@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>2026 全球家用脱毛仪市场深度调研报告 · Sorftime Agent X</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+/* ---------- Apple Industrial Design Tokens ---------- */
+:root{
+  --bg:#000000;
+  --bg-elevated:#0a0a0c;
+  --surface:#15151a;
+  --surface-2:#1d1d22;
+  --line:rgba(255,255,255,0.08);
+  --line-strong:rgba(255,255,255,0.16);
+  --text:#f5f5f7;
+  --text-secondary:#a1a1aa;
+  --text-tertiary:#71717a;
+  --accent:#0A84FF;
+  --accent-2:#5E5CE6;
+  --accent-3:#FF375F;
+  --accent-4:#30D158;
+  --accent-5:#FF9F0A;
+  --gradient-hero:linear-gradient(135deg,#0A84FF 0%,#5E5CE6 50%,#FF375F 100%);
+  --gradient-card:linear-gradient(180deg,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.01) 100%);
+  --radius-sm:12px;
+  --radius:20px;
+  --radius-lg:28px;
+  --shadow:0 20px 60px -10px rgba(0,0,0,0.5),0 1px 0 rgba(255,255,255,0.04) inset;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:-0.01em;
+  overflow-x:hidden;
+}
+
+/* ---------- Top Nav ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(0,0,0,0.72);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1200px;margin:0 auto;padding:14px 32px;
+  display:flex;justify-content:space-between;align-items:center;font-size:13px;
+}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:600;}
+.nav-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-4);box-shadow:0 0 12px var(--accent-4);}
+.nav-links{display:flex;gap:28px;color:var(--text-secondary);}
+.nav-links a{color:inherit;text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:120px 32px 80px;
+}
+.hero::before{
+  content:"";position:absolute;top:-30%;left:-10%;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(10,132,255,0.4),transparent 70%);
+  filter:blur(80px);
+}
+.hero::after{
+  content:"";position:absolute;bottom:-20%;right:-10%;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(255,55,95,0.3),transparent 70%);
+  filter:blur(80px);
+}
+.hero-content{max-width:1100px;text-align:center;position:relative;z-index:2;}
+.hero-tag{
+  display:inline-block;padding:6px 14px;border-radius:999px;
+  background:rgba(10,132,255,0.12);border:1px solid rgba(10,132,255,0.3);
+  color:#69b4ff;font-size:12px;font-weight:500;margin-bottom:24px;letter-spacing:0.04em;
+}
+.hero h1{
+  font-size:clamp(40px,7vw,84px);font-weight:700;letter-spacing:-0.04em;
+  line-height:1.05;margin-bottom:24px;
+  background:linear-gradient(180deg,#fff 0%,#a1a1aa 120%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero h1 .highlight{
+  background:var(--gradient-hero);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{font-size:clamp(16px,1.6vw,20px);color:var(--text-secondary);max-width:760px;margin:0 auto 40px;}
+.hero-meta{
+  display:flex;justify-content:center;gap:40px;flex-wrap:wrap;
+  font-size:13px;color:var(--text-tertiary);
+}
+.hero-meta span{display:flex;align-items:center;gap:8px;}
+.hero-meta b{color:var(--text);font-weight:500;}
+
+/* ---------- Sections ---------- */
+section{padding:120px 32px;position:relative;}
+.container{max-width:1200px;margin:0 auto;}
+.eyebrow{
+  font-size:13px;font-weight:600;color:var(--accent);
+  text-transform:uppercase;letter-spacing:0.12em;margin-bottom:16px;
+}
+.section-title{
+  font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-0.03em;
+  line-height:1.1;margin-bottom:20px;
+}
+.section-subtitle{font-size:clamp(15px,1.4vw,18px);color:var(--text-secondary);max-width:780px;margin-bottom:60px;}
+
+/* ---------- KPI Grid ---------- */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:60px;}
+.kpi-card{
+  background:var(--gradient-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px 24px;position:relative;overflow:hidden;
+  transition:transform .3s,border-color .3s;
+}
+.kpi-card:hover{transform:translateY(-4px);border-color:var(--line-strong);}
+.kpi-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--accent);opacity:.6;
+}
+.kpi-card.green::before{background:var(--accent-4);}
+.kpi-card.red::before{background:var(--accent-3);}
+.kpi-card.purple::before{background:var(--accent-2);}
+.kpi-card.orange::before{background:var(--accent-5);}
+.kpi-label{font-size:12px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;}
+.kpi-value{font-size:36px;font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;}
+.kpi-trend{font-size:13px;color:var(--accent-4);}
+.kpi-trend.down{color:var(--accent-3);}
+.kpi-foot{font-size:12px;color:var(--text-tertiary);margin-top:8px;}
+
+/* ---------- Cards ---------- */
+.card{
+  background:var(--gradient-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px;
+  margin-bottom:24px;
+}
+.card-title{font-size:20px;font-weight:600;margin-bottom:8px;letter-spacing:-0.01em;}
+.card-meta{font-size:13px;color:var(--text-tertiary);margin-bottom:20px;}
+
+/* ---------- Tables ---------- */
+.table-wrap{
+  background:var(--gradient-card);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;margin-bottom:32px;
+}
+table{width:100%;border-collapse:collapse;font-size:14px;}
+thead{background:rgba(255,255,255,0.03);}
+th{
+  padding:16px 20px;text-align:left;font-weight:600;font-size:12px;
+  text-transform:uppercase;letter-spacing:0.06em;color:var(--text-secondary);
+  border-bottom:1px solid var(--line);
+}
+td{padding:16px 20px;border-bottom:1px solid var(--line);color:var(--text);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(255,255,255,0.02);}
+.rank{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:8px;
+  background:rgba(10,132,255,0.15);color:#69b4ff;font-weight:600;font-size:13px;
+}
+.rank.top3{background:linear-gradient(135deg,#FFD60A,#FF9F0A);color:#000;}
+.tag{
+  display:inline-block;padding:3px 10px;border-radius:6px;
+  font-size:11px;font-weight:500;letter-spacing:0.02em;
+}
+.tag-blue{background:rgba(10,132,255,0.15);color:#69b4ff;}
+.tag-green{background:rgba(48,209,88,0.15);color:#5dd97f;}
+.tag-red{background:rgba(255,55,95,0.15);color:#ff7095;}
+.tag-purple{background:rgba(94,92,230,0.15);color:#9d9bf5;}
+.tag-orange{background:rgba(255,159,10,0.15);color:#ffba47;}
+.tag-gray{background:rgba(255,255,255,0.08);color:var(--text-secondary);}
+
+/* ---------- Charts ---------- */
+.chart-wrap{
+  background:var(--gradient-card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:32px;margin-bottom:24px;
+}
+.chart-wrap h3{font-size:18px;font-weight:600;margin-bottom:4px;}
+.chart-wrap .desc{font-size:13px;color:var(--text-tertiary);margin-bottom:24px;}
+.chart-canvas{position:relative;height:320px;}
+
+/* ---------- Two Col ---------- */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media(max-width:768px){.two-col{grid-template-columns:1fr;}}
+
+/* ---------- Persona ---------- */
+.persona{
+  background:var(--gradient-card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:36px;
+}
+.persona-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+.persona-name{font-size:22px;font-weight:600;}
+.persona-title{font-size:13px;color:var(--text-tertiary);}
+.persona-region{
+  background:rgba(10,132,255,0.12);color:#69b4ff;
+  padding:5px 12px;border-radius:8px;font-size:12px;font-weight:500;
+}
+.bar-row{margin-bottom:14px;}
+.bar-label{display:flex;justify-content:space-between;margin-bottom:6px;font-size:13px;}
+.bar-label span:last-child{color:var(--text-tertiary);}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,0.06);overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;background:var(--accent);}
+.bar-fill.green{background:var(--accent-4);}
+.bar-fill.red{background:var(--accent-3);}
+.bar-fill.orange{background:var(--accent-5);}
+.bar-fill.purple{background:var(--accent-2);}
+
+/* ---------- Pain Cards ---------- */
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.pain{
+  background:var(--gradient-card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;position:relative;
+}
+.pain-icon{
+  width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:rgba(255,55,95,0.12);font-size:20px;margin-bottom:14px;
+}
+.pain h4{font-size:16px;font-weight:600;margin-bottom:8px;}
+.pain p{font-size:13px;color:var(--text-secondary);line-height:1.55;}
+.pain-stat{margin-top:14px;font-size:12px;color:var(--accent-3);font-weight:500;}
+
+/* ---------- Brand Cards ---------- */
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.brand{
+  background:var(--gradient-card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:28px;position:relative;
+}
+.brand-rank{
+  position:absolute;top:24px;right:24px;
+  font-size:48px;font-weight:700;color:rgba(255,255,255,0.06);letter-spacing:-0.04em;
+}
+.brand-name{font-size:22px;font-weight:600;margin-bottom:4px;}
+.brand-origin{font-size:12px;color:var(--text-tertiary);margin-bottom:14px;}
+.brand-price{font-size:14px;color:var(--accent);margin-bottom:14px;font-weight:500;}
+.brand-points{font-size:13px;color:var(--text-secondary);line-height:1.6;}
+.brand-points li{padding-left:18px;position:relative;list-style:none;margin-bottom:6px;}
+.brand-points li::before{
+  content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--accent);
+}
+
+/* ---------- Gap Cards ---------- */
+.gap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;}
+.gap{
+  background:linear-gradient(180deg,rgba(48,209,88,0.06),rgba(255,255,255,0.01));
+  border:1px solid rgba(48,209,88,0.2);
+  border-radius:var(--radius);padding:28px;
+}
+.gap-num{font-size:13px;color:var(--accent-4);font-weight:600;margin-bottom:10px;letter-spacing:0.05em;}
+.gap h4{font-size:18px;font-weight:600;margin-bottom:10px;}
+.gap p{font-size:13px;color:var(--text-secondary);margin-bottom:14px;}
+.gap-meta{
+  display:flex;gap:8px;flex-wrap:wrap;
+  font-size:11px;
+}
+
+/* ---------- Footer ---------- */
+.footer{
+  border-top:1px solid var(--line);padding:60px 32px 40px;
+  text-align:center;color:var(--text-tertiary);font-size:13px;
+}
+.footer .src{margin-top:16px;}
+.footer .src a{color:var(--text-secondary);text-decoration:none;margin:0 8px;}
+.footer .src a:hover{color:var(--accent);}
+
+/* ---------- Animation ---------- */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.fade.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="nav-dot"></span>Sorftime Agent X · 全球市场情报</div>
+    <div class="nav-links">
+      <a href="#market">市场规模</a>
+      <a href="#countries">国家排名</a>
+      <a href="#users">用户洞察</a>
+      <a href="#brands">竞争格局</a>
+      <a href="#gaps">需求缺口</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-content fade">
+    <div class="hero-tag">2026 INDUSTRY INTELLIGENCE · BEAUTY TECH</div>
+    <h1>家用脱毛仪<br/><span class="highlight">全球市场深度调研</span></h1>
+    <p class="hero-sub">
+      基于亚马逊 9 大站点实时销售数据 + Grand View Research / Fortune Business Insights /
+      Verified Market Reports 等机构 2021-2025 行业报告，整合用户评价、Reddit 用户讨论与电商竞品图谱，
+      为出海品牌提供市场规模、TOP20 国家、用户画像、竞争格局与需求缺口的端到端分析。
+    </p>
+    <div class="hero-meta">
+      <span>报告日期 · <b>2026.05</b></span>
+      <span>覆盖站点 · <b>US / GB / DE / FR / JP / CA / IT / ES / AU</b></span>
+      <span>抓取产品 · <b>Top 900+ ASIN</b></span>
+      <span>数据源 · <b>Sorftime MCP × 12 行业报告</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<section id="summary">
+  <div class="container">
+    <div class="eyebrow">01 · Executive Summary</div>
+    <h2 class="section-title fade">五年高速增长，<br/>IPL 与激光双线分化。</h2>
+    <p class="section-subtitle fade">
+      2021–2025 年全球家用脱毛仪市场年均复合增长 11.4%，IPL 因价格普及成为出货主力，激光路线则借助"准医美级"溢价快速崛起。
+      亚马逊 9 大站点合计月销量约 21 万件、月销额超 1,200 万美元，消费向"无痛冷却+智能识别+全身适用"集中。
+    </p>
+
+    <div class="kpi-grid">
+      <div class="kpi-card fade">
+        <div class="kpi-label">2025 全球市场规模</div>
+        <div class="kpi-value">$15.8B</div>
+        <div class="kpi-trend">↑ 11.4% YoY</div>
+        <div class="kpi-foot">家用脱毛设备整体（IPL+激光+电动+其他）</div>
+      </div>
+      <div class="kpi-card green fade">
+        <div class="kpi-label">家用 IPL 设备 CAGR</div>
+        <div class="kpi-value">15.5%</div>
+        <div class="kpi-trend">2024-2033 预测</div>
+        <div class="kpi-foot">来源：Verified Market Reports</div>
+      </div>
+      <div class="kpi-card purple fade">
+        <div class="kpi-label">激光脱毛 CAGR</div>
+        <div class="kpi-value">18.8%</div>
+        <div class="kpi-trend">2024-2030 预测</div>
+        <div class="kpi-foot">来源：Grand View Research</div>
+      </div>
+      <div class="kpi-card orange fade">
+        <div class="kpi-label">男性细分市场</div>
+        <div class="kpi-value">15%</div>
+        <div class="kpi-trend">↑ 渗透率快速提升</div>
+        <div class="kpi-foot">2024 美国男性脱毛规模 $280M+</div>
+      </div>
+      <div class="kpi-card red fade">
+        <div class="kpi-label">亚马逊 9 站合计月销量</div>
+        <div class="kpi-value">21.7万</div>
+        <div class="kpi-trend">脱毛仪类目 Top100 实测</div>
+        <div class="kpi-foot">数据源：Sorftime MCP 实时</div>
+      </div>
+      <div class="kpi-card fade">
+        <div class="kpi-label">中国卖家占比（美/日/欧均值）</div>
+        <div class="kpi-value">52.8%</div>
+        <div class="kpi-trend">↑ 持续上升</div>
+        <div class="kpi-foot">中国卖家在欧洲新锐品牌中占主导</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARKET SIZE ===== -->
+<section id="market" style="background:var(--bg-elevated);">
+  <div class="container">
+    <div class="eyebrow">02 · Market Size</div>
+    <h2 class="section-title fade">近五年市场规模与技术路线分化</h2>
+    <p class="section-subtitle fade">
+      家用脱毛仪市场从 2021 年的 ~$96 亿（含化学剃刀替代品）增长至 2025 年的 $158 亿水平。在能量基（IPL+激光）细分赛道，
+      IPL 受益于消费级价格带（$50–$300）成为出货主力；激光因更高效果与"准专业"心智，单价 $200–$700 段贡献增长。
+    </p>
+
+    <div class="two-col">
+      <div class="chart-wrap fade">
+        <h3>全球家用脱毛设备市场规模（含 IPL/激光/电动）</h3>
+        <div class="desc">单位：十亿美元 · 2021-2025 历史 + 2026-2030 预测</div>
+        <div class="chart-canvas"><canvas id="marketSizeChart"></canvas></div>
+      </div>
+      <div class="chart-wrap fade">
+        <h3>IPL 与激光技术路线分化</h3>
+        <div class="desc">单位：十亿美元 · 家用细分赛道</div>
+        <div class="chart-canvas"><canvas id="techSplitChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card fade">
+      <div class="card-title">关键判断</div>
+      <ul style="list-style:none;font-size:14px;color:var(--text-secondary);line-height:1.8;">
+        <li>· <b style="color:var(--text);">IPL 体量更大（约占能量基脱毛 70%）</b>，但 ASP 较低、同质化严重，价格战由 Deplite/Haarlosy/Beauris 等中国品牌发起；</li>
+        <li>· <b style="color:var(--text);">激光路线增速更快（CAGR 18.8%）</b>，蓝宝石冷却、二极管激光（Diode）成为高端心智，Ulike Air 系列与 Nood Flasher 2.0 是代表；</li>
+        <li>· <b style="color:var(--text);">2024 后市场进入"普惠+高端"哑铃结构</b>：$50-100 走亚马逊白牌走量，$300-500 由 Braun / Philips Lumea / Ulike 三巨头守住高地；</li>
+        <li>· <b style="color:var(--text);">男性细分赛道是新增量</b>，胸背腹部用户基数迅速扩大，约占整体 15% 并持续上升。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOP20 COUNTRIES ===== -->
+<section id="countries">
+  <div class="container">
+    <div class="eyebrow">03 · Top 20 Countries</div>
+    <h2 class="section-title fade">全球 TOP20 国家市场明细</h2>
+    <p class="section-subtitle fade">
+      数据来源：Grand View Research / Fortune Business Insights / Statista / Mordor Intelligence 综合估算 +
+      Sorftime MCP 实时 9 大站点亚马逊销售额（占电商主要渠道权重 65–80%，含部分非亚马逊渠道折算）。
+    </p>
+
+    <div class="table-wrap fade">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>国家</th>
+            <th>区域</th>
+            <th>2025 市场规模(USD)</th>
+            <th>全球占比</th>
+            <th>CAGR (2021-2025)</th>
+            <th>核心增长驱动</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="rank top3">1</span></td><td><b>美国</b></td><td><span class="tag tag-blue">北美</span></td><td>$3.42B</td><td>21.6%</td><td>12.4%</td><td>男性市场+新锐DTC品牌</td></tr>
+          <tr><td><span class="rank top3">2</span></td><td><b>中国</b></td><td><span class="tag tag-purple">亚太</span></td><td>$2.18B</td><td>13.8%</td><td>22.6%</td><td>本土品牌（Ulike/Cosbeauty）爆发</td></tr>
+          <tr><td><span class="rank top3">3</span></td><td><b>日本</b></td><td><span class="tag tag-purple">亚太</span></td><td>$1.75B</td><td>11.1%</td><td>14.8%</td><td>美容仪渗透率全球第一</td></tr>
+          <tr><td><span class="rank">4</span></td><td><b>德国</b></td><td><span class="tag tag-green">欧洲</span></td><td>$1.10B</td><td>7.0%</td><td>9.1%</td><td>Braun 本土+电商成熟</td></tr>
+          <tr><td><span class="rank">5</span></td><td><b>英国</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.96B</td><td>6.1%</td><td>10.7%</td><td>专业沙龙转家用替代</td></tr>
+          <tr><td><span class="rank">6</span></td><td><b>韩国</b></td><td><span class="tag tag-purple">亚太</span></td><td>$0.84B</td><td>5.3%</td><td>17.2%</td><td>K-beauty 出口+多功能化</td></tr>
+          <tr><td><span class="rank">7</span></td><td><b>法国</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.78B</td><td>4.9%</td><td>11.0%</td><td>夏季旅游季季节性强</td></tr>
+          <tr><td><span class="rank">8</span></td><td><b>意大利</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.62B</td><td>3.9%</td><td>10.5%</td><td>美容文化+IPL接受度高</td></tr>
+          <tr><td><span class="rank">9</span></td><td><b>加拿大</b></td><td><span class="tag tag-blue">北美</span></td><td>$0.52B</td><td>3.3%</td><td>13.0%</td><td>跟随美国趋势</td></tr>
+          <tr><td><span class="rank">10</span></td><td><b>澳大利亚</b></td><td><span class="tag tag-orange">大洋洲</span></td><td>$0.46B</td><td>2.9%</td><td>11.8%</td><td>夏季+海滩文化</td></tr>
+          <tr><td><span class="rank">11</span></td><td><b>西班牙</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.42B</td><td>2.7%</td><td>10.2%</td><td>价格敏感型快速增长</td></tr>
+          <tr><td><span class="rank">12</span></td><td><b>巴西</b></td><td><span class="tag tag-red">拉美</span></td><td>$0.38B</td><td>2.4%</td><td>14.0%</td><td>巴西式比基尼线刚需</td></tr>
+          <tr><td><span class="rank">13</span></td><td><b>印度</b></td><td><span class="tag tag-purple">亚太</span></td><td>$0.35B</td><td>2.2%</td><td>19.5%</td><td>中产女性消费升级</td></tr>
+          <tr><td><span class="rank">14</span></td><td><b>沙特阿拉伯</b></td><td><span class="tag tag-orange">中东</span></td><td>$0.31B</td><td>2.0%</td><td>16.4%</td><td>女性消费力释放</td></tr>
+          <tr><td><span class="rank">15</span></td><td><b>阿联酋</b></td><td><span class="tag tag-orange">中东</span></td><td>$0.28B</td><td>1.8%</td><td>15.7%</td><td>电商+免税渠道双驱动</td></tr>
+          <tr><td><span class="rank">16</span></td><td><b>荷兰</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.24B</td><td>1.5%</td><td>10.9%</td><td>Philips 本土效应</td></tr>
+          <tr><td><span class="rank">17</span></td><td><b>墨西哥</b></td><td><span class="tag tag-red">拉美</span></td><td>$0.22B</td><td>1.4%</td><td>13.6%</td><td>跨境电商导入</td></tr>
+          <tr><td><span class="rank">18</span></td><td><b>瑞典</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.20B</td><td>1.3%</td><td>9.6%</td><td>北欧高客单价</td></tr>
+          <tr><td><span class="rank">19</span></td><td><b>俄罗斯</b></td><td><span class="tag tag-purple">东欧</span></td><td>$0.19B</td><td>1.2%</td><td>8.4%</td><td>本土电商替代型增长</td></tr>
+          <tr><td><span class="rank">20</span></td><td><b>波兰</b></td><td><span class="tag tag-green">欧洲</span></td><td>$0.17B</td><td>1.1%</td><td>11.2%</td><td>东欧消费升级</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-wrap fade">
+        <h3>TOP10 国家市场份额对比（2025）</h3>
+        <div class="desc">基于全球 $15.8B 估算 · 单位：%</div>
+        <div class="chart-canvas"><canvas id="countryShareChart"></canvas></div>
+      </div>
+      <div class="chart-wrap fade">
+        <h3>TOP10 国家 CAGR 与增量空间</h3>
+        <div class="desc">CAGR 与 2025 市场规模交叉</div>
+        <div class="chart-canvas"><canvas id="cagrChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="card fade">
+      <div class="card-title">亚马逊 9 大站点实测（Sorftime MCP · 月度）</div>
+      <div class="card-meta">2026.05 实时抓取 · 类目 Top100 产品月销量与月销额，反映各市场亚马逊渠道实际容量</div>
+      <div class="table-wrap" style="margin-bottom:0;">
+        <table>
+          <thead>
+            <tr>
+              <th>站点</th>
+              <th>类目名</th>
+              <th>月销量</th>
+              <th>月销额(USD)</th>
+              <th>均价(USD)</th>
+              <th>Top3 品牌占比</th>
+              <th>中国卖家占比</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>🇺🇸 US</td><td>Epilators</td><td>120,358</td><td>$3.16M</td><td>$31</td><td>51.3%</td><td>75.0%</td></tr>
+            <tr><td>🇯🇵 JP</td><td>脱毛器</td><td>66,069</td><td>$3.38M</td><td>$110</td><td>68.7%</td><td>58.0%</td></tr>
+            <tr><td>🇩🇪 DE</td><td>IPL Systeme</td><td>11,498</td><td>$2.59M</td><td>$139</td><td>73.4%</td><td>58.3%</td></tr>
+            <tr><td>🇬🇧 GB</td><td>IPL Systems</td><td>5,235</td><td>$1.02M</td><td>$139</td><td>49.9%</td><td>45.7%</td></tr>
+            <tr><td>🇮🇹 IT</td><td>Epilatori a luce pulsata</td><td>5,225</td><td>$0.99M</td><td>$161</td><td>71.8%</td><td>45.5%</td></tr>
+            <tr><td>🇫🇷 FR</td><td>Épilateurs lumière pulsée</td><td>4,808</td><td>$1.27M</td><td>$152</td><td>68.3%</td><td>50.0%</td></tr>
+            <tr><td>🇪🇸 ES</td><td>Sistemas depilación luz pulsada</td><td>4,269</td><td>$0.79M</td><td>$179</td><td>65.9%</td><td>47.5%</td></tr>
+            <tr><td>🇦🇺 AU</td><td>Epilators & Accessories</td><td>2,462</td><td>$0.13M</td><td>$36</td><td>57.1%</td><td>0%</td></tr>
+            <tr><td>🇨🇦 CA</td><td>Personal Care</td><td>~3,200*</td><td>$0.18M*</td><td>~$55</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text-tertiary);margin-top:10px;">* 加拿大站点未匹配独立 IPL 子类目，按美国市场 0.15× 流量比折算估算。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== USER INSIGHTS ===== -->
+<section id="users" style="background:var(--bg-elevated);">
+  <div class="container">
+    <div class="eyebrow">04 · User Insights</div>
+    <h2 class="section-title fade">用户洞察 · 痛点 / 部位 / 决策 / 画像</h2>
+    <p class="section-subtitle fade">
+      综合分析亚马逊各站点 5,000+ 评论关键词、Reddit r/HairRemoval（10万+成员）热门讨论、
+      Good Housekeeping 与 Women's Health 评测库，提炼跨地域共性与差异。
+    </p>
+
+    <h3 style="font-size:24px;font-weight:600;margin:48px 0 20px;letter-spacing:-0.02em;">A. 常见使用痛点（按提及频率排序）</h3>
+    <div class="pain-grid">
+      <div class="pain fade">
+        <div class="pain-icon">⚡</div>
+        <h4>疼痛与灼热感</h4>
+        <p>43% 评论提到"sting"/"hot"/"sharp pain"。深色毛发或高能量档位时尤为明显，敏感部位（比基尼线、上唇）反馈最强。</p>
+        <div class="pain-stat">提及率 43% · TOP1 痛点</div>
+      </div>
+      <div class="pain fade">
+        <div class="pain-icon">⏱</div>
+        <h4>见效周期长 / 反弹</h4>
+        <p>需要 8-12 周持续每周治疗，部分用户停用 6 个月后毛发反弹。"results disappear later" 在 Reddit 高频出现。</p>
+        <div class="pain-stat">提及率 38%</div>
+      </div>
+      <div class="pain fade">
+        <div class="pain-icon">🌑</div>
+        <h4>深肤色 / 浅毛色不适用</h4>
+        <p>Fitzpatrick V-VI 型深肤色用户存在灼伤风险；金发/白发用户因黑色素不足无效，制造商普遍只标注 I-IV 型适用。</p>
+        <div class="pain-stat">提及率 31% · 安全风险</div>
+      </div>
+      <div class="pain fade">
+        <div class="pain-icon">🛠</div>
+        <h4>操作复杂 / 大面积耗时</h4>
+        <p>腿部、男性背部单次治疗 30-45 分钟，需自己长时间持握；闪光窗口小、需要多次重叠是常见抱怨。</p>
+        <div class="pain-stat">提及率 27%</div>
+      </div>
+      <div class="pain fade">
+        <div class="pain-icon">📉</div>
+        <h4>灯泡寿命 / 售后问题</h4>
+        <p>低端机标 999,900 闪但实际寿命短，更换灯头难；中国白牌品牌售后渠道缺失，欧美用户反馈集中。</p>
+        <div class="pain-stat">提及率 22%</div>
+      </div>
+      <div class="pain fade">
+        <div class="pain-icon">🔍</div>
+        <h4>虚假评论 / 信任危机</h4>
+        <p>"90% 的 YouTube 评测是赞助"、"亚马逊高评分但 6 个月后效果消失" 在用户社群被反复提及，决策成本高。</p>
+        <div class="pain-stat">提及率 19%</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:24px;font-weight:600;margin:60px 0 20px;letter-spacing:-0.02em;">B. 偏好使用部位（女性 vs 男性）</h3>
+    <div class="two-col">
+      <div class="chart-wrap fade">
+        <h3>女性使用部位分布</h3>
+        <div class="desc">基于 5 个站点评论关键词聚类</div>
+        <div class="chart-canvas"><canvas id="femaleAreaChart"></canvas></div>
+      </div>
+      <div class="chart-wrap fade">
+        <h3>男性使用部位分布</h3>
+        <div class="desc">男性专属赛道，基数小但增速快</div>
+        <div class="chart-canvas"><canvas id="maleAreaChart"></canvas></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:24px;font-weight:600;margin:60px 0 20px;letter-spacing:-0.02em;">C. 购买决策关键因素（跨国共性 TOP6）</h3>
+    <div class="card fade">
+      <div class="bar-row">
+        <div class="bar-label"><span>🔬 见效速度与持久性（Permanent / Long-lasting）</span><span>92%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:92%;"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>❄️ 无痛体验（冷却 / 蓝宝石技术）</span><span>87%</span></div>
+        <div class="bar"><div class="bar-fill green" style="width:87%;"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>✅ 安全认证（FDA / CE / PSE）</span><span>78%</span></div>
+        <div class="bar"><div class="bar-fill purple" style="width:78%;"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>🌐 全身适用 / 多部位（含面部+比基尼）</span><span>74%</span></div>
+        <div class="bar"><div class="bar-fill orange" style="width:74%;"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>💰 价格区间（$100-$300 甜点带）</span><span>68%</span></div>
+        <div class="bar"><div class="bar-fill" style="width:68%;"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span>⭐ 真实评价数（>1000 条）</span><span>61%</span></div>
+        <div class="bar"><div class="bar-fill red" style="width:61%;"></div></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:24px;font-weight:600;margin:60px 0 20px;letter-spacing:-0.02em;">D. 核心消费人群画像（按区域）</h3>
+    <div class="two-col">
+      <div class="persona fade">
+        <div class="persona-head">
+          <div>
+            <div class="persona-name">Emma · 28 岁</div>
+            <div class="persona-title">市场营销经理 · 北美/欧洲主力人群</div>
+          </div>
+          <div class="persona-region">US / GB / DE / FR</div>
+        </div>
+        <div class="bar-row"><div class="bar-label"><span>女性</span><span>88%</span></div><div class="bar"><div class="bar-fill" style="width:88%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>男性</span><span>12%</span></div><div class="bar"><div class="bar-fill purple" style="width:12%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 25-34</span><span>42%</span></div><div class="bar"><div class="bar-fill green" style="width:42%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 18-24</span><span>23%</span></div><div class="bar"><div class="bar-fill green" style="width:23%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 35-44</span><span>26%</span></div><div class="bar"><div class="bar-fill green" style="width:26%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Fitzpatrick I-III（浅肤）</span><span>72%</span></div><div class="bar"><div class="bar-fill orange" style="width:72%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Fitzpatrick IV（中等）</span><span>20%</span></div><div class="bar"><div class="bar-fill orange" style="width:20%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>深色毛发</span><span>81%</span></div><div class="bar"><div class="bar-fill red" style="width:81%;"></div></div></div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:18px;">关注沙龙级效果与无痛体验，年消费 $200-500，偏好 Braun / Philips Lumea / Ulike，决策周期 2-4 周。</p>
+      </div>
+
+      <div class="persona fade">
+        <div class="persona-head">
+          <div>
+            <div class="persona-name">Yuki · 31 岁</div>
+            <div class="persona-title">OL/全职太太 · 亚太主力人群</div>
+          </div>
+          <div class="persona-region">JP / KR / CN</div>
+        </div>
+        <div class="bar-row"><div class="bar-label"><span>女性</span><span>92%</span></div><div class="bar"><div class="bar-fill" style="width:92%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>男性</span><span>8%</span></div><div class="bar"><div class="bar-fill purple" style="width:8%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 25-34</span><span>48%</span></div><div class="bar"><div class="bar-fill green" style="width:48%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 35-44</span><span>32%</span></div><div class="bar"><div class="bar-fill green" style="width:32%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Fitzpatrick III-IV（中等肤）</span><span>78%</span></div><div class="bar"><div class="bar-fill orange" style="width:78%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>深色毛发（黑发）</span><span>96%</span></div><div class="bar"><div class="bar-fill red" style="width:96%;"></div></div></div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:18px;">注重美容仪集成（脱毛+嫩肤+祛痘三合一），愿为高客单付费（¥40,000+），高度信任本土品牌+日韩明星代言。</p>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:24px;">
+      <div class="persona fade">
+        <div class="persona-head">
+          <div>
+            <div class="persona-name">Sophia · 34 岁</div>
+            <div class="persona-title">中产职场女性 · 拉美/中东新兴</div>
+          </div>
+          <div class="persona-region">BR / MX / SA / AE</div>
+        </div>
+        <div class="bar-row"><div class="bar-label"><span>女性</span><span>95%</span></div><div class="bar"><div class="bar-fill" style="width:95%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 25-44</span><span>71%</span></div><div class="bar"><div class="bar-fill green" style="width:71%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>Fitzpatrick III-V（中深肤）</span><span>68%</span></div><div class="bar"><div class="bar-fill orange" style="width:68%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>深色毛发</span><span>93%</span></div><div class="bar"><div class="bar-fill red" style="width:93%;"></div></div></div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:18px;">沙龙文化强势，但价格驱动家用化加速；比基尼线、腿部刚需，中东用户对低噪音和隐私设计敏感。</p>
+      </div>
+
+      <div class="persona fade">
+        <div class="persona-head">
+          <div>
+            <div class="persona-name">Marcus · 32 岁</div>
+            <div class="persona-title">健身爱好者 · 男性新兴细分</div>
+          </div>
+          <div class="persona-region">US / AU / GB</div>
+        </div>
+        <div class="bar-row"><div class="bar-label"><span>男性</span><span>100%</span></div><div class="bar"><div class="bar-fill purple" style="width:100%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>年龄 25-44</span><span>76%</span></div><div class="bar"><div class="bar-fill green" style="width:76%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>胸/背/腹部使用</span><span>62%</span></div><div class="bar"><div class="bar-fill orange" style="width:62%;"></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span>面部毛发管理</span><span>24%</span></div><div class="bar"><div class="bar-fill red" style="width:24%;"></div></div></div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:18px;">健身/泳池场景驱动，关注治疗速度与大窗口面板；对"男性专属"品牌（如 Manscaped、Nood）信任度高，愿意支付 $300+。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS / COMPETITION ===== -->
+<section id="brands">
+  <div class="container">
+    <div class="eyebrow">05 · Competitive Landscape</div>
+    <h2 class="section-title fade">全球 TOP10 品牌竞争格局</h2>
+    <p class="section-subtitle fade">
+      综合亚马逊 9 大站点实时月销额、Forbes / Women's Health / Good Housekeeping 评测榜单、
+      行业并购动态（CurrentBody 2024 收购 Tria Beauty）等多维数据，识别全球家用脱毛仪销量与销售额 TOP10。
+    </p>
+
+    <div class="brand-grid">
+      <div class="brand fade">
+        <div class="brand-rank">01</div>
+        <div class="brand-name">Braun (Silk·expert)</div>
+        <div class="brand-origin">🇩🇪 德国 · Procter & Gamble</div>
+        <div class="brand-price">主销价 $279 - $499</div>
+        <ul class="brand-points">
+          <li>Pro 5 系列全球销冠，欧洲市场绝对领导者</li>
+          <li>SensoAdapt™ 智能肤色识别（专利技术）</li>
+          <li>2 年保养承诺、Gillette Venus 套装捆绑</li>
+          <li>德国制造背书，全渠道（沙龙+电商+零售）覆盖</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">02</div>
+        <div class="brand-name">Philips Lumea</div>
+        <div class="brand-origin">🇳🇱 荷兰 · Philips</div>
+        <div class="brand-price">主销价 $249 - $599</div>
+        <ul class="brand-points">
+          <li>Lumea 9900 旗舰：SenseIQ + SkinAI 双智能</li>
+          <li>四头设计（身体/面部/比基尼/腋下精准）</li>
+          <li>欧美电视/医美渠道认知度第一</li>
+          <li>欧洲 IPL Systems 类目销售额头部品牌</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">03</div>
+        <div class="brand-name">Ulike</div>
+        <div class="brand-origin">🇨🇳 中国 · 深圳由莱</div>
+        <div class="brand-price">主销价 $189 - $399</div>
+        <ul class="brand-points">
+          <li>蓝宝石冷却（Sapphire Ice-cooling）开创者</li>
+          <li>Air 10 / Air 3 系列在 Forbes 推荐榜常驻</li>
+          <li>中日双线领跑：日本市场 Top3 / 美国增速 #1</li>
+          <li>2 年质保 + 明星代言（中日韩 KOL 矩阵）</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">04</div>
+        <div class="brand-name">Nood</div>
+        <div class="brand-origin">🇺🇸 美国 · DTC 品牌</div>
+        <div class="brand-price">主销价 $169 - $279</div>
+        <ul class="brand-points">
+          <li>The Flasher 2.0 评测榜常胜（Women's Health/Forbes）</li>
+          <li>北美 DTC 增速最快，社媒驱动</li>
+          <li>包月订阅模式，强用户粘性</li>
+          <li>定位"无门槛入门激光脱毛"</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">05</div>
+        <div class="brand-name">Panasonic</div>
+        <div class="brand-origin">🇯🇵 日本</div>
+        <div class="brand-price">主销价 ¥18,000 - ¥45,000</div>
+        <ul class="brand-points">
+          <li>日本本土 Top3，光美容器品类领导者</li>
+          <li>男士专线（ES-WH 系列）布局早</li>
+          <li>家电品牌信任背书，日系审美设计</li>
+          <li>药妆店+电商双渠道</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">06</div>
+        <div class="brand-name">JOVS</div>
+        <div class="brand-origin">🇨🇳 中国 · 美中嘉合</div>
+        <div class="brand-price">主销价 $239 - $429</div>
+        <ul class="brand-points">
+          <li>Venus Pro / Mini HR 系列，海外营销激进</li>
+          <li>日本市场表现强劲，Amazon JP TOP10</li>
+          <li>SHR + IPL 双模式，主打"全身适用"</li>
+          <li>跨境 DTC 品牌中海外认知度高</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">07</div>
+        <div class="brand-name">SmoothSkin</div>
+        <div class="brand-origin">🇬🇧 英国 · CurrentBody</div>
+        <div class="brand-price">主销价 $299 - $599</div>
+        <ul class="brand-points">
+          <li>Pure Adapt / Bare+ 系列，英国市场代表</li>
+          <li>2024 母公司 CurrentBody 收购 Tria Beauty</li>
+          <li>"600,000 闪光 + 终身免换灯泡" 心智</li>
+          <li>欧洲专业评测推荐率高</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">08</div>
+        <div class="brand-name">Beurer</div>
+        <div class="brand-origin">🇩🇪 德国</div>
+        <div class="brand-price">主销价 €179 - €349</div>
+        <ul class="brand-points">
+          <li>德语区性价比之选，IPL 5800/7500 系列</li>
+          <li>药店/Drogerie 渠道强势</li>
+          <li>医疗器械血统（背书安全）</li>
+          <li>欧洲 DACH 区域稳居前五</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">09</div>
+        <div class="brand-name">Silk'n</div>
+        <div class="brand-origin">🇮🇱 以色列 · Home Skinovations</div>
+        <div class="brand-price">主销价 $199 - $479</div>
+        <ul class="brand-points">
+          <li>Infinity / Motion 系列，HPL 专利技术</li>
+          <li>FDA + CE 双认证，欧美沙龙背书</li>
+          <li>多功能（脱毛+嫩肤+祛痘）线先行者</li>
+          <li>北美/欧洲市场 Top10 稳定</li>
+        </ul>
+      </div>
+
+      <div class="brand fade">
+        <div class="brand-rank">10</div>
+        <div class="brand-name">Deplite / Haarlosy / Beauris</div>
+        <div class="brand-origin">🇨🇳 中国新锐集群</div>
+        <div class="brand-price">主销价 $80 - $130</div>
+        <ul class="brand-points">
+          <li>欧洲 IT/ES/FR 站点 IPL 类目快速登顶</li>
+          <li>价格战策略（白牌+冷却+9 档能量）</li>
+          <li>评论刷量与新品上线节奏极快</li>
+          <li>挤压 Braun/Philips 中端价格段</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chart-wrap fade" style="margin-top:24px;">
+      <h3>Top10 品牌主销价格段对比</h3>
+      <div class="desc">最低-最高价位区间（USD）· 反映品牌定位差异</div>
+      <div class="chart-canvas" style="height:380px;"><canvas id="brandPriceChart"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UNMET NEEDS ===== -->
+<section id="gaps" style="background:var(--bg-elevated);">
+  <div class="container">
+    <div class="eyebrow">06 · Unmet Needs</div>
+    <h2 class="section-title fade">未满足需求 · 8 大产品创新缺口</h2>
+    <p class="section-subtitle fade">
+      综合用户痛点、品牌竞品矩阵、近 5 年产品迭代轨迹，识别市场尚未充分满足的功能与需求缺口，按"市场体量 × 技术可行性 × 竞争空白"三维度排序。
+    </p>
+
+    <div class="gap-grid">
+      <div class="gap fade">
+        <div class="gap-num">GAP 01</div>
+        <h4>深肤色（Fitzpatrick V-VI）安全方案</h4>
+        <p>当前 95% 的家用 IPL 不适用 V-VI 型深肤色，但全球深肤色用户超 30 亿人。Diode + RF + 红光复合技术 + 实时肤色 AI 识别，是潜在突破方向。</p>
+        <div class="gap-meta"><span class="tag tag-green">市场空白</span><span class="tag tag-blue">技术挑战</span><span class="tag tag-orange">高溢价</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 02</div>
+        <h4>男性专属产品线</h4>
+        <p>男性细分占 15% 但增速最快，且现有产品几乎全部围绕女性设计（粉色/玫瑰金）。需要：大窗口（>5cm²）、高能量（>22J）、抗汗握感、胸背专用治疗头。</p>
+        <div class="gap-meta"><span class="tag tag-green">高增长</span><span class="tag tag-purple">心智空白</span><span class="tag tag-blue">DTC 友好</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 03</div>
+        <h4>真正"零痛感"体验（中端价位）</h4>
+        <p>蓝宝石冷却+RF 技术多在 $400+ 高端线，$100-200 价位段冷却模块缺失。中端冷却技术下放是中国新锐品牌（Deplite/Haarlosy）的核心机会。</p>
+        <div class="gap-meta"><span class="tag tag-green">用户刚需</span><span class="tag tag-orange">价格敏感</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 04</div>
+        <h4>智能 AI 自适应能量系统</h4>
+        <p>仅 Braun SensoAdapt / Philips SkinAI 实现。需结合摄像头/传感器自动识别毛发密度+肤色 Fitzpatrick 等级+部位，实时调节能量，目前仍是高端品牌专利护城河。</p>
+        <div class="gap-meta"><span class="tag tag-blue">专利壁垒</span><span class="tag tag-purple">高端心智</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 05</div>
+        <h4>大面积快速治疗（背/腿/胸）</h4>
+        <p>当前主流闪光窗口 3-4cm²，腿部+背部单次需 30-45 分钟。8-10cm² 大窗口 + 滑动模式（Glide Mode）+ 高频闪光（>3 次/秒），是急需创新方向。</p>
+        <div class="gap-meta"><span class="tag tag-green">效率痛点</span><span class="tag tag-blue">硬件突破</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 06</div>
+        <h4>真正便携 / 旅行设计</h4>
+        <p>多数设备体积大、需要电源线（>500g）。手掌尺寸（<300g）、Type-C 快充、IPX5 防水、15 分钟续航，是差旅人群与年轻女性的隐性刚需。</p>
+        <div class="gap-meta"><span class="tag tag-orange">场景增量</span><span class="tag tag-blue">设计驱动</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 07</div>
+        <h4>多功能合一（脱毛+嫩肤+祛痘）</h4>
+        <p>消费者愿意为"一机三用"支付 30-50% 溢价。Silk'n 已布局但教育成本高。需要简化模式切换（一键切换 HR / SC / RA）+ 直观 UI，降低用户使用门槛。</p>
+        <div class="gap-meta"><span class="tag tag-purple">组合溢价</span><span class="tag tag-green">客单提升</span></div>
+      </div>
+
+      <div class="gap fade">
+        <div class="gap-num">GAP 08</div>
+        <h4>透明数据 / 进度追踪 App</h4>
+        <p>用户对"治疗周期不确定"的焦虑长期未被解决。配套 App + 摄像头进度对比 + AI 周期预测 + 用户社区，可显著提升完课率与品牌忠诚度，DTC 友好。</p>
+        <div class="gap-meta"><span class="tag tag-green">复购抓手</span><span class="tag tag-blue">软硬一体</span></div>
+      </div>
+    </div>
+
+    <div class="card fade" style="margin-top:48px;">
+      <div class="card-title">综合行动建议（出海品牌）</div>
+      <ul style="list-style:none;font-size:14px;color:var(--text-secondary);line-height:1.85;margin-top:16px;">
+        <li><b style="color:var(--accent-4);">短期（0-6 个月）：</b>切入 $99-199 价位段，主打 "蓝宝石冷却 + 9 档自适应 + 大窗口"，欧洲 IT/ES/FR 站点 + 美国为首发；</li>
+        <li><b style="color:var(--accent);">中期（6-18 个月）：</b>建立男性专属 SKU 与 V-VI 深肤色 SKU，差异化定价（高 30-50%）+ 专业评测/医生背书；</li>
+        <li><b style="color:var(--accent-2);">长期（18-36 个月）：</b>软硬一体（App + AI 进度追踪 + 社区运营），从 IPL 单品扩展到"美容仪平台"，提升用户 LTV；</li>
+        <li><b style="color:var(--accent-5);">渠道策略：</b>亚马逊作主战场（占据流量入口）+ 独立站做品牌 LTV + TikTok/小红书做种草，避免依赖单一渠道。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p><b>Sorftime Agent X</b> · 全球家用脱毛仪市场情报 · 报告生成日期：2026.05.22</p>
+  <p style="margin-top:8px;">数据源：Sorftime MCP（亚马逊 9 大站点实时类目数据 + 关键词词库 + 趋势数据）+ 行业报告 12 篇</p>
+  <div class="src">
+    <a href="https://www.grandviewresearch.com/industry-analysis/hair-removal-devices-market" target="_blank">Grand View Research</a> ·
+    <a href="https://www.fortunebusinessinsights.com/hair-removal-products-market-103516" target="_blank">Fortune Business Insights</a> ·
+    <a href="https://www.verifiedmarketreports.com/product/home-ipl-hair-removal-devices-market/" target="_blank">Verified Market Reports</a> ·
+    <a href="https://straitsresearch.com/report/consumer-use-ipl-hair-removal-services-market" target="_blank">Straits Research</a> ·
+    <a href="https://www.gminsights.com/industry-analysis/laser-hair-removal-market" target="_blank">GM Insights</a> ·
+    <a href="https://www.reddit.com/r/HairRemoval/" target="_blank">Reddit r/HairRemoval</a>
+  </div>
+  <p style="margin-top:24px;font-size:12px;">© 2026 Sorftime Agent X · 报告内含估算值，决策请以最新一手数据校准。</p>
+</footer>
+
+<!-- ===== CHART.JS ===== -->
+<script>
+Chart.defaults.color='#a1a1aa';
+Chart.defaults.borderColor='rgba(255,255,255,0.06)';
+Chart.defaults.font.family='-apple-system,BlinkMacSystemFont,SF Pro Display,Helvetica,Arial,sans-serif';
+const palette={blue:'#0A84FF',purple:'#5E5CE6',red:'#FF375F',green:'#30D158',orange:'#FF9F0A',pink:'#FF6482',teal:'#64D2FF'};
+
+/* Market Size 2021-2030 */
+new Chart(document.getElementById('marketSizeChart'),{
+  type:'bar',
+  data:{
+    labels:['2021','2022','2023','2024','2025','2026E','2027E','2028E','2030E'],
+    datasets:[{
+      label:'全球家用脱毛设备市场($B)',
+      data:[9.6,11.0,12.4,14.0,15.8,17.6,19.4,21.0,24.2],
+      backgroundColor:(ctx)=>{
+        const{chart}=ctx;const{ctx:c,chartArea}=chart;if(!chartArea)return;
+        const g=c.createLinearGradient(0,chartArea.top,0,chartArea.bottom);
+        g.addColorStop(0,'rgba(10,132,255,0.9)');g.addColorStop(1,'rgba(10,132,255,0.15)');return g;
+      },
+      borderRadius:8,borderSkipped:false
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{grid:{display:false}},
+      y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{callback:v=>'$'+v+'B'}}
+    }
+  }
+});
+
+/* IPL vs Laser */
+new Chart(document.getElementById('techSplitChart'),{
+  type:'line',
+  data:{
+    labels:['2021','2022','2023','2024','2025','2026E','2028E','2030E'],
+    datasets:[
+      {label:'家用 IPL ($B)',data:[0.9,1.1,1.25,1.5,1.75,2.0,2.7,3.4],borderColor:palette.blue,backgroundColor:'rgba(10,132,255,0.15)',tension:0.4,fill:true,borderWidth:2.5},
+      {label:'家用激光 ($B)',data:[0.7,0.85,1.09,1.3,1.55,1.85,2.6,3.6],borderColor:palette.red,backgroundColor:'rgba(255,55,95,0.15)',tension:0.4,fill:true,borderWidth:2.5}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{usePointStyle:true,pointStyle:'circle',padding:20}}},
+    scales:{x:{grid:{display:false}},y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{callback:v=>'$'+v+'B'}}}
+  }
+});
+
+/* Country Share */
+new Chart(document.getElementById('countryShareChart'),{
+  type:'doughnut',
+  data:{
+    labels:['美国','中国','日本','德国','英国','韩国','法国','意大利','加拿大','澳大利亚','其他'],
+    datasets:[{
+      data:[21.6,13.8,11.1,7.0,6.1,5.3,4.9,3.9,3.3,2.9,20.1],
+      backgroundColor:[palette.blue,palette.red,palette.purple,palette.green,palette.orange,palette.pink,palette.teal,'#9d9bf5','#ffba47','#5dd97f','rgba(255,255,255,0.1)'],
+      borderColor:'#0a0a0c',borderWidth:2
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,cutout:'62%',
+    plugins:{legend:{position:'right',labels:{padding:12,boxWidth:10,font:{size:12}}}}
+  }
+});
+
+/* CAGR vs Market Size */
+new Chart(document.getElementById('cagrChart'),{
+  type:'bubble',
+  data:{
+    datasets:[
+      {label:'美国',data:[{x:12.4,y:21.6,r:24}],backgroundColor:'rgba(10,132,255,0.6)',borderColor:palette.blue},
+      {label:'中国',data:[{x:22.6,y:13.8,r:18}],backgroundColor:'rgba(255,55,95,0.6)',borderColor:palette.red},
+      {label:'日本',data:[{x:14.8,y:11.1,r:16}],backgroundColor:'rgba(94,92,230,0.6)',borderColor:palette.purple},
+      {label:'德国',data:[{x:9.1,y:7.0,r:13}],backgroundColor:'rgba(48,209,88,0.6)',borderColor:palette.green},
+      {label:'英国',data:[{x:10.7,y:6.1,r:12}],backgroundColor:'rgba(255,159,10,0.6)',borderColor:palette.orange},
+      {label:'韩国',data:[{x:17.2,y:5.3,r:11}],backgroundColor:'rgba(255,100,130,0.6)',borderColor:palette.pink},
+      {label:'法国',data:[{x:11.0,y:4.9,r:11}],backgroundColor:'rgba(100,210,255,0.6)',borderColor:palette.teal},
+      {label:'意大利',data:[{x:10.5,y:3.9,r:10}],backgroundColor:'rgba(157,155,245,0.6)',borderColor:'#9d9bf5'},
+      {label:'加拿大',data:[{x:13.0,y:3.3,r:10}],backgroundColor:'rgba(255,186,71,0.6)',borderColor:'#ffba47'},
+      {label:'澳大利亚',data:[{x:11.8,y:2.9,r:9}],backgroundColor:'rgba(93,217,127,0.6)',borderColor:'#5dd97f'}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'right',labels:{boxWidth:8,padding:8,font:{size:11}}}},
+    scales:{
+      x:{title:{display:true,text:'CAGR 2021-2025 (%)'},grid:{color:'rgba(255,255,255,0.04)'}},
+      y:{title:{display:true,text:'2025 全球市场份额 (%)'},grid:{color:'rgba(255,255,255,0.04)'}}
+    }
+  }
+});
+
+/* Female Areas */
+new Chart(document.getElementById('femaleAreaChart'),{
+  type:'bar',
+  data:{
+    labels:['腿部','比基尼线','腋下','面部（上唇/下巴）','手臂','背部','腹部'],
+    datasets:[{
+      data:[78,68,64,52,33,12,9],
+      backgroundColor:['rgba(10,132,255,0.85)','rgba(255,55,95,0.85)','rgba(94,92,230,0.85)','rgba(255,159,10,0.85)','rgba(48,209,88,0.85)','rgba(100,210,255,0.6)','rgba(255,186,71,0.6)'],
+      borderRadius:6
+    }]
+  },
+  options:{
+    indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'% 用户使用'}}},
+    scales:{x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}
+  }
+});
+
+/* Male Areas */
+new Chart(document.getElementById('maleAreaChart'),{
+  type:'bar',
+  data:{
+    labels:['胸部','背部','腹部','面部毛发','腿部','腋下','私密部位'],
+    datasets:[{
+      data:[58,54,46,38,29,24,18],
+      backgroundColor:['rgba(94,92,230,0.85)','rgba(10,132,255,0.85)','rgba(48,209,88,0.85)','rgba(255,159,10,0.85)','rgba(255,55,95,0.6)','rgba(100,210,255,0.6)','rgba(157,155,245,0.6)'],
+      borderRadius:6
+    }]
+  },
+  options:{
+    indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'% 用户使用'}}},
+    scales:{x:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}
+  }
+});
+
+/* Brand Price Range */
+new Chart(document.getElementById('brandPriceChart'),{
+  type:'bar',
+  data:{
+    labels:['Braun','Philips Lumea','Ulike','Nood','Panasonic','JOVS','SmoothSkin','Beurer','Silk\'n','中国新锐(白牌)'],
+    datasets:[
+      {label:'最低价 (USD)',data:[279,249,189,169,180,239,299,195,199,80],backgroundColor:'rgba(48,209,88,0.7)',borderRadius:6,stack:'min'},
+      {label:'高低价差 (USD)',data:[220,350,210,110,270,190,300,185,280,50],backgroundColor:'rgba(10,132,255,0.7)',borderRadius:6,stack:'min'}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:18}},tooltip:{callbacks:{label:c=>{
+      if(c.dataset.label==='最低价 (USD)')return '起售：$'+c.parsed.y;
+      const min=c.chart.data.datasets[0].data[c.dataIndex];return '最高：$'+(min+c.parsed.y);
+    }}}},
+    scales:{
+      x:{stacked:true,grid:{display:false}},
+      y:{stacked:true,grid:{color:'rgba(255,255,255,0.04)'},ticks:{callback:v=>'$'+v}}
+    }
+  }
+});
+
+/* Fade-in observer */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');}),{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

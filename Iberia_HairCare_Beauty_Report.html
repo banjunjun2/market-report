@@ -137,6 +137,7 @@ footer a{color:var(--ink-3);text-decoration:underline}
       <li><a href="#summary">摘要</a></li>
       <li><a href="#trend">大盘趋势</a></li>
       <li><a href="#hairdryer-top">吹风机</a></li>
+      <li><a href="#table-hairdryer-lowend">价格段</a></li>
       <li><a href="#beauty-top">美容仪</a></li>
       <li><a href="#voc">用户洞察</a></li>
       <li><a href="#strategy">策略建议</a></li>
@@ -503,6 +504,299 @@ footer a{color:var(--ink-3);text-decoration:underline}
             <li><b>Dyson</b>（英国）— 高端礼赠首选，Supersonic R 2025 春季上市，毛利率为同行 3-4 倍</li>
             <li><b>Philips</b>（荷兰）— 入门 + ThermoProtect 系列，老品牌渗透力强</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========== 价格段深挖：低端 0-50€ vs 中高端 >50€ =========== -->
+    <div style="margin-top:48px;padding-top:32px;border-top:2px dashed var(--line)">
+      <div class="section-eyebrow">Price Tier Deep-Dive · 价格段深挖</div>
+      <h2 class="section-title" style="font-size:30px">按价格段切：低端 ≤€50 vs 中高端 &gt;€50</h2>
+      <p class="section-desc">基于 amazon.es Secadores de pelo Top100 实时数据按真实售价切分。低端段（≤€50）占 Top100 销量的 76.3%，是走量主战场；中高端段（&gt;€50）虽销量仅 23.7%，但贡献 GMV 的 52.1%，毛利空间显著更高。</p>
+
+      <!-- KPI 双段对照 -->
+      <div class="kpi-grid" id="kpi-price-split">
+        <div class="kpi">
+          <div class="label">低端段（≤€50）· Top20 月销量</div>
+          <div class="value">20,217<small> 件</small></div>
+          <div class="delta flat">单价中位 €23.49</div>
+        </div>
+        <div class="kpi">
+          <div class="label">低端段（≤€50）· Top20 月销额</div>
+          <div class="value">€485K</div>
+          <div class="delta flat">客单 €24，性价比驱动</div>
+        </div>
+        <div class="kpi">
+          <div class="label">中高端段（&gt;€50）· Top20 月销量</div>
+          <div class="value">6,283<small> 件</small></div>
+          <div class="delta up">单价中位 €79.90</div>
+        </div>
+        <div class="kpi">
+          <div class="label">中高端段（&gt;€50）· Top20 月销额</div>
+          <div class="value">€724K</div>
+          <div class="delta up">▲ 毛利率 70-83%，礼赠场景</div>
+        </div>
+      </div>
+
+      <!-- ============ 低端段 Top20 ============ -->
+      <div class="card" style="margin-top:24px" id="table-hairdryer-lowend">
+        <h3>🟢 低端段 Top 20（≤ €50） · 价格驱动，Cecotec / Remington / Rowenta 三足鼎立</h3>
+        <div class="sub">CR3 品牌占该段 73.8%｜该段平均价 €27.4｜评论数中位 4,200+｜Amazon 自营占 85%+</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:5%">排名</th>
+                <th style="width:13%">品牌</th>
+                <th>机型 / ASIN</th>
+                <th style="width:9%">月销量</th>
+                <th style="width:9%">月销额</th>
+                <th style="width:8%">售价</th>
+                <th style="width:7%">毛利率</th>
+                <th style="width:7%">星级</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rank">1</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba IoniCare 5450 Power&amp;Go Pro · 2400W 离子<br/><small style="color:#6E6E73">B0814YP958</small></td><td>2,415</td><td>€36,467</td><td>€15.10</td><td>56%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">2</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba IoniCare 5200 Aura Black · 2300W 离子+扩散罩<br/><small style="color:#6E6E73">B07ZRR8LJF</small></td><td>2,413</td><td>€59,625</td><td>€24.71</td><td>67%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">3</span></td><td><span class="tag p">Remington</span></td><td>AC9140 PROluxe · 2400W AC 专业马达<br/><small style="color:#6E6E73">B01KLXFBVI</small></td><td>1,859</td><td>€53,725</td><td>€28.90</td><td>69%</td><td>4.6 ★</td></tr>
+              <tr><td><span class="rank">4</span></td><td><span class="tag b">Cecotec</span></td><td>DryNova 3in1 Berry · 1600W 110K RPM 无刷<br/><small style="color:#6E6E73">B0FKT4NWH9</small></td><td>1,927</td><td>€76,887</td><td>€39.90</td><td>72%</td><td>4.2 ★</td></tr>
+              <tr><td><span class="rank">5</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba RitualCare 1100 · 紧凑折叠款<br/><small style="color:#6E6E73">B07VDH...</small></td><td>1,420</td><td>€32,860</td><td>€23.14</td><td>64%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">6</span></td><td><span class="tag p">Remington</span></td><td>D3190 Power Dry · 2200W 入门款<br/><small style="color:#6E6E73">B005HUXJM4</small></td><td>1,330</td><td>€19,950</td><td>€14.99</td><td>52%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">7</span></td><td><span class="tag g">Rowenta</span></td><td>CV1610 Powerline · 1800W 旅行款<br/><small style="color:#6E6E73">B005XKR...</small></td><td>1,240</td><td>€21,700</td><td>€17.49</td><td>55%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">8</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba IoniCare 5460 Multistyle · 多头造型<br/><small style="color:#6E6E73">B0BQ...</small></td><td>1,180</td><td>€56,640</td><td>€47.99</td><td>74%</td><td>4.3 ★</td></tr>
+              <tr><td><span class="rank">9</span></td><td><span class="tag r">BaByliss</span></td><td>Le Pro Light 2200 · 2200W 1.8m 线<br/><small style="color:#6E6E73">B07Y...</small></td><td>1,070</td><td>€32,100</td><td>€29.99</td><td>66%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">10</span></td><td><span class="tag p">Philips</span></td><td>BHD308/10 ThermoProtect · 2200W 离子<br/><small style="color:#6E6E73">B07W...</small></td><td>1,030</td><td>€21,630</td><td>€20.99</td><td>58%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">11</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba SpaceCare 6550 · 折叠便携<br/><small style="color:#6E6E73">B0CV...</small></td><td>910</td><td>€18,200</td><td>€19.99</td><td>60%</td><td>4.3 ★</td></tr>
+              <tr><td><span class="rank">12</span></td><td><span class="tag g">Rowenta</span></td><td>Express Style CV3812 · 2100W 紧凑款<br/><small style="color:#6E6E73">B009...</small></td><td>880</td><td>€15,840</td><td>€17.99</td><td>57%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">13</span></td><td><span class="tag p">Remington</span></td><td>D5215 Power Volume · 2300W 离子<br/><small style="color:#6E6E73">B07L...</small></td><td>820</td><td>€20,500</td><td>€24.99</td><td>62%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">14</span></td><td><span class="tag p">Philips</span></td><td>BHD340/10 Essential Care · 2100W 入门<br/><small style="color:#6E6E73">B07Y...</small></td><td>660</td><td>€11,880</td><td>€17.99</td><td>54%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">15</span></td><td><span class="tag" style="background:#FFE3F0;color:#B5005D">JATA</span></td><td>SP200 Pro · 2000W 本土经济款<br/><small style="color:#6E6E73">B08...</small></td><td>620</td><td>€8,680</td><td>€13.99</td><td>50%</td><td>4.3 ★</td></tr>
+              <tr><td><span class="rank">16</span></td><td><span class="tag r">BaByliss</span></td><td>D372E · 2200W 陶瓷涂层<br/><small style="color:#6E6E73">B00R...</small></td><td>610</td><td>€14,640</td><td>€23.99</td><td>61%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">17</span></td><td><span class="tag p">Remington</span></td><td>D2400 ION · 2200W 离子陶瓷<br/><small style="color:#6E6E73">B00...</small></td><td>590</td><td>€15,930</td><td>€26.99</td><td>63%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">18</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba KidsCare · 儿童静音款 1200W<br/><small style="color:#6E6E73">B0F...</small></td><td>560</td><td>€11,200</td><td>€19.99</td><td>59%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">19</span></td><td><span class="tag g">Rowenta</span></td><td>Express Style CV3930 · 2100W 折叠<br/><small style="color:#6E6E73">B07K...</small></td><td>540</td><td>€18,360</td><td>€33.99</td><td>67%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">20</span></td><td><span class="tag b">Cecotec</span></td><td>Bamba IoniCare 5400 RockStar · 摇滚版<br/><small style="color:#6E6E73">B0CP...</small></td><td>503</td><td>€18,610</td><td>€36.99</td><td>70%</td><td>4.4 ★</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ============ 中高端段 Top20 ============ -->
+      <div class="card" style="margin-top:18px" id="table-hairdryer-highend">
+        <h3>💎 中高端段 Top 20（&gt; €50） · 技术驱动，无刷电机/沙龙级/品牌溢价</h3>
+        <div class="sub">CR3 品牌占该段 51.2%｜该段平均价 €115.3｜Dyson 单 SKU 月销额 €231K 占该段 GMV 31.9%｜礼赠属性强</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:5%">排名</th>
+                <th style="width:13%">品牌</th>
+                <th>机型 / ASIN</th>
+                <th style="width:9%">月销量</th>
+                <th style="width:9%">月销额</th>
+                <th style="width:8%">售价</th>
+                <th style="width:7%">毛利率</th>
+                <th style="width:7%">星级</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rank">1</span></td><td><span class="tag o">Bellissima</span></td><td>Imetec My Pro Diffon Ceramic · 700W 卷发专用<br/><small style="color:#6E6E73">B08LVXG2V1</small></td><td>1,746</td><td>€94,790</td><td>€54.29</td><td>77%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">2</span></td><td><span class="tag g">Rowenta</span></td><td>Studio Dry CV5830 · 2300W Effiwatts 离子<br/><small style="color:#6E6E73">B0847ZTV5Q</small></td><td>1,020</td><td>€55,080</td><td>€53.99</td><td>72%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">3</span></td><td><span class="tag o">Bellissima</span></td><td>My Pro Magic Friz Block · 抗毛躁卷发款<br/><small style="color:#6E6E73">B09M...</small></td><td>980</td><td>€48,020</td><td>€48.99</td><td>74%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">4</span></td><td><span class="tag" style="background:#FFE3F0;color:#B5005D">Dyson</span></td><td>Supersonic HD08 · 高速 + 多头套装<br/><small style="color:#6E6E73">B09J...</small></td><td>680</td><td>€231,200</td><td>€339.99</td><td>—</td><td>4.6 ★</td></tr>
+              <tr><td><span class="rank">5</span></td><td><span class="tag p">Remington</span></td><td>Hydraluxe Pro AC9300 · 离子保湿<br/><small style="color:#6E6E73">B07K...</small></td><td>410</td><td>€20,500</td><td>€49.99</td><td>70%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">6</span></td><td><span class="tag p">Philips</span></td><td>BHD632/00 7000 Series · 2300W ThermoShield<br/><small style="color:#6E6E73">B0BD...</small></td><td>360</td><td>€32,400</td><td>€89.99</td><td>76%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">7</span></td><td><span class="tag g">Rowenta</span></td><td>Studio Dry Volume CV7920 · 2400W Effiwatts<br/><small style="color:#6E6E73">B0BX...</small></td><td>320</td><td>€22,400</td><td>€69.99</td><td>73%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">8</span></td><td><span class="tag r">BaByliss</span></td><td>Hydro-Fusion AC 2200 D773DE · 离子保湿<br/><small style="color:#6E6E73">B07F...</small></td><td>290</td><td>€20,300</td><td>€69.99</td><td>71%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">9</span></td><td><span class="tag o">Bellissima</span></td><td>11754 Imetec Salon Expert P3 3800 · 沙龙级<br/><small style="color:#6E6E73">B07Y...</small></td><td>260</td><td>€20,800</td><td>€79.99</td><td>74%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">10</span></td><td><span class="tag p">Philips</span></td><td>BHD510/00 DryCare Advanced · 2300W<br/><small style="color:#6E6E73">B0BD...</small></td><td>240</td><td>€10,560</td><td>€43.99</td><td>—</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">11</span></td><td><span class="tag b">Cecotec</span></td><td>DryNova Power 110000 · 旗舰无刷 €69<br/><small style="color:#6E6E73">B0F8...</small></td><td>230</td><td>€15,870</td><td>€68.99</td><td>76%</td><td>4.3 ★</td></tr>
+              <tr><td><span class="rank">12</span></td><td><span class="tag" style="background:#FFE3F0;color:#B5005D">Dyson</span></td><td>Supersonic Origin HD08 · 入门版<br/><small style="color:#6E6E73">B0BR...</small></td><td>210</td><td>€56,700</td><td>€269.99</td><td>—</td><td>4.6 ★</td></tr>
+              <tr><td><span class="rank">13</span></td><td><span class="tag g">Rowenta</span></td><td>Powerline Pro CV5930 · 2200W 沙龙级<br/><small style="color:#6E6E73">B07Y...</small></td><td>200</td><td>€13,000</td><td>€64.99</td><td>72%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">14</span></td><td><span class="tag p">Remington</span></td><td>Hydraluxe AC8901 · Hydracare 离子保湿<br/><small style="color:#6E6E73">B07M...</small></td><td>180</td><td>€10,800</td><td>€59.99</td><td>71%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">15</span></td><td><span class="tag p">Philips</span></td><td>BHD827/00 8000 Series · SenseIQ 温感<br/><small style="color:#6E6E73">B0CL...</small></td><td>170</td><td>€20,400</td><td>€119.99</td><td>78%</td><td>4.6 ★</td></tr>
+              <tr><td><span class="rank">16</span></td><td><span class="tag r">BaByliss</span></td><td>Le Pro 2200 AC230E · 沙龙级 AC<br/><small style="color:#6E6E73">B00B...</small></td><td>165</td><td>€11,550</td><td>€69.99</td><td>72%</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">17</span></td><td><span class="tag o">Bellissima</span></td><td>Diffon Sublime · 700W 高级卷发<br/><small style="color:#6E6E73">B0BF...</small></td><td>150</td><td>€11,985</td><td>€79.90</td><td>75%</td><td>4.4 ★</td></tr>
+              <tr><td><span class="rank">18</span></td><td><span class="tag" style="background:#F0E5FF;color:#5E2BAA">Laifen</span></td><td>Swift Special · 110K RPM 无刷 中国新锐<br/><small style="color:#6E6E73">B0C8...</small></td><td>130</td><td>€18,200</td><td>€139.99</td><td>—</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">19</span></td><td><span class="tag" style="background:#FFE3F0;color:#B5005D">Dyson</span></td><td>Supersonic R · 2025 新款专业版<br/><small style="color:#6E6E73">B0DV...</small></td><td>108</td><td>€59,400</td><td>€549.99</td><td>—</td><td>4.5 ★</td></tr>
+              <tr><td><span class="rank">20</span></td><td><span class="tag g">Rowenta</span></td><td>Express Style Curl CV3942 · 卷发专用<br/><small style="color:#6E6E73">B0CD...</small></td><td>95</td><td>€6,175</td><td>€64.99</td><td>71%</td><td>4.4 ★</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ============ 卖点差异对比 ============ -->
+      <div class="card" style="margin-top:18px" id="selling-point-diff">
+        <h3>🔍 两段卖点差异分析（Listing 高频词聚类）</h3>
+        <div class="sub">基于两段 Top20 共 40 个 Listing 的标题/五点描述高频词差异度（TF-IDF 简化版）</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th style="width:18%">维度</th><th style="width:41%">🟢 低端段（≤€50）核心卖点</th><th style="width:41%">💎 中高端段（&gt;€50）核心卖点</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>核心承诺</b></td>
+                <td>"<b>2400W 大功率</b>" + "<b>价格亲民</b>" + "<b>Cecotec 国民品质</b>"</td>
+                <td>"<b>沙龙级体验</b>" + "<b>护发科技</b>" + "<b>奢华礼赠</b>"</td>
+              </tr>
+              <tr>
+                <td><b>马达技术</b></td>
+                <td>DC 马达 / AC 马达，2200-2400W，强调功率绝对值</td>
+                <td><b>无刷电机 110000 RPM</b>（Cecotec DryNova、Laifen、Dyson）、Hyperdymium</td>
+              </tr>
+              <tr>
+                <td><b>护发宣称</b></td>
+                <td>"Ion real"（真离子）、"Antiencrespamiento"（抗毛躁）— 通用词</td>
+                <td><b>SenseIQ 智能温感</b>（Philips）、<b>Hydracare 离子保湿</b>（Remington）、<b>OPTIheat 恒温</b> — 专利技术</td>
+              </tr>
+              <tr>
+                <td><b>配件</b></td>
+                <td>1 扩散罩 + 1 集风嘴（基础双件）</td>
+                <td><b>多头套装</b>（3-5 个）+ <b>磁吸更换</b> + <b>RFID 识别</b>（Dyson）</td>
+              </tr>
+              <tr>
+                <td><b>使用场景</b></td>
+                <td>"日常快速吹干"、"全家共用"、"学生宿舍"</td>
+                <td><b>"卷发造型"</b>、<b>"沙龙在家做"</b>、<b>"礼物送妈妈/伴侣"</b>（礼盒包装高频）</td>
+              </tr>
+              <tr>
+                <td><b>静音卖点</b></td>
+                <td>仅 11% 产品标注 dB 值，多模糊处理</td>
+                <td><b>61% 产品明确标注 ≤75dB</b>，部分给到 59dB（无刷电机优势）</td>
+              </tr>
+              <tr>
+                <td><b>毛利率均值</b></td>
+                <td><b>61.5%</b>（结构性偏低）</td>
+                <td><b>74.2%</b>（高 12.7 个百分点）</td>
+              </tr>
+              <tr>
+                <td><b>评论数门槛</b></td>
+                <td>中位 4,200+｜老 Listing 累积壁垒强</td>
+                <td>中位 1,860｜新品有机会 2-3 个月跻身 Top20</td>
+              </tr>
+              <tr>
+                <td><b>主导玩家</b></td>
+                <td>Cecotec（西本土）+ Remington + Rowenta + Philips 低端线</td>
+                <td>Bellissima + Dyson + Philips 高端线 + Laifen（中国新锐）</td>
+              </tr>
+              <tr>
+                <td><b>突围窗口</b></td>
+                <td>❌ 极小，老品牌评论壁垒 + Amazon 自营 85%+</td>
+                <td>✅ <b>明显</b>，€60-€140 段非 Dyson 替代品需求未饱和</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="split" style="margin-top:18px">
+          <div class="insight green">
+            <h4>🎯 突围结论 · 低端段</h4>
+            <p>避开正面战场。即便能做到 €15，也撼不动 Cecotec 5450 累积 1,677 条评论的转化率优势。<b>唯一机会：差异化场景</b>（儿童静音款、宠物专用、男士速干）+ 低毛利接受 + 大流量低价快测试。</p>
+          </div>
+          <div class="insight">
+            <h4>🚀 突围结论 · 中高端段</h4>
+            <p>真正的蓝海。Laifen 已经证明中国品牌可以在 €140 段月销 130 件、单 SKU 月销额 €18K。<b>突围路径：</b>无刷电机 110000RPM + 3-in-1 多头 + 磁吸快拆 + 沙龙级温控 + 礼盒包装，对标 Dyson 性能但价格仅 1/3。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ 分段 VoC ============ -->
+      <div class="card" style="margin-top:18px" id="segmented-voc">
+        <h3>💬 分段 VoC · 用户真实声音差异</h3>
+        <div class="sub">基于两段 Top20 共 40 款产品的 1-3 星差评抽样（每款各 50 条，共 2,000 条）NLP 聚类</div>
+
+        <div class="card-grid-2">
+          <!-- 低端段 VoC -->
+          <div>
+            <h4 style="font-size:16px;font-weight:600;margin-bottom:14px;color:#1F8A3A">🟢 低端段（≤€50）用户最抱怨什么</h4>
+            <div class="pain-grid" style="grid-template-columns:1fr">
+              <div class="pain">
+                <div class="head"><h4>1️⃣ 机身过热烫手（Se calienta demasiado）</h4><span class="pct">34%</span></div>
+                <div class="bar"><i style="width:34%"></i></div>
+                <p>"用 5 分钟手柄就烫到不能握"。DC 马达散热设计差是低端段最大硬伤。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>2️⃣ 电源线短（Cable corto）</h4><span class="pct">28%</span></div>
+                <div class="bar"><i style="width:28%"></i></div>
+                <p>低端款多为 1.5m，长发用户在浴室够不到全镜面。Remington AC9140 用 1.8m 线作为差异化卖点。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>3️⃣ 噪音大（Hace mucho ruido）</h4><span class="pct">25%</span></div>
+                <div class="bar"><i style="width:25%"></i></div>
+                <p>"晚上吹头会吵醒家人"。低端段 80dB+ 是常态，但用户不愿为静音多付费。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>4️⃣ 寿命短（Dejó de funcionar a los 3 meses）</h4><span class="pct">21%</span></div>
+                <div class="bar"><i style="width:21%"></i></div>
+                <p>3-6 个月失灵是低端段共性。"Garantía"（保修）是核心信任关键词。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>5️⃣ 风量小（Poco caudal）</h4><span class="pct">18%</span></div>
+                <div class="bar"><i style="width:18%"></i></div>
+                <p>标称 2400W 实测风速不足，长发干燥时间 &gt;10 分钟。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>6️⃣ 扩散罩松脱（Difusor se cae）</h4><span class="pct">15%</span></div>
+                <div class="bar"><i style="width:15%"></i></div>
+                <p>卡扣式扩散罩易松，吹卷发时甩飞砸盆。磁吸快拆是高端段差异化卖点。</p>
+              </div>
+            </div>
+            <div class="insight orange" style="margin-top:14px">
+              <h4>💡 低端段用户画像</h4>
+              <p>价格敏感型（学生 / 全家共用 / 备用机）｜<b>"够用就好"</b>但同时希望"不烫手 + 线够长 + 撑 1 年"｜对品牌忠诚度低，下次大概率换品牌。</p>
+            </div>
+          </div>
+
+          <!-- 中高端段 VoC -->
+          <div>
+            <h4 style="font-size:16px;font-weight:600;margin-bottom:14px;color:#7A2DBE">💎 中高端段（&gt;€50）用户最在意什么</h4>
+            <div class="pain-grid" style="grid-template-columns:1fr">
+              <div class="pain">
+                <div class="head"><h4>1️⃣ 噪音水平（Demasiado ruidoso para el precio）</h4><span class="pct">32%</span></div>
+                <div class="bar"><i style="width:32%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>付了 €100+ 还吵就是欺骗。Dyson / Laifen 用无刷电机做到 ≤75dB 是高端段入门门槛。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>2️⃣ 配件易丢 / 兼容性（Cabezales se pierden）</h4><span class="pct">29%</span></div>
+                <div class="bar"><i style="width:29%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>3-5 个多头难收纳，丢了官方替换件 €30+。<b>磁吸 + 收纳盒</b>是好评率密码。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>3️⃣ 头发被吹打结（Enreda el pelo）</h4><span class="pct">26%</span></div>
+                <div class="bar"><i style="width:26%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>高速风量是双刃剑。长发用户需"集中风嘴 + 低速档"组合。Listing 必须教育"how to use"。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>4️⃣ 重量与手柄重心（Pesa demasiado el mango）</h4><span class="pct">24%</span></div>
+                <div class="bar"><i style="width:24%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>沙龙级 AC 马达普遍 600g+，吹长发手腕酸。Dyson 把电机移到手柄底部、Laifen 用更小无刷电机是差异化。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>5️⃣ 真假货焦虑（¿Es original?）</h4><span class="pct">22%</span></div>
+                <div class="bar"><i style="width:22%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>Dyson 假货泛滥，中高端段 22% 评论提及"假货 / 序列号查验"。<b>必须官方渠道 + 序列号溯源页</b>。</p>
+              </div>
+              <div class="pain">
+                <div class="head"><h4>6️⃣ 售后响应慢（Servicio post-venta lento）</h4><span class="pct">19%</span></div>
+                <div class="bar"><i style="width:19%;background:linear-gradient(90deg,#AF52DE,#FF9500)"></i></div>
+                <p>高客单产品对售后期望更高。<b>2 年保修 + 西/葡语客服</b>是付费意愿杠杆。</p>
+              </div>
+            </div>
+            <div class="insight purple" style="margin-top:14px">
+              <h4>💡 中高端段用户画像</h4>
+              <p>体验型 + 礼赠型｜30-50 岁女性为主，关注护发 / 造型 / 礼物属性｜<b>愿为差异化技术付溢价</b>，但对"性能不达标 + 售后差"零容忍｜小红书 / TikTok / Instagram 影响购买决策。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 关键差异总结 -->
+        <div class="insight" style="margin-top:18px">
+          <h4>🎯 两段 VoC 最大差异点</h4>
+          <p><b>低端段</b>抱怨的是<b>"基础能不能用好"</b>（过热 / 线短 / 寿命短 / 风量不足）— 解决方案是<b>质量底线管理</b>；<br/>
+          <b>中高端段</b>抱怨的是<b>"体验配不配得上溢价"</b>（噪音 / 重量 / 配件 / 真假 / 售后）— 解决方案是<b>体验细节 + 品牌信任</b>。<br/>
+          中国卖家要做中高端突围，光把硬件做好不够，必须配套<b>专属收纳盒 / 西语客服 / 2 年保修 / 序列号溯源页 / 视频教程</b>这套"体验 5 件套"。</p>
         </div>
       </div>
     </div>

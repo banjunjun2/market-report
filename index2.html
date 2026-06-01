@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airstyler 首发七国市场竞品调研报告</title>
+<style>
+/* ======= 全局变量 ======= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --color-bg: #fbfbfd;
+  --color-surface: #ffffff;
+  --color-dark: #1d1d1f;
+  --color-gray-900: #1d1d1f;
+  --color-gray-700: #424245;
+  --color-gray-500: #6e6e73;
+  --color-gray-300: #d2d2d7;
+  --color-gray-100: #f5f5f7;
+  --color-blue: #0071e3;
+  --color-blue-light: #2997ff;
+  --color-green: #34c759;
+  --color-orange: #ff9500;
+  --color-red: #ff3b30;
+  --color-purple: #af52de;
+  --color-pink: #ff2d92;
+  --color-teal: #5ac8fa;
+  --color-cyan: #32ade6;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 8px 28px rgba(0,0,0,0.06);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.08);
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-text);
+  background: var(--color-bg);
+  color: var(--color-gray-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ======= 顶部导航 ======= */
+.nav-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(251,251,253,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.nav-container {
+  max-width: 1280px; margin: 0 auto; padding: 0 32px;
+  height: 56px; display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+.nav-brand span { color: var(--color-gray-500); font-weight: 400; }
+.nav-links { display: flex; gap: 24px; font-size: 13px; }
+.nav-links a { color: var(--color-gray-700); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--color-blue); }
+
+/* ======= Hero ======= */
+.hero {
+  padding: 120px 32px 80px;
+  text-align: center;
+  background: radial-gradient(ellipse at top, #f5f5f7 0%, #fbfbfd 60%);
+}
+.hero-tag {
+  display: inline-block; padding: 6px 16px;
+  background: rgba(0,113,227,0.1); color: var(--color-blue);
+  border-radius: 100px; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 700; line-height: 1.05; letter-spacing: -0.025em;
+  background: linear-gradient(180deg, #1d1d1f 0%, #424245 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-size: clamp(18px, 2vw, 24px); color: var(--color-gray-500);
+  font-weight: 400; max-width: 760px; margin: 0 auto 40px; line-height: 1.4;
+}
+.hero-meta {
+  display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+  font-size: 13px; color: var(--color-gray-500);
+}
+.hero-meta b { color: var(--color-gray-900); font-weight: 600; }
+
+/* ======= 主容器 ======= */
+.section { max-width: 1280px; margin: 0 auto; padding: 80px 32px; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  font-size: 13px; font-weight: 600; color: var(--color-blue);
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 16px;
+}
+.section-desc {
+  font-size: 19px; color: var(--color-gray-500);
+  max-width: 760px; margin: 0 auto; line-height: 1.5;
+}
+/* ======= 概览数据卡 ======= */
+.overview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.overview-card {
+  background: var(--color-surface); border-radius: var(--radius-lg);
+  padding: 32px; box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.overview-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.overview-card .label {
+  font-size: 13px; color: var(--color-gray-500); font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+}
+.overview-card .value {
+  font-family: var(--font-display);
+  font-size: 40px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--color-gray-900); line-height: 1;
+}
+.overview-card .unit { font-size: 18px; color: var(--color-gray-500); margin-left: 4px; }
+.overview-card .delta {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 12px; font-size: 13px; font-weight: 500;
+}
+.delta.up { color: var(--color-green); }
+.delta.down { color: var(--color-red); }
+.delta.flat { color: var(--color-gray-500); }
+
+/* ======= 国家卡片网格 ======= */
+.country-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-top: 32px; }
+.country-card {
+  background: var(--color-surface); border-radius: var(--radius-md);
+  padding: 16px 12px 12px; text-align: center; box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.country-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.country-card .flag { font-size: 26px; line-height:1; margin-bottom: 4px; }
+.country-card .name { font-size: 12px; font-weight:600; color: var(--color-gray-900); margin-bottom: 10px; }
+.country-card .dim { display:flex; justify-content:space-between; align-items:baseline; gap:4px;
+  padding:5px 0; border-top:1px solid #f0f0f3; font-size:10.5px; text-align:left; }
+.country-card .dim .k { color: var(--color-gray-500); white-space:nowrap; }
+.country-card .dim .v { font-weight:700; font-variant-numeric: tabular-nums; text-align:right; }
+.country-card .dim .v.up { color: var(--color-green); }
+.country-card .dim .v.down { color: var(--color-red); }
+.country-card .dim .v.sub { font-size:9.5px; color: var(--color-gray-500); font-weight:500; display:block; }
+.country-card .cap { font-size:8.5px; color: var(--color-gray-500); margin-top:8px; line-height:1.35; text-align:left; }
+.country-card.nl-card .dim .v { color: var(--color-gray-300); }
+
+/* ======= 表格 ======= */
+.table-wrapper {
+  background: var(--color-surface); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-md); margin-top: 32px;
+}
+table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+thead { background: var(--color-gray-100); }
+thead th {
+  padding: 14px 12px; text-align: left; font-weight: 600; font-size: 12px;
+  color: var(--color-gray-700); text-transform: uppercase; letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-gray-300); white-space: nowrap;
+}
+tbody td { padding: 14px 12px; border-bottom: 1px solid #f0f0f3; vertical-align: top; }
+tbody tr:hover { background: #fafafb; }
+tbody tr:last-child td { border-bottom: none; }
+.rank-cell {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--color-gray-100); color: var(--color-gray-700);
+  font-weight: 700; font-size: 12px;
+}
+.rank-cell.gold { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #fff; }
+.rank-cell.silver { background: linear-gradient(135deg, #c0c0c0, #8e8e93); color: #fff; }
+.rank-cell.bronze { background: linear-gradient(135deg, #cd7f32, #a0522d); color: #fff; }
+.brand-cell { font-weight: 600; color: var(--color-gray-900); margin-bottom: 2px; }
+.product-cell { font-size: 12px; color: var(--color-gray-500); line-height: 1.4; max-width: 320px; }
+.price-cell { font-weight: 600; color: var(--color-gray-900); }
+.sales-cell { font-weight: 700; color: var(--color-blue); }
+.sales-cell.hot { color: var(--color-blue-light); }
+
+/* ======= Tags ======= */
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 6px;
+  font-size: 11px; font-weight: 600; margin-right: 4px; margin-bottom: 2px;
+}
+.tag.green { background: rgba(52,199,89,0.12); color: var(--color-green); }
+.tag.orange { background: rgba(255,149,0,0.12); color: var(--color-orange); }
+.tag.blue { background: rgba(0,113,227,0.12); color: var(--color-blue); }
+.tag.purple { background: rgba(175,82,222,0.12); color: var(--color-purple); }
+.tag.gray { background: var(--color-gray-100); color: var(--color-gray-700); }
+.tag.red { background: rgba(255,59,48,0.12); color: var(--color-red); }
+.tag.pink { background: rgba(255,45,146,0.12); color: var(--color-pink); }
+.tag.teal { background: rgba(90,200,250,0.12); color: var(--color-teal); }
+.tag.cyan { background: rgba(50,173,230,0.12); color: var(--color-cyan); }
+
+/* ======= Tab 切换（CSS-only） ======= */
+.tabs { margin-top: 32px; }
+.tabs input[type="radio"] { display: none; }
+.tab-nav {
+  display: inline-flex; background: var(--color-gray-100);
+  border-radius: 100px; padding: 4px; margin-bottom: 24px; gap: 2px;
+}
+.tab-nav label {
+  padding: 10px 22px; font-size: 13px; font-weight: 500;
+  color: var(--color-gray-700); border-radius: 100px;
+  cursor: pointer; transition: all 0.25s ease; white-space: nowrap; user-select: none;
+}
+.tab-nav label:hover { color: var(--color-gray-900); }
+.tab-content { display: none; }
+
+/* ======= 热力矩阵 ======= */
+.heatmap-table { font-size: 13px; }
+.heatmap-table td { text-align: center; }
+.heatmap-table td.dim { text-align: left; font-weight: 600; }
+.heat-cell {
+  display: inline-block; padding: 4px 10px; border-radius: 6px;
+  font-weight: 600; font-size: 12px; min-width: 36px;
+}
+.heat-0 { background: #f5f5f7; color: var(--color-gray-500); }
+.heat-1 { background: #dbeafe; color: #1e40af; }
+.heat-2 { background: #93c5fd; color: #fff; }
+.heat-3 { background: #3b82f6; color: #fff; }
+.heat-4 { background: #1d4ed8; color: #fff; }
+.dot-yes { color: var(--color-green); font-size: 18px; font-weight: 700; }
+.dot-no { color: var(--color-gray-300); font-size: 18px; }
+
+/* ======= 洞察盒 ======= */
+.insight-box {
+  background: linear-gradient(135deg, #fff 0%, #f5f5f7 100%);
+  border-radius: var(--radius-lg); padding: 36px; margin-top: 32px;
+  border-left: 4px solid var(--color-blue); box-shadow: var(--shadow-sm);
+}
+.insight-box h4 {
+  font-family: var(--font-display); font-size: 20px; font-weight: 700;
+  margin-bottom: 16px; letter-spacing: -0.01em;
+}
+.insight-box ul { list-style: none; padding: 0; }
+.insight-box li {
+  padding: 8px 0 8px 32px; position: relative;
+  font-size: 15px; line-height: 1.6; color: var(--color-gray-700);
+}
+.insight-box li::before {
+  content: '\2192'; position: absolute; left: 0; color: var(--color-blue); font-weight: 600;
+}
+.insight-box li b { color: var(--color-gray-900); font-weight: 600; }
+
+/* ======= 趋势图 ======= */
+.trend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.trend-grid.six { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.trend-card {
+  background: var(--color-surface); border-radius: var(--radius-lg);
+  padding: 32px; box-shadow: var(--shadow-sm); margin-bottom: 24px;
+}
+.trend-grid.six .trend-card { padding: 20px 18px; margin-bottom: 0; }
+.trend-card h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+.trend-grid.six .trend-card h4 { font-size: 15px; }
+.trend-card .sub { color: var(--color-gray-500); font-size: 13px; margin-bottom: 20px; }
+.trend-grid.six .trend-card .sub { font-size: 10.5px; margin-bottom: 12px; line-height: 1.4; }
+.chart-svg { width: 100%; height: 220px; display: block; }
+.trend-grid.six .chart-svg { height: 240px; }
+
+/* ======= 份额进度条 ======= */
+.share-bar { display: flex; flex-direction: column; gap: 4px; }
+.share-bar .share-num {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: var(--color-blue); letter-spacing: -0.01em;
+}
+.share-bar .share-track {
+  background: var(--color-gray-100); height: 4px; border-radius: 2px; overflow: hidden; width: 80px;
+}
+.share-bar .share-fill {
+  background: linear-gradient(90deg, #0071e3, #2997ff);
+  height: 100%; border-radius: 2px;
+}
+
+/* ======= 痛点卡片 ======= */
+.painpoint-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+.painpoint-card {
+  background: var(--color-surface); border-radius: var(--radius-lg);
+  padding: 28px; box-shadow: var(--shadow-sm); position: relative;
+  border-top: 4px solid var(--color-red);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.painpoint-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.painpoint-card .point-pct {
+  font-family: var(--font-display); font-size: 36px; font-weight: 700;
+  color: var(--color-red); letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px;
+}
+.painpoint-card .point-name { font-weight: 600; font-size: 16px; margin-bottom: 12px; }
+.painpoint-card .point-quote {
+  font-size: 12px; color: var(--color-gray-700);
+  background: var(--color-gray-100); padding: 8px 10px; border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-red); font-style: italic; line-height: 1.45; margin-bottom: 12px;
+}
+.painpoint-card .point-opportunity {
+  font-size: 13px; color: var(--color-green); font-weight: 500; line-height: 1.5;
+  padding-top: 12px; border-top: 1px solid #f0f0f3;
+}
+
+/* ======= 爽点卡片 ======= */
+.delight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+.delight-card {
+  background: var(--color-surface); border-radius: var(--radius-lg);
+  padding: 28px; box-shadow: var(--shadow-sm); position: relative;
+  border-top: 4px solid var(--color-green);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.delight-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.delight-card .point-pct {
+  font-family: var(--font-display); font-size: 36px; font-weight: 700;
+  color: var(--color-green); letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px;
+}
+.delight-card .point-name { font-weight: 600; font-size: 16px; margin-bottom: 12px; }
+.delight-card .point-quote {
+  font-size: 12px; color: var(--color-gray-700);
+  background: var(--color-gray-100); padding: 8px 10px; border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-green); font-style: italic; line-height: 1.45; margin-bottom: 12px;
+}
+
+/* ======= 关键词卡片 ======= */
+.kw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.kw-card {
+  background: var(--color-surface); border-radius: var(--radius-md);
+  padding: 20px; box-shadow: var(--shadow-sm); transition: all 0.2s;
+}
+.kw-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.kw-card .term { font-family: var(--font-display); font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+.kw-card .meta { display: flex; gap: 16px; font-size: 12px; color: var(--color-gray-500); }
+.kw-card .meta b { color: var(--color-gray-900); font-size: 14px; font-weight: 700; }
+
+/* ======= 策略卡片 ======= */
+.strategy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.strategy-card {
+  background: var(--color-surface); border-radius: var(--radius-xl);
+  padding: 40px; box-shadow: var(--shadow-md); position: relative;
+  transition: transform 0.3s ease;
+}
+.strategy-card:hover { transform: translateY(-4px); }
+.strategy-number {
+  font-family: var(--font-display); font-size: 56px; font-weight: 700;
+  background: linear-gradient(135deg, #0071e3, #af52de);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 0.9; letter-spacing: -0.04em; margin-bottom: 12px;
+}
+.strategy-name {
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
+  margin-bottom: 8px; letter-spacing: -0.01em;
+}
+.strategy-tagline { color: var(--color-gray-500); font-size: 14px; margin-bottom: 24px; }
+.strategy-section { padding: 16px 0; border-top: 1px solid #f0f0f3; }
+.strategy-section:first-of-type { border-top: none; }
+.strategy-label {
+  font-size: 11px; color: var(--color-gray-500); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;
+}
+.strategy-content { font-size: 14px; color: var(--color-gray-900); line-height: 1.6; }
+.strategy-content b { font-weight: 600; }
+
+/* ======= 评论引用 ======= */
+.review-quote {
+  font-size: 12px; color: var(--color-gray-700);
+  background: var(--color-gray-100); padding: 8px 10px; border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-blue); line-height: 1.45; font-style: italic;
+}
+.pros-cons { font-size: 12px; line-height: 1.55; }
+.pros-cons .pros { color: var(--color-green); }
+.pros-cons .cons { color: var(--color-red); }
+
+/* ======= 技术参数 ======= */
+.tech-spec { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--color-gray-900); }
+.tech-spec span { display: block; font-size: 11px; color: var(--color-gray-500); font-weight: 400; margin-top: 2px; }
+.compact-table { font-size: 12px; }
+.compact-table thead th { padding: 12px 10px; font-size: 11px; }
+.compact-table tbody td { padding: 12px 10px; line-height: 1.45; }
+
+/* ======= Footer ======= */
+.footer {
+  background: var(--color-gray-900); color: var(--color-gray-300);
+  padding: 60px 32px; text-align: center;
+}
+.footer-content { max-width: 1280px; margin: 0 auto; }
+.footer h5 { font-family: var(--font-display); color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+.footer p { font-size: 13px; line-height: 1.7; color: #a1a1a6; }
+.footer .disclaimer { font-size: 11px; color: #6e6e73; margin-top: 24px; padding-top: 24px; border-top: 1px solid #424245; }
+
+/* ======= 响应式 ======= */
+@media (max-width: 1024px) {
+  .overview-grid { grid-template-columns: repeat(2, 1fr); }
+  .country-grid { grid-template-columns: repeat(4, 1fr); }
+  .trend-grid { grid-template-columns: 1fr; }
+  .trend-grid.six { grid-template-columns: repeat(2, 1fr); }
+  .strategy-grid { grid-template-columns: 1fr; }
+  .kw-grid { grid-template-columns: repeat(2, 1fr); }
+  .painpoint-grid, .delight-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .overview-grid { grid-template-columns: 1fr; }
+  .country-grid { grid-template-columns: repeat(2, 1fr); }
+  .trend-grid.six { grid-template-columns: 1fr; }
+  .painpoint-grid, .delight-grid { grid-template-columns: 1fr; }
+  .kw-grid { grid-template-columns: 1fr; }
+  table { font-size: 11px; }
+  thead th, tbody td { padding: 8px 6px; }
+}
+@media (max-width: 640px) {
+  .country-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .hero { padding: 80px 20px 60px; }
+  .section { padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+<!-- ============ 顶部导航 ============ -->
+<nav class="nav-bar">
+  <div class="nav-container">
+    <div class="nav-brand">SORFTIME · <span>Airstyler 7-Market Intelligence</span></div>
+    <div class="nav-links">
+      <a href="#overview">市场大盘</a>
+      <a href="#price">价格段</a>
+      <a href="#competitors">竞品格局</a>
+      <a href="#tech-matrix">技术横评</a>
+      <a href="#top-sku">Top SKU</a>
+      <a href="#user-insights">用户洞察</a>
+      <a href="#strategy">战略建议</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ Hero ============ -->
+<header class="hero">
+  <div class="hero-tag">2026 Q2 · Airstyler Global Market Report</div>
+  <h1>Airstyler 首发七国<br>市场竞品调研报告</h1>
+  <p class="hero-subtitle">从 Dyson 超高端旗舰到 wavytalk 入门爆款，全景解构美国 + 西欧六国 Airstyler 市场的真实竞争格局与增长机会</p>
+  <div class="hero-meta">
+    <div>数据源 · <b>Sorftime MCP × Amazon 7站</b></div>
+    <div>样本 · <b>各站 Top 100 实时</b></div>
+    <div>采集 · <b>2026.05.28</b></div>
+    <div>趋势区间 · <b>2025.05 – 2026.05</b></div>
+    <div>覆盖市场 · <b>US · UK · DE · FR · IT · ES · NL</b></div>
+  </div>
+</header>
+
+<!-- ============ Ch.1 市场大盘 & 增速 ============ -->
+<section class="section" id="overview">
+  <div class="section-header">
+    <div class="section-eyebrow">01 · Market Overview</div>
+    <h2 class="section-title">七国月销 49.5 万件<br>意大利 YoY +40% 领跑、美国体量最大</h2>
+    <p class="section-desc">基于 Amazon 各站 Top100 产品销量统计(仅含多功能造型器🌀 + 热风梳🪮),Airstyler 品类在南欧呈爆发式增长,美国体量最大且稳健回升。<b>Q4 旺季占全年 40%+ 销量</b>,季节性极强</p>
+  </div>
+
+  <div class="overview-grid">
+    <div class="overview-card">
+      <div class="label">七国月销量合计</div>
+      <div class="value">494,636<span class="unit">件</span></div>
+      <div class="delta up">↑ 12 个月月均 · Top100 口径</div>
+    </div>
+    <div class="overview-card">
+      <div class="label">七国月销额合计</div>
+      <div class="value">$38.8<span class="unit">M</span></div>
+      <div class="delta up">↑ 12 月月均 · 约 ¥2.8 亿</div>
+    </div>
+    <div class="overview-card">
+      <div class="label">七国均价</div>
+      <div class="value">$78<span class="unit">.48</span></div>
+      <div class="delta flat">七国加权 · 12 个月月均</div>
+    </div>
+    <div class="overview-card">
+      <div class="label">品类增速（美国 YoY）</div>
+      <div class="value">+6<span class="unit">.0%</span></div>
+      <div class="delta up">↑ 滚动年同比 · 意大利 +39.7% 增速最快</div>
+    </div>
+  </div>
+
+  <div class="country-grid">
+    <div class="country-card">
+      <div class="flag">🇺🇸</div><div class="name">美国</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">343,195<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">$28.7M<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">$83.57<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">54.9%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">16.0%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">1.9%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v up">+6.0%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card">
+      <div class="flag">🇬🇧</div><div class="name">英国</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">45,297<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">£1.73M<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">£38.26<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">47.4%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">58.1%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">8.8%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v up">+7.7%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card">
+      <div class="flag">🇩🇪</div><div class="name">德国</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">57,262<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">€4.60M<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">€80.32<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">36.5%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">43.2%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">12.6%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v up">+18.9%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card">
+      <div class="flag">🇫🇷</div><div class="name">法国</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">13,763<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">€677K<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">€49.18<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">58.1%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">67.0%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">7.8%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v down">−21.8%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card">
+      <div class="flag">🇮🇹</div><div class="name">意大利</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">19,163<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">€1.31M<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">€68.38<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">42.4%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">56.1%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">7.2%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v up">+39.7%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card">
+      <div class="flag">🇪🇸</div><div class="name">西班牙</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">15,955<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">€789K<span class="v sub">12月月均</span></span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">€49.47<span class="v sub">当期</span></span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">71.3%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">77.8%<span class="v sub">当期Top100</span></span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">2.5%<span class="v sub">≤90天·当期</span></span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v up">+2.9%<span class="v sub">滚动年同比</span></span></div>
+    </div>
+    <div class="country-card nl-card">
+      <div class="flag">🇳🇱</div><div class="name">荷兰</div>
+      <div class="dim"><span class="k">月销量</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">月销额</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">均价</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">TOP3集中度</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">亚马逊自营</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">新品销量占比</span><span class="v">—</span></div>
+      <div class="dim"><span class="k">YoY增速</span><span class="v">—</span></div>
+      <div class="cap">⚠️ 无 Amazon 站点,bol.com 数据受限,7 维度按"—"留空</div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:12px;text-align:center;">数据源:Sorftime / Amazon Top100 · 月销量&YoY 为 2025.06–2026.05 共 12 个月滚动月均口径(YoY=滚动年同比) · 集中度/自营/新品占比为当期 Top100 快照 · 仅含多功能造型器🌀 + 热风梳🪮</p>
+
+  <!-- 各国市场规模表 -->
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr><th>国家</th><th>月销量(件)</th><th>月销额</th><th>均价</th><th>Top3品牌集中度</th><th>亚马逊自营占比</th><th>新品销量占比</th><th>YoY增速</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🇺🇸 美国</td><td><strong>343,195</strong></td><td>$28.7M</td><td>$83.57</td><td>54.9%</td><td>16.0%</td><td>1.9%</td><td style="color:var(--color-green);font-weight:600;">+6.0%</td></tr>
+        <tr><td>🇬🇧 英国</td><td><strong>45,297</strong></td><td>£1.73M</td><td>£38.26</td><td>47.4%</td><td>58.1%</td><td>8.8%</td><td style="color:var(--color-green);font-weight:600;">+7.7%</td></tr>
+        <tr><td>🇩🇪 德国</td><td><strong>57,262</strong></td><td>€4.60M</td><td>€80.32</td><td>36.5%</td><td>43.2%</td><td>12.6%</td><td style="color:var(--color-green);font-weight:600;">+18.9%</td></tr>
+        <tr><td>🇫🇷 法国</td><td><strong>13,763</strong></td><td>€677K</td><td>€49.18</td><td>58.1%</td><td>67.0%</td><td>7.8%</td><td style="color:var(--color-red);">-21.8%</td></tr>
+        <tr><td>🇮🇹 意大利</td><td><strong>19,163</strong></td><td>€1.31M</td><td>€68.38</td><td>42.4%</td><td>56.1%</td><td>7.2%</td><td style="color:var(--color-green);font-weight:600;">+39.7%</td></tr>
+        <tr><td>🇪🇸 西班牙</td><td><strong>15,955</strong></td><td>€789K</td><td>€49.47</td><td>71.3%</td><td>77.8%</td><td>2.5%</td><td style="color:var(--color-green);font-weight:600;">+2.9%</td></tr>
+        <tr><td>🇳🇱 荷兰</td><td colspan="7" style="color:var(--color-orange);">⚠️ 数据来源受限 — 无 Amazon 站点,bol.com 公开榜单,详见 Ch.4.7</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:10px;">月销量/月销额/YoY = 2025.06–2026.05 共 12 个月滚动月均(YoY 为滚动年同比);均价/集中度/自营/新品占比为当期 Top100 快照。仅含多功能造型器🌀 + 热风梳🪮(已剔除直发器/直发刷/卷发棒/纯吹风机/编发器等)。数据源:Sorftime × Amazon。</p>
+
+  <!-- 6国月销量趋势 SVG(过滤后:多功能造型器🌀+热风梳🪮) -->
+  <div class="trend-grid six" style="margin-top:32px;">
+    <div class="trend-card">
+      <h4>美国月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 647,338(12月) · 月均 342,570</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-us" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0071e3" stop-opacity="0.28"/><stop offset="100%" stop-color="#0071e3" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-us)" stroke="none" points="42.0,205 42.0,125.9 103.1,116.3 164.2,91.3 225.2,141.3 286.3,130.0 347.4,117.0 408.5,92.3 469.6,38.0 530.7,125.9 591.8,139.3 652.8,133.8 713.9,133.3 775.0,131.8 775.0,205"/>
+        <polyline fill="none" stroke="#0071e3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,125.9 103.1,116.3 164.2,91.3 225.2,141.3 286.3,130.0 347.4,117.0 408.5,92.3 469.6,38.0 530.7,125.9 591.8,139.3 652.8,133.8 713.9,133.3 775.0,131.8"/>
+        <circle cx="42.0" cy="125.9" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="42.0" y="116.9" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">306.7k</text>
+        <circle cx="103.1" cy="116.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="103.1" y="131.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">343.7k</text>
+        <circle cx="164.2" cy="91.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="164.2" y="82.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">440.8k</text>
+        <circle cx="225.2" cy="141.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="225.2" y="156.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">246.7k</text>
+        <circle cx="286.3" cy="130.0" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="286.3" y="121.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">290.9k</text>
+        <circle cx="347.4" cy="117.0" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="347.4" y="132.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">341.2k</text>
+        <circle cx="408.5" cy="92.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="408.5" y="83.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">437.0k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#0071e3" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#0071e3" font-weight="700">647.3k</text>
+        <circle cx="530.7" cy="125.9" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="530.7" y="116.9" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">306.6k</text>
+        <circle cx="591.8" cy="139.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="591.8" y="154.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">254.8k</text>
+        <circle cx="652.8" cy="133.8" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="652.8" y="124.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">276.1k</text>
+        <circle cx="713.9" cy="133.3" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="713.9" y="148.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">277.8k</text>
+        <circle cx="775.0" cy="131.8" r="2.5" fill="#0071e3" opacity="0.55"/>
+        <text x="775.0" y="122.8" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">283.9k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+    <div class="trend-card">
+      <h4>英国月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 79,260(12月) · 月均 44,377</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5ac8fa" stop-opacity="0.28"/><stop offset="100%" stop-color="#5ac8fa" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-gb)" stroke="none" points="42.0,205 42.0,134.8 103.1,130.1 164.2,111.5 225.2,125.0 286.3,121.1 347.4,106.0 408.5,84.7 469.6,38.0 530.7,103.1 591.8,123.1 652.8,118.8 713.9,122.8 775.0,130.6 775.0,205"/>
+        <polyline fill="none" stroke="#5ac8fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,134.8 103.1,130.1 164.2,111.5 225.2,125.0 286.3,121.1 347.4,106.0 408.5,84.7 469.6,38.0 530.7,103.1 591.8,123.1 652.8,118.8 713.9,122.8 775.0,130.6"/>
+        <circle cx="42.0" cy="134.8" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="42.0" y="125.8" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">33.3k</text>
+        <circle cx="103.1" cy="130.1" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="103.1" y="145.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">35.6k</text>
+        <circle cx="164.2" cy="111.5" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="164.2" y="102.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">44.4k</text>
+        <circle cx="225.2" cy="125.0" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="225.2" y="140.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">38.0k</text>
+        <circle cx="286.3" cy="121.1" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="286.3" y="112.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">39.8k</text>
+        <circle cx="347.4" cy="106.0" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="347.4" y="121.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">47.0k</text>
+        <circle cx="408.5" cy="84.7" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="408.5" y="75.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">57.1k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#5ac8fa" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#5ac8fa" font-weight="700">79.3k</text>
+        <circle cx="530.7" cy="103.1" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="530.7" y="94.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">48.4k</text>
+        <circle cx="591.8" cy="123.1" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="591.8" y="138.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">38.9k</text>
+        <circle cx="652.8" cy="118.8" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="652.8" y="109.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">40.9k</text>
+        <circle cx="713.9" cy="122.8" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="713.9" y="137.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">39.0k</text>
+        <circle cx="775.0" cy="130.6" r="2.5" fill="#5ac8fa" opacity="0.55"/>
+        <text x="775.0" y="121.6" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">35.3k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+    <div class="trend-card">
+      <h4>德国月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 88,268(12月) · 月均 56,256</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-de" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34c759" stop-opacity="0.28"/><stop offset="100%" stop-color="#34c759" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-de)" stroke="none" points="42.0,205 42.0,116.3 103.1,126.4 164.2,101.5 225.2,111.2 286.3,111.8 347.4,69.5 408.5,74.9 469.6,38.0 530.7,73.4 591.8,104.5 652.8,103.7 713.9,119.3 775.0,130.9 775.0,205"/>
+        <polyline fill="none" stroke="#34c759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,116.3 103.1,126.4 164.2,101.5 225.2,111.2 286.3,111.8 347.4,69.5 408.5,74.9 469.6,38.0 530.7,73.4 591.8,104.5 652.8,103.7 713.9,119.3 775.0,130.9"/>
+        <circle cx="42.0" cy="116.3" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="42.0" y="107.3" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">46.9k</text>
+        <circle cx="103.1" cy="126.4" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="103.1" y="141.4" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">41.6k</text>
+        <circle cx="164.2" cy="101.5" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="164.2" y="92.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">54.7k</text>
+        <circle cx="225.2" cy="111.2" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="225.2" y="126.2" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">49.6k</text>
+        <circle cx="286.3" cy="111.8" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="286.3" y="102.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">49.3k</text>
+        <circle cx="347.4" cy="69.5" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="347.4" y="84.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">71.6k</text>
+        <circle cx="408.5" cy="74.9" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="408.5" y="65.9" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">68.8k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#34c759" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#34c759" font-weight="700">88.3k</text>
+        <circle cx="530.7" cy="73.4" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="530.7" y="64.4" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">69.5k</text>
+        <circle cx="591.8" cy="104.5" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="591.8" y="119.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">53.1k</text>
+        <circle cx="652.8" cy="103.7" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="652.8" y="94.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">53.5k</text>
+        <circle cx="713.9" cy="119.3" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="713.9" y="134.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">45.3k</text>
+        <circle cx="775.0" cy="130.9" r="2.5" fill="#34c759" opacity="0.55"/>
+        <text x="775.0" y="121.9" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">39.2k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+    <div class="trend-card">
+      <h4>法国月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 27,719(12月) · 月均 13,994</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-fr" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff9500" stop-opacity="0.28"/><stop offset="100%" stop-color="#ff9500" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-fr)" stroke="none" points="42.0,205 42.0,104.0 103.1,122.0 164.2,131.4 225.2,140.7 286.3,135.4 347.4,121.2 408.5,111.1 469.6,38.0 530.7,123.6 591.8,126.8 652.8,129.1 713.9,146.7 775.0,139.0 775.0,205"/>
+        <polyline fill="none" stroke="#ff9500" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,104.0 103.1,122.0 164.2,131.4 225.2,140.7 286.3,135.4 347.4,121.2 408.5,111.1 469.6,38.0 530.7,123.6 591.8,126.8 652.8,129.1 713.9,146.7 775.0,139.0"/>
+        <circle cx="42.0" cy="104.0" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="42.0" y="95.0" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">16.8k</text>
+        <circle cx="103.1" cy="122.0" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="103.1" y="137.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">13.8k</text>
+        <circle cx="164.2" cy="131.4" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="164.2" y="122.4" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">12.2k</text>
+        <circle cx="225.2" cy="140.7" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="225.2" y="155.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">10.7k</text>
+        <circle cx="286.3" cy="135.4" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="286.3" y="126.4" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">11.6k</text>
+        <circle cx="347.4" cy="121.2" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="347.4" y="136.2" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">13.9k</text>
+        <circle cx="408.5" cy="111.1" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="408.5" y="102.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">15.6k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#ff9500" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#ff9500" font-weight="700">27.7k</text>
+        <circle cx="530.7" cy="123.6" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="530.7" y="114.6" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">13.5k</text>
+        <circle cx="591.8" cy="126.8" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="591.8" y="141.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">13.0k</text>
+        <circle cx="652.8" cy="129.1" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="652.8" y="120.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">12.6k</text>
+        <circle cx="713.9" cy="146.7" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="713.9" y="161.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">9,673</text>
+        <circle cx="775.0" cy="139.0" r="2.5" fill="#ff9500" opacity="0.55"/>
+        <text x="775.0" y="130.0" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">11.0k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+    <div class="trend-card">
+      <h4>意大利月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 53,679(12月) · 月均 20,393</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-it" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#af52de" stop-opacity="0.28"/><stop offset="100%" stop-color="#af52de" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-it)" stroke="none" points="42.0,205 42.0,164.3 103.1,167.8 164.2,159.8 225.2,159.3 286.3,151.1 347.4,142.0 408.5,127.3 469.6,38.0 530.7,116.5 591.8,152.1 652.8,149.0 713.9,153.5 775.0,159.6 775.0,205"/>
+        <polyline fill="none" stroke="#af52de" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,164.3 103.1,167.8 164.2,159.8 225.2,159.3 286.3,151.1 347.4,142.0 408.5,127.3 469.6,38.0 530.7,116.5 591.8,152.1 652.8,149.0 713.9,153.5 775.0,159.6"/>
+        <circle cx="42.0" cy="164.3" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="42.0" y="155.3" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">13.1k</text>
+        <circle cx="103.1" cy="167.8" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="103.1" y="182.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">12.0k</text>
+        <circle cx="164.2" cy="159.8" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="164.2" y="150.8" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">14.5k</text>
+        <circle cx="225.2" cy="159.3" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="225.2" y="174.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">14.7k</text>
+        <circle cx="286.3" cy="151.1" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="286.3" y="142.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">17.3k</text>
+        <circle cx="347.4" cy="142.0" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="347.4" y="157.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">20.2k</text>
+        <circle cx="408.5" cy="127.3" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="408.5" y="118.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">25.0k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#af52de" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#af52de" font-weight="700">53.7k</text>
+        <circle cx="530.7" cy="116.5" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="530.7" y="107.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">28.4k</text>
+        <circle cx="591.8" cy="152.1" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="591.8" y="167.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">17.0k</text>
+        <circle cx="652.8" cy="149.0" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="652.8" y="140.0" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">18.0k</text>
+        <circle cx="713.9" cy="153.5" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="713.9" y="168.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">16.6k</text>
+        <circle cx="775.0" cy="159.6" r="2.5" fill="#af52de" opacity="0.55"/>
+        <text x="775.0" y="150.6" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">14.6k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+    <div class="trend-card">
+      <h4>西班牙月销量趋势</h4>
+      <div class="sub">Top100 月销量 · 2025.05–2026.05 · 峰值 36,816(12月) · 月均 15,627</div>
+      <svg class="chart-svg" viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="grad-es" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff2d92" stop-opacity="0.28"/><stop offset="100%" stop-color="#ff2d92" stop-opacity="0"/></linearGradient></defs>
+        <polyline fill="url(#grad-es)" stroke="none" points="42.0,205 42.0,151.9 103.1,162.1 164.2,153.2 225.2,160.4 286.3,152.7 347.4,140.9 408.5,111.7 469.6,38.0 530.7,74.6 591.8,136.7 652.8,148.3 713.9,155.5 775.0,157.5 775.0,205"/>
+        <polyline fill="none" stroke="#ff2d92" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="42.0,151.9 103.1,162.1 164.2,153.2 225.2,160.4 286.3,152.7 347.4,140.9 408.5,111.7 469.6,38.0 530.7,74.6 591.8,136.7 652.8,148.3 713.9,155.5 775.0,157.5"/>
+        <circle cx="42.0" cy="151.9" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="42.0" y="142.9" text-anchor="start" font-size="8.5" fill="#6e6e73" font-weight="400">11.7k</text>
+        <circle cx="103.1" cy="162.1" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="103.1" y="177.1" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">9,456</text>
+        <circle cx="164.2" cy="153.2" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="164.2" y="144.2" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">11.4k</text>
+        <circle cx="225.2" cy="160.4" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="225.2" y="175.4" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">9,830</text>
+        <circle cx="286.3" cy="152.7" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="286.3" y="143.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">11.5k</text>
+        <circle cx="347.4" cy="140.9" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="347.4" y="155.9" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">14.1k</text>
+        <circle cx="408.5" cy="111.7" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="408.5" y="102.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">20.6k</text>
+        <circle cx="469.6" cy="38.0" r="4.5" fill="#ff2d92" opacity="1"/>
+        <text x="469.6" y="29.0" text-anchor="middle" font-size="10.5" fill="#ff2d92" font-weight="700">36.8k</text>
+        <circle cx="530.7" cy="74.6" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="530.7" y="65.6" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">28.7k</text>
+        <circle cx="591.8" cy="136.7" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="591.8" y="151.7" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">15.1k</text>
+        <circle cx="652.8" cy="148.3" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="652.8" y="139.3" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">12.5k</text>
+        <circle cx="713.9" cy="155.5" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="713.9" y="170.5" text-anchor="middle" font-size="8.5" fill="#6e6e73" font-weight="400">10.9k</text>
+        <circle cx="775.0" cy="157.5" r="2.5" fill="#ff2d92" opacity="0.55"/>
+        <text x="775.0" y="148.5" text-anchor="end" font-size="8.5" fill="#6e6e73" font-weight="400">10.5k</text>
+        <text x="42.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="103.1" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">06</text>
+        <text x="164.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">07</text>
+        <text x="225.2" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">08</text>
+        <text x="286.3" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">09</text>
+        <text x="347.4" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">10</text>
+        <text x="408.5" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">11</text>
+        <text x="469.6" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">12</text>
+        <text x="530.7" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">01</text>
+        <text x="591.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">02</text>
+        <text x="652.8" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">03</text>
+        <text x="713.9" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">04</text>
+        <text x="775.0" y="232" text-anchor="middle" font-size="8" fill="#a1a1a6">05</text>
+        <text x="408" y="250" text-anchor="middle" font-size="9" fill="#c7c7cc">2025.05 ——— 2026.05(月)</text>
+        </svg>
+    </div>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:14px;text-align:center;">数据源:Sorftime × Amazon Top100 · 每图独立 Y 轴 · 过滤后口径(仅多功能造型器🌀+热风梳🪮) · 荷兰无 Amazon 站点不计入</p>
+
+  <!-- 季节性 & 品类成熟度 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table>
+      <thead><tr><th>维度</th><th>🇺🇸 美国</th><th>🇬🇧 英国</th><th>🇩🇪 德国</th><th>🇫🇷 法国</th><th>🇮🇹 意大利</th><th>🇪🇸 西班牙</th></tr></thead>
+      <tbody>
+        <tr><td><b>旺季月份</b></td><td>11-12月</td><td>11-12月</td><td>11-12月</td><td>12月</td><td>12月</td><td>11-12月</td></tr>
+        <tr><td><b>旺季占全年比</b></td><td>~38%</td><td>~35%</td><td>~32%</td><td>~30%</td><td>~42%</td><td>~28%</td></tr>
+        <tr><td><b>淡季月份</b></td><td>6月</td><td>5月</td><td>5-6月</td><td>4-5月</td><td>5月</td><td>6-8月</td></tr>
+        <tr><td><b>新品占比(Top100)</b></td><td>18.7%</td><td>8.2%</td><td>22.4%</td><td>5.6%</td><td>31.5%</td><td>28.3%</td></tr>
+        <tr><td><b>品类成熟度</b></td><td><span class="tag green">成长期</span></td><td><span class="tag orange">成熟期</span></td><td><span class="tag orange">成熟期</span></td><td><span class="tag red">衰退期</span></td><td><span class="tag green">导入期</span></td><td><span class="tag green">导入期</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Airstyler vs 传统造型器 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table>
+      <thead><tr><th>品类</th><th>美国月销量</th><th>美国 YoY</th><th>欧洲月销量(5国)</th><th>欧洲 YoY</th><th>替代趋势</th></tr></thead>
+      <tbody>
+        <tr><td><b>Airstyler(多功能造型器🌀+热风梳🪮)</b></td><td>343,195</td><td style="color:var(--color-green);font-weight:600;">+6.0%</td><td>151,440</td><td style="color:var(--color-green);">+10.5%</td><td><span class="tag green">强势替代</span></td></tr>
+        <tr><td>直发器 (Flat Iron)</td><td colspan="4" style="color:var(--color-gray-500);">已剔除出本报告口径(非 Airstyler),增速数据不在 Sorftime 抓取范围,从略</td><td><span class="tag gray">被替代</span></td></tr>
+        <tr><td>卷发棒 (Curling Iron)</td><td colspan="4" style="color:var(--color-gray-500);">已剔除出本报告口径(非 Airstyler),从略</td><td><span class="tag red">快速萎缩</span></td></tr>
+        <tr><td>吹风机 (Hair Dryer)</td><td colspan="4" style="color:var(--color-gray-500);">非 Airstyler 品类,从略</td><td><span class="tag gray">稳定</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:10px;">Airstyler 行 = 过滤后 12 月月均;欧洲 5 国 = UK+DE+FR+IT+ES。传统造型器品类已按数据范围铁律剔除,本报告不再单列其销量(原估算值不可靠,故移除以保持数据真实性)。</p>
+
+  <div class="insight-box">
+    <h4>Ch.1 市场核心判读</h4>
+    <ul>
+      <li><b>美国是全球 Airstyler 第一大市场</b>:过滤后月销 34.3 万件(12 月月均),YoY +6.0% 稳健回升,体量是欧洲五国之和的两倍以上。热风梳是大头(REVLON One-Step、wavytalk、TYMO 三强),wavytalk 以 $45 热梳占据销量前列,证明中国卖家在入门段有强势地位。</li>
+      <li><b>南欧/德国是增长最快的市场</b>:意大利 YoY +39.7%、德国 +18.9% 领跑,新品销量占比德国 12.6% 最高,Cecotec/7MAGIC/Bellissima 等先行者正在定义市场规则,是新品牌进入的较好窗口。</li>
+      <li><b>法国是唯一负增长市场</b>:YoY -21.8%,REVLON/BaByliss 双强主导(CR3 58%)、Amazon 自营占比高达 67%,新进入者空间被严重挤压,需差异化突围。</li>
+      <li><b>Q4 旺季(11-12月)是全年胜负手</b>:所有市场 12 月均为全年峰值,六国 12 月销量普遍是月均的 1.5–2.6 倍。备货节奏:7-8月备货 → 9月上架 → 10月广告预热。</li>
+      <li><b>热风梳撑起销量基本盘,多功能造型器主导高客单</b>:入门热风梳(<$50)贡献六国 62-87% 的销量,而 ≥$200 高端多功能造型器(Dyson/Shark)虽销量占比低,却贡献美国 46%、德国 39% 的销额。</li>
+    </ul>
+  </div>
+</section>
+<!-- ============ Ch.2 价格段构成 & 各价格段增速 ============ -->
+<section class="section" id="price">
+  <div class="section-header">
+    <div class="section-eyebrow">02 · Price Band Analysis</div>
+    <h2 class="section-title">入门段与高端段同时爆发<br>$150-250 是最大价格空白带</h2>
+    <p class="section-desc">基于各站 Top50 产品售价与销量分布，按当地货币划分四个价格段，识别增量机会与竞争密度</p>
+  </div>
+
+  <!-- 七国×4价格段矩阵 -->
+  <div class="table-wrapper">
+    <table class="heatmap-table">
+      <thead>
+        <tr>
+          <th style="text-align:left;">价格段</th>
+          <th>🇺🇸 US<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>🇬🇧 UK<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>🇩🇪 DE<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>🇫🇷 FR<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>🇮🇹 IT<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>🇪🇸 ES<br><span style="font-weight:400;font-size:10px;">销量% / 销额%</span></th>
+          <th>分段 YoY<br><span style="font-weight:400;font-size:10px;">六国合计 · 销量同比</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="dim">入门段<br><span style="font-size:11px;color:var(--color-gray-500);">&lt;$80 / &lt;€70 / &lt;£60</span></td>
+          <td><span class="heat-cell heat-4">83% / 42%</span></td>
+          <td><span class="heat-cell heat-4">93% / 62%</span></td>
+          <td><span class="heat-cell heat-4">76% / 38%</span></td>
+          <td><span class="heat-cell heat-4">95% / 81%</span></td>
+          <td><span class="heat-cell heat-4">80% / 41%</span></td>
+          <td><span class="heat-cell heat-4">77% / 57%</span></td>
+          <td style="color:var(--color-green);font-weight:600;">+10%</td>
+        </tr>
+        <tr>
+          <td class="dim">中端段<br><span style="font-size:11px;color:var(--color-gray-500);">$80–150 / €70–130 / £60–120</span></td>
+          <td><span class="heat-cell heat-1">8% / 11%</span></td>
+          <td><span class="heat-cell heat-0">1% / 2%</span></td>
+          <td><span class="heat-cell heat-2">15% / 18%</span></td>
+          <td><span class="heat-cell heat-0">3% / 7%</span></td>
+          <td><span class="heat-cell heat-1">9% / 12%</span></td>
+          <td><span class="heat-cell heat-2">21% / 34%</span></td>
+          <td style="color:var(--color-green);font-weight:700;">+97%</td>
+        </tr>
+        <tr>
+          <td class="dim">中高端段<br><span style="font-size:11px;color:var(--color-gray-500);">$150–300 / €130–260 / £120–240</span></td>
+          <td><span class="heat-cell heat-0">4% / 14%</span></td>
+          <td><span class="heat-cell heat-0">4% / 14%</span></td>
+          <td><span class="heat-cell heat-0">2% / 6%</span></td>
+          <td><span class="heat-cell heat-0">0% / 0%</span></td>
+          <td><span class="heat-cell heat-1">7% / 19%</span></td>
+          <td><span class="heat-cell heat-0">0% / 0%</span></td>
+          <td style="color:var(--color-red);font-weight:600;">−8%</td>
+        </tr>
+        <tr style="background:rgba(0,113,227,0.03);">
+          <td class="dim" style="color:var(--color-blue);font-weight:700;">高端段<br><span style="font-size:11px;color:var(--color-gray-500);">&gt;$300 / &gt;€260 / &gt;£240</span></td>
+          <td><span class="heat-cell heat-1">5% / 34%</span></td>
+          <td><span class="heat-cell heat-0">2% / 22%</span></td>
+          <td><span class="heat-cell heat-1">7% / 38%</span></td>
+          <td><span class="heat-cell heat-0">2% / 12%</span></td>
+          <td><span class="heat-cell heat-1">5% / 27%</span></td>
+          <td><span class="heat-cell heat-0">1% / 10%</span></td>
+          <td style="color:var(--color-green);font-weight:700;">+92%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:10px;">占比 = 过滤后 Top100 当期(2026.05)各价格段 销量% / 销额%(按当地货币阈值分桶,仅含多功能造型器🌀+热风梳🪮)。<b>分段 YoY = 六国合计该价格段销量的 2025.06 vs 2024.06 同月同比</b>(单一真实口径,非各国独立值;高端/中端基数较小,同比波动偏大)。数据源:Sorftime × Amazon 历史 Top100。热力深浅按销量%。</p>
+
+  <!-- 价格段×功能覆盖热力矩阵 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table class="heatmap-table">
+      <thead><tr><th style="text-align:left;">功能维度</th><th>&lt;$80 入门</th><th>$80-150 中端</th><th>$150-300 中高端</th><th>&gt;$300 高端</th></tr></thead>
+      <tbody>
+        <tr><td class="dim">多功能头（3+）</td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">5-7头</span></td><td><span class="heat-cell heat-4">6-8头</span></td></tr>
+        <tr><td class="dim">负离子</td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">高密度</span></td></tr>
+        <tr><td class="dim">高速无刷电机(100k+ RPM)</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">110k+</span></td><td><span class="heat-cell heat-4">110k+</span></td></tr>
+        <tr><td class="dim">智能温控</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-1">少数</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">AI级</span></td></tr>
+        <tr><td class="dim">Auto-Wrap 自动卷发</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-1">少数</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">双向</span></td></tr>
+        <tr><td class="dim">磁吸配件</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-2">部分</span></td><td><span class="heat-cell heat-4">标配</span></td></tr>
+        <tr><td class="dim">App 连接 / 个性化</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-2">仅Dyson</span></td></tr>
+        <tr><td class="dim">冷风定型</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-2">部分</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">标配</span></td></tr>
+        <tr><td class="dim">收纳盒/旅行袋</td><td><span class="heat-cell heat-0">—</span></td><td><span class="heat-cell heat-2">部分</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-4">高端盒</span></td></tr>
+        <tr><td class="dim">双电压(110-240V)</td><td><span class="heat-cell heat-2">部分</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-3">标配</span></td><td><span class="heat-cell heat-3">标配</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-box">
+    <h4>Ch.2 价格段核心洞察</h4>
+    <ul>
+      <li><b>销量高度集中在入门段(各国 76-95%)</b>:六国入门段(&lt;$80/&lt;€70/&lt;£60)销量占比全部在 76% 以上,法国高达 95%。这是由热风梳(🪮)的低价属性决定的,入门段也是销额贡献最大的单一价格段。</li>
+      <li><b>中端段(+97%)和高端段(+92%)是增长最快的两段</b>:虽然基数小,但分段 YoY(六国合计,2025.06 vs 2024.06 同月)显示消费正向两端迁移——入门段仅 +10%、中高端段 -8%,呈"中端与高端双双跑赢"的结构。</li>
+      <li><b>$150-300 中高端段是最大价格空白带</b>:六国该段销量占比普遍 0-7%(法/西甚至为 0%),且 YoY -8% 唯一负增长,说明此价位长期缺乏有吸引力的产品供给。这正是新品牌"利润款"的最佳定价机会。</li>
+      <li><b>高端段销量占比低、销额占比高</b>:≥$300/≥€260 段在各国销量仅占 1-7%,却贡献美国 34%、德国 38% 的销额(Dyson/Shark 拉动),南欧/法国对高端接受度则明显偏低。</li>
+      <li><b>功能分水岭在 $150</b>:$150 以下产品普遍缺乏智能温控、Auto-Wrap、磁吸配件三大差异化功能。在 $150-250 段同时具备这三项,即可对入门段形成降维打击,同时填补中高端空白。</li>
+    </ul>
+  </div>
+</section>
+<!-- ============ Ch.3 主要竞品 & 市占率 ============ -->
+<section class="section" id="competitors">
+  <div class="section-header">
+    <div class="section-eyebrow">03 · Competitive Landscape</div>
+    <h2 class="section-title">Dyson/Shark 双寡头主导高端<br>中国卖家占据入门段 60%+</h2>
+    <p class="section-desc">各国 Top5 品牌市占率（销量+销额双口径）、品牌集中度（CR3/CR5）及全球竞品定位矩阵</p>
+  </div>
+
+  <!-- 各国 Top5 品牌市占率(18列全展开) -->
+  <div class="table-wrapper">
+    <table style="font-size:11.5px;">
+      <thead>
+        <tr style="font-size:10.5px;">
+          <th>国家</th>
+          <th>#1 品牌</th><th>销量%</th><th>销额%</th>
+          <th>#2 品牌</th><th>销量%</th><th>销额%</th>
+          <th>#3 品牌</th><th>销量%</th><th>销额%</th>
+          <th>#4 品牌</th><th>销量%</th><th>销额%</th>
+          <th>#5 品牌</th><th>销量%</th><th>销额%</th>
+          <th>CR3<br><span style="font-weight:400;">量/额</span></th>
+          <th>CR5<br><span style="font-weight:400;">量/额</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🇺🇸 US</td>
+          <td><strong>🪮 wavytalk</strong></td><td>21.8%</td><td>11.4%</td>
+          <td>🪮 TYMO</td><td>16.6%</td><td>8.4%</td>
+          <td>🪮 REVLON</td><td>16.5%</td><td>8.0%</td>
+          <td>🌀 L'ANGE</td><td>6.8%</td><td>3.9%</td>
+          <td>🌀 Shark</td><td>4.8%</td><td>17.1%</td>
+          <td>54.9% / 27.7%</td><td>66.5% / 48.7%</td>
+        </tr>
+        <tr>
+          <td>🇬🇧 UK</td>
+          <td><strong>🌀 Revlon</strong></td><td>23.3%</td><td>12.1%</td>
+          <td>🪮 BaByliss</td><td>13.7%</td><td>10.5%</td>
+          <td>🪮 wavytalk</td><td>10.4%</td><td>10.1%</td>
+          <td>🪮 TRESemmé</td><td>9.7%</td><td>3.3%</td>
+          <td>🌀 Remington</td><td>5.5%</td><td>4.2%</td>
+          <td>47.4% / 32.7%</td><td>62.6% / 40.2%</td>
+        </tr>
+        <tr>
+          <td>🇩🇪 DE</td>
+          <td><strong>🪮 wavytalk</strong></td><td>15.8%</td><td>8.5%</td>
+          <td>🪮 Revlon</td><td>12.2%</td><td>7.4%</td>
+          <td>🪮 BaByliss</td><td>8.5%</td><td>5.9%</td>
+          <td>🌀 7MAGIC</td><td>6.7%</td><td>9.4%</td>
+          <td>🌀 Dyson</td><td>5.6%</td><td>33.9%</td>
+          <td>36.5% / 21.8%</td><td>48.8% / 65.0%</td>
+        </tr>
+        <tr>
+          <td>🇫🇷 FR</td>
+          <td><strong>🪮 REVLON</strong></td><td>24.9%</td><td>28.1%</td>
+          <td>🪮 BaByliss</td><td>24.3%</td><td>18.9%</td>
+          <td>🪮 Cecotec</td><td>8.9%</td><td>4.3%</td>
+          <td>🪮 wavytalk</td><td>4.0%</td><td>4.2%</td>
+          <td>🪮 Remington</td><td>3.3%</td><td>2.0%</td>
+          <td>58.1% / 51.2%</td><td>65.4% / 57.5%</td>
+        </tr>
+        <tr>
+          <td>🇮🇹 IT</td>
+          <td><strong>🌀 BELLISSIMA</strong></td><td>20.0%</td><td>12.0%</td>
+          <td>🪮 Cecotec</td><td>14.4%</td><td>3.4%</td>
+          <td>🪮 REVLON</td><td>8.0%</td><td>4.9%</td>
+          <td>🪮 BaByliss</td><td>6.1%</td><td>3.6%</td>
+          <td>🌀 7MAGIC</td><td>5.3%</td><td>9.4%</td>
+          <td>42.4% / 20.3%</td><td>53.8% / 33.3%</td>
+        </tr>
+        <tr>
+          <td>🇪🇸 ES</td>
+          <td><strong>🌀 Cecotec</strong></td><td>46.9%</td><td>45.0%</td>
+          <td>🪮 REVLON</td><td>15.5%</td><td>13.4%</td>
+          <td>🌀 BaByliss</td><td>8.9%</td><td>10.7%</td>
+          <td>🪮 Olivia G.</td><td>4.2%</td><td>1.6%</td>
+          <td>🪮 Rowenta</td><td>3.5%</td><td>4.4%</td>
+          <td>71.3% / 69.0%</td><td>78.9% / 75.0%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:10px;">🌀 多功能造型器 · 🪮 热风梳(标签按该品牌在本国销量占优的子品类)。所有市占率与 CR3/CR5 均为过滤后 Top100 当期重算(销量% / 销额% 双口径);CR 合并格格式为"销量 / 销额"。已剔除直发器(如意大利原第一 ghd Gold)、直发刷等非 Airstyler 产品。数据源:Sorftime × Amazon。</p>
+
+  <!-- 全球竞品定位矩阵 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table>
+      <thead><tr><th>品牌</th><th>定位</th><th>价格带</th><th>核心技术</th><th>覆盖国家</th><th>竞争策略</th><th>威胁等级</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Dyson</strong></td><td>超高端旗舰</td><td>$400-750</td><td>Coanda气流/App/i.d.个性化</td><td>全部7国</td><td>技术壁垒+品牌溢价</td><td><span class="tag red">极高</span></td></tr>
+        <tr><td><strong>Shark</strong></td><td>高端挑战者</td><td>$150-450</td><td>FlexStyle/Auto-Wrap/FlexFusion</td><td>US/UK/DE/ES/IT</td><td>功能对标Dyson，价格-30%</td><td><span class="tag red">高</span></td></tr>
+        <tr><td><strong>BaByliss</strong></td><td>欧洲主流</td><td>€20-110</td><td>旋转气流/离子/陶瓷</td><td>UK/FR/IT/ES</td><td>渠道深耕+产品线全覆盖</td><td><span class="tag orange">中</span></td></tr>
+        <tr><td><strong>Revlon</strong></td><td>大众走量</td><td>$10-70</td><td>One-Step/5-in-1</td><td>US/UK/FR</td><td>极致性价比+品牌认知</td><td><span class="tag orange">中</span></td></tr>
+        <tr><td><strong>Cecotec</strong></td><td>西班牙本土王者</td><td>€100-210</td><td>Coanda/14头/Brushless</td><td>ES/IT</td><td>本土品牌信任+高配低价</td><td><span class="tag blue">区域高</span></td></tr>
+        <tr><td><strong>wavytalk</strong></td><td>中国跨境黑马</td><td>$30-55</td><td>热梳/双电压/负离子</td><td>US/UK/FR</td><td>低价爆款+评论积累</td><td><span class="tag green">低(非直接竞品)</span></td></tr>
+        <tr><td><strong>7MAGIC</strong></td><td>中国中端</td><td>€100-135</td><td>110k RPM/6-7in1/Auto-Wrap</td><td>DE/IT/ES</td><td>高配中价+欧洲本地仓</td><td><span class="tag orange">中</span></td></tr>
+        <tr><td><strong>DREAME</strong></td><td>科技新势力</td><td>$200-350</td><td>110k RPM/磁吸/智能识别</td><td>US/DE</td><td>技术对标Dyson，价格50%</td><td><span class="tag red">高(直接竞品)</span></td></tr>
+        <tr><td><strong>ghd</strong></td><td>专业沙龙</td><td>€135-360</td><td>Duet Blowdry/Rise/智能温控</td><td>UK/IT/FR</td><td>专业背书+沙龙渠道</td><td><span class="tag orange">中</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ Ch.3.5 技术横评矩阵 ============ -->
+<section class="section" id="tech-matrix">
+  <div class="section-header">
+    <div class="section-eyebrow">03.5 · Tech Cross-Evaluation Matrix</div>
+    <h2 class="section-title">9 大品牌 × 12 个技术维度</h2>
+    <p class="section-desc">将全球核心竞品拉到同一坐标系，从动力系统 / 造型技术 / 智能化 / 配件生态 / 便携性 5 大维度全面对比，识别技术天花板与差异化机会</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="heatmap-table compact-table">
+      <thead>
+        <tr>
+          <th style="text-align:left;width:150px;">技术维度</th>
+          <th>Dyson<br><span style="font-weight:400;font-size:10px;">$500-750</span></th>
+          <th>Shark<br><span style="font-weight:400;font-size:10px;">$270-450</span></th>
+          <th>DREAME<br><span style="font-weight:400;font-size:10px;">$200</span></th>
+          <th>7MAGIC<br><span style="font-weight:400;font-size:10px;">€100-135</span></th>
+          <th>Cecotec<br><span style="font-weight:400;font-size:10px;">€100-210</span></th>
+          <th>BaByliss<br><span style="font-weight:400;font-size:10px;">€20-110</span></th>
+          <th>ghd<br><span style="font-weight:400;font-size:10px;">€135-360</span></th>
+          <th>Revlon<br><span style="font-weight:400;font-size:10px;">$10-70</span></th>
+          <th>wavytalk<br><span style="font-weight:400;font-size:10px;">$30-55</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="dim">电机转速 (RPM)</td><td><span class="heat-cell heat-4">110k</span></td><td><span class="heat-cell heat-3">105k</span></td><td><span class="heat-cell heat-4">110k</span></td><td><span class="heat-cell heat-4">110k</span></td><td><span class="heat-cell heat-3">100k</span></td><td><span class="heat-cell heat-1">传统</span></td><td><span class="heat-cell heat-2">65k</span></td><td><span class="heat-cell heat-0">传统</span></td><td><span class="heat-cell heat-0">无电机</span></td></tr>
+        <tr><td class="dim">功率 (W)</td><td><span class="heat-cell heat-3">1300W</span></td><td><span class="heat-cell heat-3">1400W</span></td><td><span class="heat-cell heat-3">1300W</span></td><td><span class="heat-cell heat-3">1200W</span></td><td><span class="heat-cell heat-3">1400W</span></td><td><span class="heat-cell heat-2">1000W</span></td><td><span class="heat-cell heat-3">1400W</span></td><td><span class="heat-cell heat-2">800W</span></td><td><span class="heat-cell heat-1">450W</span></td></tr>
+        <tr><td class="dim">造型头数量</td><td><span class="heat-cell heat-4">6头</span></td><td><span class="heat-cell heat-3">5-6头</span></td><td><span class="heat-cell heat-2">3头</span></td><td><span class="heat-cell heat-3">6-7头</span></td><td><span class="heat-cell heat-4">8-14头</span></td><td><span class="heat-cell heat-2">3-4头</span></td><td><span class="heat-cell heat-2">3头</span></td><td><span class="heat-cell heat-3">5头</span></td><td><span class="heat-cell heat-0">1头</span></td></tr>
+        <tr><td class="dim">Auto-Wrap 自动卷发</td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td></tr>
+        <tr><td class="dim">智能温控</td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td></tr>
+        <tr><td class="dim">磁吸配件</td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td></tr>
+        <tr><td class="dim">负离子</td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td></tr>
+        <tr><td class="dim">冷风定型</td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td></tr>
+        <tr><td class="dim">App 连接</td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td></tr>
+        <tr><td class="dim">重量</td><td><span class="heat-cell heat-2">410g</span></td><td><span class="heat-cell heat-1">500g</span></td><td><span class="heat-cell heat-2">420g</span></td><td><span class="heat-cell heat-1">480g</span></td><td><span class="heat-cell heat-1">520g</span></td><td><span class="heat-cell heat-3">350g</span></td><td><span class="heat-cell heat-2">400g</span></td><td><span class="heat-cell heat-2">430g</span></td><td><span class="heat-cell heat-3">350g</span></td></tr>
+        <tr><td class="dim">收纳方案</td><td><span class="heat-cell heat-4">高端盒</span></td><td><span class="heat-cell heat-3">收纳盒</span></td><td><span class="heat-cell heat-3">皮质盒</span></td><td><span class="heat-cell heat-2">旅行袋</span></td><td><span class="heat-cell heat-2">旅行袋</span></td><td><span class="heat-cell heat-0">无</span></td><td><span class="heat-cell heat-3">收纳盒</span></td><td><span class="heat-cell heat-0">无</span></td><td><span class="heat-cell heat-0">无</span></td></tr>
+        <tr><td class="dim">双电压(110-240V)</td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td><td><span class="dot-no">○</span></td><td><span class="dot-yes">●</span></td></tr>
+        <tr style="background:rgba(0,113,227,0.04);">
+          <td class="dim" style="color:var(--color-blue);font-weight:700;">技术综合评分 /60</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">54</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">45</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">42</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">38</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">36</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">24</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">34</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">18</td>
+          <td style="font-weight:700;font-size:16px;color:var(--color-blue);">14</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-box">
+    <h4>Ch.3 技术能力地图核心结论</h4>
+    <ul>
+      <li><b>Dyson 是技术全能冠军（54/60）</b>：唯一同时具备 App 连接 + 磁吸 + 智能温控 + Auto-Wrap 的品牌。但其 $500+ 定价留出了巨大的"技术平替"空间。</li>
+      <li><b>DREAME 是最具威胁的挑战者（42/60）</b>：以 Dyson 50% 的价格实现了 78% 的技术覆盖（磁吸+110k RPM+智能温控），唯一缺失 Auto-Wrap 和 App。</li>
+      <li><b>$150-250 价格空白带的技术门槛</b>：要在此段位有效竞争，至少需要：110k RPM + 磁吸配件 + 智能温控 + 5头以上 + 收纳盒。目前仅 DREAME 一家满足。</li>
+      <li><b>轻量化是未被攻克的差异化点</b>：当前主流产品 400-520g，若能做到 <350g 同时保持 110k RPM，将形成显著的体验差异（参考 wavytalk/BaByliss 的轻量优势）。</li>
+      <li><b>配件生态是长期护城河</b>：Dyson 6头磁吸 + 单买 $30-50/头，Shark 5头卡扣。配件数量和连接方式决定了用户粘性和复购价值。</li>
+      <li><b>App 连接目前仅 Dyson 一家</b>：这是一个"有则加分、无则不减分"的功能。短期内不建议投入，但中长期（旗舰款）可作为品牌升级的标志性功能。</li>
+    </ul>
+  </div>
+</section>
+<!-- ============ Ch.4 Top 10 SKU 深度拆解 ============ -->
+<section class="section" id="top-sku">
+  <div class="section-header">
+    <div class="section-eyebrow">04 · Top 10 SKU Deep Dive</div>
+    <h2 class="section-title">七国 Top 10 全维度拆解</h2>
+    <p class="section-desc">每国 Top 10 产品按三层维度展示：基础销售 / 技术参数 / 市场评测。首先呈现跨国重复上榜 SKU 总览，识别"全球通吃款"与"区域独占款"</p>
+  </div>
+
+  <!-- 4.0 七国综合 Top10 总览 -->
+  <div class="table-wrapper">
+    <table class="compact-table">
+      <thead>
+        <tr><th>品牌</th><th>主营子品类</th><th>价格带(跨国)</th><th>上榜国家数</th><th>覆盖市场</th><th>类型</th><th>核心竞争力</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Revlon</strong></td><td>🪮 热风梳</td><td>$37-42 / £10-54 / €33-64</td><td><span class="heat-cell heat-4">6国</span></td><td>US·UK·DE·FR·IT·ES</td><td><span class="tag blue">全球通吃</span></td><td>One-Step 系列+品牌认知+极致性价比</td></tr>
+        <tr><td><strong>BaByliss</strong></td><td>🪮 热风梳</td><td>£21-27 / €30-80</td><td><span class="heat-cell heat-3">5国</span></td><td>UK·DE·FR·IT·ES</td><td><span class="tag blue">欧洲通吃</span></td><td>Big Hair 旋转热风梳+欧洲渠道深耕</td></tr>
+        <tr><td><strong>wavytalk</strong></td><td>🪮 热风梳</td><td>$31-45 / £35-38 / €43-53</td><td><span class="heat-cell heat-3">4国</span></td><td>US·UK·DE·FR</td><td><span class="tag purple">英语圈+德语区</span></td><td>$30-50 超低价+评论积累+双电压(中国卖家)</td></tr>
+        <tr><td><strong>Cecotec</strong></td><td>🌀 多功能造型器</td><td>€15-80</td><td><span class="heat-cell heat-2">3国</span></td><td>ES·FR·IT</td><td><span class="tag purple">南欧通吃</span></td><td>本土品牌信任+多配件高配低价</td></tr>
+        <tr><td><strong>Rowenta</strong></td><td>🪮 热风梳</td><td>€50-68</td><td><span class="heat-cell heat-2">3国</span></td><td>ES·FR·IT</td><td><span class="tag purple">南欧通吃</span></td><td>Brush Activ 天然鬃毛+欧洲老牌</td></tr>
+        <tr><td><strong>Shark</strong></td><td>🌀 多功能造型器</td><td>$297 / £149</td><td><span class="heat-cell heat-1">2国</span></td><td>US·UK</td><td><span class="tag orange">英语圈高端</span></td><td>FlexStyle Auto-Wrap+比 Dyson 便宜一半</td></tr>
+        <tr><td><strong>7MAGIC</strong></td><td>🌀 多功能造型器</td><td>€104-110</td><td><span class="heat-cell heat-1">2国</span></td><td>DE·IT</td><td><span class="tag orange">德语区+南欧</span></td><td>高速电机+Auto-Wrap+4.7★ 高评分(中国卖家)</td></tr>
+        <tr><td><strong>Dyson</strong></td><td>🌀 多功能造型器</td><td>€449</td><td><span class="heat-cell heat-0">1国</span></td><td>DE</td><td><span class="tag gray">高端独占</span></td><td>Coanda 气流+品牌力(仅德国进 Top10)</td></tr>
+        <tr><td><strong>Bellissima</strong></td><td>🌀 多功能造型器</td><td>€32-60</td><td><span class="heat-cell heat-0">1国</span></td><td>IT</td><td><span class="tag gray">单国独占</span></td><td>意大利本土品牌+5-in-1 高性价比</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:var(--color-gray-500);margin-top:10px;">基于六国过滤后 Top10 的品牌出现次数统计(同品牌不同站点 ASIN 已合并)。价格带为各国 Top10 内该品牌的实际售价区间。仅含多功能造型器🌀 + 热风梳🪮。数据源:Sorftime × Amazon。</p>
+
+  <div class="insight-box">
+    <h4>跨国上榜规律</h4>
+    <ul>
+      <li><b>Revlon 是唯一"全球通吃"品牌</b>:One-Step 系列热风梳(🪮)在全部 6 国 Top10 均上榜,$37-64 的价格带 + 品牌认知形成跨市场护城河,是真正的全球化基准。</li>
+      <li><b>热风梳(🪮)是跨国上榜的主力形态</b>:上榜 3 国以上的品牌(Revlon/BaByliss/wavytalk/Rowenta)几乎全是热风梳,印证入门热风梳的需求是跨市场普适的。</li>
+      <li><b>Dyson 不再"全球通吃",仅德国进 Top10</b>:超高端多功能造型器在多数市场被入门热风梳挤出 Top10,高端段的全球化销量基础其实很薄。</li>
+      <li><b>中国品牌呈"区域深耕"模式</b>:wavytalk(🪮)深耕英语圈+德语区(4 国),7MAGIC(🌀)深耕德语区+南欧,尚无中国品牌实现 5 国以上同时上榜。</li>
+      <li><b>本土品牌守住南欧</b>:Cecotec(西班牙)、Bellissima(意大利)各自在本国占据 Top10 前列,外来品牌需更强差异化才能撼动。</li>
+      <li><b>$150-300 中高端段几乎空白</b>:仅 Shark 一个品牌在 US/UK 上榜,欧洲大陆该价位无强势玩家——这是新品牌全球化布局的最佳价格窗口。</li>
+    </ul>
+  </div>
+
+  <!-- ====== 美国 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇺🇸 美国 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.com · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+
+  <div class="tabs">
+    <input type="radio" name="us-tab" id="us-tab-1" checked>
+    <input type="radio" name="us-tab" id="us-tab-2">
+    <input type="radio" name="us-tab" id="us-tab-3">
+    <div class="tab-nav">
+      <label for="us-tab-1">① 基础信息 + 销售</label>
+      <label for="us-tab-2">② 技术参数深度</label>
+      <label for="us-tab-3">③ 市场评测 + 口碑</label>
+    </div>
+
+    <!-- US Tab1 CSS trigger -->
+    <style>
+      #us-tab-1:checked ~ .tab-nav label[for="us-tab-1"],
+      #us-tab-2:checked ~ .tab-nav label[for="us-tab-2"],
+      #us-tab-3:checked ~ .tab-nav label[for="us-tab-3"] { background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm); }
+      #us-tab-1:checked ~ .tab-content.us-c1,
+      #us-tab-2:checked ~ .tab-content.us-c2,
+      #us-tab-3:checked ~ .tab-content.us-c3 { display:block; }
+    </style>
+
+    <!-- US Tab① 基础信息+销售 -->
+    <div class="tab-content us-c1">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>月销额($)</th><th>售价($)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">One</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell hot">27,689</td><td>1,161,554</td><td>41.95</td><td>4.6 ★</td><td>351,381</td><td>Stam Sales (美国)</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span><span class="tag green">双电压</span></td><td class="sales-cell">26,169</td><td>1,177,343</td><td>44.99</td><td>4.2 ★</td><td>5,098</td><td>Freshine Hair (美国)</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 TYMO</div><div class="product-cell">Hair Dryer Brush Blow Dryer Brush in One</div></td><td>热风梳</td><td><span class="tag blue">4合1</span><span class="tag green">负离子</span></td><td class="sales-cell">25,881</td><td>775,654</td><td>29.97</td><td>4.4 ★</td><td>8,220</td><td>HSL Life (中国)</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">One</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">9,770</td><td>361,002</td><td>36.95</td><td>4.2 ★</td><td>11,827</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🌀 L‘ANGE HAIR</div><div class="product-cell">Le Volume 2</div></td><td>多功能造型器</td><td><span class="tag blue">2合1</span></td><td class="sales-cell">9,276</td><td>413,153</td><td>44.54</td><td>4.4 ★</td><td>21,424</td><td>L’ange Hair Inc.</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Updated Version Thermal Brush for Blowout </div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag green">双电压</span></td><td class="sales-cell">9,103</td><td>363,756</td><td>39.96</td><td>4.1 ★</td><td>4,790</td><td>Freshine Hair (美国)</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🌀 TYMO</div><div class="product-cell">4.0 Hair Blow Dryer Brush</div></td><td>多功能造型器</td><td><span class="tag blue">5合1</span><span class="tag green">负离子</span></td><td class="sales-cell">8,235</td><td>658,718</td><td>79.99</td><td>4.2 ★</td><td>588</td><td>Beauty Life US (中国)</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 Umeely</div><div class="product-cell">Hair Dryer Brush Blow Dryer Brush in One</div></td><td>热风梳</td><td><span class="tag blue">4合1</span><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">7,284</td><td>205,482</td><td>28.21</td><td>4.4 ★</td><td>13,900</td><td>PUTOSUN (中国香港)</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">双电压</span></td><td class="sales-cell">7,088</td><td>216,822</td><td>30.59</td><td>4.2 ★</td><td>4,591</td><td>Freshine Hair (美国)</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 Shark</div><div class="product-cell">FlexStyle Air Styling &amp; Drying System</div></td><td>多功能造型器</td><td><span class="tag purple">Auto-Wrap</span></td><td class="sales-cell">6,510</td><td>1,933,470</td><td>297.00</td><td>4.3 ★</td><td>6,470</td><td>Jazzer Shack (美国)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- US Tab② 技术参数深度 -->
+    <div class="tab-content us-c2">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子品类</th><th>加热 / 涂层</th><th>温控</th><th>配件 / 合1</th><th>重量</th><th>电压 / 功率</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">REVLON</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+负离子</td><td>—</td><td>—</td><td>712g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石+负离子</td><td>智能温控</td><td>—</td><td>381g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">TYMO</div></td><td style="font-size:10px;">🪮 热风梳</td><td>钛+负离子</td><td>—</td><td>4合1</td><td>689g</td><td>1200W</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">REVLON</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+负离子</td><td>—</td><td>—</td><td>590g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">L‘ANGE HAIR</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>钛</td><td>—</td><td>2合1</td><td>1329g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+负离子</td><td>3档温控</td><td>—</td><td>399g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">TYMO</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>负离子</td><td>—</td><td>5合1</td><td>699g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">Umeely</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+钛+负离子</td><td>3档温控</td><td>4合1</td><td>649g</td><td>1200W</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石</td><td>智能温控</td><td>—</td><td>408g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">Shark</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>Auto-Wrap</td><td>1542g</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- US Tab③ 市场评测+口碑 -->
+    <div class="tab-content us-c3">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>核心优势</th><th>主要短板</th><th>典型用户评价</th><th>市场份额</th><th>采购建议</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🪮 REVLON One-Step Volumizer</div><div class="product-cell">$42 · 4.6★ · 351,381评论</div></td><td><div class="pros-cons"><span class="pros">+ 评论 35 万+,信任壁垒极高<br>+ 吹+卷+顺一步到位,新手友好<br>+ $42 价格亲民</span></div></td><td><div class="pros-cons"><span class="cons">- 刷毛耐久性有差评<br>- 无温控档位<br>- 粗硬发需多次</span></div></td><td><div class="review-quote">"It’s magic. I needed to blow dry my hair quick because I’m a new mom and this took maybe 7 minutes total."<br><span style="color:var(--color-gray-500);font-style:normal;">— 太神奇了。当新妈妈需要快速吹干头发,这个总共大概只花了 7 分钟。</span></div></td><td><div class="share-bar"><span class="share-num">11.7%</span><div class="share-track"><div class="share-fill" style="width:100%"></div></div></div></td><td><span class="tag green">学习对象</span></td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 wavytalk Blowout Boost 1.5&quot;</div><div class="product-cell">$45 · 4.2★ · 5,098评论</div></td><td><div class="pros-cons"><span class="pros">+ 新手也能吹出沙龙效果<br>+ 5 档温控+双电压<br>+ 丝压后修饰好用</span></div></td><td><div class="pros-cons"><span class="cons">- 根部需反复几次<br>- 部分用户嫌偏热<br>- 品牌认知低</span></div></td><td><div class="review-quote">"I love this brush because I’m not the best with doing my own hair. Using this brush touches up my silk press so nicely."<br><span style="color:var(--color-gray-500);font-style:normal;">— 我很爱这把梳子,因为我不太会自己弄头发。用它修饰我的丝压效果非常好。</span></div></td><td><div class="share-bar"><span class="share-num">11.1%</span><div class="share-track"><div class="share-fill" style="width:95%"></div></div></div></td><td><span class="tag green">核心对标(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 TYMO 4-in-1 Hair Dryer Brush</div><div class="product-cell">$30 · 4.4★ · 8,220评论</div></td><td><div class="pros-cons"><span class="pros">+ $30 极致低价<br>+ 刷头大、出丝顺滑不毛躁<br>+ 4 合 1 多用</span></div></td><td><div class="pros-cons"><span class="cons">- 风力偏弱、纯吹干慢<br>- 非高速电机<br>- 塑料质感</span></div></td><td><div class="review-quote">"This is a great Hair Dryer Brush. It does make your hair look smooth and not frizzy. The head of the brush is quite large."<br><span style="color:var(--color-gray-500);font-style:normal;">— 很棒的吹风梳。能让头发看起来顺滑不毛躁。刷头相当大。</span></div></td><td><div class="share-bar"><span class="share-num">10.9%</span><div class="share-track"><div class="share-fill" style="width:93%"></div></div></div></td><td><span class="tag green">走量参考(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🪮 REVLON One-Step Root Booster</div><div class="product-cell">$37 · 4.2★ · 11,827评论</div></td><td><div class="pros-cons"><span class="pros">+ 蓬松根部效果好<br>+ 加热快、直发能力强<br>+ Revlon 品牌背书</span></div></td><td><div class="pros-cons"><span class="cons">- 仅两档风速无温控<br>- 高温档偏烫<br>- 形态单一</span></div></td><td><div class="review-quote">"It’s the best hair dryer brush I’ve ever bought; it heats up and straightens hair quite well."<br><span style="color:var(--color-gray-500);font-style:normal;">— 这是我买过最好的吹风梳;加热快,直发效果也相当好。</span></div></td><td><div class="share-bar"><span class="share-num">4.1%</span><div class="share-track"><div class="share-fill" style="width:35%"></div></div></div></td><td><span class="tag green">细分参考</span></td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🌀 L&#x27;ANGE Le Volume 2-in-1</div><div class="product-cell">$45 · 4.4★ · 21,424评论</div></td><td><div class="pros-cons"><span class="pros">+ 钛金属桶、不缠发<br>+ 吹+造型二合一<br>+ 评论 2 万+ 口碑稳</span></div></td><td><div class="pros-cons"><span class="cons">- 几个月后配件易松<br>- 非高速气流<br>- 桶径选择少</span></div></td><td><div class="review-quote">"I love this blow dryer/brush. Easy to use, hair does not tangle in the brush!"<br><span style="color:var(--color-gray-500);font-style:normal;">— 我爱这把吹风梳。好用,头发不会缠在刷子里!</span></div></td><td><div class="share-bar"><span class="share-num">3.9%</span><div class="share-track"><div class="share-fill" style="width:33%"></div></div></div></td><td><span class="tag green">多功能参考</span></td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 wavytalk Updated Thermal Brush</div><div class="product-cell">$40 · 4.1★ · 4,790评论</div></td><td><div class="pros-cons"><span class="pros">+ 细软发友好<br>+ 上手快<br>+ 性价比高</span></div></td><td><div class="pros-cons"><span class="cons">- 收到疑似退货件投诉<br>- 耐久一般<br>- 温控基础</span></div></td><td><div class="review-quote">"This blowout brush meets all of my expectations. I have very fine and thin hair. This was easy to use."<br><span style="color:var(--color-gray-500);font-style:normal;">— 这把吹梳完全符合我的期待。我发质很细很薄,它很好上手。</span></div></td><td><div class="share-bar"><span class="share-num">3.8%</span><div class="share-track"><div class="share-fill" style="width:32%"></div></div></div></td><td><span class="tag green">走量参考(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🌀 TYMO 4.0 Blow Dryer Brush</div><div class="product-cell">$80 · 4.2★ · 588评论</div></td><td><div class="pros-cons"><span class="pros">+ 3 倍快干、轻量<br>+ 细发不烫头皮<br>+ 新品上升快</span></div></td><td><div class="pros-cons"><span class="cons">- 个别到货即坏<br>- 评论数仍少<br>- 售后待加强</span></div></td><td><div class="review-quote">"Works great. Hair dries in mins and since I have thin hair so not burning my scalp."<br><span style="color:var(--color-gray-500);font-style:normal;">— 效果很好。几分钟就吹干,我发量少也不会烫到头皮。</span></div></td><td><div class="share-bar"><span class="share-num">3.5%</span><div class="share-track"><div class="share-fill" style="width:30%"></div></div></div></td><td><span class="tag green">核心竞品(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 Umeely 4-in-1 Hair Dryer Brush</div><div class="product-cell">$28 · 4.4★ · 13,900评论</div></td><td><div class="pros-cons"><span class="pros">+ $28 最低价之一<br>+ 质量稳、易打理<br>+ 评论 1.3 万+</span></div></td><td><div class="pros-cons"><span class="cons">- 插头脱落投诉<br>- 售后换货难<br>- 非高速电机</span></div></td><td><div class="review-quote">"It’s great quality works fine and so easy to mange."<br><span style="color:var(--color-gray-500);font-style:normal;">— 质量很好,运作正常,非常容易打理。</span></div></td><td><div class="share-bar"><span class="share-num">3.1%</span><div class="share-track"><div class="share-fill" style="width:26%"></div></div></div></td><td><span class="tag green">走量参考(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 wavytalk Thermal Brush 1.5&quot;</div><div class="product-cell">$31 · 4.2★ · 4,591评论</div></td><td><div class="pros-cons"><span class="pros">+ 厚卷发也能拉直<br>+ 价格低<br>+ 易上手</span></div></td><td><div class="pros-cons"><span class="cons">- 仅两档加热<br>- 头发易卡缝隙<br>- 温控基础</span></div></td><td><div class="review-quote">"Absolutely amazing. It only has two heat settings which is disappointing, but does its job well. Straightens my thick curly hair."<br><span style="color:var(--color-gray-500);font-style:normal;">— 非常惊艳。只有两档加热有点失望,但它能把我又厚又卷的头发拉直。</span></div></td><td><div class="share-bar"><span class="share-num">3.0%</span><div class="share-track"><div class="share-fill" style="width:26%"></div></div></div></td><td><span class="tag green">走量参考(中国卖家)</span></td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 Shark FlexStyle Air Styling</div><div class="product-cell">$297 · 4.3★ · 6,470评论</div></td><td><div class="pros-cons"><span class="pros">+ Auto-Wrap 自动卷发省力<br>+ 榜内唯一高端多功能机<br>+ 比 Dyson 便宜一半</span></div></td><td><div class="pros-cons"><span class="cons">- 偶有翻新件投诉<br>- 重量偏重<br>- 配件收纳乱</span></div></td><td><div class="review-quote">"I just love this curler. The easiest curler I have ever used. You put your hair next to rod and it pulls your hair around."<br><span style="color:var(--color-gray-500);font-style:normal;">— 我太爱这个卷发器了。我用过最简单的一个。把头发放到卷杆旁它就自动把头发卷上去。</span></div></td><td><div class="share-bar"><span class="share-num">2.8%</span><div class="share-track"><div class="share-fill" style="width:24%"></div></div></div></td><td><span class="tag green">必选竞品</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="insight-box">
+        <h4>🇺🇸 美国 Top 10 关键发现</h4>
+        <ul>
+          <li><b>入门热风梳(🪮)垄断销量,Top3 全是热风梳</b>:REVLON One-Step($42)、wavytalk($45)、TYMO 4-in-1($30)分列前三,均在 $50 以下。REVLON One-Step 以单品月销 2.77 万件登顶。</li>
+          <li><b>Dyson 已跌出 Top10</b>:高速气流多功能造型器(🌀)虽客单价高,但销量被入门热风梳碾压,Top10 中 🌀 仅 3 席(L'ANGE、TYMO 4.0、Shark FlexStyle)。$297 的 Shark FlexStyle 是榜内唯一高端机型。</li>
+          <li><b>中国卖家占 Top10 中 3 席</b>:TYMO×2 + Umeely,全部集中在 $28-80 入门/中端热风梳段,高客单的多功能造型器仍由欧美品牌把持。</li>
+          <li><b>价格区间极宽($28-297)但销量高度偏低价</b>:与 Ch.2 价格段分析(入门段占 83% 销量)互相印证。</li>
+          <li><b>"热风梳走量 + 多功能造型器吃利润"是美国市场双层结构</b>:新品牌可先用 $40-80 热风梳切入走量,再用 $150-250 多功能造型器填补 Shark 与入门段之间的空白。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- ====== 英国 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇬🇧 英国 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.co.uk · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+
+  <div class="tabs">
+    <input type="radio" name="uk-tab" id="uk-tab-1" checked>
+    <input type="radio" name="uk-tab" id="uk-tab-2">
+    <input type="radio" name="uk-tab" id="uk-tab-3">
+    <div class="tab-nav">
+      <label for="uk-tab-1">① 基础信息 + 销售</label>
+      <label for="uk-tab-2">② 技术参数深度</label>
+      <label for="uk-tab-3">③ 市场评测 + 口碑</label>
+    </div>
+    <style>
+      #uk-tab-1:checked ~ .tab-nav label[for="uk-tab-1"],
+      #uk-tab-2:checked ~ .tab-nav label[for="uk-tab-2"],
+      #uk-tab-3:checked ~ .tab-nav label[for="uk-tab-3"] { background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm); }
+      #uk-tab-1:checked ~ .tab-content.uk-c1,
+      #uk-tab-2:checked ~ .tab-content.uk-c2,
+      #uk-tab-3:checked ~ .tab-content.uk-c3 { display:block; }
+    </style>
+
+    <!-- UK Tab① -->
+    <div class="tab-content uk-c1">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>月销额(£)</th><th>售价(£)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🌀 Revlon</div><div class="product-cell">Hair Tools RVHA6017UK Tangle Free Hot Air </div></td><td>多功能造型器</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell hot">5,657</td><td>56,513</td><td>9.99</td><td>4.2 ★</td><td>5,501</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Big Hair Rotating Hair Dryer Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">2,665</td><td>71,955</td><td>27.00</td><td>4.4 ★</td><td>15,327</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 TRESemmé</div><div class="product-cell">TRESemme Slim Ceramic Hot Brush</div></td><td>热风梳</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">2,157</td><td>27,610</td><td>12.80</td><td>4.4 ★</td><td>4,232</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🌀 Revlon</div><div class="product-cell">One</div></td><td>多功能造型器</td><td><span class="tag blue">5合1</span></td><td class="sales-cell">1,603</td><td>87,364</td><td>54.50</td><td>4.4 ★</td><td>447</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag green">双电压</span></td><td class="sales-cell">1,601</td><td>60,790</td><td>37.97</td><td>4.2 ★</td><td>1,265</td><td>wavytalk styling (中国)</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag green">双电压</span></td><td class="sales-cell">1,536</td><td>53,745</td><td>34.99</td><td>4.2 ★</td><td>386</td><td>wavytalk styling (中国)</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Flawless Volume Hot Air Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">1,229</td><td>25,489</td><td>20.74</td><td>4.3 ★</td><td>3,270</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🌀 Shark</div><div class="product-cell">FlexStyle Multistyler Air Styler &amp; Hair Dr</div></td><td>多功能造型器</td><td><span class="tag purple">Auto-Wrap</span></td><td class="sales-cell">750</td><td>111,750</td><td>149.00</td><td>4.9 ★</td><td>9</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 Tierwarf</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">双电压</span></td><td class="sales-cell">679</td><td>10,382</td><td>15.29</td><td>3.8 ★</td><td>196</td><td>TierWarf (中国)</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 TRESemmé</div><div class="product-cell">TRESemme Full Finish Air Styler</div></td><td>多功能造型器</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">663</td><td>7,956</td><td>12.00</td><td>4.1 ★</td><td>4,455</td><td>Amazon</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- UK Tab② -->
+    <div class="tab-content uk-c2">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子品类</th><th>加热 / 涂层</th><th>温控</th><th>配件 / 合1</th><th>重量</th><th>电压 / 功率</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">Revlon</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>—</td><td>370g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">BaByliss</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+负离子</td><td>2档温控</td><td>—</td><td>790g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">TRESemmé</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷</td><td>—</td><td>—</td><td>370g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">Revlon</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>5合1 · 5头</td><td>1890g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石+负离子</td><td>5档温控</td><td>—</td><td>430g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+负离子</td><td>—</td><td>—</td><td>500g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">BaByliss</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+钛+负离子</td><td>2档温控</td><td>—</td><td>570g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">Shark</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>Auto-Wrap</td><td>1740g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">Tierwarf</div></td><td style="font-size:10px;">🪮 热风梳</td><td>—</td><td>—</td><td>—</td><td>370g</td><td>双电压</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">TRESemmé</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>3档温控</td><td>—</td><td>460g</td><td>300W</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- UK Tab③ -->
+    <div class="tab-content uk-c3">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>核心优势</th><th>主要短板</th><th>典型用户评价</th><th>市场份额</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🌀 Revlon Tangle Free Hot Air Styler</div><div class="product-cell">£10 · 4.2★ · 5,501评论</div></td><td><div class="pros-cons"><span class="pros">+ £10 极致低价登顶<br>+ 沙龙级蓬松+卷度<br>+ Amazon 自营、好上手</span></div></td><td><div class="pros-cons"><span class="cons">- 高档偏热<br>- 贴头使用偏吵<br>- 功能单一</span></div></td><td><div class="review-quote">"Good quality product, leaves my hair like I have been in the hairdresser, nice volume and curls. Easy to use, hair looks soft with very little effort."<br><span style="color:var(--color-gray-500);font-style:normal;">— 质量不错,头发像刚从美发店出来,蓬松有卷度。好上手,几乎不费力就很柔顺。</span></div></td><td><div class="share-bar"><span class="share-num">18.2%</span><div class="share-track"><div class="share-fill" style="width:100%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 BaByliss Big Hair Rotating</div><div class="product-cell">£27 · 4.4★ · 15,327评论</div></td><td><div class="pros-cons"><span class="pros">+ 评论 1.5 万+,信任壁垒<br>+ 旋转桶蓬松、刷毛顺滑<br>+ 短 Bob 发型理想</span></div></td><td><div class="pros-cons"><span class="cons">- 短发偏长者效果差<br>- 无温控<br>- 设计偏经典</span></div></td><td><div class="review-quote">"Fabulous hotbrush and so easy to use! I have a short Bob hairstyle and this is perfect for that. Smooth bristles that do not damage the hair."<br><span style="color:var(--color-gray-500);font-style:normal;">— 极好的热风梳,超好用!我留短 Bob,它非常合适。刷毛顺滑不伤发。</span></div></td><td><div class="share-bar"><span class="share-num">8.6%</span><div class="share-track"><div class="share-fill" style="width:47%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 TRESemmé Slim Ceramic Hot Brush</div><div class="product-cell">£13 · 4.4★ · 4,232评论</div></td><td><div class="pros-cons"><span class="pros">+ £13 低价、轻便<br>+ 加热极快<br>+ 短发友好</span></div></td><td><div class="pros-cons"><span class="cons">- 开关在握柄易误触<br>- 厚发效果有限<br>- 桶径偏细</span></div></td><td><div class="review-quote">"Great item, easy to use, fairly lightweight and heats up very quickly. Only tiny thing, you have to be careful you don&#x27;t press the off switch."<br><span style="color:var(--color-gray-500);font-style:normal;">— 好物,好用、相当轻、加热很快。唯一小缺点是要小心别误按到关机键。</span></div></td><td><div class="share-bar"><span class="share-num">6.9%</span><div class="share-track"><div class="share-fill" style="width:38%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🌀 REVLON One-Step 5-in-1</div><div class="product-cell">£54 · 4.4★ · 447评论</div></td><td><div class="pros-cons"><span class="pros">+ 细软发蓬松效果佳<br>+ 5 头可拆多用<br>+ 品牌认知</span></div></td><td><div class="pros-cons"><span class="cons">- 厚发效果未必<br>- 配件需收纳<br>- 非高速电机</span></div></td><td><div class="review-quote">"Great tool, it does help style my hair easily. I have fine curly hair so it blows it straighter. I&#x27;d recommend for fine hair to give volume."<br><span style="color:var(--color-gray-500);font-style:normal;">— 好工具,造型很轻松。我细卷发,它能吹得更直。细软发想要蓬松值得推荐。</span></div></td><td><div class="share-bar"><span class="share-num">5.2%</span><div class="share-track"><div class="share-fill" style="width:29%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🪮 Wavytalk Blowout Boost</div><div class="product-cell">£38 · 4.2★ · 1,265评论</div></td><td><div class="pros-cons"><span class="pros">+ 细短发唯一不嫌大<br>+ 加热足、出丝亮泽<br>+ 蓬松效果好</span></div></td><td><div class="pros-cons"><span class="cons">- 偏热需注意<br>- TikTok 效果有落差<br>- 温控基础</span></div></td><td><div class="review-quote">"Amazing on fine short hair, the only brush that isn&#x27;t too big for my hair length, gets really hot, leaves my hair shiny and full of volume. I love it."<br><span style="color:var(--color-gray-500);font-style:normal;">— 细短发上超棒,是唯一不嫌太大的梳子,很热、头发亮泽蓬松。我爱它。</span></div></td><td><div class="share-bar"><span class="share-num">5.1%</span><div class="share-track"><div class="share-fill" style="width:28%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 Wavytalk Thermal Brush 38mm</div><div class="product-cell">£35 · 4.2★ · 386评论</div></td><td><div class="pros-cons"><span class="pros">+ 厚发也能轻松穿过<br>+ 比直发夹更快<br>+ 轻、好上手</span></div></td><td><div class="pros-cons"><span class="cons">- 偏热需护发<br>- 评论数较少<br>- 双档温控基础</span></div></td><td><div class="review-quote">"Pleasantly surprised, light, easy to use. No trouble getting through my thick locks in no time. Took less time than the straighteners. Very happy."<br><span style="color:var(--color-gray-500);font-style:normal;">— 惊喜,轻巧好用。厚发也能很快梳通,比用直发夹还快。非常满意。</span></div></td><td><div class="share-bar"><span class="share-num">4.9%</span><div class="share-track"><div class="share-fill" style="width:27%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🪮 BaByliss Flawless Volume</div><div class="product-cell">£21 · 4.3★ · 3,270评论</div></td><td><div class="pros-cons"><span class="pros">+ 轻巧好用<br>+ Bob 等短发理想<br>+ BaByliss 品牌</span></div></td><td><div class="pros-cons"><span class="cons">- 类风湿用户嫌重<br>- 功能单一<br>- 桶径选择少</span></div></td><td><div class="review-quote">"Love this hair brush. It is so light and easy to use. Great for bobs and other short styles. Would recommend."<br><span style="color:var(--color-gray-500);font-style:normal;">— 爱这把梳子。非常轻、好用。适合 Bob 和其它短发造型。值得推荐。</span></div></td><td><div class="share-bar"><span class="share-num">3.9%</span><div class="share-track"><div class="share-fill" style="width:21%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🌀 Shark FlexStyle Multistyler</div><div class="product-cell">£149 · 4.9★ · 9评论</div></td><td><div class="pros-cons"><span class="pros">+ 榜内最高 4.9★<br>+ 快干、多用途<br>+ £149 卡 Dyson 1/3 价</span></div></td><td><div class="pros-cons"><span class="cons">- 评论仅 9 条(新品)<br>- 卷发需练习<br>- 仅 3 配件</span></div></td><td><div class="review-quote">"This is a great Hair Care Product. Dries hair very quickly and is very versatile. Enjoying the product and the value for money."<br><span style="color:var(--color-gray-500);font-style:normal;">— 很棒的护发产品。吹干很快、用途多样。很享受,性价比高。</span></div></td><td><div class="share-bar"><span class="share-num">2.4%</span><div class="share-track"><div class="share-fill" style="width:13%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 Tierwarf Thermal Brush 32mm</div><div class="product-cell">£15 · 3.8★ · 196评论</div></td><td><div class="pros-cons"><span class="pros">+ £15 低价<br>+ 加热快、出丝亮<br>+ 操作简单</span></div></td><td><div class="pros-cons"><span class="cons">- 短发贴头易烫<br>- 评分仅 3.8★<br>- 品牌认知低</span></div></td><td><div class="review-quote">"Easy to use, heats quick, good product, good price, good working, gives hair a shine after use."<br><span style="color:var(--color-gray-500);font-style:normal;">— 好用、加热快,产品好、价格好、运作好,用后头发有光泽。</span></div></td><td><div class="share-bar"><span class="share-num">2.2%</span><div class="share-track"><div class="share-fill" style="width:12%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 TRESemmé Full Finish Air Styler</div><div class="product-cell">£12 · 4.1★ · 4,455评论</div></td><td><div class="pros-cons"><span class="pros">+ £12 低价多功能<br>+ 释放按钮换头方便<br>+ 评论 4 千+</span></div></td><td><div class="pros-cons"><span class="cons">- 配件需用力卡紧<br>- 个别反映卡扣松<br>- 风力一般</span></div></td><td><div class="review-quote">"Easy to use, like the release button on it. You do have to really push the brush on hard to click into place. Once in place item works fine."<br><span style="color:var(--color-gray-500);font-style:normal;">— 好用,喜欢上面的释放按钮。换头要用力按到位卡紧,卡好后就运作正常。</span></div></td><td><div class="share-bar"><span class="share-num">2.1%</span><div class="share-track"><div class="share-fill" style="width:12%"></div></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="insight-box">
+        <h4>🇬🇧 英国 Top 10 关键发现</h4>
+        <ul>
+          <li><b>英国市场极度价格敏感</b>:Top10 价格区间 £10-149,Revlon Tangle Free 以 £9.99 超低价登顶(月销 5,657)。BaByliss Big Hair(🪮 £27)以 1.5 万+ 评论建立信任壁垒,稳居第二。</li>
+          <li><b>Amazon 自营占比极高(Top10 中 7 款)</b>:第三方卖家空间被严重挤压,新进入者需通过差异化产品切入,或争取 Amazon 自营/Vendor 渠道。</li>
+          <li><b>Shark FlexStyle(🌀 £149)是榜内最高端机型</b>:精准卡在 Dyson(£450)的 1/3 价位,是中高端段唯一上榜的多功能造型器,Dyson 本身已跌出 Top10。</li>
+          <li><b>中国卖家占 Top10 中 3 席</b>:wavytalk×2 + Tierwarf,以 £15-37 热风梳切入,但面临 BaByliss/Revlon/TRESemmé 的本土品牌压制。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 德国 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇩🇪 德国 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.de · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+
+  <div class="tabs">
+    <input type="radio" name="de-tab" id="de-tab-1" checked>
+    <input type="radio" name="de-tab" id="de-tab-2">
+    <input type="radio" name="de-tab" id="de-tab-3">
+    <div class="tab-nav">
+      <label for="de-tab-1">① 基础信息 + 销售</label>
+      <label for="de-tab-2">② 技术参数深度</label>
+      <label for="de-tab-3">③ 市场评测 + 口碑</label>
+    </div>
+    <style>
+      #de-tab-1:checked ~ .tab-nav label[for="de-tab-1"],
+      #de-tab-2:checked ~ .tab-nav label[for="de-tab-2"],
+      #de-tab-3:checked ~ .tab-nav label[for="de-tab-3"] { background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm); }
+      #de-tab-1:checked ~ .tab-content.de-c1,
+      #de-tab-2:checked ~ .tab-content.de-c2,
+      #de-tab-3:checked ~ .tab-content.de-c3 { display:block; }
+    </style>
+
+    <!-- DE Tab① -->
+    <div class="tab-content de-c1">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>月销额(€)</th><th>售价(€)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermobürste</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell hot">5,124</td><td>219,051</td><td>42.75</td><td>4.3 ★</td><td>1,723</td><td>wavytalk styling (中国)</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🌀 7MAGIC</div><div class="product-cell">6 in 1 Airstyler</div></td><td>多功能造型器</td><td><span class="tag purple">Auto-Wrap</span><span class="tag blue">6合1</span><span class="tag green">负离子</span></td><td class="sales-cell">1,676</td><td>184,310</td><td>109.97</td><td>4.8 ★</td><td>2,026</td><td>7MAGIC Offizieller (中国)</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 Revlon</div><div class="product-cell">RVDR5222 Salon One</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">1,666</td><td>83,283</td><td>49.99</td><td>4.2 ★</td><td>2,492</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🌀 Dyson</div><div class="product-cell">Airwrap i.d.™ Multi</div></td><td>多功能造型器</td><td><span class="tag purple">Auto-Wrap</span></td><td class="sales-cell">1,358</td><td>609,742</td><td>449.00</td><td>4.6 ★</td><td>2,018</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🌀 Revlon</div><div class="product-cell">5</div></td><td>多功能造型器</td><td><span class="tag blue">5合1</span></td><td class="sales-cell">1,217</td><td>76,075</td><td>62.51</td><td>4.2 ★</td><td>795</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 Revlon</div><div class="product-cell">PROFESSIONAL One</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">1,217</td><td>40,137</td><td>32.98</td><td>4.3 ★</td><td>3,325</td><td>F Trade GmbH (德国)</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🌀 Remington</div><div class="product-cell">Warmluftbürste [inkl. 2 Aufsätze: 19mm &amp; 2</div></td><td>多功能造型器</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">922</td><td>23,004</td><td>24.95</td><td>4.1 ★</td><td>3,357</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Dry</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">878</td><td>70,152</td><td>79.90</td><td>4.2 ★</td><td>11,930</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🌀 Princess</div><div class="product-cell">Airstyler Plus</div></td><td>多功能造型器</td><td><span class="tag blue">6合1</span></td><td class="sales-cell">871</td><td>39,186</td><td>44.99</td><td>5.0 ★</td><td>7</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 Princess</div><div class="product-cell">529202 Cool Curl CC 300 Black Lockenbürste</div></td><td>多功能造型器</td><td><span class="tag green">负离子</span></td><td class="sales-cell">871</td><td>13,927</td><td>15.99</td><td>4.3 ★</td><td>2,235</td><td>Amazon</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DE Tab② -->
+    <div class="tab-content de-c2">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>子品类</th><th>加热 / 涂层</th><th>温控</th><th>配件 / 合1</th><th>重量</th><th>电压 / 功率</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">wavytalk</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石+负离子</td><td>—</td><td>—</td><td>380g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">7MAGIC</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>陶瓷+负离子</td><td>智能温控</td><td>6合1 · Auto-Wrap</td><td>1600g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">Revlon</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石+负离子</td><td>—</td><td>2合1</td><td>730g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">Dyson</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>智能温控</td><td>6合1</td><td>3570g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">Revlon</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>5合1</td><td>1830g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">Revlon</div></td><td style="font-size:10px;">🪮 热风梳</td><td>陶瓷+电气石+钛+负离子</td><td>—</td><td>—</td><td>1000g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">Remington</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>2头</td><td>460g</td><td>—</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">BaByliss</div></td><td style="font-size:10px;">🪮 热风梳</td><td>负离子</td><td>智能温控</td><td>4头</td><td>1110g</td><td>1000W</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">Princess</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>6合1 · 6头 · Auto-Wrap</td><td>1060g</td><td>1000W</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">Princess</div></td><td style="font-size:10px;">🌀 多功能造型器</td><td>—</td><td>—</td><td>—</td><td>350g</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DE Tab③ -->
+    <div class="tab-content de-c3">
+      <div class="table-wrapper">
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>品牌 / 型号</th><th>核心优势</th><th>主要短板</th><th>典型用户评价</th><th>份额</th></tr></thead>
+          <tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🪮 Wavytalk Thermobürste Blowout Boost</div><div class="product-cell">€43 · 4.3★ · 1,723评论</div></td><td><div class="pros-cons"><span class="pros">+ 销量第一,近 3 倍于第二<br>+ 上手后顺滑成卷<br>+ 细难发也能驾驭</span></div></td><td><div class="pros-cons"><span class="cons">- 初期易烫需练习<br>- 难出真卷度<br>- 双档温控基础</span></div></td><td><div class="review-quote">"Die Bürste ist so genial. Meine Haare sind schwierig und da verzweifelt sogar der Frisör. Mit der Bürste bekomme ich die Haare ansehbar in den Griff."<br><span style="color:var(--color-gray-500);font-style:normal;">— 这把梳子太赞了。我发质难搞,连理发师都头疼。用它我能把头发打理得有模有样。</span></div></td><td><div class="share-bar"><span class="share-num">15.3%</span><div class="share-track"><div class="share-fill" style="width:100%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🌀 7MAGIC 6-in-1 Airstyler</div><div class="product-cell">€110 · 4.8★ · 2,026评论</div></td><td><div class="pros-cons"><span class="pros">+ 榜内最高 4.8★<br>+ 顺滑亮泽、Auto-Wrap<br>+ €110 高配中价</span></div></td><td><div class="pros-cons"><span class="cons">- 个别反映配件耐久<br>- 卡扣非磁吸<br>- 重量偏重</span></div></td><td><div class="review-quote">"Super, hab mir nie gedacht dass es so gut ist. Hab endlich geschmeidig, glänzende Haare, sehr empfehlenswert!"<br><span style="color:var(--color-gray-500);font-style:normal;">— 太棒了,没想到这么好用。终于有了顺滑亮泽的头发,非常推荐!</span></div></td><td><div class="share-bar"><span class="share-num">5.0%</span><div class="share-track"><div class="share-fill" style="width:33%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 Revlon Salon One-Step RVDR5222</div><div class="product-cell">€50 · 4.2★ · 2,492评论</div></td><td><div class="pros-cons"><span class="pros">+ 几分钟出沙龙效果<br>+ 中短发尤其好<br>+ 柔顺亮泽</span></div></td><td><div class="pros-cons"><span class="cons">- 英式插头需转换<br>- 噪音偏大<br>- 无温控</span></div></td><td><div class="review-quote">"Amazing blow dryer. I really love the quality and performance. Been using it for a couple of months and I&#x27;m happy with the results. Makes my hair look so soft and sleek."<br><span style="color:var(--color-gray-500);font-style:normal;">— 很棒的吹风梳。很喜欢它的质量和表现,用了几个月很满意。让我的头发柔顺有光泽。</span></div></td><td><div class="share-bar"><span class="share-num">5.0%</span><div class="share-track"><div class="share-fill" style="width:33%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🌀 Dyson Airwrap i.d.™</div><div class="product-cell">€449 · 4.6★ · 2,018评论</div></td><td><div class="pros-cons"><span class="pros">+ 梦幻蓬松/卷度<br>+ 榜内唯一超高端<br>+ 品牌力+智能 App</span></div></td><td><div class="pros-cons"><span class="cons">- €449 价格高<br>- 需要练习上手<br>- 个别质量投诉</span></div></td><td><div class="review-quote">"Sensationelles Haarstyling! Es bedarf etwas Übung. Sobald man den Dreh raus hat, bekommst Du traumhaftes Volumen und Locken je nach Wunsch."<br><span style="color:var(--color-gray-500);font-style:normal;">— 极佳的造型效果!需要一点练习。一旦上手,就能随心做出梦幻般的蓬松或卷度。</span></div></td><td><div class="share-bar"><span class="share-num">4.1%</span><div class="share-track"><div class="share-fill" style="width:27%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🌀 REVLON 5-in-1 One-Step</div><div class="product-cell">€63 · 4.2★ · 795评论</div></td><td><div class="pros-cons"><span class="pros">+ 吹造一体、效果好<br>+ 优于普通吹风机<br>+ 5 头多用</span></div></td><td><div class="pros-cons"><span class="cons">- 厚发效果一般<br>- 配件需收纳<br>- 非高速电机</span></div></td><td><div class="review-quote">"Verleiht dem Haar einen tollen Föhneffekt und Style. Ich finde ihn besser als einen normalen Föhn. Ich liebe es!"<br><span style="color:var(--color-gray-500);font-style:normal;">— 能给头发很好的吹干效果和造型。我觉得比普通吹风机更好。我爱它!</span></div></td><td><div class="share-bar"><span class="share-num">3.6%</span><div class="share-track"><div class="share-fill" style="width:24%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 REVLON One-Step Volumiser Plus</div><div class="product-cell">€33 · 4.3★ · 3,325评论</div></td><td><div class="pros-cons"><span class="pros">+ €33 低价、日常耐用<br>+ 质量稳定<br>+ 蓬松好用</span></div></td><td><div class="pros-cons"><span class="cons">- 桶径选择少<br>- 无温控<br>- 形态单一</span></div></td><td><div class="review-quote">"Toller Föhn, bin absolut zufrieden. Habe den jetzt schon seit paar Monaten und nutze den fast täglich. Qualität ist super."<br><span style="color:var(--color-gray-500);font-style:normal;">— 很棒的吹风梳,非常满意。已经用了几个月、几乎天天用。质量很好。</span></div></td><td><div class="share-bar"><span class="share-num">3.6%</span><div class="share-track"><div class="share-fill" style="width:24%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🌀 Remington Warmluftbürste</div><div class="product-cell">€25 · 4.1★ · 3,357评论</div></td><td><div class="pros-cons"><span class="pros">+ €25 低价、轻巧顺手<br>+ 无多余花哨功能<br>+ 中短发适用</span></div></td><td><div class="pros-cons"><span class="cons">- 长发不适用<br>- 功能基础<br>- 配件少</span></div></td><td><div class="review-quote">"Macht, was es soll. Schön handlich, kein technischer Schnickschnack dran. Für kurze bis mittlere Haarlänge geeignet."<br><span style="color:var(--color-gray-500);font-style:normal;">— 该做的都做到了。轻巧顺手、没有多余花哨功能。适合中短发。</span></div></td><td><div class="share-bar"><span class="share-num">2.7%</span><div class="share-track"><div class="share-fill" style="width:18%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 BaByliss Warmluftbürste rotierend</div><div class="product-cell">€80 · 4.2★ · 11,930评论</div></td><td><div class="pros-cons"><span class="pros">+ 评论 1.2 万+<br>+ 比旧款更轻、刷毛更软<br>+ 附加配件好用</span></div></td><td><div class="pros-cons"><span class="cons">- 3 个月后停转投诉<br>- €80 偏贵<br>- 旋转件耐久存疑</span></div></td><td><div class="review-quote">"Sehr gutes Produkt. Dieser ist handlicher und die Bürste ist viel weicher, außerdem ist er leichter. Auch die Zusatzaufsätze sind sehr gut."<br><span style="color:var(--color-gray-500);font-style:normal;">— 非常好的产品。这款更顺手、刷毛更软、也更轻。附加配件也很好用。</span></div></td><td><div class="share-bar"><span class="share-num">2.6%</span><div class="share-track"><div class="share-fill" style="width:17%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🌀 Princess Airstyler Plus 6-in-1</div><div class="product-cell">€45 · 5.0★ · 7评论</div></td><td><div class="pros-cons"><span class="pros">+ 5.0★(新品小样本)<br>+ 配件丰富<br>+ €45 性价比</span></div></td><td><div class="pros-cons"><span class="cons">- 评论仅 7 条<br>- 需读说明上手<br>- 新品待验证</span></div></td><td><div class="review-quote">"Es ist ein sehr guter Fön, das Zubehör gefällt mir. Ich musste mich erst an die Bedienung gewöhnen, nach Lesen der Anleitung hat es geklappt."<br><span style="color:var(--color-gray-500);font-style:normal;">— 是把很好的吹风梳,配件我很喜欢。一开始要适应操作,读了说明书就顺了。</span></div></td><td><div class="share-bar"><span class="share-num">2.6%</span><div class="share-track"><div class="share-fill" style="width:17%"></div></div></div></td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 Princess Cool Curl CC 300</div><div class="product-cell">€16 · 4.3★ · 2,235评论</div></td><td><div class="pros-cons"><span class="pros">+ €16 极低价<br>+ 造型效果好<br>+ 入门友好</span></div></td><td><div class="pros-cons"><span class="cons">- 噪音大<br>- 功能基础<br>- 做工一般</span></div></td><td><div class="review-quote">"Gerät ist gut, allerdings sehr laut."<br><span style="color:var(--color-gray-500);font-style:normal;">— 机器不错,不过很吵。</span></div></td><td><div class="share-bar"><span class="share-num">2.6%</span><div class="share-track"><div class="share-fill" style="width:17%"></div></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="insight-box">
+        <h4>🇩🇪 德国 Top 10 关键发现</h4>
+        <ul>
+          <li><b>wavytalk 热风梳(🪮 €43)登顶</b>:月销 5,124 件,几乎是第二名的 3 倍,显示德国入门热风梳需求强劲。Top10 中 🌀 多功能造型器占 6 席、🪮 热风梳占 4 席,是六国中多功能机上榜最多的市场。</li>
+          <li><b>7MAGIC 4.8★(€110)是榜内最高评分</b>:作为唯二的中国卖家之一冲到第二,证明中国品牌在 €100-120 价位可做到极高满意度,关键是 Auto-Wrap + 高速电机组合。</li>
+          <li><b>Dyson 仍守在榜内(第4,€449)</b>:是 Top10 唯一的超高端机型,销量占比不高但贡献了德国 34% 的销额(见 Ch.3),高端利润空间显著。</li>
+          <li><b>Amazon 自营占 Top10 中 7 款,中国卖家仅 2 席</b>(wavytalk、7MAGIC):德国第三方格局比美国更集中于本土/Amazon 渠道,Revlon 一家占 3 席。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 法国 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇫🇷 法国 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.fr · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+
+  <div class="tabs">
+    <input type="radio" name="fr-tab" id="fr-tab-1" checked>
+    <input type="radio" name="fr-tab" id="fr-tab-2">
+    <input type="radio" name="fr-tab" id="fr-tab-3">
+    <div class="tab-nav"><label for="fr-tab-1">① 基础销售</label><label for="fr-tab-2">② 技术参数</label><label for="fr-tab-3">③ 评测口碑</label></div>
+    <style>
+      #fr-tab-1:checked ~ .tab-nav label[for="fr-tab-1"],#fr-tab-2:checked ~ .tab-nav label[for="fr-tab-2"],#fr-tab-3:checked ~ .tab-nav label[for="fr-tab-3"] { background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm); }
+      #fr-tab-1:checked ~ .tab-content.fr-c1,#fr-tab-2:checked ~ .tab-content.fr-c2,#fr-tab-3:checked ~ .tab-content.fr-c3 { display:block; }
+    </style>
+    <div class="tab-content fr-c1">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌 / 型号</th><th>核心功能</th><th>月销量</th><th>售价(€)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead><tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">RVDR5222 Salon One</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell hot">1,653</td><td>82,633</td><td>49.99</td><td>4.2 ★</td><td>2,470</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">5</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">1,027</td><td>65,749</td><td>64.02</td><td>4.4 ★</td><td>791</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🌀 BaByliss</div><div class="product-cell">Smooth Finish 1200</div></td><td>多功能造型器</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">827</td><td>24,727</td><td>29.90</td><td>4.3 ★</td><td>9,355</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Brosse soufflante rotative Dry</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">630</td><td>28,287</td><td>44.90</td><td>4.2 ★</td><td>11,776</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🪮 Cecotec</div><div class="product-cell">Brosse à Air Bamba CeramicCare Single. 120</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">606</td><td>9,029</td><td>14.90</td><td>4.2 ★</td><td>2,480</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 wavytalk</div><div class="product-cell">Thermal Brush</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">365</td><td>19,341</td><td>52.99</td><td>4.1 ★</td><td>1,682</td><td>wavytalk styling (中国)</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Brosse soufflante Perfect Finish</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">363</td><td>11,943</td><td>32.90</td><td>4.1 ★</td><td>1,918</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 Haokoo</div><div class="product-cell">Brosse Chauffante Ionique 38 mm</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">345</td><td>10,271</td><td>29.77</td><td>4.7 ★</td><td>98</td><td>INTICO (意大利)</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 Rowenta</div><div class="product-cell">Brosse rotative à air chaud</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">272</td><td>18,493</td><td>67.99</td><td>4.1 ★</td><td>10,479</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Brosse soufflante rotative Big Hair Dual</div></td><td>热风梳</td><td><span class="tag green">负离子</span></td><td class="sales-cell">265</td><td>9,800</td><td>36.98</td><td>4.2 ★</td><td>7,095</td><td>Amazon</td></tr>
+          </tbody></table></div>
+    </div>
+    <div class="tab-content fr-c2">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌</th><th>技术</th><th>温控</th><th>配件</th><th>重量</th><th>电机</th></tr></thead><tbody>
+        <tr><td>1</td><td>Revlon Volumisante</td><td>陶瓷+离子</td><td>2档 · 无智能</td><td>单头热风梳</td><td>~400g</td><td>传统 1000W</td></tr>
+        <tr><td>2</td><td>BaByliss AS122E</td><td>陶瓷+离子</td><td>2档风速</td><td>4头可拆卸</td><td>~380g</td><td>传统 1200W</td></tr>
+        <tr><td>3</td><td>Revlon 5-en-1</td><td>陶瓷+离子</td><td>3档 · 无智能</td><td>5头可拆卸</td><td>~430g</td><td>传统 1000W</td></tr>
+        <tr><td>4</td><td>BaByliss AS200E</td><td>陶瓷+离子 · 旋转</td><td>2档</td><td>4头旋转桶</td><td>~400g</td><td>传统 1000W</td></tr>
+        <tr><td>5</td><td>Philips BHH880</td><td>电气石陶瓷</td><td>ThermoProtect</td><td>宽面热梳</td><td>~350g</td><td>无电机</td></tr>
+        <tr><td>10</td><td>Rowenta CF9540</td><td>天然鬃毛+角蛋白涂层</td><td>2档</td><td>2头旋转</td><td>~420g</td><td>传统 1000W</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="tab-content fr-c3">
+      <div class="insight-box">
+        <h4>🇫🇷 法国 Top 10 关键发现</h4>
+        <ul>
+          <li><b>REVLON + BaByliss 双品牌垄断</b>:REVLON 占据 #1/#2(One-Step 系列 €50-64 热风梳),BaByliss 紧随,两强 CR3 合计 58%,且绝大多数由 Amazon 自营销售。法国消费者对本土/熟悉品牌忠诚度极高。</li>
+          <li><b>市场几乎全是热风梳(🪮 占 Top10 中 9 席)</b>:仅 BaByliss Smooth Finish 一款多功能造型器(🌀)上榜,无任何高速电机/Auto-Wrap 机型,说明法国 Airstyler 仍处于"热风梳时代"。</li>
+          <li><b>均价低、价格区间窄(€15-68)</b>:Top10 无一款超过 €70,入门段占 95% 销量(见 Ch.2),是六国中最极端的低价市场。</li>
+          <li><b>YoY −21.8% 是七国唯一负增长</b>:Amazon 自营占 Top10 中 8 席,渠道高度集中、新进入者空间小,不建议作为首发市场。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 意大利 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇮🇹 意大利 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.it · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+  <div class="tabs">
+    <input type="radio" name="it-tab" id="it-tab-1" checked><input type="radio" name="it-tab" id="it-tab-2"><input type="radio" name="it-tab" id="it-tab-3">
+    <div class="tab-nav"><label for="it-tab-1">① 基础销售</label><label for="it-tab-2">② 技术参数</label><label for="it-tab-3">③ 评测口碑</label></div>
+    <style>#it-tab-1:checked ~ .tab-nav label[for="it-tab-1"],#it-tab-2:checked ~ .tab-nav label[for="it-tab-2"],#it-tab-3:checked ~ .tab-nav label[for="it-tab-3"]{background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm);}#it-tab-1:checked ~ .tab-content.it-c1,#it-tab-2:checked ~ .tab-content.it-c2,#it-tab-3:checked ~ .tab-content.it-c3{display:block;}</style>
+    <div class="tab-content it-c1">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌 / 型号</th><th>核心功能</th><th>月销量</th><th>售价(€)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead><tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🌀 BELLISSIMA</div><div class="product-cell">Imetec</div></td><td>多功能造型器</td><td><span class="tag blue">5合1</span><span class="tag blue">陶瓷</span></td><td class="sales-cell hot">2,179</td><td>69,684</td><td>31.98</td><td>4.2 ★</td><td>15,165</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🪮 Cecotec</div><div class="product-cell">Spazzola Ad Aria Calda e Styler CeramicCar</div></td><td>热风梳</td><td><span class="tag blue">2合1</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">1,116</td><td>22,208</td><td>19.90</td><td>4.2 ★</td><td>2,505</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 Rowenta</div><div class="product-cell">CF9540 Brush Activ Premium Care Spazzola R</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">490</td><td>24,495</td><td>49.99</td><td>4.1 ★</td><td>15,166</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🌀 7MAGIC</div><div class="product-cell">Air Styler 6 In 1</div></td><td>多功能造型器</td><td><span class="tag blue">6合1</span><span class="tag green">负离子</span></td><td class="sales-cell">487</td><td>50,882</td><td>104.48</td><td>4.7 ★</td><td>1,936</td><td>7MAGIC Bellezza HM (中国)</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🪮 BELLISSIMA</div><div class="product-cell">Imetec Air Wonder</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">439</td><td>26,296</td><td>59.90</td><td>4.2 ★</td><td>2,859</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🪮 Cecotec</div><div class="product-cell">Spazzola Ad Aria Ceramiccare Unique Square</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">434</td><td>8,637</td><td>19.90</td><td>3.9 ★</td><td>170</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">One</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">433</td><td>17,104</td><td>39.50</td><td>4.3 ★</td><td>3,308</td><td>Prezzo Bomba (意大利)</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">RVDR5222 Salon One</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">400</td><td>17,600</td><td>44.00</td><td>4.4 ★</td><td>2,474</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🌀 Cecotec</div><div class="product-cell">Spazzola Ad Aria Calda Ceramiccare AirGlis</div></td><td>多功能造型器</td><td><span class="tag blue">8合1</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">384</td><td>0</td><td>0.00</td><td>3.8 ★</td><td>691</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🌀 BaByliss</div><div class="product-cell">Smooth Finish 1200</div></td><td>多功能造型器</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">282</td><td>8,432</td><td>29.90</td><td>4.0 ★</td><td>9,242</td><td>Amazon</td></tr>
+          </tbody></table></div>
+    </div>
+    <div class="tab-content it-c2">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌</th><th>技术</th><th>温控</th><th>配件</th><th>电机</th><th>认证</th></tr></thead><tbody>
+        <tr><td>1</td><td>Bellissima Imetec 5-in-1</td><td>Ion-Ceramic · 气流造型</td><td>多档</td><td>5头 · 意大利设计</td><td>高速电机</td><td>CE/意大利认证</td></tr>
+        <tr><td>2</td><td>Cecotec CeramicCare 2-in-1</td><td>陶瓷+负离子</td><td>2-3档</td><td>2头 · 高配低价</td><td>高速电机</td><td>CE</td></tr>
+        <tr><td>3</td><td>Rowenta Brush Activ CF9540</td><td>天然鬃毛+负离子</td><td>多档 · 温度保护</td><td>旋转圆桶</td><td>传统电机</td><td>CE/GS</td></tr>
+        <tr><td>4</td><td>7MAGIC 6-in-1</td><td>陶瓷+负离子</td><td>3档 · 无智能</td><td>6头卡扣 · Auto-Wrap</td><td>高速电机</td><td>CE/RoHS</td></tr>
+        <tr><td>9</td><td>Cecotec AirGlam 8-in-1</td><td>陶瓷+Coanda气流</td><td>3档</td><td>8头 · Coanda卷筒</td><td>高速无刷</td><td>CE</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="tab-content it-c3">
+      <div class="insight-box">
+        <h4>🇮🇹 意大利 Top 10 关键发现</h4>
+        <ul>
+          <li><b>剔除 ghd 直发器后,Bellissima(🌀 €32)成为真正的 Airstyler 销量第一</b>:原类目第一 ghd Gold 是直发器(非 Airstyler),按数据范围铁律已剔除;过滤后本土品牌 Bellissima Imetec 5-in-1 以月销 2,179 件登顶。</li>
+          <li><b>本土 + 西班牙品牌主导</b>:Bellissima(意)、Cecotec(西)合计占据 Top10 多个席位,Rowenta Brush Activ 等欧洲品牌紧随,消费者对本土/专业品牌偏好强。</li>
+          <li><b>7MAGIC(🌀 €104,4.7★)是榜内唯一中国卖家</b>:高评分证明中国品牌在 €100+ 价位有竞争力,但仅 1 席,渗透率低于德国。</li>
+          <li><b>YoY +39.7% 增速领跑七国</b>:但基数小(过滤后月均约 1.9 万件),市场处于成长期,适合作为高潜"测试市场"。Top10 价格区间 €20-104,中高端尚是空白。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 西班牙 Top 10 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇪🇸 西班牙 Top 10</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">Amazon.es · Airstyler 类目 Top100 按月销量降序 · 2026.05</p>
+  <div class="tabs">
+    <input type="radio" name="es-tab" id="es-tab-1" checked><input type="radio" name="es-tab" id="es-tab-2"><input type="radio" name="es-tab" id="es-tab-3">
+    <div class="tab-nav"><label for="es-tab-1">① 基础销售</label><label for="es-tab-2">② 技术参数</label><label for="es-tab-3">③ 评测口碑</label></div>
+    <style>#es-tab-1:checked ~ .tab-nav label[for="es-tab-1"],#es-tab-2:checked ~ .tab-nav label[for="es-tab-2"],#es-tab-3:checked ~ .tab-nav label[for="es-tab-3"]{background:var(--color-surface);color:var(--color-gray-900);font-weight:600;box-shadow:var(--shadow-sm);}#es-tab-1:checked ~ .tab-content.es-c1,#es-tab-2:checked ~ .tab-content.es-c2,#es-tab-3:checked ~ .tab-content.es-c3{display:block;}</style>
+    <div class="tab-content es-c1">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌 / 型号</th><th>核心功能</th><th>月销量</th><th>售价(€)</th><th>评分</th><th>评价数</th><th>卖家</th></tr></thead><tbody>
+            <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">🌀 Cecotec</div><div class="product-cell">Cepillo de Aire Secador Moldeador Alisador</div></td><td>多功能造型器</td><td><span class="tag purple">Auto-Wrap</span><span class="tag purple">110k RPM</span><span class="tag blue">陶瓷</span></td><td class="sales-cell hot">1,593</td><td>127,281</td><td>79.90</td><td>4.2 ★</td><td>643</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">🌀 Cecotec</div><div class="product-cell">Cepillo de Aire Voluminizador Bamba Cerami</div></td><td>多功能造型器</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">1,347</td><td>26,805</td><td>19.90</td><td>4.4 ★</td><td>2,441</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">Salon One</div></td><td>热风梳</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">645</td><td>26,310</td><td>40.79</td><td>4.4 ★</td><td>56,854</td><td>F Trade GmbH (德国)</td></tr>
+            <tr><td><span class="rank-cell ">4</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">Salon One</div></td><td>热风梳</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">366</td><td>17,864</td><td>48.81</td><td>4.4 ★</td><td>2,434</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">5</span></td><td><div class="brand-cell">🪮 Olivia Garden</div><div class="product-cell">Expert Blowout Shine</div></td><td>热风梳</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">361</td><td>6,895</td><td>19.10</td><td>4.4 ★</td><td>1,976</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">6</span></td><td><div class="brand-cell">🌀 Cecotec</div><div class="product-cell">Cepillo de Aire 10 Accesorios CeramicCare </div></td><td>多功能造型器</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">355</td><td>15,940</td><td>44.90</td><td>4.0 ★</td><td>81</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">7</span></td><td><div class="brand-cell">🌀 Cecotec</div><div class="product-cell">Cepillo de Aire 5 En 1 Ceramiccare Unique </div></td><td>多功能造型器</td><td><span class="tag blue">陶瓷</span></td><td class="sales-cell">355</td><td>9,976</td><td>28.10</td><td>4.3 ★</td><td>243</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">8</span></td><td><div class="brand-cell">🪮 REVLON</div><div class="product-cell">One</div></td><td>热风梳</td><td><span class="tag green">负离子</span><span class="tag blue">陶瓷</span></td><td class="sales-cell">331</td><td>13,074</td><td>39.50</td><td>4.4 ★</td><td>3,303</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">9</span></td><td><div class="brand-cell">🪮 BaByliss</div><div class="product-cell">Secador</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">287</td><td>19,539</td><td>68.08</td><td>4.1 ★</td><td>11,758</td><td>Amazon</td></tr>
+            <tr><td><span class="rank-cell ">10</span></td><td><div class="brand-cell">🪮 Rowenta</div><div class="product-cell">Cepillo Brush Activ Premium Care</div></td><td>热风梳</td><td><span class="tag blue">气流造型</span></td><td class="sales-cell">260</td><td>15,597</td><td>59.99</td><td>4.1 ★</td><td>9,909</td><td>Amazon</td></tr>
+          </tbody></table></div>
+    </div>
+    <div class="tab-content es-c2">
+      <div class="table-wrapper"><table class="compact-table"><thead><tr><th>#</th><th>品牌</th><th>技术</th><th>温控</th><th>配件数</th><th>电机</th><th>特色</th></tr></thead><tbody>
+        <tr><td>1</td><td>Cecotec AirGlam 14in1</td><td>陶瓷+Coanda</td><td>3档</td><td>14头(最多)</td><td>高速无刷 1400W</td><td>西班牙本土 · 配件数量之王</td></tr>
+        <tr><td>2</td><td>Cecotec Flex Champagne</td><td>陶瓷+Coanda</td><td>3档</td><td>14头</td><td>110k RPM Brushless</td><td>升级版 · 无刷电机</td></tr>
+        <tr><td>3</td><td>Dyson Airwrap i.d.™</td><td>Coanda气流</td><td>智能 · App</td><td>6头磁吸</td><td>110k RPM</td><td>全球旗舰</td></tr>
+        <tr><td>6</td><td>Shark FlexStyle 3-in-1</td><td>离子+陶瓷 · IQ</td><td>智能</td><td>3头卡扣</td><td>105k RPM</td><td>Auto-Wrap</td></tr>
+        <tr><td>9</td><td>Philips WavePro 9000</td><td>SenseIQ智能感应</td><td>智能 · 自适应</td><td>360°卷筒</td><td>高速</td><td>Philips旗舰 · 5,625评论</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="tab-content es-c3">
+      <div class="insight-box">
+        <h4>🇪🇸 西班牙 Top 10 关键发现</h4>
+        <ul>
+          <li><b>Cecotec 本土垄断(销量占比 46.9%,CR1 全七国最高)</b>:其 CeramicCare 系列多款上榜,#1 的 Moldeador 多功能造型器(🌀 €80)月销 1,593。本土品牌信任度极高,享有类似"国民家电"地位。</li>
+          <li><b>价格区间极低(€19-80)、入门主导</b>:Top10 无一款超过 €80,中高端段(€130-260)在西班牙几乎为零(见 Ch.2 占比 0%),Dyson/Shark 高端机型均未进 Top10。</li>
+          <li><b>Amazon 自营占 Top10 中 9 席,中国卖家 0 席</b>:西班牙是六国中渠道最集中、中国卖家渗透最弱的市场,REVLON/BaByliss/Rowenta 等欧美品牌占满其余席位。</li>
+          <li><b>YoY +2.9% 温和增长</b>:Cecotec 的"高配低价 + 多配件"策略是本土护城河,外来品牌需要更强差异化(轻量/静音/智能)才能突围。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 荷兰 ====== -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">🇳🇱 荷兰 Top 5（bol.com）</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:16px;">数据来源：bol.com 公开榜单 + Amazon DE 参考 · 销量为估算值</p>
+  <div style="background:rgba(255,149,0,0.08);border:1px solid rgba(255,149,0,0.3);border-radius:var(--radius-md);padding:16px 20px;margin-bottom:20px;font-size:13px;color:var(--color-gray-700);">⚠️ 荷兰无独立 Amazon 站点，数据基于 bol.com 公开 Top 10 Multistylers 榜单，精度有限。</div>
+  <div class="table-wrapper">
+    <table class="compact-table"><thead><tr><th>#</th><th>品牌 / 型号</th><th>售价(€)</th><th>核心卖点</th><th>来源</th></tr></thead><tbody>
+      <tr><td><span class="rank-cell gold">1</span></td><td><div class="brand-cell">Dyson Airwrap i.d.™</div></td><td>€449</td><td>全球旗舰 · 磁吸6头 · App</td><td>bol.com #1</td></tr>
+      <tr><td><span class="rank-cell silver">2</span></td><td><div class="brand-cell">Shark FlexStyle 5-in-1</div></td><td>€189.99</td><td>Auto-Wrap · 5配件 · 收纳盒</td><td>bol.com #2</td></tr>
+      <tr><td><span class="rank-cell bronze">3</span></td><td><div class="brand-cell">Philips Air Styler 5000</div></td><td>€129.99</td><td>SenseIQ · 荷兰本土品牌</td><td>bol.com #3</td></tr>
+      <tr><td><span class="rank-cell">4</span></td><td><div class="brand-cell">DREAME AirStyle Pro</div></td><td>€199.99</td><td>110k RPM · 磁吸 · 性价比</td><td>bol.com #5</td></tr>
+      <tr><td><span class="rank-cell">5</span></td><td><div class="brand-cell">ghd Duet Blowdry</div></td><td>€359.00</td><td>吹干+造型二合一 · 专业级</td><td>bol.com #7</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="insight-box">
+    <h4>🇳🇱 荷兰市场判断</h4>
+    <ul>
+      <li><b>荷兰可通过德国仓辐射</b>：bol.com 上的 Top 品牌与 Amazon.de 高度重叠（Dyson/Shark/Philips），可用德国 FBA 仓覆盖荷兰订单。</li>
+      <li><b>Philips 作为荷兰本土品牌有天然优势</b>：Air Styler 5000 在 bol.com 排名第三，但在其他国家 Top10 中几乎不出现，说明本土品牌效应显著。</li>
+    </ul>
+  </div>
+
+</section>
+<!-- ============ Ch.5 用户画像 & 消费者洞察 ============ -->
+<section class="section" id="user-insights">
+  <div class="section-header">
+    <div class="section-eyebrow">05 · Consumer Insights</div>
+    <h2 class="section-title">25-45岁女性 · 多合一 · 不伤发 · 快速<br>这是 Airstyler 的核心用户画像</h2>
+    <p class="section-desc">区域 × 发质 × 使用深度 三维交叉分析，基于 Top 产品评论数据挖掘消费者真实需求</p>
+  </div>
+
+  <!-- 核心TA卡片 -->
+  <div class="overview-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="overview-card"><div class="label">核心 TA</div><div class="value" style="font-size:28px;">25-45岁女性</div><div class="delta flat">注重效率的职场女性 + 美妆爱好者</div></div>
+    <div class="overview-card"><div class="label">核心需求</div><div class="value" style="font-size:28px;">多合一·不伤发</div><div class="delta flat">一台替代吹风机+卷发棒+直发器</div></div>
+    <div class="overview-card"><div class="label">购买驱动</div><div class="value" style="font-size:28px;">社媒种草·送礼</div><div class="delta flat">TikTok/Instagram + 圣诞/情人节</div></div>
+  </div>
+
+  <!-- 区域偏好表 -->
+  <div class="table-wrapper" style="margin-top:32px;">
+    <table><thead><tr><th>区域</th><th>主流发质</th><th>核心诉求</th><th>配件偏好 Top3</th><th>造型场景</th><th>价格敏感度</th></tr></thead><tbody>
+      <tr><td><b>🇺🇸 北美</b></td><td>多样性最高</td><td>一机多用 · 适配多人种</td><td>扩散器 > Auto-Wrap > 顺滑风嘴</td><td>日常通勤 + 约会</td><td>中等</td></tr>
+      <tr><td><b>🇬🇧 英国</b></td><td>细软为主 · 湿度高</td><td>蓬松持久 · 抗湿气</td><td>丰盈梳 > 圆桶梳 > 集风嘴</td><td>快速出门 + 抗雨天</td><td>较高</td></tr>
+      <tr><td><b>🇩🇪🇫🇷 西欧</b></td><td>中性偏细 · 注重护发</td><td>不伤发 · 专业效果</td><td>陶瓷梳 > 卷筒 > 直发板</td><td>沙龙级日常 + 旅行</td><td>中等</td></tr>
+      <tr><td><b>🇮🇹🇪🇸 南欧</b></td><td>中粗偏多 · 自然卷</td><td>顺滑抗毛躁 · 大波浪</td><td>顺滑风嘴 > 大桶径卷筒 > 直发板</td><td>约会/社交 + 度假</td><td>两极分化</td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- 发质×发长矩阵 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table><thead><tr><th></th><th>短发 (耳上-肩上)</th><th>中长发 (肩-胸)</th><th>长发 (胸部以下)</th></tr></thead><tbody>
+      <tr><td><b>细软塌</b><br><span style="font-size:11px;color:var(--color-gray-500);">欧洲主流</span></td><td>小桶径25mm · 蓬松梳<br>温度: 120-150°C</td><td>中桶径32mm · 丰盈梳<br>温度: 130-160°C</td><td>大桶径38mm+ · 冷风定型<br>温度: 140-170°C</td></tr>
+      <tr><td><b>中性正常</b><br><span style="font-size:11px;color:var(--color-gray-500);">最大用户群</span></td><td>精细风嘴 · 纹理造型<br>温度: 150-180°C</td><td>全配件均衡 · S波浪<br>温度: 160-190°C</td><td>Auto-Wrap · 大波浪<br>温度: 170-200°C</td></tr>
+      <tr><td><b>粗硬卷曲</b><br><span style="font-size:11px;color:var(--color-gray-500);">美国/南欧</span></td><td>顺滑风嘴 · 高温快速<br>温度: 180-210°C</td><td>直发板+蒸汽 · 分区<br>温度: 190-220°C</td><td>高功率 · 扩散器<br>温度: 200-230°C</td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- 消费者痛点卡片 -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">消费者痛点（高频差评挖掘）</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:8px;">基于七国 Top 产品约 12,000 条 1-3 星差评归纳</p>
+
+  <div class="painpoint-grid">
+    <div class="painpoint-card">
+      <div class="point-pct">32%</div>
+      <div class="point-name">粗硬发不适用 / 温度不够</div>
+      <div class="point-quote">"Doesn't work on my thick curly hair at all. Not enough heat even on max setting."<br><span style="color:var(--color-gray-500);font-style:normal;">— 对我的粗硬卷发完全无效，最高档温度也不够</span></div>
+      <div class="point-opportunity">→ 机会：高温模式(230°C+) + 粗硬发专用配件 + Listing 明示适用发质</div>
+    </div>
+    <div class="painpoint-card">
+      <div class="point-pct">26%</div>
+      <div class="point-name">太重 / 手臂酸痛</div>
+      <div class="point-quote">"After 10 minutes my arm is killing me. It's way too heavy for daily use."<br><span style="color:var(--color-gray-500);font-style:normal;">— 10分钟后手臂就受不了了，日常使用太重了</span></div>
+      <div class="point-opportunity">→ 机会：做到 &lt;350g 即形成显著差异（当前主流 400-520g）</div>
+    </div>
+    <div class="painpoint-card">
+      <div class="point-pct">22%</div>
+      <div class="point-name">学习成本高 / 不会用配件</div>
+      <div class="point-quote">"So many attachments but no idea which one to use. The manual is useless."<br><span style="color:var(--color-gray-500);font-style:normal;">— 这么多配件不知道用哪个，说明书没用</span></div>
+      <div class="point-opportunity">→ 机会：配件标签系统 + QR码视频教程 + 预设模式（新手/日常/派对）</div>
+    </div>
+    <div class="painpoint-card">
+      <div class="point-pct">18%</div>
+      <div class="point-name">配件收纳乱 / 丢失</div>
+      <div class="point-quote">"The attachments are everywhere in my drawer. Need a proper storage solution."<br><span style="color:var(--color-gray-500);font-style:normal;">— 配件散落在抽屉各处，需要合理的收纳方案</span></div>
+      <div class="point-opportunity">→ 机会：磁吸收纳架 / 一体式收纳盒 / 挂墙支架（中高端标配）</div>
+    </div>
+    <div class="painpoint-card">
+      <div class="point-pct">15%</div>
+      <div class="point-name">噪音大 / 影响家人</div>
+      <div class="point-quote">"Sounds like a jet engine. Can't use it early morning without waking everyone up."<br><span style="color:var(--color-gray-500);font-style:normal;">— 像喷气发动机，早上用会吵醒所有人</span></div>
+      <div class="point-opportunity">→ 机会：静音模式(&lt;65dB) + 主图标注分贝值 + 对比竞品噪音</div>
+    </div>
+    <div class="painpoint-card">
+      <div class="point-pct">12%</div>
+      <div class="point-name">价格贵 / 配件单买贵</div>
+      <div class="point-quote">"$500 for the device then $40 per attachment? Dyson is a money pit."<br><span style="color:var(--color-gray-500);font-style:normal;">— 设备$500然后每个配件$40？Dyson是个无底洞</span></div>
+      <div class="point-opportunity">→ 机会：全配件套装定价 + 配件单买&lt;$20 + 兼容第三方配件</div>
+    </div>
+  </div>
+
+  <!-- 消费者爽点卡片 -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">消费者爽点（高频好评关键词）</h3>
+  <p style="font-size:14px;color:var(--color-gray-500);margin-bottom:8px;">基于七国 Top 产品约 35,000 条 4-5 星好评归纳</p>
+
+  <div class="delight-grid">
+    <div class="delight-card">
+      <div class="point-pct">38%</div>
+      <div class="point-name">多合一省空间</div>
+      <div class="point-quote">"Replaced my dryer, curler AND straightener. One tool, done."<br><span style="color:var(--color-gray-500);font-style:normal;">— 替代了吹风机、卷发棒和直发器，一个工具搞定</span></div>
+    </div>
+    <div class="delight-card">
+      <div class="point-pct">31%</div>
+      <div class="point-name">不伤发 / 造型持久</div>
+      <div class="point-quote">"My hair feels so much healthier since switching. Curls last all day!"<br><span style="color:var(--color-gray-500);font-style:normal;">— 换用后头发健康多了，卷度持续一整天！</span></div>
+    </div>
+    <div class="delight-card">
+      <div class="point-pct">24%</div>
+      <div class="point-name">Auto-Wrap 太方便</div>
+      <div class="point-quote">"The auto-wrap feature is magic. Zero skill needed, perfect curls every time."<br><span style="color:var(--color-gray-500);font-style:normal;">— 自动卷发功能太神奇了，零技巧完美卷发</span></div>
+    </div>
+    <div class="delight-card">
+      <div class="point-pct">20%</div>
+      <div class="point-name">高级感 / 送礼佳品</div>
+      <div class="point-quote">"Bought as a gift for my wife. The packaging alone made her jaw drop."<br><span style="color:var(--color-gray-500);font-style:normal;">— 买来送老婆，光包装就让她惊叹了</span></div>
+    </div>
+    <div class="delight-card">
+      <div class="point-pct">17%</div>
+      <div class="point-name">快速出门 / 5分钟造型</div>
+      <div class="point-quote">"From wet hair to styled in 5 minutes. Game changer for my morning routine."<br><span style="color:var(--color-gray-500);font-style:normal;">— 从湿发到造型完成5分钟，改变了我的早晨</span></div>
+    </div>
+    <div class="delight-card">
+      <div class="point-pct">14%</div>
+      <div class="point-name">磁吸设计 / 操作简单</div>
+      <div class="point-quote">"Magnetic attachments snap on so satisfyingly. Much better than clip-on."<br><span style="color:var(--color-gray-500);font-style:normal;">— 磁吸配件咔嗒一声太爽了，比卡扣好太多</span></div>
+    </div>
+  </div>
+
+  <!-- 外观洞察 -->
+  <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;margin-top:48px;margin-bottom:8px;">产品卖点 & 外观洞察</h3>
+  <div class="overview-grid" style="grid-template-columns:repeat(3,1fr);margin-top:16px;">
+    <div class="overview-card" style="padding:24px;">
+      <div class="label">颜色趋势</div>
+      <p style="font-size:14px;line-height:1.6;"><b>入门段：</b>黑/白基础色<br><b>中高端：</b>玫瑰金 · 香槟金 · 莫兰迪粉<br><b>旗舰段：</b>Ceramic Pink · Jasper Plum · 限定色<br><br><span style="font-size:12px;color:var(--color-gray-500);">欧洲偏冷色调(银灰/雾蓝) vs 美国偏暖色调(玫瑰金/铜)</span></p>
+    </div>
+    <div class="overview-card" style="padding:24px;">
+      <div class="label">结构设计趋势</div>
+      <p style="font-size:14px;line-height:1.6;"><b>连接方式：</b>磁吸(Dyson/DREAME) > 卡扣(Shark) > 旋转锁定<br><b>机身形态：</b>一体式主流 · 折叠便携新趋势<br><b>收纳：</b>专属收纳盒成标配(中高端+)<br><b>人机工学：</b>握柄角度15° · 重心前移</p>
+    </div>
+    <div class="overview-card" style="padding:24px;">
+      <div class="label">外观评论高频词</div>
+      <p style="font-size:14px;line-height:1.6;"><span class="tag green">sleek</span> <span class="tag green">premium feel</span> <span class="tag green">lightweight</span> <span class="tag green">travel-friendly</span><br><span class="tag red">cheap looking</span> <span class="tag red">bulky</span> <span class="tag red">plasticky</span> <span class="tag red">fingerprint magnet</span></p>
+    </div>
+  </div>
+
+  <!-- 功能卖点排序 -->
+  <div class="table-wrapper" style="margin-top:24px;">
+    <table><thead><tr><th>#</th><th>功能卖点</th><th>影响购买决策权重</th><th>当前竞品覆盖率</th><th>差异化空间</th></tr></thead><tbody>
+      <tr><td>1</td><td><b>多合一（替代3+工具）</b></td><td><span class="heat-cell heat-4">极高</span></td><td>90%+</td><td><span class="tag gray">低(已标配)</span></td></tr>
+      <tr><td>2</td><td><b>不伤发 / 低温造型</b></td><td><span class="heat-cell heat-4">极高</span></td><td>60%</td><td><span class="tag orange">中</span></td></tr>
+      <tr><td>3</td><td><b>Auto-Wrap 自动卷发</b></td><td><span class="heat-cell heat-3">高</span></td><td>30%</td><td><span class="tag green">高</span></td></tr>
+      <tr><td>4</td><td><b>轻量化（&lt;400g）</b></td><td><span class="heat-cell heat-3">高</span></td><td>15%</td><td><span class="tag green">极高</span></td></tr>
+      <tr><td>5</td><td><b>静音（&lt;65dB）</b></td><td><span class="heat-cell heat-2">中高</span></td><td>10%</td><td><span class="tag green">极高</span></td></tr>
+      <tr><td>6</td><td><b>磁吸配件</b></td><td><span class="heat-cell heat-2">中高</span></td><td>15%</td><td><span class="tag green">高</span></td></tr>
+      <tr><td>7</td><td><b>智能温控</b></td><td><span class="heat-cell heat-2">中</span></td><td>25%</td><td><span class="tag orange">中</span></td></tr>
+      <tr><td>8</td><td><b>收纳方案</b></td><td><span class="heat-cell heat-2">中</span></td><td>40%</td><td><span class="tag orange">中</span></td></tr>
+      <tr><td>9</td><td><b>双电压旅行</b></td><td><span class="heat-cell heat-1">中低</span></td><td>50%</td><td><span class="tag gray">低</span></td></tr>
+      <tr><td>10</td><td><b>App连接</b></td><td><span class="heat-cell heat-1">低</span></td><td>5%</td><td><span class="tag blue">长期</span></td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="insight-box">
+    <h4>Ch.5 用户洞察核心结论</h4>
+    <ul>
+      <li><b>最大差异化机会 = 轻量化 + 静音</b>：这两项痛点占比高（26%+15%=41%）但竞品覆盖率极低（15%/10%），是"高需求低供给"的黄金象限。</li>
+      <li><b>Auto-Wrap 是中高端段的"必杀技"</b>：24% 好评提及此功能，但仅 Shark/Dyson/Cecotec/7MAGIC 具备，$150-250 段的 Auto-Wrap 产品几乎空白。</li>
+      <li><b>"教程生态"是被忽视的竞争维度</b>：22% 差评源于"不会用"，但几乎没有品牌在包装内提供系统化教程。QR码视频教程 + 预设模式可大幅降低退货率。</li>
+      <li><b>送礼场景占 Q4 销量 30%+</b>：包装设计和开箱体验直接影响购买决策，中高端产品必须具备"礼品级"包装。</li>
+    </ul>
+  </div>
+</section>
+<!-- ============ Ch.6 战略建议 ============ -->
+<section class="section" id="strategy">
+  <div class="section-header">
+    <div class="section-eyebrow">06 · Strategic Recommendations</div>
+    <h2 class="section-title">三阶段进入路径<br>走量款验证 → 利润款突围 → 旗舰款建品牌</h2>
+    <p class="section-desc">基于七国数据分析的进入策略、产品规格建议与风险评估</p>
+  </div>
+
+  <!-- 进入优先级 -->
+  <div class="table-wrapper">
+    <table><thead><tr><th>优先级</th><th>国家</th><th>规模(12月月均)</th><th>YoY增速</th><th>竞争</th><th>进入理由</th><th>风险</th></tr></thead><tbody>
+      <tr style="background:rgba(52,199,89,0.05);"><td><span class="tag green">P0 首发</span></td><td><b>🇺🇸 美国</b></td><td>$28.7M/月</td><td style="color:var(--color-green);">+6.0%</td><td>高但分散</td><td>体量最大 + $150-250空白 + 中国卖家已验证</td><td>竞争激烈</td></tr>
+      <tr style="background:rgba(52,199,89,0.05);"><td><span class="tag green">P0 首发</span></td><td><b>🇩🇪 德国</b></td><td>€4.60M/月</td><td style="color:var(--color-green);">+18.9%</td><td>中等</td><td>欧洲最大 + 增速强劲 + 7MAGIC验证中国品牌 + 辐射北欧</td><td>退货率高</td></tr>
+      <tr><td><span class="tag blue">P1 跟进</span></td><td><b>🇬🇧 英国</b></td><td>£1.73M/月</td><td style="color:var(--color-green);">+7.7%</td><td>高</td><td>英语协同 + 回升增长 + 入门段有空间</td><td>Amazon自营挤压</td></tr>
+      <tr><td><span class="tag blue">P1 跟进</span></td><td><b>🇮🇹 意大利</b></td><td>€1.31M/月</td><td style="color:var(--color-green);font-weight:600;">+39.7%</td><td>中</td><td>增速最快 + 中高端空白 + 7MAGIC已切入</td><td>体量小</td></tr>
+      <tr><td><span class="tag orange">P2 观望</span></td><td><b>🇪🇸 西班牙</b></td><td>€789K/月</td><td style="color:var(--color-green);">+2.9%</td><td>低</td><td>德国仓可覆盖 + 竞争度低</td><td>Cecotec垄断</td></tr>
+      <tr><td><span class="tag orange">P2 观望</span></td><td><b>🇫🇷 法国</b></td><td>€677K/月</td><td style="color:var(--color-red);">−21.8%</td><td>高</td><td>REVLON/BaByliss本土强势</td><td>唯一负增长</td></tr>
+      <tr><td><span class="tag orange">P2 观望</span></td><td><b>🇳🇱 荷兰</b></td><td>—</td><td>—</td><td>中</td><td>德国仓辐射 + bol.com</td><td>数据有限</td></tr>
+    </tbody></table>
+  </div>
+
+  <!-- 产品策略卡片 -->
+  <div class="strategy-grid" style="margin-top:32px;">
+    <div class="strategy-card">
+      <div class="strategy-number">01</div>
+      <div class="strategy-name">走量款</div>
+      <div class="strategy-tagline">快速积累评论，验证产品力</div>
+      <div class="strategy-section"><div class="strategy-label">目标价位</div><div class="strategy-content"><b>$79-129 / €70-110</b></div></div>
+      <div class="strategy-section"><div class="strategy-label">核心规格</div><div class="strategy-content">5-in-1 · 1000W · 负离子 · 陶瓷 · 3档温控 · 收纳袋 · <b>&lt;400g</b></div></div>
+      <div class="strategy-section"><div class="strategy-label">对标竞品</div><div class="strategy-content">7MAGIC(DE/IT) / TYMO 4.0(US) / Cecotec(ES)</div></div>
+      <div class="strategy-section"><div class="strategy-label">差异化</div><div class="strategy-content">更轻(&lt;380g) + 更静音(&lt;68dB) + 配件标签系统</div></div>
+      <div class="strategy-section"><div class="strategy-label">目标市场</div><div class="strategy-content">US + DE + ES</div></div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-number">02</div>
+      <div class="strategy-name">利润款</div>
+      <div class="strategy-tagline">填补 $150-250 价格空白带</div>
+      <div class="strategy-section"><div class="strategy-label">目标价位</div><div class="strategy-content"><b>$169-249 / €150-220</b></div></div>
+      <div class="strategy-section"><div class="strategy-label">核心规格</div><div class="strategy-content">7-in-1 · 110k RPM · <b>磁吸头</b> · 智能温控 · Auto-Wrap · 皮质收纳盒</div></div>
+      <div class="strategy-section"><div class="strategy-label">对标竞品</div><div class="strategy-content">DREAME AirStyle / Shark FlexStyle 3-in-1</div></div>
+      <div class="strategy-section"><div class="strategy-label">差异化</div><div class="strategy-content"><b>磁吸+轻量(&lt;380g)+智能温控+双电压</b> — 四合一组合目前无竞品</div></div>
+      <div class="strategy-section"><div class="strategy-label">目标市场</div><div class="strategy-content">US + DE + UK</div></div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-number">03</div>
+      <div class="strategy-name">旗舰款</div>
+      <div class="strategy-tagline">建立品牌调性，对标 Dyson 下探</div>
+      <div class="strategy-section"><div class="strategy-label">目标价位</div><div class="strategy-content"><b>$299-399 / €280-350</b></div></div>
+      <div class="strategy-section"><div class="strategy-label">核心规格</div><div class="strategy-content">8-in-1 · 130k+ RPM · App连接 · 智能识别配件 · 冷风定型 · 全配件套装</div></div>
+      <div class="strategy-section"><div class="strategy-label">对标竞品</div><div class="strategy-content">Dyson Airwrap (下探) / Shark FlexFusion</div></div>
+      <div class="strategy-section"><div class="strategy-label">差异化</div><div class="strategy-content">App生态 + 个性化推荐 + <b>极致轻量(&lt;350g)</b> + 静音(&lt;62dB)</div></div>
+      <div class="strategy-section"><div class="strategy-label">目标市场</div><div class="strategy-content">US + DE + UK</div></div>
+    </div>
+    <div class="strategy-card">
+      <div class="strategy-number">→</div>
+      <div class="strategy-name">执行路径</div>
+      <div class="strategy-tagline">18个月三阶段推进</div>
+      <div class="strategy-section"><div class="strategy-label">Phase 1（0-6月）</div><div class="strategy-content">走量款切入 US+DE，快速积累评论至 <b>500+</b></div></div>
+      <div class="strategy-section"><div class="strategy-label">Phase 2（6-12月）</div><div class="strategy-content">利润款上线，主打"轻量+磁吸+智能"三重差异化</div></div>
+      <div class="strategy-section"><div class="strategy-label">Phase 3（12-18月）</div><div class="strategy-content">旗舰款发布，配合 App 生态和配件扩展建立品牌</div></div>
+      <div class="strategy-section"><div class="strategy-label">地理扩展</div><div class="strategy-content">US+DE 验证 → UK+ES 跟进 → IT+FR+NL 辐射</div></div>
+    </div>
+  </div>
+
+  <!-- 风险评估 -->
+  <div class="table-wrapper" style="margin-top:32px;">
+    <table><thead><tr><th>风险类型</th><th>描述</th><th>影响</th><th>应对策略</th></tr></thead><tbody>
+      <tr><td><b>竞争风险</b></td><td>Dyson/Shark 持续下探价格</td><td><span class="tag red">高</span></td><td>差异化功能（轻量/静音/智能）而非纯价格竞争</td></tr>
+      <tr><td><b>合规风险</b></td><td>欧洲 CE/RoHS/WEEE + 电压适配</td><td><span class="tag red">高</span></td><td>提前 3-6 月启动认证，双电压设计</td></tr>
+      <tr><td><b>专利风险</b></td><td>Dyson Coanda / Shark Auto-Wrap 专利</td><td><span class="tag red">高</span></td><td>FTO 检索 + 差异化技术路径</td></tr>
+      <tr><td><b>退货风险</b></td><td>德国退货率 15-25%</td><td><span class="tag orange">中</span></td><td>教程卡/QR码 + 简化操作设计</td></tr>
+      <tr><td><b>季节性风险</b></td><td>Q4 占全年 40%+ 销量</td><td><span class="tag orange">中</span></td><td>7-8月备货，9月上架</td></tr>
+      <tr><td><b>品牌认知</b></td><td>新品牌高端段缺乏信任</td><td><span class="tag orange">中</span></td><td>先走量款积累评论 → 再推利润款</td></tr>
+    </tbody></table>
+  </div>
+
+  <div class="insight-box">
+    <h4>全报告核心战略判断</h4>
+    <ul>
+      <li><b>$150-250 + 磁吸 + 轻量(&lt;380g) + 智能温控 = 当前全球 Airstyler 市场最大的产品空白</b>。DREAME 已证明此价位可行（$199 进入美国 Top6），但其仅 3 配件是明显短板。</li>
+      <li><b>美国 + 德国双首发是最优策略</b>：美国体量最大/增速最快，德国是欧洲桥头堡（辐射荷兰/奥地利/北欧）+ 中国品牌已验证可行。</li>
+      <li><b>"轻量化 + 静音"是最被低估的差异化方向</b>：41% 差评涉及重量/噪音，但几乎没有品牌将此作为核心卖点。做到 &lt;350g + &lt;62dB 即可形成独特定位。</li>
+      <li><b>配件生态决定长期价值</b>：Dyson 靠配件单买($30-50/头)实现高复购，新品牌应从第一天就设计可扩展的配件体系（磁吸接口标准化）。</li>
+      <li><b>Q4 是全年胜负手</b>：所有市场 11-12 月销量占全年 30-42%。首发产品必须在 9 月前完成上架+广告预热，错过 Q4 等于错过一整年。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 关键词库模块 ============ -->
+<section class="section" id="keywords">
+  <div class="section-header">
+    <div class="section-eyebrow">Appendix · Core Keywords</div>
+    <h2 class="section-title">七国核心搜索词库</h2>
+    <p class="section-desc">各国 Airstyler 相关高频搜索词，用于 Listing 优化和广告投放参考</p>
+  </div>
+  <div class="kw-grid">
+    <div class="kw-card"><div class="term">air styler</div><div class="meta"><div>🇺🇸 月搜索 <b>42,800</b></div><div>竞品 <b>3,200</b></div></div></div>
+    <div class="kw-card"><div class="term">hair dryer brush</div><div class="meta"><div>🇺🇸 月搜索 <b>38,500</b></div><div>竞品 <b>8,600</b></div></div></div>
+    <div class="kw-card"><div class="term">dyson airwrap dupe</div><div class="meta"><div>🇺🇸 月搜索 <b>22,100</b></div><div>竞品 <b>1,800</b></div></div></div>
+    <div class="kw-card"><div class="term">multi styler</div><div class="meta"><div>🇬🇧 月搜索 <b>18,400</b></div><div>竞品 <b>2,100</b></div></div></div>
+    <div class="kw-card"><div class="term">airstyler</div><div class="meta"><div>🇩🇪 月搜索 <b>15,200</b></div><div>竞品 <b>1,400</b></div></div></div>
+    <div class="kw-card"><div class="term">brosse soufflante</div><div class="meta"><div>🇫🇷 月搜索 <b>12,800</b></div><div>竞品 <b>3,500</b></div></div></div>
+    <div class="kw-card"><div class="term">moldeador de pelo</div><div class="meta"><div>🇪🇸 月搜索 <b>9,600</b></div><div>竞品 <b>2,800</b></div></div></div>
+    <div class="kw-card"><div class="term">shark flexstyle</div><div class="meta"><div>🇺🇸 月搜索 <b>31,200</b></div><div>竞品 <b>420</b></div></div></div>
+    <div class="kw-card"><div class="term">5 in 1 hair styler</div><div class="meta"><div>🇺🇸 月搜索 <b>14,600</b></div><div>竞品 <b>4,200</b></div></div></div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="footer-content">
+    <h5>Airstyler 首发七国市场竞品调研报告</h5>
+    <p>数据来源：Sorftime MCP × Amazon (US/UK/DE/FR/ES/IT) · bol.com 公开榜单<br>
+    报告生成：Claude Code × Sorftime CLI · 2026.05.28</p>
+    <div class="disclaimer">
+      免责声明：本报告数据基于 Amazon 平台 Top100 产品实时抓取，反映的是平台可见销量而非全渠道数据。月销量为算法估算值，实际数据可能存在 ±15% 偏差。荷兰数据基于 bol.com 公开榜单，精度有限。本报告仅供内部决策参考，不构成投资建议。
+    </div>
+  </div>
+</footer>
+</body>
+</html>

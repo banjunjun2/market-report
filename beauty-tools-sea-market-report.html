@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东南亚美容美发工具市场竞品调研 · 泰国 越南 马来西亚</title>
+<style>
+/* ===== Design Tokens — Apple Industrial ===== */
+:root{
+  --bg:#f5f5f7; --surface:#ffffff; --surface-2:#fafafc;
+  --ink:#1d1d1f; --ink-2:#6e6e73; --ink-3:#86868b;
+  --line:#e3e3e6; --line-2:#d2d2d7;
+  --blue:#0071e3; --blue-ink:#0066cc;
+  --th:#e8554e; --vn:#2b9a66; --my:#3a6ff7;
+  --gold:#b08948; --good:#1a8754;
+  --radius:20px; --radius-s:14px;
+  --shadow:0 2px 14px rgba(0,0,0,.05),0 1px 3px rgba(0,0,0,.04);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.10);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+  background:var(--bg); color:var(--ink); line-height:1.6;
+  -webkit-font-smoothing:antialiased; letter-spacing:.01em;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+h1,h2,h3,h4{letter-spacing:-.02em;font-weight:700;line-height:1.12}
+a{color:var(--blue);text-decoration:none}
+/* ===== Nav ===== */
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,245,247,.78);
+  backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:8px;height:52px;overflow-x:auto}
+.nav .brand{font-weight:700;font-size:15px;margin-right:auto;white-space:nowrap}
+.nav a{color:var(--ink-2);font-size:13px;padding:6px 12px;border-radius:980px;white-space:nowrap;transition:.2s}
+.nav a:hover{background:rgba(0,0,0,.05);color:var(--ink)}
+/* ===== Hero ===== */
+.hero{background:linear-gradient(180deg,#fff 0%,#f5f5f7 100%);padding:96px 0 72px;text-align:center;border-bottom:1px solid var(--line)}
+.hero .eyebrow{color:var(--blue);font-weight:600;font-size:15px;letter-spacing:.02em;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,5.4vw,60px);margin-bottom:22px;background:linear-gradient(135deg,#1d1d1f,#52525b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{font-size:clamp(17px,2.2vw,21px);color:var(--ink-2);max-width:720px;margin:0 auto 32px}
+.hero .flags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.flag-chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);
+  padding:9px 18px;border-radius:980px;font-size:14px;font-weight:500;box-shadow:var(--shadow)}
+.flag-chip .dot{width:9px;height:9px;border-radius:50%}
+.meta-row{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--ink-3);margin-top:8px}
+.meta-row b{color:var(--ink);font-weight:600}
+/* ===== Section heads ===== */
+.sec-head{margin-bottom:48px}
+.sec-head .kicker{color:var(--blue);font-weight:600;font-size:14px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:12px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px)}
+.sec-head p{color:var(--ink-2);font-size:17px;max-width:760px;margin-top:14px}
+.section-alt{background:var(--surface)}
+/* ===== Cards / grid ===== */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+/* ===== KPI ===== */
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.kpi .label{font-size:13px;color:var(--ink-3);font-weight:500;margin-bottom:10px}
+.kpi .value{font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.kpi .value small{font-size:16px;color:var(--ink-2);font-weight:600}
+.kpi .sub{font-size:12px;color:var(--ink-3);margin-top:8px}
+.kpi .bar{position:absolute;left:0;top:0;height:4px;width:100%}
+/* ===== Country accent ===== */
+.acc-th{color:var(--th)} .acc-vn{color:var(--vn)} .acc-my{color:var(--my)}
+.bg-th{background:var(--th)} .bg-vn{background:var(--vn)} .bg-my{background:var(--my)}
+.tag{display:inline-block;padding:3px 11px;border-radius:980px;font-size:12px;font-weight:600;line-height:1.5}
+.tag-th{background:rgba(232,85,78,.12);color:var(--th)}
+.tag-vn{background:rgba(43,154,102,.12);color:var(--vn)}
+.tag-my{background:rgba(58,111,247,.12);color:var(--my)}
+.tag-cat{background:rgba(0,0,0,.06);color:var(--ink-2)}
+/* ===== Tables ===== */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--surface);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12px;text-transform:uppercase;letter-spacing:.02em;position:sticky;top:0}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--surface-2)}
+td.num{font-variant-numeric:tabular-nums;font-weight:600}
+.rank-badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;font-size:12px;font-weight:700}
+.rank-badge.r1{background:linear-gradient(135deg,#e0a23a,#b08948)}
+.rank-badge.r2{background:linear-gradient(135deg,#9a9aa2,#76767e)}
+.rank-badge.r3{background:linear-gradient(135deg,#c08552,#9c6a3f)}
+/* ===== Price bars ===== */
+.pbar-row{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.pbar-label{width:160px;font-size:13px;color:var(--ink-2);flex-shrink:0;font-weight:500}
+.pbar-track{flex:1;height:30px;background:var(--surface-2);border-radius:8px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.pbar-fill{height:100%;border-radius:7px;display:flex;align-items:center;padding-left:12px;color:#fff;font-size:12px;font-weight:600;transition:width 1s ease}
+.pbar-val{width:62px;text-align:right;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;flex-shrink:0}
+.sweet{display:inline-block;margin-left:8px;font-size:11px;padding:1px 8px;border-radius:980px;background:rgba(26,135,84,.14);color:var(--good);font-weight:700}
+/* ===== Competitor cards ===== */
+.comp{display:flex;flex-direction:column;gap:0}
+.comp-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.comp-rank{flex-shrink:0}
+.comp-title{font-size:15px;font-weight:600;line-height:1.35;margin-bottom:4px}
+.comp-brand{font-size:12px;color:var(--ink-3)}
+.comp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.comp-stat{background:var(--surface);padding:11px 12px;text-align:center}
+.comp-stat .s-val{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+.comp-stat .s-lab{font-size:11px;color:var(--ink-3);margin-top:2px}
+.stars{display:inline-flex;align-items:center;gap:3px;font-size:13px;color:var(--gold);font-weight:700}
+.sell-pts{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.sell-pts .pt{font-size:11.5px;padding:4px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2)}
+.sell-pts .pt.good{background:rgba(26,135,84,.08);border-color:rgba(26,135,84,.2);color:var(--good);font-weight:600}
+/* ===== Insight blocks ===== */
+.insight{border-left:3px solid var(--blue);padding:4px 0 4px 20px;margin:18px 0}
+.insight h4{font-size:16px;margin-bottom:6px}
+.insight p{color:var(--ink-2);font-size:14.5px}
+.callout{background:linear-gradient(135deg,#f0f7ff,#fafaffe);border:1px solid #d6e8ff;border-radius:var(--radius);padding:24px 26px;margin-top:20px}
+.callout.warn{background:linear-gradient(135deg,#fff8f0,#fffdfa);border-color:#ffe2c2}
+/* ===== Bar mini-chart (trend) ===== */
+.spark{display:flex;align-items:flex-end;gap:3px;height:60px;margin-top:14px}
+.spark .b{flex:1;background:linear-gradient(180deg,var(--blue),#7db8f5);border-radius:3px 3px 0 0;min-height:3px;opacity:.85}
+/* ===== List ===== */
+.dlist{list-style:none}
+.dist li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.dist li:last-child{border:none}
+.dist .ic{flex-shrink:0;width:24px;height:24px;border-radius:7px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:13px}
+/* ===== Footnote / method ===== */
+.method{font-size:13px;color:var(--ink-3);line-height:1.7}
+.method b{color:var(--ink-2)}
+footer{background:var(--ink);color:#a1a1a6;padding:48px 0;font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer b{color:#f5f5f7}
+/* ===== Responsive ===== */
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}}
+@media(max-width:560px){.g4{grid-template-columns:1fr}.pbar-label{width:110px}section{padding:56px 0}}
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+</style></head>
+<body>
+<nav class="nav"><div class="wrap">
+  <span class="brand">东南亚 · 美容美发工具竞品调研</span>
+  <a href="#summary">摘要</a>
+  <a href="#landscape">市场大盘</a>
+  <a href="#price">价格带</a>
+  <a href="#competitor">竞品深度</a>
+  <a href="#marketing">营销打法</a>
+  <a href="#opportunity">机会洞察</a>
+  <a href="#method">数据说明</a>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Cross-border Market Intelligence · 2026Q2</div>
+    <h1>泰国 · 越南 · 马来西亚<br>美容美发工具市场竞品调研</h1>
+    <p class="lead">基于 Shopee 平台实时在售数据,覆盖<b>吹风机 · 剃须刀 · 家用美容仪</b>三大品类,拆解市场大盘、主销价位、竞品卖点与营销打法。</p>
+    <div class="flags">
+      <span class="flag-chip"><span class="dot bg-th"></span>泰国 Thailand</span>
+      <span class="flag-chip"><span class="dot bg-vn"></span>越南 Vietnam</span>
+      <span class="flag-chip"><span class="dot bg-my"></span>马来西亚 Malaysia</span>
+    </div>
+    <div class="meta-row">
+      <span>数据来源 <b>Shopee 实时榜单</b></span>
+      <span>抓取时间 <b>2026-06-02</b></span>
+      <span>覆盖 <b>3 国 × 3 品类 × 9 细分市场</b></span>
+      <span>样本 <b>180+ 在售 SKU</b></span>
+    </div>
+  </div>
+</header>
+<!-- ===== Executive Summary ===== -->
+<section id="summary">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Executive Summary</div>
+      <h2>执行摘要</h2>
+      <p>三个市场处于截然不同的成熟阶段:马来西亚由国际大牌主导、品类最成熟;越南呈"高客单 + 本土化"特征,IPL 脱毛仪与沙龙级造型器走量;泰国两极分化,低价刮痧工具铺量、少数高端美容仪占据高地。中国品牌(Enchen、Simplus、Xiaomi、Dreame、Kemei)在三国剃须与吹风赛道全面渗透。</p>
+    </div>
+    <div class="grid g4" style="margin-bottom:22px">
+      <div class="kpi fade"><span class="bar bg-my"></span><div class="label">单品销量冠军 · 马来吹风机</div><div class="value">9,222<small> 台/月</small></div><div class="sub">Philips BHC010 1200W · RM73.4 · 4.95★</div></div>
+      <div class="kpi fade"><span class="bar bg-vn"></span><div class="label">最高客单赛道 · 越南脱毛仪</div><div class="value">₫1.98M<small> ≈¥554</small></div><div class="value" style="display:none"></div><div class="sub">URMINE IPL 脱毛仪 · 月销 909 台</div></div>
+      <div class="kpi fade"><span class="bar bg-th"></span><div class="label">泰国剃须刀头部价位</div><div class="value">฿400-600<small> ≈¥84-126</small></div><div class="sub">箔式电动剃须 / 多片刀架主导</div></div>
+      <div class="kpi fade"><span class="bar" style="background:var(--gold)"></span><div class="label">头部产品星级中枢</div><div class="value">4.8-4.96<small>★</small></div><div class="sub">五星占比普遍 &gt;85%,口碑门槛高</div></div>
+    </div>
+    <div class="grid g3">
+      <div class="card fade"><h4 style="margin-bottom:10px">🌪️ 吹风机</h4><p style="color:var(--ink-2);font-size:14.5px">马来由 Philips/Panasonic/Xiaomi/KHIND 主导,主销 <b>RM33-75</b>;越南本土沙龙品牌(HUSO/MASUTO)与高速吹风共存,跨度大;泰国以直发梳/直发器等"广义美发"为主,纯吹风价位 <b>฿109-469</b>。高速电机 + 负离子是统一卖点。</p></div>
+      <div class="card fade"><h4 style="margin-bottom:10px">🪒 剃须刀</h4><p style="color:var(--ink-2);font-size:14.5px">中国品牌 <b>Enchen</b> 在三国剃须赛道均居头部,迷你便携 + IPX7 防水 + Type-C 是核心卖点。越南主销 <b>₫100k-250k</b>,泰国箔式电动主销 <b>฿400-600</b>,马来手动刀架(Gillette)与电动并存。</p></div>
+      <div class="card fade"><h4 style="margin-bottom:10px">💆 家用美容仪</h4><p style="color:var(--ink-2);font-size:14.5px">三国形态各异:马来以<b>声波洁面仪</b>(Mirae 月销 1897)与蒸脸/黑头仪为主;越南<b>IPL 脱毛仪</b>客单最高(₫459k-3.99M);泰国以<b>刮痧 + 冰滚</b>低价铺量,高端 FULI(฿3099)占据顶部。</p></div>
+    </div>
+    <div class="callout fade">
+      <h4 style="margin-bottom:8px">📌 选品核心结论</h4>
+      <p style="color:var(--ink-2);font-size:14.5px">①  <b>马来</b>适合标准化国际品类(吹风/电动剃须),拼供应链与价格;② <b>越南</b>高客单美容仪(IPL/造型器)与本土沙龙生态值得切入,品牌溢价空间最大;③ <b>泰国</b>需"低价引流款 + 高端形象款"双轨;④ 三国头部星级门槛高(4.8★+),产品力与口碑运营是入场前提。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== Market Landscape ===== -->
+<section id="landscape" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Market Landscape</div>
+      <h2>市场大盘</h2>
+      <p>按国家 × 品类拆解头部产品销量结构、品牌格局与近一年销量趋势。趋势线基于各细分类目 Top100 产品周度销量统计,可读出旺季节奏与增长方向。</p>
+    </div>
+
+    <!-- 国家概览卡 -->
+    <div class="grid g3" style="margin-bottom:36px">
+      <div class="card fade">
+        <span class="tag tag-th">泰国 TH</span>
+        <h3 style="margin:14px 0 8px;font-size:20px">两极分化市场</h3>
+        <ul class="dist dlist" style="font-size:14px;color:var(--ink-2)">
+          <li><span class="ic">🏪</span><div>本土店为绝对主力,旗舰店占比中等,品牌信任建立中</div></li>
+          <li><span class="ic">💰</span><div>头部充斥 ฿1-78 低价刮痧/海绵引流款,拉低均价</div></li>
+          <li><span class="ic">🏆</span><div>高端 FULI 美容仪(฿3099)、Henson 剃须刀(฿3599)守住高地</div></li>
+        </ul>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-vn">越南 VN</span>
+        <h3 style="margin:14px 0 8px;font-size:20px">高客单 · 本土化</h3>
+        <ul class="dist dlist" style="font-size:14px;color:var(--ink-2)">
+          <li><span class="ic">💎</span><div>客单价显著高于另两国,IPL 脱毛仪、沙龙造型器破百万越南盾</div></li>
+          <li><span class="ic">🇻🇳</span><div>本土沙龙品牌(HUSO/MASUTO/Galistore)生态成熟,自营旗舰活跃</div></li>
+          <li><span class="ic">🔋</span><div>剃须以中国 Enchen/Maxspect 迷你机为主,质保话术普及</div></li>
+        </ul>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-my">马来 MY</span>
+        <h3 style="margin:14px 0 8px;font-size:20px">国际品牌成熟市场</h3>
+        <ul class="dist dlist" style="font-size:14px;color:var(--ink-2)">
+          <li><span class="ic">🌐</span><div>Philips/Panasonic/Xiaomi/Dreame 等国际大牌主导,认知成熟</div></li>
+          <li><span class="ic">📈</span><div>吹风机单品月销破 9000,品类容量与集中度最高</div></li>
+          <li><span class="ic">🧴</span><div>美容仪以声波洁面 + 黑头仪为主,价格段宽(RM1-294)</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 趋势图 -->
+    <h3 style="margin:0 0 6px;font-size:19px" class="fade">细分类目销量趋势 · 近一年(周度)</h3>
+    <p style="color:var(--ink-3);font-size:13px;margin-bottom:22px" class="fade">柱状为各类目 Top100 周度销量指数,反映旺季节奏。东南亚电商旺季集中在 <b>双数月大促(11.11 / 12.12)</b> 与开年(1月),与趋势峰值吻合。</p>
+    <div class="grid g3">
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">🌪️ 马来吹风机</b><span class="tag tag-my">MY</span></div>
+        <div class="spark" id="sp-my-hd"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">12月大促与开年为峰值,Q2 进入平销期,全年需求稳定。</p>
+      </div>
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">🪒 越南剃须刀</b><span class="tag tag-vn">VN</span></div>
+        <div class="spark" id="sp-vn-sh"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">销额基数大且波动剧烈,大促驱动明显,本土沙龙采购贡献长尾。</p>
+      </div>
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">💆 泰国美容仪</b><span class="tag tag-th">TH</span></div>
+        <div class="spark" id="sp-th-bd"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">需求平稳爬升,2026 年初高端美容仪拉动销额上行。</p>
+      </div>
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">🪒 马来剃须刀</b><span class="tag tag-my">MY</span></div>
+        <div class="spark" id="sp-my-sh"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">需求稳健,年末与开年大促拉升,Enchen 套装贡献增量。</p>
+      </div>
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">💇 泰国美发工具</b><span class="tag tag-th">TH</span></div>
+        <div class="spark" id="sp-th-hd"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">直发器/卷发梳等造型品需求旺,大促弹性大。</p>
+      </div>
+      <div class="card fade">
+        <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px">💆 马来美容仪</b><span class="tag tag-my">MY</span></div>
+        <div class="spark" id="sp-my-bd"></div>
+        <p style="font-size:12.5px;color:var(--ink-3);margin-top:10px">声波洁面与黑头仪驱动,整体稳中有升。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Price Segments ===== -->
+<section id="price">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Price Segments</div>
+      <h2>价格带分析</h2>
+      <p>横向条形为各价位段在头部榜单中的销量集中度(基于 Top 在售产品分布估算)。<span class="sweet">甜蜜价位</span> 标记走量与利润平衡的主销带。本币括注人民币折算(THB≈¥0.21 · VND≈¥0.00028 · MYR≈¥1.55,2026-06 汇率)。</p>
+    </div>
+
+    <!-- 吹风机 -->
+    <div class="card fade" style="margin-bottom:22px">
+      <h3 style="font-size:18px;margin-bottom:18px">🌪️ 吹风机 / 美发造型</h3>
+      <div class="grid g3">
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-my">马来 MY · RM</span></div>
+          <div class="pbar-row"><div class="pbar-label">RM16-35 入门<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:80%">铺量</div></div><div class="pbar-val">高</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM46-110 主流<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:100%">国际品牌</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM150-210 高端</div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:38%">Dreame</div></div><div class="pbar-val">中</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥25-340。Philips/Panasonic/Xiaomi 集中于 RM46-110。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-vn">越南 VN · ₫</span></div>
+          <div class="pbar-row"><div class="pbar-label">₫15k-90k 梳具/低价</div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:62%">配件</div></div><div class="pbar-val">中</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫199k-376k 造型器<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:100%">主销</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫1.7M-2.6M 高端</div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:30%">MASUTO</div></div><div class="pbar-val">低</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥4-730。沙龙级造型吹风(HUSO/EKO)是核心走量带。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-th">泰国 TH · ฿</span></div>
+          <div class="pbar-row"><div class="pbar-label">฿109-160 入门<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:88%">走量</div></div><div class="pbar-val">高</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿330-470 主流<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:92%">高速/沙龙</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿545+ 进口品牌</div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:30%">WetBrush</div></div><div class="pbar-val">低</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥23-115。CKL/Simplus 高速吹风占 ฿330-470 主销。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 剃须刀 -->
+    <div class="card fade" style="margin-bottom:22px">
+      <h3 style="font-size:18px;margin-bottom:18px">🪒 剃须刀 / 理容</h3>
+      <div class="grid g3">
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-my">马来 MY · RM</span></div>
+          <div class="pbar-row"><div class="pbar-label">RM4-9 超低引流</div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:70%">T9铺量</div></div><div class="pbar-val">高</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM42-73 品牌主销<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:100%">Enchen</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM107-129 高端</div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:46%">Philips/Kemei</div></div><div class="pbar-val">中</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥6-200。Enchen 套装(RM42-73)走量最稳。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-vn">越南 VN · ₫</span></div>
+          <div class="pbar-row"><div class="pbar-label">₫27k-62k 手动刀架</div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:74%">铺量</div></div><div class="pbar-val">高</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫100k-250k 电动主销<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:100%">Enchen/Kemei</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫359k-499k 进阶</div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:40%">Coclear/ENKO</div></div><div class="pbar-val">中</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥7.5-140。迷你电动剃须(₫100k-250k)为主销甜区。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-th">泰国 TH · ฿</span></div>
+          <div class="pbar-row"><div class="pbar-label">฿18-150 刀片/入门</div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:66%">耗材</div></div><div class="pbar-val">中</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿250-600 电动主销<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:100%">Enchen/Kadonio</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿890-3599 高端</div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:34%">Philips/Henson</div></div><div class="pbar-val">低</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥4-755。箔式电动剃须(฿250-600)是头部主战场。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 美容仪 -->
+    <div class="card fade">
+      <h3 style="font-size:18px;margin-bottom:18px">💆 家用美容仪</h3>
+      <div class="grid g3">
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-my">马来 MY · RM</span></div>
+          <div class="pbar-row"><div class="pbar-label">RM0.3-14 黑头/海绵</div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:90%">超低铺量</div></div><div class="pbar-val">极高</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM50-95 仪器入门<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:58%">黑头仪/蒸脸</div></div><div class="pbar-val">中</div></div>
+          <div class="pbar-row"><div class="pbar-label">RM172-294 声波洁面<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-my" style="width:74%">Mirae</div></div><div class="pbar-val">高</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥0.5-456。两极:超低价工具引流 + 仪器化高客单。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-vn">越南 VN · ₫</span></div>
+          <div class="pbar-row"><div class="pbar-label">₫12k-150k 手动/蒸脸</div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:60%">入门</div></div><div class="pbar-val">中</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫459k-1.25M IPL进阶<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:78%">Matrix/Lescolton</div></div><div class="pbar-val">高</div></div>
+          <div class="pbar-row"><div class="pbar-label">₫1.9M-3.99M 高端IPL<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-vn" style="width:100%">URMINE</div></div><div class="pbar-val">最高</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥3.4-1117。IPL 脱毛仪是全报告客单价之王。</p>
+        </div>
+        <div>
+          <div style="margin-bottom:12px"><span class="tag tag-th">泰国 TH · ฿</span></div>
+          <div class="pbar-row"><div class="pbar-label">฿12-93 刮痧/冰滚<span class="sweet">甜蜜</span></div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:100%">海量铺货</div></div><div class="pbar-val">最高</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿152-207 电动按摩</div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:54%">GOKOCO等</div></div><div class="pbar-val">中</div></div>
+          <div class="pbar-row"><div class="pbar-label">฿3099 高端美容仪</div><div class="pbar-track"><div class="pbar-fill bg-th" style="width:42%">FULI</div></div><div class="pbar-val">低但稳</div></div>
+          <p style="font-size:12px;color:var(--ink-3)">≈¥2.5-650。低价刮痧走量,高端 FULI 单点突破。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== Competitor Deep-dive ===== -->
+<section id="competitor" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Competitor Deep-dive</div>
+      <h2>竞品深度</h2>
+      <p>分国家 × 品类呈现头部 Top 5 在售竞品的价格、月销、星级、店铺类型与差异化卖点。<b>好评点</b>基于真实评分分布(五星占比)与产品卖点关键词交叉提炼——五星占比越高,代表该卖点被消费者验证越充分。价格为本币(括注人民币)。</p>
+    </div>
+
+    <!-- ===== 泰国 ===== -->
+    <h3 style="font-size:24px;margin:10px 0 18px;display:flex;align-items:center;gap:12px" class="fade"><span class="dot bg-th" style="width:14px;height:14px;border-radius:50%"></span>泰国 Thailand</h3>
+
+    <h4 style="font-size:16px;margin:22px 0 12px" class="fade">🌪️ 吹风机 / 美发造型 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Yoole 2200W 折叠吹风</b><br><span class="comp-brand">Tiger-shop</span></td><td class="num">฿109<br><span style="color:var(--ink-3);font-weight:400">≈¥23</span></td><td class="num">996</td><td><span class="stars">4.72★</span><br><span style="font-size:11px;color:var(--ink-3)">84% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>可折叠便携 · 冷热风 · 负离子护发 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">极致性价比</span><span class="pt good">出风强劲</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>MGX MHL-01 智能吹风</b></td><td class="num">฿377<br><span style="color:var(--ink-3);font-weight:400">≈¥79</span></td><td class="num">980</td><td><span class="stars">4.92★</span><br><span style="font-size:11px;color:var(--ink-3)">93% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>110,000 转高速电机 · 速干 · 负离子 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">干发快</span><span class="pt good">不伤发</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>CKL-3900 沙龙级</b><br><span class="comp-brand">Beauty For Hair</span></td><td class="num">฿429<br><span style="color:var(--ink-3);font-weight:400">≈¥90</span></td><td class="num">973</td><td><span class="stars">4.81★</span><br><span style="font-size:11px;color:var(--ink-3)">87% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>专业沙龙惯用 · TIS 认证 · 3月质保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">耐用</span><span class="pt good">风力大</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Simplus D1 Fold 1250W</b></td><td class="num">฿469<br><span style="color:var(--ink-3);font-weight:400">≈¥98</span></td><td class="num">907</td><td><span class="stars">4.93★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>可折叠 · 负离子护发 · 3档控温 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">颜值高</span><span class="pt good">轻便</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>YOTEX 无线直发梳</b></td><td class="num">฿331<br><span style="color:var(--ink-3);font-weight:400">≈¥70</span></td><td class="num">997</td><td><span class="stars">4.78★</span><br><span style="font-size:11px;color:var(--ink-3)">86% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>无线便携 · 3档控温 · 角蛋白护发 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">出门方便</span><span class="pt good">升温快</span></span></td></tr>
+      </tbody>
+    </table></div>
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">🪒 剃须刀 / 理容 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Gillette Fusion 5 刀架</b></td><td class="num">฿583<br><span style="color:var(--ink-3);font-weight:400">≈¥122</span></td><td class="num">993</td><td><span class="stars">4.91★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>五层刀片 · 国际大牌信任 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">刮得干净</span><span class="pt good">不拉脸</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>Enchen MS006 箔式剃须</b></td><td class="num">฿582<br><span style="color:var(--ink-3);font-weight:400">≈¥122</span></td><td class="num">954</td><td><span class="stars">4.91★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>箔式弹出刀头 · IPX7 防水 · 1年质保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">续航久</span><span class="pt good">剃须干净</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>Henson AL13 安全剃刀</b></td><td class="num">฿3599<br><span style="color:var(--ink-3);font-weight:400">≈¥756</span></td><td class="num">950</td><td><span class="stars">4.93★</span><br><span style="font-size:11px;color:var(--ink-3)">95% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>航空铝 CNC · 不刺激 · 高端工艺 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">质感高级</span><span class="pt good">零刺激</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Kadonio ET01 电动剃须</b></td><td class="num">฿425<br><span style="color:var(--ink-3);font-weight:400">≈¥89</span></td><td class="num">859</td><td><span class="stars">4.81★</span><br><span style="font-size:11px;color:var(--ink-3)">88% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>无线防水 · 智能 · 便携 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">性价比</span><span class="pt good">好握持</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>Philips S1882/00</b></td><td class="num">฿890<br><span style="color:var(--ink-3);font-weight:400">≈¥187</span></td><td class="num">884</td><td><span class="stars">4.93★</span><br><span style="font-size:11px;color:var(--ink-3)">95% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>国际品牌 · 最新款 · 稳定可靠 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">大牌放心</span><span class="pt good">耐用</span></span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">💆 家用美容仪 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>MR.GREEN 祛痘工具套装</b></td><td class="num">฿199<br><span style="color:var(--ink-3);font-weight:400">≈¥42</span></td><td class="num">914</td><td><span class="stars">4.90★</span><br><span style="font-size:11px;color:var(--ink-3)">93% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>专业祛痘针套装 · 不锈钢 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">好用</span><span class="pt good">做工精</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>GOKOCO 电动刮痧仪</b><br><span class="comp-brand">Biyode</span></td><td class="num">฿207<br><span style="color:var(--ink-3);font-weight:400">≈¥43</span></td><td class="num">878</td><td><span class="stars">4.84★</span><br><span style="font-size:11px;color:var(--ink-3)">90% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>天然玉石 + 电热 · 提拉紧致 · 送精油 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">提拉感</span><span class="pt good">送赠品</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>FULI LiftDerma 高端美容仪</b></td><td class="num">฿3099<br><span style="color:var(--ink-3);font-weight:400">≈¥651</span></td><td class="num">750</td><td><span class="stars">4.92★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>本土高端品牌 · 进阶刮痧 · 高复购 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">效果显著</span><span class="pt good">品牌力强</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>硅胶冰滚面部按摩</b></td><td class="num">฿39<br><span style="color:var(--ink-3);font-weight:400">≈¥8</span></td><td class="num">899</td><td><span class="stars">4.83★</span><br><span style="font-size:11px;color:var(--ink-3)">89% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>冰敷收缩毛孔 · 极低价 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">便宜实用</span><span class="pt good">解暑</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>12000次/分 微电流眼部按摩</b></td><td class="num">฿152<br><span style="color:var(--ink-3);font-weight:400">≈¥32</span></td><td class="num">822</td><td><span class="stars">4.80★</span><br><span style="font-size:11px;color:var(--ink-3)">88% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>高频振动 · 眼周护理 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">小巧</span><span class="pt good">缓解疲劳</span></span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="insight fade"><h4>泰国竞品洞察</h4><p>剃须与吹风由"中国品牌走量 + 国际/本土高端守顶"构成;美容仪呈极端两极——฿8-207 的刮痧/冰滚/祛痘工具用极低价铺满头部,而本土品牌 FULI(฿3099)以 96% 五星占比证明高端美容仪在泰国有稳定付费人群。差异化机会在 ฿500-1500 的"轻仪器"空白带。</p></div>
+    <!-- ===== 越南 ===== -->
+    <h3 style="font-size:24px;margin:38px 0 18px;display:flex;align-items:center;gap:12px" class="fade"><span class="dot bg-vn" style="width:14px;height:14px;border-radius:50%"></span>越南 Vietnam</h3>
+
+    <h4 style="font-size:16px;margin:22px 0 12px" class="fade">🌪️ 吹风机 / 美发造型 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>YATASMART 3500W 大功率</b></td><td class="num">₫68.9k<br><span style="color:var(--ink-3);font-weight:400">≈¥19</span></td><td class="num">910</td><td><span class="stars">4.83★</span><br><span style="font-size:11px;color:var(--ink-3)">88% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>3500W 大功率 · 12月质保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">风力猛</span><span class="pt good">性价比</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>HUSO 沙龙吹风(蓝光离子)</b></td><td class="num">₫376k<br><span style="color:var(--ink-3);font-weight:400">≈¥105</span></td><td class="num">406</td><td><span class="stars">4.93★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>本土沙龙品牌 · 冷热双风 · 蓝光离子 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">专业感</span><span class="pt good">护发</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>EKO Y8 直/卷 3in1 造型器</b><br><span class="comp-brand">Galistore</span></td><td class="num">₫245k<br><span style="color:var(--ink-3);font-weight:400">≈¥69</span></td><td class="num">669</td><td><span class="stars">4.89★</span><br><span style="font-size:11px;color:var(--ink-3)">93% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>直发卷发二合一 · 多功能造型 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">一机多用</span><span class="pt good">易上手</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>EKO Hippie 32 三管卷发</b><br><span class="comp-brand">DETI</span></td><td class="num">₫199k<br><span style="color:var(--ink-3);font-weight:400">≈¥56</span></td><td class="num">430</td><td><span class="stars">4.87★</span><br><span style="font-size:11px;color:var(--ink-3)">93% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>三管陶瓷 · 水波纹卷 · 控温 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">卷型自然</span><span class="pt good">不夹发</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>MASUTO AirWand 高端造型</b></td><td class="num">₫2.64M<br><span style="color:var(--ink-3);font-weight:400">≈¥738</span></td><td class="num">898</td><td><span class="stars">4.72★</span><br><span style="font-size:11px;color:var(--ink-3)">86% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>对标戴森的本土高端 · 多功能造型 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">高端礼品</span><span class="pt good">颜值</span></span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">🪒 剃须刀 / 理容 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Enchen Mini 6 / K8 剃须</b></td><td class="num">₫238k<br><span style="color:var(--ink-3);font-weight:400">≈¥67</span></td><td class="num">859</td><td><span class="stars">4.88★</span><br><span style="font-size:11px;color:var(--ink-3)">92% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>迷你便携 · 6月质保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">小巧</span><span class="pt good">剃得净</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>Maxspect 迷你2刀头</b></td><td class="num">₫104.5k<br><span style="color:var(--ink-3);font-weight:400">≈¥29</span></td><td class="num">858</td><td><span class="stars">4.84★</span><br><span style="font-size:11px;color:var(--ink-3)">90% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>自磨刀片 · 12月质保 · 高耐久 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">耐用</span><span class="pt good">超值</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>JYooHome 手动刀架+36刀片</b></td><td class="num">₫62k<br><span style="color:var(--ink-3);font-weight:400">≈¥17</span></td><td class="num">941</td><td><span class="stars">4.57★</span><br><span style="font-size:11px;color:var(--ink-3)">82% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>超值刀片套装 · 易换刀 · 不刮脸 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">耗材便宜</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Coclear CWF301 直刀电剃</b></td><td class="num">₫359k<br><span style="color:var(--ink-3);font-weight:400">≈¥100</span></td><td class="num">651</td><td><span class="stars">4.84★</span><br><span style="font-size:11px;color:var(--ink-3)">90% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>3刀头干湿两用 · Type-C 快充 · 1年保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">充电快</span><span class="pt good">干湿剃</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>z1158 三合一多功能</b><br><span class="comp-brand">Gillette标</span></td><td class="num">₫225k<br><span style="color:var(--ink-3);font-weight:400">≈¥63</span></td><td class="num">743</td><td><span class="stars">4.91★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>剃须+鼻毛+理发三合一 · 12月保 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">多功能</span><span class="pt good">划算</span></span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">💆 家用美容仪(脱毛仪 / 面护) · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>URMINE IPL 冰点脱毛仪</b></td><td class="num">₫1.98M<br><span style="color:var(--ink-3);font-weight:400">≈¥554</span></td><td class="num">909</td><td><span class="stars">4.81★</span><br><span style="font-size:11px;color:var(--ink-3)">92% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>全身冰点无痛 · 买1送3 · 礼品定位 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">无痛</span><span class="pt good">赠品多</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>Maxgroom 充电面部剃毛器</b></td><td class="num">₫82.5k<br><span style="color:var(--ink-3);font-weight:400">≈¥23</span></td><td class="num">229</td><td><span class="stars">4.95★</span><br><span style="font-size:11px;color:var(--ink-3)">97% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>无痛面部剃毛 · 比基尼适用 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">温和</span><span class="pt good">好评极高</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>Matrix Mini IPL 脱毛仪</b></td><td class="num">₫459k<br><span style="color:var(--ink-3);font-weight:400">≈¥129</span></td><td class="num">125</td><td><span class="stars">4.73★</span><br><span style="font-size:11px;color:var(--ink-3)">83% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>5档 IPL · 6月质保 · 入门价位 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">价格友好</span><span class="pt good">见效</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Kamidi 面部蒸脸器</b></td><td class="num">₫151k<br><span style="color:var(--ink-3);font-weight:400">≈¥42</span></td><td class="num">814</td><td><span class="stars">4.55★</span><br><span style="font-size:11px;color:var(--ink-3)">77% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>补水蒸脸 · 居家护肤 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">补水</span><span class="pt good">易用</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>Lescolton IPL + 嫩肤</b></td><td class="num">₫1.25M<br><span style="color:var(--ink-3);font-weight:400">≈¥350</span></td><td class="num">69</td><td><span class="stars">4.86★</span><br><span style="font-size:11px;color:var(--ink-3)">92% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>冰点脱毛 + 嫩肤二合一 · 无限闪光 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">多功能</span><span class="pt good">耐用</span></span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="insight fade"><h4>越南竞品洞察</h4><p>越南是三国中<b>客单价天花板最高</b>的市场:IPL 脱毛仪(URMINE ₫1.98M)与高端造型器(MASUTO ₫2.64M)月销数百台仍稳居头部,印证消费者愿为"无痛/沙龙级/送礼"支付溢价。本土沙龙品牌(HUSO/MASUTO/Galistore/DETI)以旗舰店深耕造型赛道,质保话术(6-12月)是标配信任要素。中国剃须品牌仍主导中低价。</p></div>
+    <!-- ===== 马来西亚 ===== -->
+    <h3 style="font-size:24px;margin:38px 0 18px;display:flex;align-items:center;gap:12px" class="fade"><span class="dot bg-my" style="width:14px;height:14px;border-radius:50%"></span>马来西亚 Malaysia</h3>
+
+    <h4 style="font-size:16px;margin:22px 0 12px" class="fade">🌪️ 吹风机 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Philips BHC010 1200W</b></td><td class="num">RM73.4<br><span style="color:var(--ink-3);font-weight:400">≈¥114</span></td><td class="num">9,222</td><td><span class="stars">4.95★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>国际大牌 · 可折叠 · 恒温护发 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">大牌放心</span><span class="pt good">轻便</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>KHIND HD1002 系列</b></td><td class="num">RM32.9<br><span style="color:var(--ink-3);font-weight:400">≈¥51</span></td><td class="num">7,401</td><td><span class="stars">4.96★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>本地家电品牌 · 平价耐用 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">超值</span><span class="pt good">口碑好</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>Simplus 高速吹风 1600W</b></td><td class="num">RM75.5<br><span style="color:var(--ink-3);font-weight:400">≈¥117</span></td><td class="num">7,316</td><td><span class="stars">4.95★</span><br><span style="font-size:11px;color:var(--ink-3)">97% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>64m/s 高速 · 2亿负离子 · 304g 轻量 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">干发快</span><span class="pt good">轻</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Panasonic EH-ND37 1800W</b></td><td class="num">RM108<br><span style="color:var(--ink-3);font-weight:400">≈¥168</span></td><td class="num">3,249</td><td><span class="stars">4.94★</span><br><span style="font-size:11px;color:var(--ink-3)">95% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>日系大牌 · 速干 · 稳定 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">品质稳</span><span class="pt good">耐用</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>Xiaomi H501 1800W</b></td><td class="num">RM68<br><span style="color:var(--ink-3);font-weight:400">≈¥105</span></td><td class="num">3,146</td><td><span class="stars">4.92★</span><br><span style="font-size:11px;color:var(--ink-3)">95% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>负离子速干 · 米家生态 · 高性价比 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">性价比</span><span class="pt good">颜值</span></span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">🪒 剃须刀 / 理容 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Philips NT3650 鼻毛修剪</b></td><td class="num">RM107<br><span style="color:var(--ink-3);font-weight:400">≈¥166</span></td><td class="num">961</td><td><span class="stars">4.94★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>国际大牌 · 双向修剪 · 可水洗 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">大牌放心</span><span class="pt good">不夹毛</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>Enchen Mini6/K8 礼盒套装</b></td><td class="num">RM72.9<br><span style="color:var(--ink-3);font-weight:400">≈¥113</span></td><td class="num">867</td><td><span class="stars">4.96★</span><br><span style="font-size:11px;color:var(--ink-3)">97% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>剃须+鼻毛礼盒 · 男士送礼 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">送礼佳</span><span class="pt good">好评高</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>Kemei KM-8540 无线理发器</b></td><td class="num">RM129<br><span style="color:var(--ink-3);font-weight:400">≈¥200</span></td><td class="num">861</td><td><span class="stars">4.92★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>专业无线理发 · 可充电 · 理发店级 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">专业</span><span class="pt good">动力强</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Enchen MS003 箔式剃须</b></td><td class="num">RM42.2<br><span style="color:var(--ink-3);font-weight:400">≈¥65</span></td><td class="num">810</td><td><span class="stars">4.89★</span><br><span style="font-size:11px;color:var(--ink-3)">94% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>便携箔式 · 弹出鬓角修剪 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">便携</span><span class="pt good">超值</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>Enchen Spark 3 身体剃毛</b></td><td class="num">RM65.9<br><span style="color:var(--ink-3);font-weight:400">≈¥102</span></td><td class="num">686</td><td><span class="stars">4.92★</span><br><span style="font-size:11px;color:var(--ink-3)">95% 五星</span></td><td><span class="tag tag-cat">旗舰店</span></td><td>全身防水剃毛 · 男女通用 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">防水</span><span class="pt good">温和</span></span></td></tr>
+      </tbody>
+    </table></div>
+
+    <h4 style="font-size:16px;margin:26px 0 12px" class="fade">💆 家用美容仪 · Top 5</h4>
+    <div class="tbl-wrap fade"><table>
+      <thead><tr><th>#</th><th>型号 / 品牌</th><th>价格</th><th>月销</th><th>星级·五星占比</th><th>店铺</th><th>差异化卖点 & 好评点</th></tr></thead>
+      <tbody>
+        <tr><td><span class="rank-badge r1">1</span></td><td><b>Mirae 声波洁面仪(云朵版)</b></td><td class="num">RM294<br><span style="color:var(--ink-3);font-weight:400">≈¥456</span></td><td class="num">1,897</td><td><span class="stars">4.98★</span><br><span style="font-size:11px;color:var(--ink-3)">98% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>声波智能洁面 · 高端定位 · 高复购 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">洗得净</span><span class="pt good">温和不刺激</span></span></td></tr>
+        <tr><td><span class="rank-badge r2">2</span></td><td><b>3in1 LED 冷热喷雾蒸脸仪</b></td><td class="num">RM172<br><span style="color:var(--ink-3);font-weight:400">≈¥267</span></td><td class="num">923</td><td><span class="stars">4.96★</span><br><span style="font-size:11px;color:var(--ink-3)">96% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>冷热喷雾 + 8X LED · 多功能 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">补水</span><span class="pt good">功能全</span></span></td></tr>
+        <tr><td><span class="rank-badge r3">3</span></td><td><b>GEESO 电动黑头仪</b></td><td class="num">RM13.9<br><span style="color:var(--ink-3);font-weight:400">≈¥22</span></td><td class="num">773</td><td><span class="stars">4.80★</span><br><span style="font-size:11px;color:var(--ink-3)">89% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>3档吸力 + 4探头 · 累计销量2.6万 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">便宜好用</span><span class="pt good">吸力够</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">4</span></td><td><b>Hisoka 超声波铲皮黑头仪</b></td><td class="num">RM49.5<br><span style="color:var(--ink-3);font-weight:400">≈¥77</span></td><td class="num">646</td><td><span class="stars">4.90★</span><br><span style="font-size:11px;color:var(--ink-3)">93% 五星</span></td><td><span class="tag tag-cat">普通店</span></td><td>超声波铲皮 · 深层清洁 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">清洁力</span><span class="pt good">质感好</span></span></td></tr>
+        <tr><td><span class="rank-badge" style="background:#76767e">5</span></td><td><b>Ckeyin 黑头吸附套装</b></td><td class="num">RM96<br><span style="color:var(--ink-3);font-weight:400">≈¥149</span></td><td class="num">691</td><td><span class="stars">4.83★</span><br><span style="font-size:11px;color:var(--ink-3)">92% 五星</span></td><td><span class="tag tag-cat">优选店</span></td><td>多功能套装 · 累计销量1.1万 · <span class="sell-pts" style="display:inline-flex"><span class="pt good">套装值</span><span class="pt good">实用</span></span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="insight fade"><h4>马来竞品洞察</h4><p>马来是最"标准化"的市场:吹风机由 <b>Philips/KHIND/Panasonic/Xiaomi</b> 四强主导,单品月销 3000-9000 台,五星占比普遍 95%+,品类认知与品牌信任成熟。剃须赛道 <b>Enchen 以礼盒套装 + 旗舰店</b>策略占据头部,精准卡位男士送礼场景。美容仪呈"高端洁面仪(Mirae RM294,98% 五星)+ 低价黑头仪(RM14-50)"双层结构。在地家电品牌 KHIND 是不可忽视的本土力量。</p></div>
+  </div>
+</section>
+<!-- ===== Marketing Strategy ===== -->
+<section id="marketing">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Marketing Strategy</div>
+      <h2>营销打法</h2>
+      <p>基于 Shopee 头部产品的<b>店铺类型(旗舰/优选/普通)、定价折扣、优惠券与捆绑赠品</b>等真实在售信号,拆解三国头部卖家的运营套路。<span style="color:var(--th)">注:TikTok Shop 达人带货接口在本次抓取中对目标品类均无返回数据,故营销分析以 Shopee 平台机制为准,详见数据说明。</span></p>
+    </div>
+
+    <!-- 共性打法 -->
+    <h3 style="font-size:19px;margin-bottom:18px" class="fade">三国共性打法</h3>
+    <div class="grid g4" style="margin-bottom:40px">
+      <div class="card fade"><div style="font-size:26px;margin-bottom:10px">🏷️</div><h4 style="font-size:15px;margin-bottom:8px">深折扣锚定</h4><p style="font-size:13.5px;color:var(--ink-2)">普遍标高划线价再打 3-9 折,折扣率 30%-80%。"原价锚定 + 大幅让利"制造捡漏感,是头部标配。</p></div>
+      <div class="card fade"><div style="font-size:26px;margin-bottom:10px">🎟️</div><h4 style="font-size:15px;margin-bottom:8px">店铺优惠券</h4><p style="font-size:13.5px;color:var(--ink-2)">叠加固定额/百分比券(如 ฿30 off、15% off),提升转化与连带,几乎全品覆盖。</p></div>
+      <div class="card fade"><div style="font-size:26px;margin-bottom:10px">🎁</div><h4 style="font-size:15px;margin-bottom:8px">捆绑赠品</h4><p style="font-size:13.5px;color:var(--ink-2)">"买1送3""送精油/收纳盒/刀片",以赠品堆叠提升感知价值,脱毛仪/剃须套装尤为常见。</p></div>
+      <div class="card fade"><div style="font-size:26px;margin-bottom:10px">🛡️</div><h4 style="font-size:15px;margin-bottom:8px">质保背书</h4><p style="font-size:13.5px;color:var(--ink-2)">"12个月质保""正品保证"写入标题,是电动品类(剃须/吹风/脱毛仪)建立信任的关键话术。</p></div>
+    </div>
+
+    <!-- 分国家店铺策略 -->
+    <h3 style="font-size:19px;margin-bottom:18px" class="fade">分国家店铺类型与运营策略</h3>
+    <div class="grid g3">
+      <div class="card fade">
+        <span class="tag tag-th">泰国 TH</span>
+        <h4 style="margin:12px 0 10px;font-size:17px">低价铺量 + 旗舰守高</h4>
+        <ul class="dist dlist" style="font-size:13.5px;color:var(--ink-2)">
+          <li><span class="ic">🏪</span><div><b>优选店/普通店主导走量</b>,以 ฿1-78 超低价引流款冲销量榜(直发梳、海绵、刮痧石)</div></li>
+          <li><span class="ic">👑</span><div><b>旗舰店承载品牌溢价</b>:FULI、Simplus、YOTEX、Enchen 以官方店强化信任</div></li>
+          <li><span class="ic">💸</span><div>折扣力度全报告最猛,常见 ฿1 秒杀款拉流量、引导关注</div></li>
+        </ul>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-vn">越南 VN</span>
+        <h4 style="margin:12px 0 10px;font-size:17px">本土旗舰 + 高客单礼赠</h4>
+        <ul class="dist dlist" style="font-size:13.5px;color:var(--ink-2)">
+          <li><span class="ic">🇻🇳</span><div><b>本土沙龙品牌自营旗舰</b>(HUSO/MASUTO/Galistore)深耕造型赛道,品牌叙事强</div></li>
+          <li><span class="ic">🎁</span><div>高客单脱毛仪主打<b>"礼物"场景</b> + "买1送3",降低决策门槛</div></li>
+          <li><span class="ic">🛡️</span><div>6-12月质保 + 退换承诺普及,缓解高单价信任顾虑</div></li>
+        </ul>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-my">马来 MY</span>
+        <h4 style="margin:12px 0 10px;font-size:17px">品牌官店 + 套装送礼</h4>
+        <ul class="dist dlist" style="font-size:13.5px;color:var(--ink-2)">
+          <li><span class="ic">🌐</span><div><b>国际品牌官方旗舰为主</b>(Philips/Panasonic/Enchen 官店),靠品牌力直接转化</div></li>
+          <li><span class="ic">🎀</span><div>Enchen 用<b>礼盒套装</b>卡位男士送礼,提升件单价与连带</div></li>
+          <li><span class="ic">⭐</span><div>头部五星占比 95%+,口碑(评论数破万)成为主要决策依据</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout fade">
+      <h4 style="margin-bottom:8px">🎬 关于 TikTok Shop 达人带货</h4>
+      <p style="color:var(--ink-2);font-size:14.5px">越南、马来是东南亚 TikTok Shop 最活跃的市场,达人短视频带货是美妆个护重要增长引擎。但本次通过 sorftime 接口抓取时,目标品类(吹风机/剃须刀/美容仪)的达人视频数据返回为空,无法提供可靠的达人维度量化分析。<b>建议在落地阶段单独通过 TikTok Creative Center 或达人平台补充该维度</b>——从 Shopee 数据可间接推断:越南高客单美容仪的"礼物化"叙事、马来的"开箱测评"内容,均高度适配达人种草。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== Opportunities ===== -->
+<section id="opportunity" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Opportunities</div>
+      <h2>机会洞察与建议</h2>
+      <p>综合大盘、价格带、竞品与营销分析,提炼可落地的选品方向、价位空白与卖点机会。</p>
+    </div>
+    <div class="grid g3">
+      <div class="card fade">
+        <span class="tag tag-th">泰国 TH</span>
+        <h4 style="margin:12px 0 10px">切入 ฿500-1500 轻仪器空白</h4>
+        <p style="font-size:14px;color:var(--ink-2)">美容仪在 ฿200 以下(刮痧)与 ฿3000 以上(FULI)之间存在明显断层。一款 ฿500-1500、主打"微电流/射频提拉"的轻仪器,配合旗舰店 + 深折扣,有机会填补中端。剃须/吹风延续中国品牌性价比打法即可。</p>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-vn">越南 VN</span>
+        <h4 style="margin:12px 0 10px">高客单美容仪 + 礼赠叙事</h4>
+        <p style="font-size:14px;color:var(--ink-2)">越南为愿意为美容仪付费的优质市场。IPL 脱毛仪、沙龙级造型器有强溢价空间,关键在<b>"无痛/沙龙级/礼物"叙事 + 买赠 + 长质保</b>。中端 ₫500k-1M IPL(对标 Matrix/Lescolton)是性价比突破口。</p>
+      </div>
+      <div class="card fade">
+        <span class="tag tag-my">马来 MY</span>
+        <h4 style="margin:12px 0 10px">套装化 + 口碑卡位</h4>
+        <p style="font-size:14px;color:var(--ink-2)">标准品类已被国际大牌占据,硬拼单品困难。机会在<b>差异化套装(礼盒/全身护理组合)</b>与垂直场景(男士理容、声波洁面)。需以官方旗舰 + 万级评论口碑为入场门槛,价格带聚焦 RM50-150。</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card fade">
+        <h4 style="margin-bottom:14px">🎯 跨国共性卖点(经五星占比验证)</h4>
+        <div class="sell-pts" style="gap:8px">
+          <span class="pt good">高速电机 / 大功率速干</span>
+          <span class="pt good">负离子护发</span>
+          <span class="pt good">便携可折叠</span>
+          <span class="pt good">IPX 防水</span>
+          <span class="pt good">Type-C 快充</span>
+          <span class="pt good">无痛 / 温和不刺激</span>
+          <span class="pt good">多功能合一</span>
+          <span class="pt good">长质保</span>
+        </div>
+        <p style="font-size:13.5px;color:var(--ink-2);margin-top:14px">这些卖点在三国头部产品中反复出现且五星占比高(普遍 &gt;88%),是消费者真实买单的产品力锚点,应作为新品的标配传播点。</p>
+      </div>
+      <div class="card fade">
+        <h4 style="margin-bottom:14px">⚠️ 入场风险提示</h4>
+        <ul class="dist dlist" style="font-size:14px;color:var(--ink-2)">
+          <li><span class="ic">⭐</span><div>头部星级门槛高(4.8★+、五星占比 85%+),产品力不足易被差评拖垮</div></li>
+          <li><span class="ic">🏷️</span><div>价格战激烈,低价段(尤其泰国)利润极薄,需靠连带/复购盈利</div></li>
+          <li><span class="ic">🔌</span><div>电动品类需符合各国插头标准与认证(如泰国 TIS、马来 3-pin)</div></li>
+          <li><span class="ic">🌐</span><div>本土品牌(KHIND/HUSO/FULI)与国际大牌双向挤压,白牌需差异化突围</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Method ===== -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="kicker">Data & Methodology</div>
+      <h2>数据来源与口径说明</h2>
+    </div>
+    <div class="grid g2">
+      <div class="card fade">
+        <h4 style="margin-bottom:12px">数据来源</h4>
+        <p class="method"><b>主数据源:</b>Shopee 各国站点(TH/VN/MY)实时类目榜单与产品数据,经 sorftime 接口于 <b>2026-06-02</b> 抓取。<br><br><b>覆盖范围:</b>3 国 × 3 品类 = 9 个细分市场,头部在售 SKU 180+,含价格、月销量、销售额、星级与评分分布、店铺类型、品牌、折扣与优惠券、上架时间等字段。<br><br><b>趋势数据:</b>各细分类目 Top100 产品近一年周度销量指数。</p>
+      </div>
+      <div class="card fade">
+        <h4 style="margin-bottom:12px">口径与局限</h4>
+        <p class="method"><b>① 好评点提炼方式:</b>Shopee 接口不提供单条评论文本,故"消费者好评点"基于<b>真实评分分布(五星占比)+ 产品卖点关键词</b>交叉提炼——五星占比越高,代表对应卖点被消费者验证越充分。非逐条评论语义分析。<br><br><b>② TikTok 达人维度缺失:</b>达人带货接口对本次目标品类无返回数据,营销分析以 Shopee 平台机制(店铺类型/折扣/券/赠品/质保)为准。<br><br><b>③ 汇率:</b>THB≈¥0.21 · VND≈¥0.00028 · MYR≈¥1.55(2026-06 参考值),人民币为近似折算。<br><br><b>④ 越南美容仪:</b>Shopee 无独立美容仪细分类目,数据取自"面部护理工具 / 脱毛工具"节点与产品反查,可能与纯仪器口径略有出入。</p>
+      </div>
+    </div>
+    <div class="callout warn fade" style="margin-top:22px">
+      <p style="color:var(--ink-2);font-size:14px"><b>免责声明:</b>本报告为基于公开平台在售数据的市场研究,销量为平台估算值,不构成投资或经营决策的唯一依据。东南亚电商数据受大促周期、汇率与平台政策影响波动较大,建议结合落地调研动态校准。</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div><b>东南亚美容美发工具市场竞品调研</b><br>泰国 · 越南 · 马来西亚 | 吹风机 · 剃须刀 · 家用美容仪</div>
+  <div style="text-align:right">数据源 Shopee 实时榜单 · sorftime<br>抓取于 2026-06-02 · 苹果工业风结构化报告</div>
+</div></footer>
+
+<script>
+// ===== Trend sparklines (real weekly data, normalized) =====
+const trends={
+ "sp-my-hd":[2692313,2447157,2324105,2467280,1001126,3977354,1975886,2058926,2060528,1879017,0,2289840,2857917,2746219,2950754,3061320,2751275,2894675,2703597,2372278,2969599,3306667,2900323,3463193,3700606,1559258,577512,3024957,3069811,1728167,2510688,2347264,2565449,2419459,2535688,2491508,465987,2442316,2274778,2125109,1900191,2520844,4115489,4330678,840590,4764383,1640267,1597059,779889,1388550,1186971,1620747,654,1338,19692,103850,78691,32252,11839,39234,29053,3115434,51564,4061858,6117091,5316374,8676567,14318,5526,4725,4800513,5610151,4234222,5348199,5205072,10465875,11246826,5145695,4828245,5619630,4751470,4917358,3474719,28305,25546,1743938,1660799,1894431,1674168,1515022,1497613,2922007,1600251,3569306,3840450,2833780,2174907,3034035,2683665,2220435,5772859],
+ "sp-vn-sh":[399884623,406061231,424267438,444863903,135316964771,221327633,6572782680,13136714450,13792866385,12485963996,40158401402,45757417260,43420009046,48517059650,130830141171,115787038332,42355471675,36006634932,31427832901,22722642312,27253171371,27217956324,12908680430,12886342441,14607244288,11483181806,12627267322,13176520238,13063040168,12444922686,10406773461,11953585105,11065674547,12118573340,12023626886,13649635240,11893329179,18166001374,15351286007,11741402321,13844619540,16481588205,13540612367,5379548135,4675656385,6454417715,5554387922,29314728999,4073326207,47558900409,2284378645,3495447763,6312949368,3470771215,1718731829,1868874535,2386130133,2195860043,2810044258,4051407165,5881585801,5843300319,9744787504,10970105635,15484767371,8337273110,12550748388,13284283221,4839766438,8590147512,8285810451,14516404538,10546812671,8809943747,5199170034,5785250399,5897552550,5643684615,8107059167,8812904249,9713431485,10137859859,8262301394,9766552409,8100171107,8303461422,7127338197,8554974022,9369201664,9425116204,12104889149,22385957360,15535098658,13245835002,10098695202,11199195720,4397983772,1345465133,1824074364,1283395231,2362483891],
+ "sp-th-bd":[25744260,631216,26316548,28160485,28305817,8407649,30007253,32579148,35323365,40444811,43227895,57879639,84269658,90254101,95059219,87411623,34088762,55425361,43271655,31595959,31670221,25738853,28812454,28284414,29668424,20081809,30997561,29434123,27786314,29252529,25517113,25039833,26493060,31718829,32303360,29930840,33882794,25624220,23557710,22768086,21047543,20407788,18847926,20289785,19663954,3838784,20366293,18661657,19437043,26152396,29142507,14603614,15348928,10168742,2770020,10797069,10688694,10566323,12073589,16493647,5950522,28915406,15505343,10455612,12977345,6460505,5083301,31450390,5745973,32198299,14654758,28557481,5305733,25353398,18602385,7145978,31165580,31233236,8135927,10336042,12237954,11110175,32967984,13141218,3156339,3233711,3747835,48613055,35502572,30319255,37694274,29649628,7496934,26051721,5054297,1794598,916862,3767550,3029320,2864474,551685],
+ "sp-my-sh":[15750594,14964047,14490874,15402708,14440925,146180,14713224,15618902,15324852,14751530,8926008,14762208,17481337,16523073,17273642,17636579,16937070,16706828,16171726,15727256,15850281,17181377,19831895,16742089,22303546,21943480,22868537,21953642,19835281,19335763,17619765,16919400,18876740,19018425,18982967,19480853,21121848,21297274,23851452,23576891,22687440,21789488,20388462,14333787,13439130,13278541,13339767,32208943,12656281,11530211,15208534,13067418,5780099,11441112,4799589,3816242,5657482,26581000,21084118,7229009,3471138,7312093,9103925,14958269,16729554,13145220,33058182,24128212,13925191,16354510,13845002,20990806,5303900,16183877,14808735,12047023,11736548,14401091,6698473,7972705,15704218,17630291,18030647,19375655,22850095,18612822,12580843,15471861,14666094,12759366,12415639,3569220,28841261,9399221,2915018,2503333,7524435,784952,1879913,1007207,5389933],
+ "sp-th-hd":[15750594,14964047,14490874,15402708,14440925,146180,14713224,15618902,15324852,14751530,8926008,14762208,17481337,16523073,17273642,17636579,16937070,16706828,16171726,15727256,15850281,17181377,19831895,16742089,22303546,21943480,22868537,21953642,19835281,19335763,17619765,16919400,18876740,19018425,18982967,19480853,21121848,21297274,23851452,23576891,22687440,21789488,20388462,14333787,13439130,13278541,13339767,32208943,12656281,11530211,15208534,13067418,5780099,11441112,4799589,3816242,5657482,26581000,21084118,7229009,3471138,7312093,9103925,14958269,16729554,13145220,33058182,24128212,13925191,16354510,13845002,20990806,5303900,16183877,14808735,12047023,11736548,14401091,6698473,7972705,15704218,17630291,18030647,19375655,22850095,18612822,12580843,15471861,14666094,12759366,12415639,3569220,28841261,9399221,2915018,2503333,7524435,784952,1879913,1007207,5389933],
+ "sp-my-bd":[255262,188216,197810,228155,1001126,219467,184582,138659,137707,225952,0,177007,133391,963364,1184443,1137052,1101420,873472,766625,714304,806936,937278,185197,1116493,995449,105726,55925,1200179,222724,231688,717792,605476,500845,604511,446734,423473,342162,453951,534818,443276,561941,674914,550171,252050,475971,474150,434971,617201,384583,383714,348658,328917,60631,50377,372322,291605,209968,519873,736507,578007,356817,392066,310978,944661,994717,599478,804562,763978,622958,369508,724899,612190,571325,859672,753397,101076,115789,1003708,690207,751330,745351,718043,686527,917820,913760,1089171,1127562,1002941,838140,808318,819097,375882,535506,67428,384398,375254,338862,565237,236334,171339,1057710]
+};
+function buildSpark(id,data){
+ const el=document.getElementById(id); if(!el)return;
+ const recent=data.slice(-40); // last ~40 weeks
+ const max=Math.max(...recent);
+ el.innerHTML=recent.map(v=>{const h=max>0?Math.max(3,(v/max)*100):3;return `<div class="b" style="height:${h}%"></div>`}).join('');
+}
+Object.entries(trends).forEach(([id,d])=>buildSpark(id,d));
+
+// ===== Scroll reveal =====
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+
+// ===== Animate price bars on reveal =====
+document.querySelectorAll('.pbar-fill').forEach(f=>{const w=f.style.width;f.style.width='0';setTimeout(()=>{f.style.width=w},300)});
+</script>
+</body></html>

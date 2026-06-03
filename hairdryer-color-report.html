@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欧洲吹风机颜色偏好深度调研 · 德国市场聚焦</title>
+<style>
+:root{
+  --bg:#fbfbfd; --surface:#ffffff; --ink:#1d1d1f; --ink-2:#6e6e73; --ink-3:#86868b;
+  --line:#e8e8ed; --line-2:#d2d2d7; --accent:#0066cc; --accent-soft:#e8f0fe;
+  --rose:#c9849a; --champagne:#cbab78; --metalblue:#4a6b8a; --matcha:#8a9a6b;
+  --black:#2b2b2e; --pink:#d98aa8; --violet:#8f7da8;
+  --good:#1a7f5a; --warn:#b8860b; --bad:#c0392b;
+  --shadow:0 1px 3px rgba(0,0,0,.04),0 8px 32px rgba(0,0,0,.06);
+  --shadow-lg:0 4px 24px rgba(0,0,0,.08),0 24px 64px rgba(0,0,0,.10);
+  --radius:18px; --radius-sm:12px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+h1,h2,h3{letter-spacing:-.02em;font-weight:700;line-height:1.1}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.sec-title{font-size:40px;margin-bottom:20px}
+.sec-lead{font-size:21px;color:var(--ink-2);font-weight:400;max-width:760px;margin-bottom:48px;letter-spacing:-.01em}
+.num-id{display:inline-block;font-size:13px;color:var(--ink-3);font-weight:600;margin-bottom:8px;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+strong{font-weight:600}
+/* HERO */
+.hero{background:linear-gradient(180deg,#0b0b0d 0%,#1d1d1f 60%,#2b2b2e 100%);color:#f5f5f7;text-align:center;padding:140px 0 120px;border-bottom:none;position:relative;overflow:hidden}
+.hero-swatches{display:flex;justify-content:center;gap:10px;margin-bottom:40px}
+.hero-swatches span{width:44px;height:44px;border-radius:50%;box-shadow:0 4px 16px rgba(0,0,0,.4);border:1.5px solid rgba(255,255,255,.15)}
+.hero h1{font-size:64px;font-weight:700;letter-spacing:-.03em;margin-bottom:24px;background:linear-gradient(90deg,#fff,#c9c9ce);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .sub{font-size:23px;color:#a1a1a6;font-weight:400;max-width:680px;margin:0 auto 40px;letter-spacing:-.01em}
+.hero-meta{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:48px;font-size:14px;color:#86868b}
+.hero-meta b{display:block;color:#f5f5f7;font-size:15px;font-weight:600;margin-bottom:2px}
+/* KPI */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0 0 8px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:24px}
+.kpi .v{font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.kpi .l{font-size:13px;color:var(--ink-2);margin-top:8px}
+.kpi .v small{font-size:16px;font-weight:600;color:var(--ink-3)}
+/* CARD */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);margin-bottom:20px}
+.card h3{font-size:22px;margin-bottom:14px}
+.card p{color:var(--ink-2);margin-bottom:12px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+.tbl th{text-align:left;font-weight:600;color:var(--ink-2);font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding:12px 14px;border-bottom:2px solid var(--line-2)}
+.tbl td{padding:13px 14px;border-bottom:1px solid var(--line);color:var(--ink);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td.num{font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+.tbl tr:hover td{background:#fafafa}
+/* swatch chip */
+.sw{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.sw i{width:16px;height:16px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,.12);flex-shrink:0}
+.dot-rose{background:linear-gradient(135deg,#e8b4c4,#c9849a)}
+.dot-champ{background:linear-gradient(135deg,#e3cda0,#cbab78)}
+.dot-blue{background:linear-gradient(135deg,#6b8caa,#3a5470)}
+.dot-matcha{background:linear-gradient(135deg,#a8b888,#7a8a5b)}
+.dot-black{background:linear-gradient(135deg,#48484a,#1d1d1f)}
+.dot-pink{background:linear-gradient(135deg,#f0a8c4,#d98aa8)}
+.dot-violet{background:linear-gradient(135deg,#b4a0c8,#8f7da8)}
+.dot-white{background:linear-gradient(135deg,#fff,#e8e8ed)}
+.dot-grey{background:linear-gradient(135deg,#c8c8cd,#9a9a9f)}
+.dot-gold{background:linear-gradient(135deg,#f0d9a0,#d4b46a)}
+.dot-mix{background:conic-gradient(#2b2b2e 0 50%,#d98aa8 50% 100%)}
+.dot-red{background:linear-gradient(135deg,#c0524f,#8a2b28)}
+/* BAR */
+.bar-row{display:grid;grid-template-columns:140px 1fr 70px;align-items:center;gap:14px;margin-bottom:14px}
+.bar-row .lbl{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
+.bar-track{background:var(--line);border-radius:8px;height:26px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:8px;transition:width .6s;display:flex;align-items:center}
+.bar-row .val{font-size:14px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.b-rose{background:linear-gradient(90deg,#d98aa8,#c9849a)}
+.b-champ{background:linear-gradient(90deg,#d4b46a,#cbab78)}
+.b-blue{background:linear-gradient(90deg,#5a7d9a,#4a6b8a)}
+.b-matcha{background:linear-gradient(90deg,#9aad77,#8a9a6b)}
+.b-black{background:linear-gradient(90deg,#48484a,#2b2b2e)}
+.b-pink{background:linear-gradient(90deg,#f0a8c4,#d98aa8)}
+.b-violet{background:linear-gradient(90deg,#a890c0,#8f7da8)}
+.b-grey{background:linear-gradient(90deg,#b0b0b5,#9a9a9f)}
+.b-white{background:linear-gradient(90deg,#e8e8ed,#d2d2d7)}
+.b-gold{background:linear-gradient(90deg,#e3cda0,#d4b46a)}
+/* TAG */
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;letter-spacing:.01em}
+.tag-good{background:#e3f5ed;color:var(--good)}
+.tag-warn{background:#fdf3e0;color:var(--warn)}
+.tag-bad{background:#fdeceb;color:var(--bad)}
+.tag-neutral{background:#f0f0f3;color:var(--ink-2)}
+/* CALLOUT */
+.callout{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:20px 24px;margin:20px 0}
+.callout.warn{border-color:var(--warn);background:#fdf6e8}
+.callout.win{border-color:var(--good);background:#e8f6ef}
+.callout .ct{font-weight:700;font-size:15px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.callout p{margin:0;color:var(--ink);font-size:15px}
+/* METHOD note */
+.note{font-size:13px;color:var(--ink-3);line-height:1.6}
+.method-box{background:#f5f5f7;border-radius:var(--radius-sm);padding:24px;font-size:14px;color:var(--ink-2)}
+.method-box b{color:var(--ink)}
+/* TOC */
+.toc{position:sticky;top:0;background:rgba(251,251,253,.8);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);z-index:100;border-bottom:1px solid var(--line);padding:14px 0}
+.toc-inner{display:flex;gap:6px;flex-wrap:wrap;font-size:12.5px;justify-content:center}
+.toc a{color:var(--ink-2);padding:5px 11px;border-radius:16px;transition:.2s;font-weight:500}
+.toc a:hover{background:var(--surface);color:var(--ink)}
+/* insight pill */
+.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.pill{background:#f5f5f7;border-radius:10px;padding:10px 14px;font-size:13px;color:var(--ink-2);flex:1;min-width:140px}
+.pill b{color:var(--ink);display:block;font-size:18px;font-weight:700;margin-bottom:2px}
+/* footer */
+.footer{background:#1d1d1f;color:#86868b;text-align:center;padding:60px 24px;border:none}
+.footer p{font-size:13px;margin-bottom:6px}
+.rank-badge{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700;align-items:center;justify-content:center;margin-right:4px}
+.rank-1{background:var(--champagne)}.rank-2{background:var(--ink-2)}.rank-3{background:#c08a4a}
+@media(max-width:820px){
+  .kpi-grid,.grid-2,.grid-3{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:42px}.sec-title{font-size:30px}.sec-lead{font-size:18px}
+  .bar-row{grid-template-columns:100px 1fr 56px}
+  section{padding:64px 0}
+  .tbl{font-size:12.5px}.tbl th,.tbl td{padding:9px 8px}
+}
+@media(max-width:520px){.kpi-grid{grid-template-columns:1fr 1fr}.grid-2,.grid-3{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-swatches">
+      <span style="background:linear-gradient(135deg,#e3cda0,#cbab78)"></span>
+      <span style="background:linear-gradient(135deg,#e8b4c4,#c9849a)"></span>
+      <span style="background:linear-gradient(135deg,#6b8caa,#3a5470)"></span>
+      <span style="background:linear-gradient(135deg,#a8b888,#7a8a5b)"></span>
+      <span style="background:linear-gradient(135deg,#48484a,#1d1d1f)"></span>
+    </div>
+    <h1>颜色，是货架上的<br>第一道购买决策</h1>
+    <p class="sub">欧洲吹风机市场消费者颜色偏好深度调研 · 以德国为核心，对标法国与意大利</p>
+    <div class="hero-meta">
+      <div><b>数据源</b>Sorftime MCP / CLI 实时抓取</div>
+      <div><b>覆盖站点</b>Amazon DE · FR · IT</div>
+      <div><b>核心人群</b>28–35 岁女性（推断）</div>
+      <div><b>采集时间</b>2026 年 6 月 3 日</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== TOC ===== -->
+<nav class="toc">
+  <div class="wrap toc-inner">
+    <a href="#summary">执行摘要</a>
+    <a href="#method">方法与口径</a>
+    <a href="#market">市场概览</a>
+    <a href="#variation">颜色×真实销量</a>
+    <a href="#search">颜色×搜索需求</a>
+    <a href="#price">价位×颜色</a>
+    <a href="#brand">品牌配色矩阵</a>
+    <a href="#newproduct">新品押注</a>
+    <a href="#reviews">评论信号</a>
+    <a href="#season">季节性</a>
+    <a href="#conclusion">配色建议</a>
+  </div>
+</nav>
+
+<!-- ===== 1. EXECUTIVE SUMMARY ===== -->
+<section id="summary">
+  <div class="wrap">
+    <div class="num-id">01 / EXECUTIVE SUMMARY</div>
+    <div class="eyebrow">执行摘要</div>
+    <h2 class="sec-title">五个最值得记住的结论</h2>
+    <p class="sec-lead">基于德国站 Top100 吹风机的真实在售数据、多色款子体销量拆分、关键词流量结构与近一年评论文本，提炼出对配色决策最有价值的几条结论。</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">€58.6</div><div class="l">德国 Haartrockner 类目 Top80% 产品平均售价</div></div>
+      <div class="kpi"><div class="v">72.5<small>%</small></div><div class="l">亚马逊自营销量占比（颜色高度集中）</div></div>
+      <div class="kpi"><div class="v">10<small>×</small></div><div class="l">BaByliss「黑/粉」对比纯黑款的销量倍数</div></div>
+      <div class="kpi"><div class="v">0</div><div class="l">德国品类长尾词中带颜色的词条数量</div></div>
+    </div>
+
+    <div class="card" style="margin-top:32px">
+      <div class="bar-row">
+        <div class="lbl"><span class="rank-badge rank-1">1</span></div>
+        <div style="grid-column:2/4">
+          <strong>香槟金 / 玫瑰金是中高端走量的「安全色」。</strong>
+          <span style="color:var(--ink-2)">7MAGIC 造型器香槟金子体月销 1000–2000，碾压炫彩版（300–400）；Dyson Airwrap 玫瑰金在德国子体月销 600–700，远超其余配色。</span>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="lbl"><span class="rank-badge rank-2">2</span></div>
+        <div style="grid-column:2/4">
+          <strong>「黑 + 粉/玫瑰金点缀」是性价比段的隐藏冠军。</strong>
+          <span style="color:var(--ink-2)">BaByliss 同款，纯黑版月销 50–100，而黑/粉版冲到 600–700——一个点缀色带来近 10 倍差距。</span>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="lbl"><span class="rank-badge rank-3">3</span></div>
+        <div style="grid-column:2/4">
+          <strong>金属蓝是稳健的第二梯队主色。</strong>
+          <span style="color:var(--ink-2)">Philips 5000 系列金属蓝版月销 900–1000，主导整个父体；白色同系列仅 238。</span>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="lbl"><span class="rank-badge" style="background:var(--matcha)">4</span></div>
+        <div style="grid-column:2/4">
+          <strong>抹茶绿 / 冰川蓝是正在升温的新兴色。</strong>
+          <span style="color:var(--ink-2)">Laifen Mini 冰川蓝月销 200–300、抹茶绿 100–200，已超过传统的砂金、奶粉色，是年轻人群的差异化信号。</span>
+        </div>
+      </div>
+      <div class="bar-row">
+        <div class="lbl"><span class="rank-badge" style="background:var(--accent)">5</span></div>
+        <div style="grid-column:2/4">
+          <strong>颜色是「货架转化属性」，不是「搜索入口属性」。</strong>
+          <span style="color:var(--ink-2)">德国品类长尾词全是功能词（leise 静音、ionen、diffusor、testsieger），无一带颜色；粉色款的真实流量也全来自品类词与对标词。颜色影响的是「看到后买不买」，而非「搜不搜得到」。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ct">🇩🇪 德国 vs 南欧的关键差异</div>
+      <p>同一款 Dyson Airwrap，玫瑰金在德国子体月销 600–700（绝对主力），在法国仅 100–200 且与「红丝绒+金」打平；意大利市场更偏专业黑（Parlux Nero），并出现「夜蓝 Blu notte」。<strong>德国对玫瑰金 / 粉的偏好显著强于法国、意大利。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. METHOD ===== -->
+<section id="method">
+  <div class="wrap">
+    <div class="num-id">02 / METHODOLOGY</div>
+    <div class="eyebrow">方法与口径</div>
+    <h2 class="sec-title">数据怎么来的，边界在哪里</h2>
+    <p class="sec-lead">先把方法和局限讲清楚，这决定了每条结论该被信多少。这份报告给的是「行为揭示」——消费者搜了什么、买了什么、抱怨了什么，而非动机层面的「为什么」。</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>数据来源</h3>
+        <p>全部数据通过 <b>Sorftime MCP / CLI</b> 于 2026-06-03 实时抓取自亚马逊在售商品，覆盖：</p>
+        <ul style="color:var(--ink-2);padding-left:20px;font-size:14px;line-height:2">
+          <li>德国站 Haartrockner 类目 <b>Top100</b> 实时榜单</li>
+          <li>中高端在售产品列表（售价 ≥ €50，月销 ≥ 100）</li>
+          <li>15+ 款多色款的 <b>子体销量拆分</b>（颜色级）</li>
+          <li>品类关键词扩展、搜索量与产品反查流量词</li>
+          <li>近一年用户评论文本（德语，含正负向）</li>
+          <li>法国 / 意大利同款与同类对比数据</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>颜色解析方法</h3>
+        <p>这些接口<b>没有原生「颜色」字段</b>，颜色信号从三处解析并做德语归一化：</p>
+        <ul style="color:var(--ink-2);padding-left:20px;font-size:14px;line-height:2">
+          <li><b>子体属性</b>（Farbe / Stil）—— 最可靠</li>
+          <li><b>产品标题</b>结尾的颜色词（Rosa、Weiß…）</li>
+          <li><b>评论文本</b>中的颜色相关吐槽</li>
+        </ul>
+        <p style="font-size:13px;margin-top:10px">归一化示例：weiß=白、roségold/rose gold=玫瑰金、champagner gold/sandgold=香槟金系、matchagrün=抹茶绿、gletscherblau=冰川蓝。</p>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="ct">⚠️ 三条必须知道的局限</div>
+      <p style="margin-bottom:8px"><b>1. 年龄是推断，不是实测。</b>亚马逊不提供买家年龄数据。报告用「中高端价位 + 设计导向 + 社媒热度配色」作为 28–35 岁人群的代理变量，凡涉及年龄的结论均为推断。</p>
+      <p style="margin-bottom:8px"><b>2. 子体销量为区间估算。</b>接口返回的是销量区间（如 600–700），看相对分布比看绝对值可靠；颜色间的量级对比才是结论依据。</p>
+      <p style="margin:0"><b>3. 评论样本有上限。</b>每款最多近一年 100 条评论，适合做定性线索，不做严格统计推断。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. MARKET ===== -->
+<section id="market">
+  <div class="wrap">
+    <div class="num-id">03 / MARKET OVERVIEW</div>
+    <div class="eyebrow">市场概览</div>
+    <h2 class="sec-title">德国吹风机市场：功能为王，颜色为辅</h2>
+    <p class="sec-lead">在解读颜色之前，先看清这个市场的底色。德国 Haartrockner 类目 Top100 月销约 6.7 万台、月销额近 €296 万，呈现「头部品牌走量靠经典黑、增量机会在配色」的典型结构。</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">66,942</div><div class="l">Top100 月销量（台）</div></div>
+      <div class="kpi"><div class="v">€25.99</div><div class="l">Top80% 产品中位价（功能刚需段）</div></div>
+      <div class="kpi"><div class="v">Remington</div><div class="l">销量第一品牌（经典黑主导）</div></div>
+      <div class="kpi"><div class="v">98.9<small>%</small></div><div class="l">4 星及以上产品销量占比</div></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px">
+      <div class="card">
+        <h3>品牌格局</h3>
+        <table class="tbl">
+          <thead><tr><th>品牌</th><th>定位</th><th class="num">类目地位</th></tr></thead>
+          <tbody>
+            <tr><td>Remington</td><td>大众功能</td><td class="num">销量 No.1</td></tr>
+            <tr><td>slopehill</td><td>中国新势力</td><td class="num">销量 No.2</td></tr>
+            <tr><td>Philips / Braun</td><td>主流品牌</td><td class="num">中坚</td></tr>
+            <tr><td>Dyson / Shark / ghd</td><td>高端设计</td><td class="num">高客单</td></tr>
+            <tr><td>Laifen / DREAME</td><td>新锐高速</td><td class="num">增长快</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>价格带分布与颜色丰富度</h3>
+        <p style="font-size:14px">价位越往上，配色逻辑越分化——并非「越贵越单一」，而是分成两条路线：</p>
+        <div class="pill-row" style="flex-direction:column">
+          <div class="pill"><b>€15–40 · 刚需段</b>经典黑为绝对主力，颜色 ≈ 黑/白/银，配色几乎不影响决策</div>
+          <div class="pill"><b>€50–150 · 中高端段</b>配色最丰富、也最影响转化——本报告核心战场</div>
+          <div class="pill"><b>>€150 · 高端段</b>分化：Dyson 用「玫瑰金/红丝绒」做情绪溢价，ghd/Parlux 坚持专业黑</div>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="margin-top:16px">注：刚需段巨大的销量由经典黑承担，这是「功能为王」的底色；但 28–35 岁人群主力落在 €50–150 段，这里颜色才真正成为差异化武器。下一节用子体销量拆分，看这个段位里「别人到底买了什么颜色」。</p>
+  </div>
+</section>
+
+<!-- ===== 4. VARIATION (STRONGEST) ===== -->
+<section id="variation" style="background:linear-gradient(180deg,#fff,#fbfbfd)">
+  <div class="wrap">
+    <div class="num-id">04 / COLOR × REAL SALES &nbsp;·&nbsp; 最强线索</div>
+    <div class="eyebrow" style="color:var(--champagne)">颜色 × 真实销量</div>
+    <h2 class="sec-title">别人「真买了」什么颜色</h2>
+    <p class="sec-lead">这是整份报告信息量最大的一块。同一款产品的不同颜色子体，价格、功能、上架时间完全相同，唯一变量就是颜色——所以子体间的销量差，几乎可以纯粹归因于颜色偏好。这比「嘴上说想要什么颜色」可信得多。</p>
+
+    <div class="callout win">
+      <div class="ct">✅ 核心发现：同款不同色，销量可差 3–10 倍</div>
+      <p>在控制了价格与功能的前提下，「对的颜色」能把一款产品的销量抬升数倍。颜色不是装饰，是实打实的转化杠杆。</p>
+    </div>
+
+    <div class="card">
+      <h3>多色款子体销量拆分（德国站，月销量区间）</h3>
+      <p style="font-size:13px">每组为同一父体下的颜色子体对比；高亮行为该款的销量冠军色。</p>
+      <table class="tbl">
+        <thead><tr><th>产品款式</th><th>价位</th><th>颜色子体</th><th class="num">月销量区间</th><th>判定</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2"><b>7MAGIC 6in1 造型器</b></td><td rowspan="2">€110</td>
+            <td><span class="sw"><i class="dot-champ"></i>香槟金</span></td><td class="num">1000–2000</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-mix"></i>炫彩 Leuchtende</span></td><td class="num">300–400</td><td><span class="tag tag-neutral">点缀</span></td></tr>
+
+          <tr><td rowspan="2"><b>BaByliss Smooth 热风梳</b></td><td rowspan="2">€53</td>
+            <td><span class="sw"><i class="dot-mix"></i>黑 / 粉</span></td><td class="num">600–700</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-black"></i>纯黑</span></td><td class="num">50–100</td><td><span class="tag tag-bad">≈1/10</span></td></tr>
+
+          <tr><td rowspan="2"><b>Philips 5000 系列</b></td><td rowspan="2">€55</td>
+            <td><span class="sw"><i class="dot-blue"></i>金属蓝 Metallic-Blau</span></td><td class="num">900–1000</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-white"></i>白色（同系列 BHD500）</span></td><td class="num">≈238</td><td><span class="tag tag-warn">弱势</span></td></tr>
+
+          <tr><td rowspan="3"><b>Dyson Airwrap i.d.</b></td><td rowspan="3">€449</td>
+            <td><span class="sw"><i class="dot-rose"></i>陶瓷粉 / 玫瑰金</span></td><td class="num">600–700</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-red"></i>红丝绒 Red Velvet</span></td><td class="num">200–300</td><td><span class="tag tag-neutral">次主力</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-gold"></i>琥珀丝 / 黄玉 Topaz</span></td><td class="num">200–300</td><td><span class="tag tag-neutral">次主力</span></td></tr>
+
+          <tr><td rowspan="2"><b>okaydeer 7in1 造型器</b></td><td rowspan="2">€120</td>
+            <td><span class="sw"><i class="dot-pink"></i>粉 Rosa</span></td><td class="num">300–400</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-grey"></i>灰 Grau</span></td><td class="num">50–100</td><td><span class="tag tag-bad">≈1/4</span></td></tr>
+
+          <tr><td rowspan="4"><b>Laifen Mini</b></td><td rowspan="4">€130</td>
+            <td><span class="sw"><i class="dot-blue"></i>冰川蓝 Gletscherblau</span></td><td class="num">200–300</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-matcha"></i>抹茶绿 Matchagrün</span></td><td class="num">100–200</td><td><span class="tag tag-good">新兴黑马</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-champ"></i>砂金 Sandgold</span></td><td class="num">较低</td><td><span class="tag tag-neutral">—</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-pink"></i>奶粉 Milchrosa</span></td><td class="num">较低</td><td><span class="tag tag-neutral">—</span></td></tr>
+
+          <tr><td rowspan="3"><b>Laifen Neo</b></td><td rowspan="3">€150</td>
+            <td><span class="sw"><i class="dot-black"></i>暗影黑 Shadow-Schwarz</span></td><td class="num">200–300</td><td><span class="tag tag-good">冠军色</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-violet"></i>柔雾紫 Pastell-violett</span></td><td class="num">100–200</td><td><span class="tag tag-neutral">次主力</span></td></tr>
+          <tr><td><span class="sw"><i class="dot-white"></i>雾白 Nebel-weiß</span></td><td class="num">较低</td><td><span class="tag tag-warn">弱势</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>归纳：颜色的「销量梯队」</h3>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-champ"></i>香槟/玫瑰金</span></div><div class="bar-track"><div class="bar-fill b-champ" style="width:100%"></div></div><div class="val">第一梯队</div></div>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-pink"></i>粉 / 黑粉</span></div><div class="bar-track"><div class="bar-fill b-pink" style="width:88%"></div></div><div class="val">第一梯队</div></div>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-blue"></i>金属蓝</span></div><div class="bar-track"><div class="bar-fill b-blue" style="width:72%"></div></div><div class="val">第二梯队</div></div>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-black"></i>经典/暗影黑</span></div><div class="bar-track"><div class="bar-fill b-black" style="width:60%"></div></div><div class="val">稳健基本盘</div></div>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-matcha"></i>抹茶绿/冰川蓝</span></div><div class="bar-track"><div class="bar-fill b-matcha" style="width:46%"></div></div><div class="val">新兴升温</div></div>
+        <div class="bar-row"><div class="lbl"><span class="sw"><i class="dot-white"></i>纯白/雾白</span></div><div class="bar-track"><div class="bar-fill b-white" style="width:24%"></div></div><div class="val">普遍弱势</div></div>
+        <p class="note" style="margin-top:8px">条形为跨款式综合排序的定性梯队，非绝对销量。</p>
+      </div>
+      <div class="card">
+        <h3>三条可直接落地的规律</h3>
+        <p style="margin-bottom:14px"><b>① 金属质感 &gt; 纯色。</b>香槟金、玫瑰金、金属蓝这类带金属反光的配色，几乎在每个款式里都是冠军色。纯白、灰、纯黑（无点缀）普遍偏弱。</p>
+        <p style="margin-bottom:14px"><b>② 加一抹点缀色 = 销量放大器。</b>BaByliss「黑/粉」对纯黑的 10 倍差距说明：哪怕主体是黑，加一道粉/玫瑰金的撞色就能显著拉升转化，且几乎不增加成本。</p>
+        <p style="margin:0"><b>③ 暗色系仍是高端机的安全垫。</b>Laifen Neo 暗影黑仍是冠军色——在高速/高端机里，黑色代表「专业、不出错」，适合做基本盘 SKU，配色款做增量。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. SEARCH ===== -->
+<section id="search">
+  <div class="wrap">
+    <div class="num-id">05 / COLOR × SEARCH DEMAND</div>
+    <div class="eyebrow">颜色 × 搜索需求</div>
+    <h2 class="sec-title">德国人「搜」颜色吗？几乎不</h2>
+    <p class="sec-lead">把品类词扩展成长尾词后，一个反直觉但极其关键的结论浮现：德国消费者在搜索阶段几乎不带颜色意图。这决定了颜色该被放在「货架/详情页」环节去赢，而不是「关键词/广告」环节。</p>
+
+    <div class="card">
+      <h3>德国吹风机品类核心长尾词（按月搜索量）</h3>
+      <table class="tbl">
+        <thead><tr><th>关键词</th><th>含义</th><th class="num">月搜索量</th><th>意图类型</th></tr></thead>
+        <tbody>
+          <tr><td>föhn</td><td>吹风机</td><td class="num">92,637</td><td><span class="tag tag-neutral">品类词</span></td></tr>
+          <tr><td>fön</td><td>吹风机（变体）</td><td class="num">47,812</td><td><span class="tag tag-neutral">品类词</span></td></tr>
+          <tr><td>haartrockner</td><td>吹风机</td><td class="num">31,999</td><td><span class="tag tag-neutral">品类词</span></td></tr>
+          <tr><td>föhn mit diffusor</td><td>带扩散器</td><td class="num">24,846</td><td><span class="tag tag-good">功能词</span></td></tr>
+          <tr><td>haartrockner ionen</td><td>负离子</td><td class="num">4,526</td><td><span class="tag tag-good">功能词</span></td></tr>
+          <tr><td>haarföhn testsieger</td><td>测评冠军</td><td class="num">3,636</td><td><span class="tag tag-good">信任词</span></td></tr>
+          <tr><td>föhn leise</td><td>静音</td><td class="num">2,790</td><td><span class="tag tag-good">功能词</span></td></tr>
+          <tr><td>braun haartrockner</td><td>品牌词</td><td class="num">3,238</td><td><span class="tag tag-warn">品牌词</span></td></tr>
+          <tr style="background:#fdeceb"><td colspan="2"><b>带颜色的长尾词</b></td><td class="num"><b>0 条进榜</b></td><td><span class="tag tag-bad">无</span></td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:10px">在两个品类词（Föhn / Haartrockner）扩展出的前 40 个长尾词中，全部为功能（扩散器、负离子、静音）、信任（测评冠军）或品牌词，<b>没有任何一个颜色词</b>（rosa、weiß、gold 等）进入榜单。「haartrockner rosa」经查证甚至不是亚马逊热搜词。</p>
+    </div>
+
+    <div class="card">
+      <h3>佐证：粉色爆款的真实流量从哪来</h3>
+      <p style="font-size:14px">对 okaydeer「粉色」7in1 造型器做关键词反查（产品实际曝光来源）——结果全是品类词与对标词，没有一个颜色词：</p>
+      <div class="pill-row">
+        <div class="pill"><b>dyson airwrap</b>对标大词 · 月搜 79,695</div>
+        <div class="pill"><b>lockenstab</b>卷发棒 · 月搜 106,957</div>
+        <div class="pill"><b>föhn</b>品类词 · 月搜 92,637</div>
+        <div class="pill"><b>föhn dyson alternative</b>平替词 · 月搜 13,626</div>
+      </div>
+      <div class="callout" style="margin-top:18px">
+        <div class="ct">🎯 战略含义</div>
+        <p>颜色影响的是「用户看到产品后买不买」（货架转化 / 主图 CTR），而非「能不能被搜到」（流量入口）。<strong>因此配色策略的发力点应是：主图配色冲击力、详情页颜色实拍、A+ 内容里的配色情绪营造——而不是去投颜色关键词。</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. PRICE × COLOR ===== -->
+<section id="price">
+  <div class="wrap">
+    <div class="num-id">06 / PRICE × COLOR</div>
+    <div class="eyebrow">价位 × 颜色</div>
+    <h2 class="sec-title">「越贵越单一」只对了一半</h2>
+    <p class="sec-lead">原假设是「高端机配色单一所以意义不大」。数据给出更细的图景：高端段确实分化，但其中 Dyson 这一支恰恰把颜色当成情绪溢价的核心手段，而专业沙龙品牌才坚持单色。</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="font-size:18px">€15–40 刚需段</h3>
+        <div style="margin:14px 0"><span class="sw"><i class="dot-black"></i>经典黑</span> <span class="tag tag-good" style="margin-left:6px">绝对主力</span></div>
+        <p style="font-size:13.5px">Remington、Braun 入门款几乎全黑/银。买家只看功能与价格，颜色基本不进入决策。配色投入回报极低。</p>
+      </div>
+      <div class="card" style="border-color:var(--champagne);border-width:2px">
+        <h3 style="font-size:18px">€50–150 中高端段 ★</h3>
+        <div style="margin:14px 0;display:flex;gap:6px;flex-wrap:wrap">
+          <span class="sw"><i class="dot-champ"></i>香槟金</span><span class="sw"><i class="dot-pink"></i>粉</span><span class="sw"><i class="dot-blue"></i>金属蓝</span><span class="sw"><i class="dot-matcha"></i>抹茶绿</span>
+        </div>
+        <p style="font-size:13.5px"><b>配色最丰富、对转化影响最大的战场。</b>28–35 岁主力消费段，颜色是关键差异化武器，子体销量差距集中体现在这里。</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px">&gt;€150 高端段</h3>
+        <div style="margin:14px 0;display:flex;gap:6px;flex-wrap:wrap">
+          <span class="sw"><i class="dot-rose"></i>玫瑰金</span><span class="sw"><i class="dot-red"></i>红丝绒</span><span class="sw"><i class="dot-black"></i>专业黑</span>
+        </div>
+        <p style="font-size:13.5px"><b>两条路线分化：</b>Dyson / Shark 用稀缺配色（玫瑰金、限定冰川蓝）做情绪溢价；ghd / Parlux 坚持专业黑塑造「沙龙级」可信度。</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ct">💡 修正后的结论</div>
+      <p>「高端=单色」只适用于专业沙龙派（ghd、Parlux、Braun）。而面向 28–35 岁年轻女性的设计派高端机（Dyson、Shark、Laifen），<strong>颜色恰恰是溢价叙事的核心——玫瑰金和限量色不是装饰，是定价的一部分</strong>。Shark FlexStyle 甚至推出「Glacial Blue 冰川蓝限定版」单独立项。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. BRAND MATRIX ===== -->
+<section id="brand">
+  <div class="wrap">
+    <div class="num-id">07 / BRAND COLOR MATRIX</div>
+    <div class="eyebrow">品牌配色矩阵</div>
+    <h2 class="sec-title">头部品牌各自押什么色</h2>
+    <p class="sec-lead">把主要品牌的在售配色与走量色摊开看，能清楚识别出每个品牌的「配色性格」——以及谁在用颜色做增量、谁还停留在功能黑。</p>
+
+    <div class="card">
+      <table class="tbl">
+        <thead><tr><th>品牌</th><th>主推配色</th><th>走量色</th><th>配色性格</th></tr></thead>
+        <tbody>
+          <tr><td><b>Dyson</b></td>
+            <td><span class="sw"><i class="dot-rose"></i></span><span class="sw"><i class="dot-red"></i></span><span class="sw"><i class="dot-gold"></i></span></td>
+            <td>玫瑰金</td><td><span class="tag tag-good">情绪溢价 · 配色即卖点</span></td></tr>
+          <tr><td><b>Philips</b></td>
+            <td><span class="sw"><i class="dot-blue"></i></span><span class="sw"><i class="dot-white"></i></span></td>
+            <td>金属蓝</td><td><span class="tag tag-good">金属色拉开档次</span></td></tr>
+          <tr><td><b>BaByliss</b></td>
+            <td><span class="sw"><i class="dot-mix"></i></span><span class="sw"><i class="dot-black"></i></span></td>
+            <td>黑/粉撞色</td><td><span class="tag tag-good">点缀色放大器</span></td></tr>
+          <tr><td><b>Laifen</b></td>
+            <td><span class="sw"><i class="dot-black"></i></span><span class="sw"><i class="dot-matcha"></i></span><span class="sw"><i class="dot-blue"></i></span><span class="sw"><i class="dot-violet"></i></span></td>
+            <td>暗影黑 / 抹茶绿</td><td><span class="tag tag-good">多色矩阵试探新色</span></td></tr>
+          <tr><td><b>ghd</b></td>
+            <td><span class="sw"><i class="dot-black"></i></span></td>
+            <td>专业黑</td><td><span class="tag tag-neutral">沙龙级单色</span></td></tr>
+          <tr><td><b>Parlux</b>（意大利）</td>
+            <td><span class="sw"><i class="dot-black"></i></span><span class="sw"><i class="dot-blue"></i></span></td>
+            <td>黑 / 夜蓝</td><td><span class="tag tag-neutral">专业 + 一抹意式蓝</span></td></tr>
+          <tr><td><b>Remington / Braun</b></td>
+            <td><span class="sw"><i class="dot-black"></i></span><span class="sw"><i class="dot-grey"></i></span></td>
+            <td>黑 / 银</td><td><span class="tag tag-warn">功能黑为主</span></td></tr>
+          <tr><td><b>Shark</b></td>
+            <td><span class="sw"><i class="dot-grey"></i></span><span class="sw"><i class="dot-blue"></i></span></td>
+            <td>石墨灰 / 冰川蓝限定</td><td><span class="tag tag-good">限定色制造稀缺</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2">
+      <div class="callout win" style="margin-top:4px">
+        <div class="ct">谁靠颜色赢</div>
+        <p>Dyson（玫瑰金）、BaByliss（黑粉撞色）、Laifen（多色矩阵）——主动把颜色作为产品线策略，吃到了配色红利。</p>
+      </div>
+      <div class="callout warn" style="margin-top:4px">
+        <div class="ct">谁还有配色空间</div>
+        <p>Remington、Braun 等老牌靠功能黑走量，但在 €50–150 设计敏感段缺乏配色叙事，是后来者可切入的缺口。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. NEW PRODUCT ===== -->
+<section id="newproduct">
+  <div class="wrap">
+    <div class="num-id">08 / NEW PRODUCT BETS</div>
+    <div class="eyebrow">新品颜色押注</div>
+    <h2 class="sec-title">2025–2026 新品都在押什么色</h2>
+    <p class="sec-lead">新上架产品集中押注的配色，是品牌/卖家对「下一波偏好」的提前下注，属于先行信号。把近一年（2025 下半年起）上架的中高端新品配色摊开看，方向相当一致。</p>
+
+    <div class="card">
+      <table class="tbl">
+        <thead><tr><th>新品（上架时间）</th><th>品牌</th><th>押注配色</th><th class="num">现月销</th></tr></thead>
+        <tbody>
+          <tr><td>Airwrap i.d. Straight+Wavy <span class="note">(2025-08)</span></td><td>Dyson</td><td><span class="sw"><i class="dot-rose"></i>陶瓷粉/玫瑰金</span></td><td class="num">1,138</td></tr>
+          <tr><td>Neo Haartrockner <span class="note">(2025-09)</span></td><td>Laifen</td><td><span class="sw"><i class="dot-black"></i>暗影黑+<i class="dot-violet"></i>柔雾紫</span></td><td class="num">524</td></tr>
+          <tr><td>7in1 Airstyler <span class="note">(2025-09)</span></td><td>okaydeer</td><td><span class="sw"><i class="dot-pink"></i>粉 Rosa</span></td><td class="num">487</td></tr>
+          <tr><td>Mini Haartrockner <span class="note">(2025)</span></td><td>Laifen</td><td><span class="sw"><i class="dot-matcha"></i>抹茶绿+<i class="dot-blue"></i>冰川蓝</span></td><td class="num">463</td></tr>
+          <tr><td>slopehill 香槟金款 <span class="note">(2025-08)</span></td><td>slopehill</td><td><span class="sw"><i class="dot-champ"></i>香槟金 Champagne Gold</span></td><td class="num">403</td></tr>
+          <tr><td>FlexStyle Glacial Blue 限定 <span class="note">(2026-02)</span></td><td>Shark</td><td><span class="sw"><i class="dot-blue"></i>冰川蓝限定版</span></td><td class="num">166</td></tr>
+          <tr><td>Supersonic Travel <span class="note">(2026-02)</span></td><td>Dyson</td><td><span class="sw"><i class="dot-rose"></i>陶瓷粉/玫瑰金</span></td><td class="num">158</td></tr>
+          <tr><td>Neo Special 养护款 <span class="note">(2026-02)</span></td><td>Laifen</td><td><span class="sw"><i class="dot-champ"></i>香槟金 Champagner-Gold</span></td><td class="num">98</td></tr>
+        </tbody>
+      </table>
+      <div class="pill-row" style="margin-top:18px">
+        <div class="pill"><b>金色系</b>香槟金/玫瑰金 —— 新品押注最密集</div>
+        <div class="pill"><b>柔彩系</b>粉、柔雾紫、抹茶绿 —— 年轻向差异化</div>
+        <div class="pill"><b>限定蓝</b>冰川蓝 —— 高端制造稀缺感</div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="ct">📈 先行信号</div>
+      <p>新品配色高度集中在<strong>「金属金系」打底 + 「柔彩 / 限定色」做差异化</strong>的双轨结构。值得注意的是 Laifen 把抹茶绿、冰川蓝、柔雾紫这类「莫兰迪 / 马卡龙」色系铺成完整矩阵——这是直接瞄准 28–35 岁社媒审美的打法，也与该人群偏好的「低饱和、高级感」色调吻合。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. REVIEWS ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="num-id">09 / COLOR SIGNALS IN REVIEWS</div>
+    <div class="eyebrow">评论中的颜色信号</div>
+    <h2 class="sec-title">用户在评论里怎么谈颜色</h2>
+    <p class="sec-lead">解析德国站近一年评论文本，颜色相关的发言比预想稀疏——但稀疏本身就是结论。它印证了「颜色是看一眼就决定、买完很少复盘」的属性。同时也捞出了浅色高端机的真实痛点。</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>🟢 颜色成为加分项的声音</h3>
+        <p style="font-size:13.5px;font-style:italic;color:var(--ink-2);border-left:2px solid var(--good);padding-left:12px">「…und die Farbe finde ich tatsächlich auch ungewöhnlich und cool」<br><span style="font-style:normal">（这配色少见又好看，成了加分项）—— Dyson Airwrap 五星评论</span></p>
+        <p style="font-size:13.5px;margin-top:14px">在高端机里，<b>独特配色被当作「值这个价」的情绪佐证之一</b>，与「高级包装」「质感」并列出现在好评中。颜色参与了「物有所值」的心理叙事。</p>
+      </div>
+      <div class="card">
+        <h3>🔴 浅色高端机的真实痛点</h3>
+        <p style="font-size:13.5px;font-style:italic;color:var(--ink-2);border-left:2px solid var(--bad);padding-left:12px">「…nach 10 mal Benutzen ist dies schon deutlich am Föhn zu erkennen aufgrund der hellen Farbe」<br><span style="font-style:normal">（浅色款用 10 次就明显显旧 / 显脏）—— Dyson 玫瑰金款评论</span></p>
+        <p style="font-size:13.5px;margin-top:14px"><b>浅色 = 耐脏性差</b>是高客单浅色款的隐性差评来源。用户花近 €500 买浅色，反而更担心磨损显旧。这对「玫瑰金走量」是一个需要用材质/涂层去对冲的副作用。</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>评论信号的整体结构</h3>
+      <div class="bar-row"><div class="lbl">耐用性 / 寿命</div><div class="bar-track"><div class="bar-fill b-black" style="width:100%"></div></div><div class="val">最高频</div></div>
+      <div class="bar-row"><div class="lbl">噪音 / 重量</div><div class="bar-track"><div class="bar-fill b-blue" style="width:62%"></div></div><div class="val">高频</div></div>
+      <div class="bar-row"><div class="lbl">性价比 / 配件</div><div class="bar-track"><div class="bar-fill b-grey" style="width:50%"></div></div><div class="val">中频</div></div>
+      <div class="bar-row"><div class="lbl">颜色相关</div><div class="bar-track"><div class="bar-fill b-pink" style="width:16%"></div></div><div class="val">低频</div></div>
+      <p class="note" style="margin-top:8px">德国评论的绝对主旋律是耐用性（大量「2 年就坏」「无法拆修不环保」的抱怨，尤以 Philips 5000 为甚）。颜色发言占比低——这与「搜索阶段不带颜色意图」一致：<b>颜色是购买前的快速判断，不是购买后的复盘焦点。</b></p>
+    </div>
+    <div class="callout warn">
+      <div class="ct">⚠️ 关于「许愿色」</div>
+      <p>预想中的「要是有 XX 颜色就好了」这类主动许愿，在德国评论里几乎不存在——德国用户评论高度集中在功能与耐用性。这说明<strong>在德国，颜色缺口更适合用子体销量分布去反推，而非指望从评论里捞许愿信号</strong>。这也是第 4 节（子体销量）成为最强证据的原因。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. SEASONALITY + EU COMPARE ===== -->
+<section id="season">
+  <div class="wrap">
+    <div class="num-id">10 / SEASONALITY &amp; EU COMPARISON</div>
+    <div class="eyebrow">季节性与欧洲横向对比</div>
+    <h2 class="sec-title">时间维度与跨国差异</h2>
+    <p class="sec-lead">颜色偏好会随季节和国别漂移。德国的搜索旺季、以及德国与法意的配色差异，共同决定了「同一套配色策略不能照搬全欧」。</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>搜索季节性</h3>
+        <p style="font-size:14px">品类大词 Föhn / Haartrockner 的搜索<b>旺季集中在 2 月</b>（冬季室内吹发高峰 + 年初焕新），多数功能词旺季落在 <b>10–11 月</b>（入秋 + 黑五备货）。</p>
+        <div class="pill-row" style="flex-direction:column">
+          <div class="pill"><b>2 月</b>品类需求峰值，配色新品首发窗口</div>
+          <div class="pill"><b>10–11 月</b>黑五 / 圣诞礼赠季，礼品向配色（金色、限定色）机会</div>
+        </div>
+        <p class="note" style="margin-top:10px">礼赠季利好「高颜值配色」——作为礼物时，颜色和包装的权重显著上升，金色系、限定色更易被选为送礼对象。</p>
+      </div>
+      <div class="card">
+        <h3>德国 vs 法国 vs 意大利</h3>
+        <table class="tbl">
+          <thead><tr><th>市场</th><th>主流偏好</th><th>特征</th></tr></thead>
+          <tbody>
+            <tr><td>🇩🇪 德国</td><td><span class="sw"><i class="dot-rose"></i>玫瑰金/粉强</span></td><td>柔彩接受度最高</td></tr>
+            <tr><td>🇫🇷 法国</td><td><span class="sw"><i class="dot-black"></i>黑为主</span></td><td>玫瑰金偏好弱</td></tr>
+            <tr><td>🇮🇹 意大利</td><td><span class="sw"><i class="dot-black"></i>专业黑+<i class="dot-blue"></i>夜蓝</span></td><td>沙龙派主导</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ct">🌍 跨市场铁证</div>
+      <p>同一款 <b>Dyson Airwrap</b> 的玫瑰金子体：在<b>德国月销 600–700（碾压全场）</b>，在<b>法国仅 100–200，且与红丝绒+金打平</b>。同款 <b>BaByliss 黑/粉</b>在德国月销 600–700，在意大利仅 200–300。结论很明确：<strong>德国是欧洲对玫瑰金/粉/柔彩接受度最高的市场；法意更偏专业黑与冷色。面向德国可大胆上柔彩，面向法意则应以黑/金属色打底、柔彩做小比例试探。</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. CONCLUSION ===== -->
+<section id="conclusion" style="background:linear-gradient(180deg,#fbfbfd,#fff)">
+  <div class="wrap">
+    <div class="num-id">11 / RECOMMENDATIONS</div>
+    <div class="eyebrow" style="color:var(--champagne)">结论与配色建议</div>
+    <h2 class="sec-title">给德国市场的配色优先级</h2>
+    <p class="sec-lead">把全部证据收敛成可执行的配色决策。以下建议针对 28–35 岁女性、€50–150 中高端吹风机 / 造型器、德国为首发市场。</p>
+
+    <div class="card">
+      <h3>德国市场配色优先级矩阵</h3>
+      <table class="tbl">
+        <thead><tr><th>优先级</th><th>配色</th><th>角色</th><th>证据强度</th></tr></thead>
+        <tbody>
+          <tr><td><span class="rank-badge rank-1">1</span></td><td><span class="sw"><i class="dot-champ"></i>香槟金 / 玫瑰金</span></td><td>核心走量色 · 首发主推 SKU</td><td><span class="tag tag-good">极强（多款冠军色）</span></td></tr>
+          <tr><td><span class="rank-badge rank-2">2</span></td><td><span class="sw"><i class="dot-mix"></i>黑 + 粉/玫瑰金撞色</span></td><td>性价比段销量放大器</td><td><span class="tag tag-good">极强（10× 差距）</span></td></tr>
+          <tr><td><span class="rank-badge rank-3">3</span></td><td><span class="sw"><i class="dot-blue"></i>金属蓝</span></td><td>稳健第二主色 · 男女通吃</td><td><span class="tag tag-good">强</span></td></tr>
+          <tr><td><span class="rank-badge" style="background:var(--matcha)">4</span></td><td><span class="sw"><i class="dot-matcha"></i>抹茶绿 / 冰川蓝</span></td><td>差异化引流 · 社媒话题色</td><td><span class="tag tag-warn">中（升温中）</span></td></tr>
+          <tr><td><span class="rank-badge" style="background:var(--black)">5</span></td><td><span class="sw"><i class="dot-black"></i>暗影黑 / 经典黑</span></td><td>基本盘 SKU · 不出错</td><td><span class="tag tag-good">强（高端安全垫）</span></td></tr>
+          <tr><td><span class="rank-badge" style="background:var(--ink-3)">—</span></td><td><span class="sw"><i class="dot-white"></i>纯白 / 灰</span></td><td>不建议作主推</td><td><span class="tag tag-bad">弱（普遍低销）</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>SKU 配色组合建议</h3>
+        <p style="font-size:14px"><b>若只能上 2 色：</b>香槟金（走量）+ 暗影黑（基本盘）。</p>
+        <p style="font-size:14px"><b>若能上 3–4 色：</b>香槟金 + 黑 + 金属蓝 + 一个柔彩话题色（抹茶绿或柔雾紫）做差异化引流。</p>
+        <p style="font-size:14px"><b>低成本杠杆：</b>在现有黑色款上加一道粉/玫瑰金点缀，几乎零成本撬动转化（参考 BaByliss）。</p>
+      </div>
+      <div class="card">
+        <h3>落地动作（非关键词）</h3>
+        <p style="font-size:14px">既然颜色不是搜索入口而是货架转化属性，发力点应放在：</p>
+        <ul style="color:var(--ink-2);padding-left:20px;font-size:14px;line-height:1.9">
+          <li><b>主图配色冲击力</b>——金属反光质感要在缩略图就抓眼</li>
+          <li><b>详情页颜色实拍</b>——多角度、真实光线下的配色</li>
+          <li><b>浅色款主动对冲耐脏痛点</b>——强调涂层/材质抗磨</li>
+          <li><b>礼赠季（10–11 月）</b>主推金色/限定色礼盒</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout win">
+      <div class="ct">🎯 一句话总结</div>
+      <p>面向德国 28–35 岁女性的中高端吹风机，<strong>「香槟金 / 玫瑰金打底 + 黑色基本盘 + 一抹柔彩或撞色做差异化」</strong>是被真实子体销量反复验证的最优配色结构；并且要在主图与详情页上赢得这场颜色战，而不是在关键词上。</p>
+    </div>
+
+    <div class="method-box" style="margin-top:32px">
+      <b>数据与方法回顾：</b>本报告全部数据由 Sorftime MCP / CLI 于 2026-06-03 实时抓取自 Amazon DE / FR / IT 在售商品，含 Top100 类目榜单、15+ 款多色子体销量拆分、品类关键词与产品流量反查、近一年德语评论文本。颜色信号经德语归一化处理。<b>子体销量为区间估算，年龄人群为基于价位与设计定位的推断而非平台实测数据。</b>结论反映采集时点的市场行为，建议结合后续趋势动态复核。
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="hero-swatches" style="margin-bottom:24px">
+      <span style="background:linear-gradient(135deg,#e3cda0,#cbab78);width:32px;height:32px"></span>
+      <span style="background:linear-gradient(135deg,#e8b4c4,#c9849a);width:32px;height:32px"></span>
+      <span style="background:linear-gradient(135deg,#6b8caa,#3a5470);width:32px;height:32px"></span>
+      <span style="background:linear-gradient(135deg,#a8b888,#7a8a5b);width:32px;height:32px"></span>
+      <span style="background:linear-gradient(135deg,#48484a,#1d1d1f);width:32px;height:32px"></span>
+    </div>
+    <p style="color:#f5f5f7;font-size:15px;font-weight:600">欧洲吹风机颜色偏好深度调研 · 德国市场聚焦</p>
+    <p>数据来源：Sorftime MCP / CLI 实时抓取 · Amazon DE / FR / IT</p>
+    <p>采集时间：2026 年 6 月 3 日 · 美容美发工具品类跨境电商分析</p>
+    <p style="margin-top:16px;color:#6e6e73;font-size:12px">本报告基于公开在售商品数据的行为揭示分析，年龄人群结论为推断。仅供选品决策参考。</p>
+  </div>
+</footer>
+
+</body>
+</html>

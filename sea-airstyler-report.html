@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airstyler 东南亚四国市场竞品调研报告</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{
+ --bg:#fbfbfd; --surface:#fff; --g900:#1d1d1f; --g700:#424245; --g500:#6e6e73;
+ --g300:#d2d2d7; --g100:#f5f5f7; --blue:#0071e3; --blue2:#2997ff; --green:#34c759;
+ --red:#ff3b30; --orange:#ff9500; --purple:#af52de; --teal:#5ac8fa; --pink:#ff2d92;
+ --rsm:8px; --rmd:14px; --rlg:22px; --rxl:32px;
+ --sh-sm:0 2px 8px rgba(0,0,0,.04); --sh-md:0 8px 28px rgba(0,0,0,.06); --sh-lg:0 20px 50px rgba(0,0,0,.08);
+ --fd:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif;
+ --ft:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--ft);background:var(--bg);color:var(--g900);line-height:1.5;-webkit-font-smoothing:antialiased;font-feature-settings:"tnum" 1;}
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(251,251,253,.82);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06);}
+.nav-c{max-width:1200px;margin:0 auto;padding:0 28px;height:54px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:var(--fd);font-weight:600;font-size:16px;letter-spacing:-.01em;}
+.nav-brand span{color:var(--g500);font-weight:400;}
+.nav-links{display:flex;gap:20px;font-size:13px;}
+.nav-links a{color:var(--g700);text-decoration:none;transition:color .2s;white-space:nowrap;}
+.nav-links a:hover{color:var(--blue);}
+.hero{padding:88px 28px 48px;text-align:center;background:radial-gradient(ellipse at top,#eef1f6 0%,#fbfbfd 62%);}
+.hero-tag{display:inline-block;padding:6px 16px;background:rgba(0,113,227,.1);color:var(--blue);border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-family:var(--fd);font-size:clamp(32px,4.6vw,58px);font-weight:700;line-height:1.07;letter-spacing:-.025em;background:linear-gradient(180deg,#1d1d1f,#424245);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;}
+.hero-sub{font-size:clamp(15px,1.7vw,20px);color:var(--g500);max-width:740px;margin:0 auto 24px;line-height:1.5;}
+.hero-meta{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--g500);}
+.hero-meta b{color:var(--g900);font-weight:600;}
+.section{max-width:1200px;margin:0 auto;padding:60px 28px;}
+.sec-head{text-align:center;margin-bottom:40px;}
+.eyebrow{font-size:13px;font-weight:600;color:var(--blue);letter-spacing:.08em;text-transform:uppercase;margin-bottom:11px;}
+.sec-title{font-family:var(--fd);font-size:clamp(26px,3.2vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1.13;margin-bottom:13px;}
+.sec-desc{font-size:16px;color:var(--g500);max-width:760px;margin:0 auto;line-height:1.55;}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.card{background:var(--surface);border-radius:var(--rlg);padding:26px;box-shadow:var(--sh-sm);transition:transform .3s,box-shadow .3s;}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);}
+.card .lab{font-size:12px;color:var(--g500);font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px;}
+.card .val{font-family:var(--fd);font-size:34px;font-weight:700;letter-spacing:-.02em;line-height:1;}
+.card .val.up{color:var(--green);} .card .val.down{color:var(--red);}
+.card .note{margin-top:9px;font-size:11.5px;color:var(--g500);line-height:1.4;}
+.tw{background:var(--surface);border-radius:var(--rlg);overflow:hidden;box-shadow:var(--sh-md);margin-top:24px;overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;min-width:640px;}
+thead{background:var(--g100);}
+thead th{padding:13px 10px;text-align:center;font-weight:600;font-size:12px;color:var(--g700);text-transform:uppercase;letter-spacing:.02em;border-bottom:1px solid var(--g300);white-space:nowrap;}
+thead th.l{text-align:left;}
+tbody td{padding:12px 10px;border-bottom:1px solid #f0f0f3;text-align:center;vertical-align:middle;}
+tbody td.l{text-align:left;}
+tbody tr:hover{background:#fafafb;}
+tbody tr:last-child td{border-bottom:none;}
+.mom{font-weight:700;font-size:13px;}
+.mom.up{color:var(--green);} .mom.down{color:var(--red);} .mom.flat{color:var(--g500);} .mom.na{color:var(--orange);}
+.sub2{display:block;font-size:10px;color:var(--g500);font-weight:500;margin-top:2px;}
+.foot{font-size:11px;color:var(--g500);margin-top:10px;line-height:1.55;padding:0 4px;}
+.foot b{color:var(--g700);}
+.icon{font-size:13px;}
+.pill{display:inline-block;padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600;}
+.pill.g{background:rgba(52,199,89,.12);color:#1a7a33;} .pill.r{background:rgba(255,59,48,.1);color:#c0271f;}
+.pill.o{background:rgba(255,149,0,.13);color:#9a5b00;} .pill.b{background:rgba(0,113,227,.1);color:#005bb3;}
+.pill.p{background:rgba(175,82,222,.12);color:#7b2da8;}
+.ibox{margin-top:32px;background:linear-gradient(135deg,#f5f5f7,#fbfbfd);border-radius:var(--rlg);padding:30px 34px;border:1px solid #ececf0;}
+.ibox h4{font-family:var(--fd);font-size:18px;font-weight:700;margin-bottom:16px;}
+.ibox ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.ibox li{font-size:14.5px;line-height:1.55;color:var(--g700);padding-left:22px;position:relative;}
+.ibox li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--blue);}
+.ibox li b{color:var(--g900);font-weight:600;}
+.warn{background:linear-gradient(135deg,#fff6ec,#fffdf9);border:1px solid #ffe2bf;}
+.warn h4{color:#9a5b00;} .warn li::before{background:var(--orange);}
+.declare{max-width:1200px;margin:24px auto 0;padding:0 28px;}
+.declare-inner{background:var(--surface);border:1px solid var(--g300);border-radius:var(--rlg);padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px;box-shadow:var(--sh-sm);}
+.declare-inner div{font-size:12.5px;color:var(--g700);line-height:1.5;}
+.declare-inner b{color:var(--g900);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:2px;}
+.tabs{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap;}
+.tab-btn{padding:9px 18px;border-radius:100px;border:1px solid var(--g300);background:var(--surface);font-size:13px;font-weight:600;color:var(--g700);cursor:pointer;transition:all .2s;}
+.tab-btn.active{background:var(--g900);color:#fff;border-color:var(--g900);}
+.tab-pane{display:none;} .tab-pane.active{display:block;}
+.flag-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px;}
+.flag-card{background:var(--surface);border-radius:var(--rlg);padding:22px 24px;box-shadow:var(--sh-sm);border-top:3px solid var(--blue);}
+.flag-card h4{font-family:var(--fd);font-size:16px;margin-bottom:6px;}
+.flag-card .big{font-family:var(--fd);font-size:28px;font-weight:700;margin:6px 0;}
+.flag-card .ml{font-size:12px;color:var(--g500);line-height:1.5;margin-top:8px;}
+.bar-track{display:flex;height:24px;border-radius:6px;overflow:hidden;background:var(--g100);margin-top:6px;}
+.seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:600;min-width:0;}
+.seg.b0{background:#0071e3;} .seg.b1{background:#5ac8fa;} .seg.b2{background:#ff9500;} .seg.b3{background:#af52de;}
+.lgd{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--g500);margin-top:8px;}
+.lgd span{display:inline-flex;align-items:center;gap:5px;} .dot{width:9px;height:9px;border-radius:2px;}
+.star-bar{display:inline-flex;align-items:center;gap:6px;}
+.star-track{width:60px;height:7px;background:var(--g100);border-radius:4px;overflow:hidden;}
+.star-fill{height:100%;background:var(--green);}
+.foot-sec{padding:36px 28px 64px;text-align:center;font-size:12px;color:var(--g500);max-width:1200px;margin:0 auto;line-height:1.7;}
+@media(max-width:980px){.cards{grid-template-columns:1fr 1fr;}.declare-inner{grid-template-columns:1fr;}.nav-links{display:none;}}
+@media(max-width:560px){.cards{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="nav-bar"><div class="nav-c">
+  <div class="nav-brand">Airstyler SEA <span>· 东南亚四国市场报告</span></div>
+  <div class="nav-links">
+    <a href="#overview">市场大盘</a>
+    <a href="#price">价格段</a>
+    <a href="#competitors">竞品格局</a>
+    <a href="#tech">技术横评</a>
+    <a href="#topsku">Top SKU</a>
+    <a href="#consumer">用户洞察</a>
+    <a href="#strategy">战略建议</a>
+    <a href="#appendix">附录</a>
+  </div>
+</div></div>
+
+<div class="hero">
+  <div class="hero-tag">2026 Q2 · SEA Airstyler Market Report</div>
+  <h1>Airstyler 东南亚四国<br>市场竞品调研报告</h1>
+  <p class="hero-sub">基于 Shopee × TikTok Shop 双平台实时在售数据,解构越南 / 马来西亚 / 泰国真实竞争格局与增长机会,柬埔寨市场前瞻。从 Dyson 旗舰到本土白牌,看清高速气流造型器在东南亚的真实渗透。</p>
+  <div class="hero-meta">
+    <span>三国月销量合计 <b>21,597 件</b></span>
+    <span>月销额合计 <b>≈$949,055</b></span>
+    <span>加权均价 <b>$43.9</b></span>
+    <span>数据截止 <b>2026-06-06</b></span>
+  </div>
+</div>
+
+<div class="declare">
+  <div class="declare-inner">
+    <div><b>品类范围</b>仅含 多功能造型器🌀 + 热风梳🪮(已剔除直发器/卷发棒/纯吹风机/直发刷/配件/假发)</div>
+    <div><b>数据源</b>Sorftime × Shopee 榜单 + TikTok Shop 实时抓取;经统一气流门控分类器过滤,可审计</div>
+    <div><b>时间口径</b>近 30 日单月快照;Top SKU 附累计销量趋势补充</div>
+    <div><b>增速口径</b>近 30 日环比 MoM(由累计销量差分);<b style="display:inline;text-transform:none;color:#9a5b00">无 YoY</b> — SEA 白牌去年同期数据不可靠</div>
+    <div><b>汇率</b>2026-06-06 实时:1 USD = 26,268 VND / 4.025 MYR / 32.728 THB</div>
+    <div><b>局限</b>柬埔寨无平台级数据(全章定性);TikTok 泰国站点不可用;Lazada 无接口,未纳入口径</div>
+  </div>
+</div>
+
+
+<section class="section" id="overview">
+  <div class="sec-head">
+    <div class="eyebrow">01 · Market Overview</div>
+    <h2 class="sec-title">市场大盘 &amp; 增速</h2>
+    <p class="sec-desc">马来西亚是三国中体量最大、品类认知最成熟的市场;越南多功能造型器集中度高但中端断层;泰国均价最高、头部最集中。整体处于品类爬坡期。</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="lab">三国月销量合计</div><div class="val">21.5k</div><div class="note">21,597 件 · 近30日快照 · Shopee+TikTok</div></div>
+    <div class="card"><div class="lab">月销额合计 (USD)</div><div class="val">$949k</div><div class="note">≈$949,055 · 按实时汇率换算加总</div></div>
+    <div class="card"><div class="lab">加权均价</div><div class="val">$43.9</div><div class="note">Σ销额 ÷ Σ销量 · 跨三国</div></div>
+    <div class="card"><div class="lab">柬埔寨市场</div><div class="val" style="color:var(--orange);font-size:26px">无数据</div><div class="note">⚠️ sorftime 无平台覆盖,见 Ch.1 判读定性前瞻</div></div>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr>
+      <th class="l">市场</th><th>月销量(件)</th><th>月销额(USD)</th><th>加权均价</th>
+      <th>30日环比</th><th>CR3</th><th>本土店占比</th><th>主导子品类</th><th>平台结构(销量)</th>
+    </tr></thead><tbody>
+<tr>
+      <td class="l"><b>🇲🇾 马来西亚</b></td>
+      <td><b>12,246</b></td>
+      <td>$458,214</td>
+      <td>$37.4</td>
+      <td><span class="mom up">+127.4%</span></td>
+      <td>76.1%</td>
+      <td>100%</td>
+      <td>多功能🌀</td>
+      <td style="font-size:11.5px">Shopee 43% · TikTok 57%</td>
+    </tr>
+<tr>
+      <td class="l"><b>🇻🇳 越南</b></td>
+      <td><b>5,615</b></td>
+      <td>$246,778</td>
+      <td>$43.9</td>
+      <td><span class="mom up">+22.8%</span></td>
+      <td>62.1%</td>
+      <td>100%</td>
+      <td>多功能🌀</td>
+      <td style="font-size:11.5px">Shopee 100%</td>
+    </tr>
+<tr>
+      <td class="l"><b>🇹🇭 泰国</b></td>
+      <td><b>3,736</b></td>
+      <td>$244,063</td>
+      <td>$82.2</td>
+      <td><span class="mom up">+12.7%</span></td>
+      <td>73.8%</td>
+      <td>100%</td>
+      <td>多功能🌀</td>
+      <td style="font-size:11.5px">Shopee 100%</td>
+    </tr>
+<tr style="background:#fffaf3">
+      <td class="l"><b>🇰🇭 柬埔寨</b></td>
+      <td colspan="8" style="text-align:left;color:#9a5b00;font-size:12.5px">⚠️ sorftime 在 Shopee / TikTok / Lazada 均无柬埔寨数据 —— 全部指标留空,仅在 Ch.1 判读与 Ch.6 战略中做定性前瞻,不臆造任何销量/价格数字。</td>
+    </tr>
+    </tbody></table>
+    <p class="foot"><b>口径</b>:近30日单月快照;销量(件)可跨国加总,销额经实时汇率换算为 USD 后加总;环比=近30日累计销量 vs 上一个30日(由 Top SKU 趋势聚合);本土店占比仅基于 Shopee(TikTok 无此字段)。<b>数据源</b>:Sorftime × Shopee+TikTok。<b>范围</b>:仅多功能造型器🌀+热风梳🪮。</p>
+  </div>
+
+  <div class="flag-grid">
+
+    <div class="flag-card">
+      <h4>🇲🇾 马来西亚 · 平台结构</h4>
+      <div class="bar-track"><div class="seg b0" style="width:43%">43%</div><div class="seg b2" style="width:57%">57%</div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>Shopee</span><span><i class="dot" style="background:#ff9500"></i>TikTok Shop</span></div>
+      <div class="ml">TikTok Shop 贡献过半销量,品类已在直播/短视频生态起量;Shopee 仍是评论沉淀主场。</div>
+    </div>
+
+    <div class="flag-card">
+      <h4>🇻🇳 越南 · 平台结构</h4>
+      <div class="bar-track"><div class="seg b0" style="width:100%">100%</div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>Shopee</span><span><i class="dot" style="background:#ff9500"></i>TikTok Shop</span></div>
+      <div class="ml">样本全部来自 Shopee 本土店,TikTok 搜索召回以美妆配件为主,airstyler 尚未在 TT 形成独立心智。</div>
+    </div>
+
+    <div class="flag-card">
+      <h4>🇹🇭 泰国 · 平台结构</h4>
+      <div class="bar-track"><div class="seg b0" style="width:100%">100%</div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>Shopee</span><span><i class="dot" style="background:#ff9500"></i>TikTok Shop</span></div>
+      <div class="ml">样本全部来自 Shopee;本土美发品牌 Lesasha 与白牌 Simplus 并立,渠道集中。</div>
+    </div>
+
+  </div>
+
+  <div class="ibox"><h4>Ch.1 市场核心判读</h4><ul>
+    <li><b>马来西亚是三国中唯一"品类认知成熟"的市场。</b>月销 12,246 件领跑,且 Shopee 热搜出现 <b>philips hair styler(3,100)、airwrap hair styler(1,671)</b> 等品牌化搜索词——消费者已主动按品类+品牌搜索,而越南(hair styler 仅 132)、泰国(182)仍处被动种草阶段。</li>
+    <li><b>整体处于品类爬坡期,增长真实但基数尚小。</b>三国 Top SKU 多为 2025 下半年上架的新品(UKLISS、Simplus、ionQ 等),马来 30 日环比 <b>+127%</b>、越南 <b>+23%</b>、泰国 <b>+13%</b>。高增速来自新品上量,而非成熟市场的稳态扩张。</li>
+    <li><b>渠道高度依赖本土店 + 白牌。</b>三国 Shopee 样本几乎 100% 为本土店,头部被中国出海白牌(Simplus、HODEKT、UKLISS)与少数本土品牌(泰国 Lesasha)占据,国际大牌仅 Dyson 在泰国高端段露出。</li>
+    <li class="warn-li"><b>⚠️ 柬埔寨:无平台级真实数据,仅作定性前瞻。</b>Sorftime 在 Shopee/TikTok/Lazada 均不覆盖柬埔寨,本报告不对其销量/价格/SKU 做任何量化估算。基于公开信息的定性判断:柬埔寨电商渗透率低、美发电器仍以线下与跨境带货为主,airstyler 属早期导入,详见 Ch.6。</li>
+  </ul></div>
+</section>
+
+
+<section class="section" id="price" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">02 · Price Band Analysis</div>
+    <h2 class="sec-title">价格段构成 &amp; 各价格段增速</h2>
+    <p class="sec-desc">价格段阈值由三国 KEEP 池价格分布的分位数确定,统一美元口径便于横比。下表把"占比 MIX"与"30日环比"并入同一矩阵 —— 既看结构,也看增量方向。</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr>
+      <th class="l">价格段 (USD)</th>
+      <th>🇲🇾 马来<br><span style="font-weight:400;text-transform:none">销量% / 销额% · 环比</span></th>
+      <th>🇻🇳 越南<br><span style="font-weight:400;text-transform:none">销量% / 销额% · 环比</span></th>
+      <th>🇹🇭 泰国<br><span style="font-weight:400;text-transform:none">销量% / 销额% · 环比</span></th>
+    </tr></thead><tbody>
+<tr><td class="l"><b>入门 &lt;$15</b></td><td><b>38.4%</b> / 8.3%<span class="sub2">环比 <span class="mom up">+33.2%</span> · n=15</span></td><td><b>48.3%</b> / 13.9%<span class="sub2">环比 <span class="mom up">+34.8%</span> · n=5</span></td><td><b>11.6%</b> / 2.0%<span class="sub2">环比 <span class="mom flat">+0.5%</span> · n=1</span></td></tr>
+<tr><td class="l"><b>中端 $15–40</b></td><td><b>8.8%</b> / 5.7%<span class="sub2">环比 <span class="mom up">+71.1%</span> · n=5</span></td><td style="color:var(--g300)">无供给</td><td><b>31.7%</b> / 6.8%<span class="sub2">环比 <span class="mom flat">-0.8%</span> · n=2</span></td></tr>
+<tr><td class="l"><b>中高端 $40–80</b></td><td><b>50.9%</b> / 64.4%<span class="sub2">环比 <span class="mom na">基数小</span> · n=4</span></td><td><b>35.7%</b> / 49.6%<span class="sub2">环比 <span class="mom down">-12.0%</span> · n=10</span></td><td><b>47.8%</b> / 30.1%<span class="sub2">环比 <span class="mom up">+33.9%</span> · n=2</span></td></tr>
+<tr><td class="l"><b>高端 &gt;$80</b></td><td><b>1.9%</b> / 21.6%<span class="sub2">环比 <span class="mom na">无供给</span> · n=3</span></td><td><b>16.0%</b> / 36.5%<span class="sub2">环比 <span class="mom up">+148.8%</span> · n=1</span></td><td><b>8.9%</b> / 61.0%<span class="sub2">环比 <span class="mom up">+31.3%</span> · n=1</span></td></tr>
+</tbody></table>
+    <p class="foot"><b>价格段阈值</b>(分位数法,USD):入门&lt;$15 / 中端$15–40 / 中高端$40–80 / 高端&gt;$80。<b>占比</b>=近30日快照内该段销量(销额)占该国有效计价 SKU 的比重;<b>环比</b>=该段 Top SKU 近30日 vs 上一个30日累计销量差分,绿涨红缩,<b>基数小</b>=前30日基数&lt;80件、百分比失真(规范要求不显示),<b>无供给/无数据</b>=该段无 SKU 或无趋势。<b>销额仅同币种内可比</b>,占比为同国内计算。数据源:Sorftime × Shopee+TikTok。</p>
+  </div>
+
+  <div class="flag-grid" style="margin-top:28px">
+
+    <div class="flag-card">
+      <h4>🇲🇾 马来西亚 · 价格段销量构成</h4>
+      <div class="bar-track"><div class="seg b0" style="width:38.4%">38.4</div><div class="seg b1" style="width:8.8%">8.8</div><div class="seg b2" style="width:50.9%">50.9</div><div class="seg b3" style="width:1.9%"></div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>入门</span><span><i class="dot" style="background:#5ac8fa"></i>中端</span><span><i class="dot" style="background:#ff9500"></i>中高端</span><span><i class="dot" style="background:#af52de"></i>高端</span></div>
+    </div>
+
+    <div class="flag-card">
+      <h4>🇻🇳 越南 · 价格段销量构成</h4>
+      <div class="bar-track"><div class="seg b0" style="width:48.3%">48.3</div><div class="seg b2" style="width:35.7%">35.7</div><div class="seg b3" style="width:16.0%">16.0</div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>入门</span><span><i class="dot" style="background:#5ac8fa"></i>中端</span><span><i class="dot" style="background:#ff9500"></i>中高端</span><span><i class="dot" style="background:#af52de"></i>高端</span></div>
+    </div>
+
+    <div class="flag-card">
+      <h4>🇹🇭 泰国 · 价格段销量构成</h4>
+      <div class="bar-track"><div class="seg b0" style="width:11.6%">11.6</div><div class="seg b1" style="width:31.7%">31.7</div><div class="seg b2" style="width:47.8%">47.8</div><div class="seg b3" style="width:8.9%">8.9</div></div>
+      <div class="lgd"><span><i class="dot" style="background:#0071e3"></i>入门</span><span><i class="dot" style="background:#5ac8fa"></i>中端</span><span><i class="dot" style="background:#ff9500"></i>中高端</span><span><i class="dot" style="background:#af52de"></i>高端</span></div>
+    </div>
+
+  </div>
+
+  <div class="ibox"><h4>Ch.2 价格段增速核心洞察</h4><ul>
+    <li><b>"哑铃型"结构是三国共性:入门白牌走量 + 中高端多功能机走额。</b>马来中高端段($40–80)仅 4 个 SKU 却吃下 <b>50.9% 销量、64.4% 销额</b>(UKLISS FusionAir 拉动);越南同段也占 <b>49.6% 销额</b>。入门段则贡献大量件数但销额占比低(马来入门 38% 销量仅 8% 销额)。</li>
+    <li><b>越南的"中端 $15–40 完全空缺"是最醒目的结构性机会。</b>越南要么是 $13 左右的白牌热风梳,要么直接跳到 $55+ 的 5-in-1 多功能机,<b>中间价位无供给(0%)</b>。一款定价 $25–35、做工高于白牌的多功能热风梳可填补这一真空带。</li>
+    <li><b>增量集中在中高端与高端。</b>越南高端段环比 <b>+148.8%</b>(MASUTO AIRWAND 单品爬坡)、泰国中高端 <b>+33.9%</b>/高端 <b>+31.3%</b>(Dyson + Lesasha);而越南中高端 <b>−12%</b> 反映部分老款让位新品。马来中高端因单一新品基数过小,环比标"基数小"不予解读。</li>
+    <li><b>入门段增长平稳但非主战场。</b>马来/越南入门段环比 +33% 左右(白牌持续上新),泰国入门段近乎持平(+0.5%)。入门段拼的是价格与铺货,利润薄;真正的品牌势能要在 $40+ 段建立。</li>
+  </ul></div>
+</section>
+
+
+<section class="section" id="price24" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">02.4 · Feature × Price Band</div>
+    <h2 class="sec-title">价格段 × 功能覆盖热力</h2>
+    <p class="sec-desc">各价位段 Top SKU 的功能标配渗透率(基于产品标题可披露信息统计)。东南亚白牌普遍不在标题标注功率/温控/涂层,这些字段大面积留空,如实标注而非臆造。</p>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th class="l">功能维度</th>
+<th>入门 &lt;$15</th>
+<th>中端 $15–40</th>
+<th>中高端 $40–80</th>
+<th>高端 &gt;$80</th>
+</tr></thead><tbody>
+<tr><td class="l"><b>多功能(X合1)</b></td>
+<td><span class="pill o">40%</span><span class="sub2">4/10 SKU</span></td>
+<td><span class="pill g">100%</span><span class="sub2">4/4 SKU</span></td>
+<td><span class="pill g">70%</span><span class="sub2">7/10 SKU</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+<tr><td class="l"><b>负离子</b></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td><span class="pill ">25%</span><span class="sub2">1/4 SKU</span></td>
+<td><span class="pill g">80%</span><span class="sub2">8/10 SKU</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+<tr><td class="l"><b>冷热风</b></td>
+<td><span class="pill ">20%</span><span class="sub2">2/10 SKU</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/4</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+<tr><td class="l"><b>自动卷发/旋转</b></td>
+<td><span class="pill ">10%</span><span class="sub2">1/10 SKU</span></td>
+<td><span class="pill ">25%</span><span class="sub2">1/4 SKU</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+<tr><td class="l"><b>智能温控</b></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/4</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+<tr><td class="l"><b>陶瓷涂层</b></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/4</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/10</span></td>
+<td style="color:var(--g500)">未披露<span class="sub2">0/2</span></td>
+</tr>
+</tbody></table>
+    <p class="foot"><b>口径</b>:基于三国 Top SKU 标题文本提取的功能标签(可披露字段),按 USD 价格段归类后统计出现率。<b>"未披露"</b>=该段 SKU 标题均未提及此功能(不代表不具备,东南亚白牌常省略规格);<b>重量/RPM/升温速度/电压</b>等接口与标题均无,本报告一律标"—",不臆造(规范 §3.1)。数据源:Sorftime 标题字段。</p>
+  </div>
+  <div class="ibox"><h4>功能覆盖洞察</h4><ul>
+    <li><b>"多合一(X 合 1)"是东南亚 airstyler 的核心卖点语言,贯穿所有价位。</b>从入门白牌到中高端,标题几乎都强调 3-in-1 / 5-in-1 ,说明消费者认知锚点是"一机多用"而非单一造型力。</li>
+    <li><b>"负离子"是中高端段的主要差异化标签</b>,集中出现在 $40+ 的多功能机(MASUTO、UKLISS、Simplus 5-in-1);入门热风梳很少主打护发概念。</li>
+    <li><b>智能温控 / 陶瓷涂层 在标题中近乎零披露</b> —— 这既是白牌规格透明度低的现实,也是品牌方可建立差异化的空白:把温控/涂层做成可感知卖点,有机会在同质化的"X 合一"叙事中突围。</li>
+  </ul></div>
+</section>
+
+
+<section class="section" id="competitors" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">03 · Competitive Landscape</div>
+    <h2 class="sec-title">主要竞品 &amp; 市占率</h2>
+    <p class="sec-desc">三国均呈"中国出海白牌主导走量 + 个别本土/国际品牌占据高端"的双层结构。下表为各国 Top5 品牌销量市占(销额口径补充于括注),并标注品类集中度 CR3 / CR5。</p>
+  </div>
+  <div class="flag-grid">
+
+    <div class="flag-card" style="border-top-color:var(--purple)">
+      <h4>🇲🇾 马来西亚 · Top5 品牌市占</h4>
+      <table style="min-width:0;font-size:12.5px;margin-top:8px">
+        <thead><tr><th class="l">品牌</th><th>销量%</th><th>销额%</th></tr></thead>
+        <tbody><tr><td class="l">UKLISS</td><td><b>42.6%</b></td><td style="color:var(--g500)">53%</td></tr><tr><td class="l">HODEKT</td><td><b>17.0%</b></td><td style="color:var(--g500)">5%</td></tr><tr><td class="l">Simplus</td><td><b>16.6%</b></td><td style="color:var(--g500)">19%</td></tr><tr><td class="l">INSMART</td><td><b>7.4%</b></td><td style="color:var(--g500)">2%</td></tr><tr><td class="l">Vivid & Vogue</td><td><b>4.1%</b></td><td style="color:var(--g500)">0%</td></tr></tbody>
+      </table>
+      <div class="ml">集中度 <b>CR3 76.1%</b> · CR5 87.7%</div>
+    </div>
+
+    <div class="flag-card" style="border-top-color:var(--purple)">
+      <h4>🇻🇳 越南 · Top5 品牌市占</h4>
+      <table style="min-width:0;font-size:12.5px;margin-top:8px">
+        <thead><tr><th class="l">品牌</th><th>销量%</th><th>销额%</th></tr></thead>
+        <tbody><tr><td class="l">Simplus</td><td><b>33.5%</b></td><td style="color:var(--g500)">11%</td></tr><tr><td class="l">CWELL</td><td><b>16.0%</b></td><td style="color:var(--g500)">38%</td></tr><tr><td class="l">ionQ</td><td><b>12.6%</b></td><td style="color:var(--g500)">16%</td></tr><tr><td class="l">HODEKT</td><td><b>8.9%</b></td><td style="color:var(--g500)">0%</td></tr><tr><td class="l">BONIE MALL</td><td><b>8.8%</b></td><td style="color:var(--g500)">13%</td></tr></tbody>
+      </table>
+      <div class="ml">集中度 <b>CR3 62.1%</b> · CR5 79.8%</div>
+    </div>
+
+    <div class="flag-card" style="border-top-color:var(--purple)">
+      <h4>🇹🇭 泰国 · Top5 品牌市占</h4>
+      <table style="min-width:0;font-size:12.5px;margin-top:8px">
+        <thead><tr><th class="l">品牌</th><th>销量%</th><th>销额%</th></tr></thead>
+        <tbody><tr><td class="l">Simplus</td><td><b>32.9%</b></td><td style="color:var(--g500)">22%</td></tr><tr><td class="l">Lesasha</td><td><b>29.0%</b></td><td style="color:var(--g500)">14%</td></tr><tr><td class="l">BOMIDI</td><td><b>11.9%</b></td><td style="color:var(--g500)">0%</td></tr><tr><td class="l">HODEKT</td><td><b>10.5%</b></td><td style="color:var(--g500)">3%</td></tr><tr><td class="l">KONVY</td><td><b>8.7%</b></td><td style="color:var(--g500)">0%</td></tr></tbody>
+      </table>
+      <div class="ml">集中度 <b>CR3 73.8%</b> · CR5 93.0%</div>
+    </div>
+
+  </div>
+  <p class="foot" style="max-width:1200px;margin:10px auto 0"><b>口径</b>:销量%=该品牌近30日销量占该国 KEEP 池总销量;销额%=USD 销额占比(同国内可比);CR3/CR5=Top3/Top5 品牌销量集中度,当期 Top 榜快照。品牌名已归一化(合并大小写/本地文字注释别名)。数据源:Sorftime × Shopee+TikTok。</p>
+</section>
+
+
+<div class="section" style="padding-top:0;max-width:1200px;margin:0 auto">
+  <div class="tw"><table>
+    <thead><tr>
+      <th class="l">品牌</th><th>子品类</th><th>定位</th><th>价格带(USD)</th>
+      <th>上榜国家</th><th>核心竞争力 / 研判</th>
+    </tr></thead><tbody>
+<tr>
+      <td class="l"><b>UKLISS</b></td><td class="icon">🌀</td>
+      <td>中高端白牌</td><td>$34–49</td><td style="font-size:15px">🇲🇾</td>
+      <td class="l" style="font-size:12.5px">气流造型 DIY 多合一,马来 TikTok 头号玩家,销额第一</td>
+    </tr>
+<tr>
+      <td class="l"><b>Simplus</b></td><td class="icon">🌀🪮</td>
+      <td>入门-中高端</td><td>$13–56</td><td style="font-size:15px">🇲🇾🇻🇳🇹🇭</td>
+      <td class="l" style="font-size:12.5px">三国全覆盖的中国出海走量王,SKU 矩阵最广,价格带最宽</td>
+    </tr>
+<tr>
+      <td class="l"><b>HODEKT</b></td><td class="icon">🪮</td>
+      <td>入门热风梳</td><td>$6–17</td><td style="font-size:15px">🇲🇾🇻🇳🇹🇭</td>
+      <td class="l" style="font-size:12.5px">低价热风梳跑量,评论基数大,马来/泰国均有渗透</td>
+    </tr>
+<tr>
+      <td class="l"><b>Lesasha</b></td><td class="icon">🌀</td>
+      <td>中端本土</td><td>$18–46</td><td style="font-size:15px">🇹🇭</td>
+      <td class="l" style="font-size:12.5px">泰国本土美发品牌,WONDER/VOLUMIZING 系列,口碑沉淀深</td>
+    </tr>
+<tr>
+      <td class="l"><b>MASUTO/CWELL</b></td><td class="icon">🌀</td>
+      <td>高端白牌</td><td>$63–100</td><td style="font-size:15px">🇻🇳</td>
+      <td class="l" style="font-size:12.5px">越南 AIRWAND/AirStyler 5in1,冲击 Dyson 平替价位</td>
+    </tr>
+<tr>
+      <td class="l"><b>ionQ</b></td><td class="icon">🌀</td>
+      <td>中高端</td><td>$55</td><td style="font-size:15px">🇻🇳</td>
+      <td class="l" style="font-size:12.5px">越南负离子造型机,主打护发概念</td>
+    </tr>
+<tr>
+      <td class="l"><b>INSMART</b></td><td class="icon">🪮</td>
+      <td>入门热风梳</td><td>$8</td><td style="font-size:15px">🇲🇾</td>
+      <td class="l" style="font-size:12.5px">马来 3-in-1 热风梳,低价高评论</td>
+    </tr>
+<tr>
+      <td class="l"><b>BOMIDI</b></td><td class="icon">🪮</td>
+      <td>入门热风梳</td><td>低价</td><td style="font-size:15px">🇹🇭</td>
+      <td class="l" style="font-size:12.5px">泰国 One Step 热风梳(小米生态链)</td>
+    </tr>
+<tr>
+      <td class="l"><b>Dyson</b></td><td class="icon">🌀</td>
+      <td>超高端国际</td><td>$566</td><td style="font-size:15px">🇹🇭</td>
+      <td class="l" style="font-size:12.5px">唯一国际旗舰,泰国高端段标杆,销额占比极高、销量小众</td>
+    </tr>
+</tbody></table>
+    <p class="foot"><b>说明</b>:价格带、上榜国家来自真实抓取数据;<b>"定位/核心竞争力"为分析师研判</b>(基于价格带、销量结构、品牌背景),非平台字段。MASUTO 与 CWELL 为同一越南店铺(Masuto Beauty)旗下关联品牌,合并呈现。数据源:Sorftime × Shopee+TikTok。</p>
+  </div>
+  <div class="ibox"><h4>Ch.3 竞争格局结论</h4><ul>
+    <li><b>双层结构清晰:中国出海白牌统治走量盘,国际/本土品牌点状占据高端。</b>Simplus、HODEKT、UKLISS 三家中国白牌横扫三国走量段;国际大牌仅 Dyson 在泰国以 $566 旗舰露出(销量 263 件却贡献泰国 61% 销额);本土品牌仅泰国 Lesasha 成气候。</li>
+    <li><b>集中度高且仍在上升:三国 CR3 均超 60%(泰国 74%、马来 76%)。</b>头部白牌凭 SKU 矩阵 + 直播铺货快速集中份额,新进入者需直面已建立评论壁垒的 UKLISS / Simplus。</li>
+    <li><b>"Dyson 平替"是最热的卡位。</b>越南 MASUTO AIRWAND($100)、UKLISS FusionAir($49)都在复制 Airwrap 的气流造型叙事,以 1/5~1/10 价格卡位 —— 这是当前竞争最激烈、也最拥挤的赛道。</li>
+  </ul></div>
+</div>
+
+
+<section class="section" id="tech" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">03.5 · Tech Cross-Evaluation</div>
+    <h2 class="sec-title">技术能力横评矩阵</h2>
+    <p class="sec-desc">代表机型 × 技术维度对标(按跨三国销量排序取 Top 14)。东南亚白牌规格透明度低 —— 标题未披露的项一律标"—",绝不臆造;✓ 表示标题明确标注,· 表示未提及。</p>
+  </div>
+  <div class="tw"><table>
+    <thead><tr>
+      <th class="l">代表机型</th><th>国家</th><th>子品类</th><th>合1数</th><th>功率(W)</th>
+      <th>负离子</th><th>冷热风</th><th>自动卷发</th><th>智能温控</th><th>陶瓷涂层</th><th>重量/RPM</th>
+    </tr></thead><tbody>
+<tr>
+      <td class="l" style="font-size:12px"><b>UKLISS</b><span class="sub2">UKLISS FusionAir DIY HairSty</span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td><span class="pill g">✓</span></td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>hodekt</b><span class="sub2">HODEKT Hot Air Cool Air Brus</span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🪮</td>
+      <td><b>2</b></td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td><span class="pill g">✓</span></td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>UKLISS</b><span class="sub2">UKLISS AirTwist HairStyler 3</span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🌀</td>
+      <td><b>3</b></td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Simplus</b><span class="sub2">Simplus Pink 5 In 1 Hair Dry</span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🌀</td>
+      <td><b>5</b></td><td style="color:var(--g300)">—</td><td><span class="pill g">✓</span></td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Simplus</b><span class="sub2">Simplus Lược sấy đa năng  Nh</span></td>
+      <td style="font-size:14px">🇻🇳</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>INSMART</b><span class="sub2">3-in-1 Hot Air Brush – Hair </span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🪮</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>CWELL</b><span class="sub2">Máy Sấy Tóc Tạo Kiểu MASUTO </span></td>
+      <td style="font-size:14px">🇻🇳</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Simplus</b><span class="sub2">Lược sấy đa năng Simplus Nhỏ</span></td>
+      <td style="font-size:14px">🇻🇳</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Simplus(ซิมพลัส)</b><span class="sub2">Simplus MultiStyle 1 หวีไดร์</span></td>
+      <td style="font-size:14px">🇹🇭</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td><span class="pill g">✓</span></td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b><span class="sub2">LESASHA ไดร์จัดแต่งทรงผม WON</span></td>
+      <td style="font-size:14px">🇹🇭</td>
+      <td class="icon">🌀</td>
+      <td><b>3</b></td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b><span class="sub2">LESASHA หวีไดร์ เป่าผม รุ่น </span></td>
+      <td style="font-size:14px">🇹🇭</td>
+      <td class="icon">🌀</td>
+      <td style="color:var(--g300)">—</td><td><b>1200</b></td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>Vivid & Vogue</b><span class="sub2">Swiss Thomas Hot Air Cool Ai</span></td>
+      <td style="font-size:14px">🇲🇾</td>
+      <td class="icon">🪮</td>
+      <td><b>2</b></td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td><span class="pill g">✓</span></td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>hodekt</b><span class="sub2">Lược Chải Không Khí Nóng HOD</span></td>
+      <td style="font-size:14px">🇻🇳</td>
+      <td class="icon">🪮</td>
+      <td style="color:var(--g300)">—</td><td style="color:var(--g300)">—</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+<tr>
+      <td class="l" style="font-size:12px"><b>BONIE MALL</b><span class="sub2">Máy Sấy Tóc Tạo Kiểu 5in1 AK</span></td>
+      <td style="font-size:14px">🇻🇳</td>
+      <td class="icon">🌀</td>
+      <td><b>5</b></td><td><b>1300</b></td><td><span class="pill g">✓</span></td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td><td style="color:var(--g500)">·</td>
+      <td style="color:var(--g300)">—</td>
+    </tr>
+</tbody></table>
+    <p class="foot"><b>口径</b>:技术规格来自产品标题文本(平台详情接口不返回独立规格字段);<b>✓</b>=标题明确标注,<b>·</b>=标题未提及(不代表不具备),<b>—</b>=接口与标题均无法获取(重量/RPM/升温速度/电压等,规范 §3.1 禁止臆造)。功率仅采信标题中 300–3500W 的合理标注。数据源:Sorftime 标题字段。</p>
+  </div>
+  <div class="ibox"><h4>Ch.3.5 技术能力地图核心结论</h4><ul>
+    <li><b>"多合一 + 负离子"是当前可见的技术标配组合,但披露深度极浅。</b>14 款代表机型中,合1数与负离子是仅有的两项被普遍标注的规格;功率、温控、涂层、重量、RPM 大面积空白 —— 这是白牌主导市场的典型特征。</li>
+    <li><b>规格透明度本身就是差异化机会。</b>谁能把"精准温控档位、陶瓷/水离子涂层、电机转速、整机重量"等硬参数清晰披露并做成可信卖点,谁就能在一片"X 合一"的模糊叙事中建立专业信任 —— 尤其面向进阶用户。</li>
+    <li><b>Dyson 是唯一的技术天花板参照,但不在白牌的参数竞争维度内。</b>其余机型的竞争集中在配件数量与价格,而非电机/气流的硬技术 —— 留给"技术叙事更扎实的中端品牌"一个清晰的卡位空间。</li>
+  </ul></div>
+</section>
+
+
+<section class="section" id="topsku" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">04 · Top SKU Deep Dive</div>
+    <h2 class="sec-title">Top SKU 深度拆解</h2>
+    <p class="sec-desc">各国按近30日销量取 Top 10(泰国有效供给仅 8 款,如实呈现)。每国分三层 Tab:① 基础+销售 ② 技术参数 ③ 评测+口碑。口碑基于真实星级分布,优劣势与采购建议为分析师研判。</p>
+  </div>
+  <div class="ibox" style="margin-top:0"><h4>4.0 跨国上榜规律</h4><ul>
+    <li><b>"全区域通吃"的品牌只有中国白牌三强。</b><b>Simplus</b>(🇲🇾🇻🇳🇹🇭)、<b>HODEKT</b>(🇲🇾🇻🇳🇹🇭) 跨国重复上榜,验证了出海白牌"一套货打全东南亚"的打法。</li>
+    <li><b>区域独占款多为本土玩家:</b>泰国 Lesasha(本土美发)、越南 ionQ / MASUTO(本土店自营品牌)只在单国上榜,反映各国仍有本地化机会窗口。</li>
+    <li><b>Dyson 仅在泰国 Top 榜出现</b>(Airwrap Origin $566),是三国唯一上榜的国际旗舰 —— 印证高端需求目前只在泰国被有效激活。</li>
+  </ul></div>
+
+  <div class="tabs" id="sku-country-tabs">
+    <button class="tab-btn active" data-cty="MY">🇲🇾 马来西亚 Top 10</button>
+    <button class="tab-btn" data-cty="VN">🇻🇳 越南 Top 10</button>
+    <button class="tab-btn" data-cty="TH">🇹🇭 泰国 Top 8</button>
+    <button class="tab-btn" data-cty="KH">🇰🇭 柬埔寨</button>
+  </div>
+
+<div class="tab-pane country-pane active" data-cty="MY">
+
+    <div class="tabs sku-subtabs" data-owner="MY">
+      <button class="tab-btn active" data-sub="t1">① 基础信息 + 销售</button>
+      <button class="tab-btn" data-sub="t2">② 技术参数</button>
+      <button class="tab-btn" data-sub="t3">③ 市场评测 + 口碑</button>
+    </div>
+<div class="sku-subpane active" data-owner="MY" data-sub="t1"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>售价</th><th>评分</th><th>评价数</th><th>卖家(本土)</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l"><span class="icon">🌀</span> <b>UKLISS</b><span class="sub2">[TT] UKLISS FusionAir DIY HairStyler 5-</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">负离子</td>
+          <td><b>3,165</b></td>
+          <td>RM199<span class="sub2">$49.4</span></td>
+          <td>⭐4.8</td>
+          <td>5,888</td>
+          <td style="font-size:11px">ukliss.my</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l"><span class="icon">🪮</span> <b>hodekt</b><span class="sub2">[TT] HODEKT Hot Air Cool Air Brush Comb</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px">2合1·冷热风</td>
+          <td><b>1,845</b></td>
+          <td>RM40<span class="sub2">$9.9</span></td>
+          <td>⭐4.7</td>
+          <td>16,375</td>
+          <td style="font-size:11px">hodekt-global.my</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l"><span class="icon">🌀</span> <b>UKLISS</b><span class="sub2">[TT] UKLISS AirTwist HairStyler 3in1 Pe</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">3合1</td>
+          <td><b>1,486</b></td>
+          <td>RM162<span class="sub2">$40.2</span></td>
+          <td>⭐4.8</td>
+          <td>1,473</td>
+          <td style="font-size:11px">ukliss.my</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l"><span class="icon">🌀</span> <b>Simplus</b><span class="sub2">[SP] Simplus Pink 5 In 1 Hair Dryer Bru</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">5合1·负离子</td>
+          <td><b>1,417</b></td>
+          <td>RM196<span class="sub2">$48.7</span></td>
+          <td>⭐4.97</td>
+          <td>170</td>
+          <td style="font-size:11px">SimplusPink.my·本土</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l"><span class="icon">🪮</span> <b>INSMART</b><span class="sub2">[SP] 3-in-1 Hot Air Brush – Hair Dryer,</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>904</b></td>
+          <td>RM31<span class="sub2">$7.7</span></td>
+          <td>⭐4.79</td>
+          <td>1,673</td>
+          <td style="font-size:11px">Shopee Choice Lo·本土</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l"><span class="icon">🪮</span> <b>Vivid & Vogue</b><span class="sub2">[SP] Swiss Thomas Hot Air Cool Air Brus</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px">2合1·冷热风</td>
+          <td><b>507</b></td>
+          <td>RM25<span class="sub2">$6.3</span></td>
+          <td>⭐4.71</td>
+          <td>1,442</td>
+          <td style="font-size:11px">Swiss Thomas·本土</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l"><span class="icon">🪮</span> <b>Generic</b><span class="sub2">[TT] Hair Dryer Hot Air Brush Styler Vo</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>432</b></td>
+          <td>RM24<span class="sub2">$6.0</span></td>
+          <td>⭐4.7</td>
+          <td>4,779</td>
+          <td style="font-size:11px">Perkongsian Hari</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l"><span class="icon">🌀</span> <b>Ukliss</b><span class="sub2">[SP] Ukliss Auto Ratation Hot Air Brush</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">4合1·自动卷</td>
+          <td><b>414</b></td>
+          <td>RM136<span class="sub2">$33.8</span></td>
+          <td>⭐4.87</td>
+          <td>924</td>
+          <td style="font-size:11px">Ukliss·本土</td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l"><span class="icon">🌀</span> <b>Ubeator</b><span class="sub2">[SP] 3 in 1 Hair Straightener Comb Port</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">3合1</td>
+          <td><b>267</b></td>
+          <td>RM16<span class="sub2">$4.0</span></td>
+          <td>⭐4.99</td>
+          <td>22,471</td>
+          <td style="font-size:11px">Shopee Choice Lo·本土</td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l"><span class="icon">🌀</span> <b>Simplus</b><span class="sub2">[SP] 【SimplusPink】4 In 1 Hot Air Brush丨</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">4合1</td>
+          <td><b>201</b></td>
+          <td>RM70<span class="sub2">$17.4</span></td>
+          <td>⭐4.93</td>
+          <td>2,577</td>
+          <td style="font-size:11px">Simplus Official·本土</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:近30日销量快照;售价为当前 Shopee/TikTok 标价(本地货币,括注 USD@2026-06-06);[SP]=Shopee [TT]=TikTok。核心功能取自标题可披露标签。</p></div></div>
+<div class="sku-subpane" data-owner="MY" data-sub="t2"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>合1数</th><th>功率W</th><th>负离子</th><th>冷热风</th><th>智能温控</th><th>陶瓷涂层</th><th>自动卷发</th><th>重量/RPM/升温</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>UKLISS</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>hodekt</b></td>
+          <td><b>2</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td>✓</td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>UKLISS</b></td>
+          <td><b>3</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><b>5</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>INSMART</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>Vivid & Vogue</b></td>
+          <td><b>2</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td>✓</td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>Generic</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>Ukliss</b></td>
+          <td><b>4</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td>✓</td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l" style="font-size:12px"><b>Ubeator</b></td>
+          <td><b>3</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><b>4</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:规格取自产品标题文本;<b>✓</b>=标题标注,<b>·</b>=未提及,<b>—</b>=接口与标题均无法获取(重量/RPM/升温/电压,规范禁止臆造)。</p></div></div>
+<div class="sku-subpane" data-owner="MY" data-sub="t3"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>真实口碑(星级分布)</th><th class="l">核心优势(研判)</th><th class="l">主要短板(研判)</th><th>采购建议</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>UKLISS</b></td>
+          <td><span class="star-bar">⭐4.8 <span class="sub2">5888评价</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、评论基数大(5888)</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>hodekt</b></td>
+          <td><span class="star-bar">⭐4.7 <span class="sub2">16375评价</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、销量验证充分、评论基数大(16375)</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>UKLISS</b></td>
+          <td><span class="star-bar">⭐4.8 <span class="sub2">1473评价</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span class="star-bar">⭐4.97 <span class="star-track"><span class="star-fill" style="width:100%"></span></span><span class="sub2">100%好评·170</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、好评率100%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>INSMART</b></td>
+          <td><span class="star-bar">⭐4.79 <span class="star-track"><span class="star-fill" style="width:94%"></span></span><span class="sub2">94%好评·1673</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、销量验证充分、好评率94%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>Vivid & Vogue</b></td>
+          <td><span class="star-bar">⭐4.71 <span class="star-track"><span class="star-fill" style="width:92%"></span></span><span class="sub2">92%好评·1442</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、好评率92%、价格极具竞争力</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>Generic</b></td>
+          <td><span class="star-bar">⭐4.7 <span class="sub2">4779评价</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、评论基数大(4779)、价格极具竞争力</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>Ukliss</b></td>
+          <td><span class="star-bar">⭐4.87 <span class="star-track"><span class="star-fill" style="width:96%"></span></span><span class="sub2">96%好评·924</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率96%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill g">性价比主推款</span></td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l" style="font-size:12px"><b>Ubeator</b></td>
+          <td><span class="star-bar">⭐4.99 <span class="star-track"><span class="star-fill" style="width:100%"></span></span><span class="sub2">100%好评·22471</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(22471)、好评率100%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span class="star-bar">⭐4.93 <span class="star-track"><span class="star-fill" style="width:99%"></span></span><span class="sub2">99%好评·2577</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(2577)、好评率99%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill g">性价比主推款</span></td>
+        </tr>
+</tbody></table><p class="foot"><b>口碑数据为真实值</b>:星级评分、好评率(4★+5★占比)、评价数均来自平台接口的真实星级分布(RatingDetail)。<b>"核心优势/主要短板/采购建议"为分析师研判</b>(基于真实价格、销量、星级、子品类与功能标签的规则化推断),<b>非用户评论原文</b> —— 平台接口不提供逐字评论,故不引用、不编造评论文本(规范 §3.3)。</p></div></div>
+</div>
+<div class="tab-pane country-pane" data-cty="VN">
+
+    <div class="tabs sku-subtabs" data-owner="VN">
+      <button class="tab-btn active" data-sub="t1">① 基础信息 + 销售</button>
+      <button class="tab-btn" data-sub="t2">② 技术参数</button>
+      <button class="tab-btn" data-sub="t3">③ 市场评测 + 口碑</button>
+    </div>
+<div class="sku-subpane active" data-owner="VN" data-sub="t1"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>售价</th><th>评分</th><th>评价数</th><th>卖家(本土)</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l"><span class="icon">🌀</span> <b>Simplus</b><span class="sub2">[SP] Simplus Lược sấy đa năng  Nhỏ gọn </span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>991</b></td>
+          <td>389,000₫<span class="sub2">$14.8</span></td>
+          <td>⭐4.96</td>
+          <td>97</td>
+          <td style="font-size:11px">Simplus Outlets ·本土</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l"><span class="icon">🌀</span> <b>CWELL</b><span class="sub2">[SP] Máy Sấy Tóc Tạo Kiểu MASUTO AIRWAN</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>898</b></td>
+          <td>2,635,000₫<span class="sub2">$100.3</span></td>
+          <td>⭐4.72</td>
+          <td>29</td>
+          <td style="font-size:11px">Masuto Beauty·本土</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l"><span class="icon">🌀</span> <b>Simplus</b><span class="sub2">[SP] Lược sấy đa năng Simplus Nhỏ gọn n</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>891</b></td>
+          <td>342,000₫<span class="sub2">$13.0</span></td>
+          <td>⭐4.94</td>
+          <td>93</td>
+          <td style="font-size:11px">SimplusPink·本土</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l"><span class="icon">🪮</span> <b>hodekt</b><span class="sub2">[SP] Lược Chải Không Khí Nóng HODEKT Là</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>499</b></td>
+          <td>333,800₫<span class="sub2">$12.7</span></td>
+          <td>⭐4.86</td>
+          <td>625</td>
+          <td style="font-size:11px">HODEKT Official ·本土</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l"><span class="icon">🌀</span> <b>BONIE MALL</b><span class="sub2">[SP] Máy Sấy Tóc Tạo Kiểu 5in1 AKIO BEA</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">5合1·负离子</td>
+          <td><b>494</b></td>
+          <td>1,650,000₫<span class="sub2">$62.8</span></td>
+          <td>⭐5.0</td>
+          <td>7</td>
+          <td style="font-size:11px">AKIO Beauty Offi·本土</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l"><span class="icon">🌀</span> <b>masuto</b><span class="sub2">[SP] [GIÁ TỐT TẠI LIVE] Máy Sấy Tóc Tạo</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">5合1·负离子</td>
+          <td><b>389</b></td>
+          <td>1,660,000₫<span class="sub2">$63.2</span></td>
+          <td>⭐4.88</td>
+          <td>3,685</td>
+          <td style="font-size:11px">Masuto Beauty·本土</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l"><span class="icon">🌀</span> <b>N/A</b><span class="sub2">[SP] Máy Sấy Tóc Tạo Kiểu Masuto AirSty</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">5合1·负离子</td>
+          <td><b>386</b></td>
+          <td>1,760,000₫<span class="sub2">$67.0</span></td>
+          <td>⭐5.0</td>
+          <td>9</td>
+          <td style="font-size:11px">MASUTO VIỆT NAM·本土</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l"><span class="icon">🌀</span> <b>ionQ</b><span class="sub2">[SP] [TẶNG HỘP QUÀ] Máy sấy tóc ion âm </span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">4合1·负离子</td>
+          <td><b>375</b></td>
+          <td>1,455,000₫<span class="sub2">$55.4</span></td>
+          <td>⭐4.86</td>
+          <td>403</td>
+          <td style="font-size:11px">ionQ Vietnam·本土</td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l"><span class="icon">🌀</span> <b>ionQ</b><span class="sub2">[SP] Máy sấy tóc ion âm tạo kiểu ionQ E</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">4合1·负离子</td>
+          <td><b>334</b></td>
+          <td>1,455,000₫<span class="sub2">$55.4</span></td>
+          <td>⭐4.83</td>
+          <td>101</td>
+          <td style="font-size:11px">ionQ Vietnam·本土</td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l"><span class="icon">🌀</span> <b>Vietnamrobovac</b><span class="sub2">[SP] Lược điện sấy cao cấp - Lược uốn c</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">3合1·自动卷</td>
+          <td><b>329</b></td>
+          <td>139,000₫<span class="sub2">$5.3</span></td>
+          <td>⭐4.77</td>
+          <td>773</td>
+          <td style="font-size:11px">BIN BEAUTY & SPA·本土</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:近30日销量快照;售价为当前 Shopee/TikTok 标价(本地货币,括注 USD@2026-06-06);[SP]=Shopee [TT]=TikTok。核心功能取自标题可披露标签。</p></div></div>
+<div class="sku-subpane" data-owner="VN" data-sub="t2"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>合1数</th><th>功率W</th><th>负离子</th><th>冷热风</th><th>智能温控</th><th>陶瓷涂层</th><th>自动卷发</th><th>重量/RPM/升温</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>CWELL</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>hodekt</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>BONIE MALL</b></td>
+          <td><b>5</b></td><td><b>1300</b></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>masuto</b></td>
+          <td><b>5</b></td><td><b>1300</b></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>N/A</b></td>
+          <td><b>5</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>ionQ</b></td>
+          <td><b>4</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l" style="font-size:12px"><b>ionQ</b></td>
+          <td><b>4</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l" style="font-size:12px"><b>Vietnamrobovac</b></td>
+          <td><b>3</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td>✓</td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:规格取自产品标题文本;<b>✓</b>=标题标注,<b>·</b>=未提及,<b>—</b>=接口与标题均无法获取(重量/RPM/升温/电压,规范禁止臆造)。</p></div></div>
+<div class="sku-subpane" data-owner="VN" data-sub="t3"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>真实口碑(星级分布)</th><th class="l">核心优势(研判)</th><th class="l">主要短板(研判)</th><th>采购建议</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span class="star-bar">⭐4.96 <span class="star-track"><span class="star-fill" style="width:100%"></span></span><span class="sub2">100%好评·97</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、好评率100%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">评论样本偏少</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>CWELL</b></td>
+          <td><span class="star-bar">⭐4.72 <span class="star-track"><span class="star-fill" style="width:93%"></span></span><span class="sub2">93%好评·29</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、好评率93%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">价格门槛高、评论样本偏少</td>
+          <td><span class="pill p">高端标杆/对标参考</span></td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>Simplus</b></td>
+          <td><span class="star-bar">⭐4.94 <span class="star-track"><span class="star-fill" style="width:98%"></span></span><span class="sub2">98%好评·93</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、好评率98%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">评论样本偏少</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>hodekt</b></td>
+          <td><span class="star-bar">⭐4.86 <span class="star-track"><span class="star-fill" style="width:97%"></span></span><span class="sub2">97%好评·625</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、好评率97%、价格极具竞争力</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>BONIE MALL</b></td>
+          <td><span class="star-bar">⭐5.0 <span class="star-track"><span class="star-fill" style="width:100%"></span></span><span class="sub2">100%好评·7</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率100%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">评论样本偏少</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>masuto</b></td>
+          <td><span class="star-bar">⭐4.88 <span class="star-track"><span class="star-fill" style="width:97%"></span></span><span class="sub2">97%好评·3685</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(3685)、好评率97%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>N/A</b></td>
+          <td><span class="star-bar">⭐5.0 <span class="star-track"><span class="star-fill" style="width:100%"></span></span><span class="sub2">100%好评·9</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率100%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">评论样本偏少</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>ionQ</b></td>
+          <td><span class="star-bar">⭐4.86 <span class="star-track"><span class="star-fill" style="width:97%"></span></span><span class="sub2">97%好评·403</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率97%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>9</td>
+          <td class="l" style="font-size:12px"><b>ionQ</b></td>
+          <td><span class="star-bar">⭐4.83 <span class="star-track"><span class="star-fill" style="width:95%"></span></span><span class="sub2">95%好评·101</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率95%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>10</td>
+          <td class="l" style="font-size:12px"><b>Vietnamrobovac</b></td>
+          <td><span class="star-bar">⭐4.77 <span class="star-track"><span class="star-fill" style="width:95%"></span></span><span class="sub2">95%好评·773</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率95%、价格极具竞争力</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+</tbody></table><p class="foot"><b>口碑数据为真实值</b>:星级评分、好评率(4★+5★占比)、评价数均来自平台接口的真实星级分布(RatingDetail)。<b>"核心优势/主要短板/采购建议"为分析师研判</b>(基于真实价格、销量、星级、子品类与功能标签的规则化推断),<b>非用户评论原文</b> —— 平台接口不提供逐字评论,故不引用、不编造评论文本(规范 §3.3)。</p></div></div>
+</div>
+<div class="tab-pane country-pane" data-cty="TH">
+
+    <div class="tabs sku-subtabs" data-owner="TH">
+      <button class="tab-btn active" data-sub="t1">① 基础信息 + 销售</button>
+      <button class="tab-btn" data-sub="t2">② 技术参数</button>
+      <button class="tab-btn" data-sub="t3">③ 市场评测 + 口碑</button>
+    </div>
+<div class="sku-subpane active" data-owner="TH" data-sub="t1"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌 / 型号</th><th>子类目</th><th>核心功能</th><th>月销量</th><th>售价</th><th>评分</th><th>评价数</th><th>卖家(本土)</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l"><span class="icon">🌀</span> <b>Simplus(ซิมพลัส)</b><span class="sub2">[SP] Simplus MultiStyle 1 หวีไดร์  5-in</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">负离子</td>
+          <td><b>887</b></td>
+          <td>฿1,819<span class="sub2">$55.6</span></td>
+          <td>⭐4.91</td>
+          <td>3,164</td>
+          <td style="font-size:11px">Simplus official·本土</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l"><span class="icon">🌀</span> <b>Lesasha(เลอซาช่า)</b><span class="sub2">[SP] LESASHA ไดร์จัดแต่งทรงผม WONDER 3I</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">3合1</td>
+          <td><b>551</b></td>
+          <td>฿590<span class="sub2">$18.0</span></td>
+          <td>⭐4.76</td>
+          <td>15,796</td>
+          <td style="font-size:11px">Lesasha Official·本土</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l"><span class="icon">🌀</span> <b>Lesasha(เลอซาช่า)</b><span class="sub2">[SP] LESASHA หวีไดร์ เป่าผม รุ่น VOLUMI</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>532</b></td>
+          <td>฿1,490<span class="sub2">$45.5</span></td>
+          <td>⭐4.87</td>
+          <td>6,578</td>
+          <td style="font-size:11px">Lesasha Official·本土</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l"><span class="icon">🪮</span> <b>BOMIDI</b><span class="sub2">[SP] PAE-405 หวีไดร์ไฟฟ้า แปรงไดร์ หวีไ</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>444</b></td>
+          <td>฿14<span class="sub2"><span style='color:var(--orange)'>价格异常</span></span></td>
+          <td>⭐4.69</td>
+          <td>12,359</td>
+          <td style="font-size:11px">TookYang2020·本土</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l"><span class="icon">🌀</span> <b>Hodekt(โฮเด็กท์)</b><span class="sub2">[SP] HODEKT 5 in 1/3 in 1 เครื่องเป่าผม</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">5合1·负离子</td>
+          <td><b>391</b></td>
+          <td>฿566<span class="sub2">$17.3</span></td>
+          <td>⭐4.72</td>
+          <td>2,020</td>
+          <td style="font-size:11px">HODEKT Official ·本土</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l"><span class="icon">🪮</span> <b>Simplus(ซิมพลัส)</b><span class="sub2">[SP] Simplus หวีไดร์ ใช้ได้ทั้งผมตรง-ผม</span></td>
+          <td class="icon">🪮</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>343</b></td>
+          <td>฿459<span class="sub2">$14.0</span></td>
+          <td>⭐4.93</td>
+          <td>4,026</td>
+          <td style="font-size:11px">SimplusPink·本土</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l"><span class="icon">🌀</span> <b>KONVY(คอนวี่)</b><span class="sub2">[SP] PAE-303 หวีไดร์ แปรงไดร์  One Step</span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px">4合1</td>
+          <td><b>325</b></td>
+          <td>฿1<span class="sub2"><span style='color:var(--orange)'>价格异常</span></span></td>
+          <td>⭐4.68</td>
+          <td>26,124</td>
+          <td style="font-size:11px">TookYang2020·本土</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l"><span class="icon">🌀</span> <b>Dyson(ไดสัน)</b><span class="sub2">[SP] Dyson Airwrap Origin | Hair Dryer </span></td>
+          <td class="icon">🌀</td>
+          <td style="font-size:11.5px"><span style='color:var(--g300)'>未标注</span></td>
+          <td><b>263</b></td>
+          <td>฿18,522<span class="sub2">$565.9</span></td>
+          <td>⭐4.92</td>
+          <td>508</td>
+          <td style="font-size:11px">Dyson Official S·本土</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:近30日销量快照;售价为当前 Shopee/TikTok 标价(本地货币,括注 USD@2026-06-06);[SP]=Shopee [TT]=TikTok。核心功能取自标题可披露标签。</p></div></div>
+<div class="sku-subpane" data-owner="TH" data-sub="t2"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>合1数</th><th>功率W</th><th>负离子</th><th>冷热风</th><th>智能温控</th><th>陶瓷涂层</th><th>自动卷发</th><th>重量/RPM/升温</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>Simplus(ซิมพลัส)</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b></td>
+          <td><b>3</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><b>1200</b></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>BOMIDI</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>Hodekt(โฮเด็กท์)</b></td>
+          <td><b>5</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td>✓</td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>Simplus(ซิมพลัส)</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>KONVY(คอนวี่)</b></td>
+          <td><b>4</b></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>Dyson(ไดสัน)</b></td>
+          <td><span style="color:var(--g300)">—</span></td><td><span style="color:var(--g300)">—</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td><td><span style="color:var(--g300)">·</span></td>
+          <td style="color:var(--g300)">—</td>
+        </tr>
+</tbody></table><p class="foot"><b>口径</b>:规格取自产品标题文本;<b>✓</b>=标题标注,<b>·</b>=未提及,<b>—</b>=接口与标题均无法获取(重量/RPM/升温/电压,规范禁止臆造)。</p></div></div>
+<div class="sku-subpane" data-owner="TH" data-sub="t3"><div class="tw"><table>
+<thead><tr><th>#</th><th class="l">品牌/型号</th><th>真实口碑(星级分布)</th><th class="l">核心优势(研判)</th><th class="l">主要短板(研判)</th><th>采购建议</th></tr></thead><tbody>
+<tr>
+          <td>1</td>
+          <td class="l" style="font-size:12px"><b>Simplus(ซิมพลัส)</b></td>
+          <td><span class="star-bar">⭐4.91 <span class="star-track"><span class="star-fill" style="width:99%"></span></span><span class="sub2">99%好评·3164</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、销量验证充分、评论基数大(3164)</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>2</td>
+          <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b></td>
+          <td><span class="star-bar">⭐4.76 <span class="star-track"><span class="star-fill" style="width:95%"></span></span><span class="sub2">95%好评·15796</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(15796)、好评率95%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill g">性价比主推款</span></td>
+        </tr>
+<tr>
+          <td>3</td>
+          <td class="l" style="font-size:12px"><b>Lesasha(เลอซาช่า)</b></td>
+          <td><span class="star-bar">⭐4.87 <span class="star-track"><span class="star-fill" style="width:98%"></span></span><span class="sub2">98%好评·6578</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(6578)、好评率98%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill o">利润款候选</span></td>
+        </tr>
+<tr>
+          <td>4</td>
+          <td class="l" style="font-size:12px"><b>BOMIDI</b></td>
+          <td><span class="star-bar">⭐4.69 <span class="star-track"><span class="star-fill" style="width:93%"></span></span><span class="sub2">93%好评·12359</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、评论基数大(12359)、好评率93%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">价格字段异常需核、造型多样性弱于多功能机</td>
+          <td><span class="pill p">高端标杆/对标参考</span></td>
+        </tr>
+<tr>
+          <td>5</td>
+          <td class="l" style="font-size:12px"><b>Hodekt(โฮเด็กท์)</b></td>
+          <td><span class="star-bar">⭐4.72 <span class="star-track"><span class="star-fill" style="width:93%"></span></span><span class="sub2">93%好评·2020</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(2020)、好评率93%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">规格披露不足、技术差异化弱</td>
+          <td><span class="pill g">性价比主推款</span></td>
+        </tr>
+<tr>
+          <td>6</td>
+          <td class="l" style="font-size:12px"><b>Simplus(ซิมพลัส)</b></td>
+          <td><span class="star-bar">⭐4.93 <span class="star-track"><span class="star-fill" style="width:99%"></span></span><span class="sub2">99%好评·4026</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">热风梳上手快、适合日常、评论基数大(4026)、好评率99%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">造型多样性弱于多功能机</td>
+          <td><span class="pill b">走量验证款</span></td>
+        </tr>
+<tr>
+          <td>7</td>
+          <td class="l" style="font-size:12px"><b>KONVY(คอนวี่)</b></td>
+          <td><span class="star-bar">⭐4.68 <span class="star-track"><span class="star-fill" style="width:93%"></span></span><span class="sub2">93%好评·26124</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、评论基数大(26124)、好评率93%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">价格字段异常需核</td>
+          <td><span class="pill p">高端标杆/对标参考</span></td>
+        </tr>
+<tr>
+          <td>8</td>
+          <td class="l" style="font-size:12px"><b>Dyson(ไดสัน)</b></td>
+          <td><span class="star-bar">⭐4.92 <span class="star-track"><span class="star-fill" style="width:98%"></span></span><span class="sub2">98%好评·508</span></span></td>
+          <td class="l" style="font-size:12px;color:#1a7a33">多合一造型覆盖广、好评率98%</td>
+          <td class="l" style="font-size:12px;color:#c0271f">价格门槛高</td>
+          <td><span class="pill p">高端标杆/对标参考</span></td>
+        </tr>
+</tbody></table><p class="foot"><b>口碑数据为真实值</b>:星级评分、好评率(4★+5★占比)、评价数均来自平台接口的真实星级分布(RatingDetail)。<b>"核心优势/主要短板/采购建议"为分析师研判</b>(基于真实价格、销量、星级、子品类与功能标签的规则化推断),<b>非用户评论原文</b> —— 平台接口不提供逐字评论,故不引用、不编造评论文本(规范 §3.3)。</p></div></div>
+</div>
+
+<div class="tab-pane country-pane" data-cty="KH">
+  <div class="ibox warn"><h4>🇰🇭 柬埔寨 · 无平台级数据,定性前瞻</h4><ul>
+    <li><b>Sorftime 在柬埔寨无任何平台覆盖</b>(Shopee/TikTok Shop/Lazada 均无柬埔寨站点数据),因此本报告<b>不提供柬埔寨的 Top SKU 榜单、销量、价格、品牌市占等任何量化数字</b> —— 这是数据可得性的硬约束,任何数字化呈现都将是臆造,故留空。</li>
+    <li><b>基于公开信息的定性判断:</b>柬埔寨电商渗透率在东南亚处于较低水平,美发小家电仍以线下市场、Facebook 社群带货与跨境(主要来自泰国/越南/中国)非正规渠道为主。airstyler 属早期导入品类,缺乏本地正规分销与品牌教育。</li>
+    <li><b>跨境溢出推测:</b>柬埔寨与泰国、越南接壤,消费偏好与价格带大概率跟随两国 —— 走量盘集中在 $10–25 的中国白牌热风梳,高端需求(若有)经由泰国 Dyson 渠道或代购满足。金边等城市的年轻女性是潜在早期人群。</li>
+    <li><b>结论:</b>柬埔寨现阶段不具备独立的数据驱动选品条件,建议作为<b>"观望市场"</b>,待 TikTok Shop / Lazada 在柬埔寨数据可得后再行评估,详见 Ch.6 进入优先级。</li>
+  </ul></div>
+</div>
+</section>
+
+
+<section class="section" id="consumer" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">05 · Consumer Insights</div>
+    <h2 class="sec-title">用户画像 &amp; 消费者洞察</h2>
+    <p class="sec-desc">东南亚高温高湿气候 + 多元发质(直发/自然卷/粗硬),叠加价格敏感的电商主力人群。以下结合真实星级口碑与品类结构,刻画核心 TA 与机会人群。</p>
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="lab">核心 TA</div><div class="val" style="font-size:22px">18–35岁女性</div><div class="note">电商活跃、被直播/短视频种草的城市年轻女性</div></div>
+    <div class="card"><div class="lab">核心需求</div><div class="val" style="font-size:22px">多合一·快速</div><div class="note">高湿气候下"快速出门不塌"+ 一机多用</div></div>
+    <div class="card"><div class="lab">价格甜点</div><div class="val">$15–50</div><div class="note">入门白牌与中高端多功能机的交汇带</div></div>
+    <div class="card"><div class="lab">三国综合好评率</div><div class="val up">96.1%</div><div class="note">真实 4★+5★ 占比(马来96.8/越南97.1/泰国94.4)</div></div>
+  </div>
+
+  <div class="ibox" style="margin-top:28px"><h4>5.1 核心 TA 定义(结论前置)</h4><ul>
+    <li><b>核心用户:18–35 岁、生活在金边/胡志明/曼谷/吉隆坡等城市的电商活跃女性</b>,被 TikTok/Shopee 直播种草,追求"沙龙级造型在家快速完成"。马来市场已出现品牌化主动搜索,认知最成熟。</li>
+    <li><b>核心需求由气候定义:高温高湿 → "造型持久不塌、快速干发定型"是第一诉求</b>;多元发质(华裔直细发、马来/泰裔自然卷、印度裔粗硬发)→ "一机多用、多配件适配不同发质"成为强需求。</li>
+    <li><b>价格敏感但愿为"多合一"溢价:</b>甜点价位 $15–50,既要明显低于 Dyson($566),又要比 $6–10 的纯白牌热风梳"看起来更专业、配件更多"。</li>
+  </ul></div>
+
+
+  <div class="tw" style="margin-top:28px"><table>
+    <thead><tr><th class="l">市场</th><th>主流发质</th><th>核心诉求</th><th>配件偏好 Top3(研判)</th><th>造型场景</th><th>价格敏感度</th></tr></thead>
+    <tbody>
+      <tr><td class="l"><b>🇲🇾 马来西亚</b></td><td>多元:马来裔自然卷 / 华裔直细 / 印度裔粗硬</td><td>一机适配全家不同发质、抗湿热定型</td><td>多功能换头 &gt; 卷筒 &gt; 顺滑风嘴</td><td>日常通勤 / 斋戒月聚会 / 婚礼</td><td>中(愿为多合一溢价)</td></tr>
+      <tr><td class="l"><b>🇻🇳 越南</b></td><td>以直细-中性发为主,部分自然微卷</td><td>蓬松感 / 快速出门 / 不伤发</td><td>蓬松梳 &gt; 卷筒 &gt; 直发板</td><td>日常通勤 / 约会 / 直播出镜</td><td>高(两极:白牌或平替旗舰)</td></tr>
+      <tr><td class="l"><b>🇹🇭 泰国</b></td><td>直发-粗硬发为主,高湿易毛躁</td><td>顺滑抗毛躁 / 沙龙级效果 / 耐用</td><td>顺滑风嘴 &gt; 大卷筒 &gt; 扩散器</td><td>日常 / 夜生活社交 / 沙龙</td><td>中低(本土品牌+高端并存)</td></tr>
+      <tr style="background:#fffaf3"><td class="l"><b>🇰🇭 柬埔寨</b></td><td colspan="5" style="text-align:left;color:#9a5b00;font-size:12.5px">⚠️ 无平台数据。定性推测:发质与诉求大致跟随泰/越,粗硬-直发为主,价格敏感度高,需求处早期。</td></tr>
+    </tbody></table>
+    <p class="foot"><b>说明</b>:发质构成与气候为公开人口/地理事实;<b>配件偏好与造型场景为分析师研判</b>(结合各国销量结构与品类特征推断),非平台直接字段。</p>
+  </div>
+
+  <div class="flag-grid" style="margin-top:28px">
+    <div class="flag-card" style="border-top-color:var(--teal)">
+      <h4>5.3 发质 × 发长矩阵(造型适配研判)</h4>
+      <table style="min-width:0;font-size:11.5px;margin-top:8px">
+        <thead><tr><th class="l">发质\发长</th><th>短(肩上)</th><th>中长(肩-胸)</th><th>长(胸下)</th></tr></thead>
+        <tbody>
+          <tr><td class="l"><b>细软塌</b></td><td>小卷筒+冷风定型</td><td>蓬松梳+大卷筒</td><td>大卷筒+分区</td></tr>
+          <tr><td class="l"><b>中性</b></td><td>多功能小头</td><td>全配件均衡</td><td>顺滑风嘴+卷筒</td></tr>
+          <tr><td class="l"><b>粗硬卷</b></td><td>高温顺滑嘴</td><td>顺滑嘴+直发板</td><td>大功率+扩散器</td></tr>
+        </tbody>
+      </table>
+      <div class="ml">东南亚粗硬/自然卷比例高于欧洲 → "高温+顺滑风嘴+扩散器"组合需求强于纯卷筒。</div>
+    </div>
+    <div class="flag-card" style="border-top-color:var(--purple)">
+      <h4>5.4 使用深度 × 价位段</h4>
+      <table style="min-width:0;font-size:12px;margin-top:8px">
+        <thead><tr><th class="l">用户层</th><th>画像</th><th>对应价位</th></tr></thead>
+        <tbody>
+          <tr><td class="l"><b>新手</b></td><td>被种草/首购/送礼</td><td>入门-中端 $13–40</td></tr>
+          <tr><td class="l"><b>初级</b></td><td>会1-2种造型想进阶</td><td>中端-中高端 $40–80</td></tr>
+          <tr><td class="l"><b>资深</b></td><td>造型达人/博主/沙龙</td><td>高端 $80+(Dyson)</td></tr>
+        </tbody>
+      </table>
+      <div class="ml">东南亚以新手与初级为绝对主力,资深高端用户目前仅泰国成规模 —— 与各国价格段 MIX 完全吻合。</div>
+    </div>
+  </div>
+
+
+  <div class="flag-grid" style="margin-top:28px">
+    <div class="flag-card" style="border-top-color:var(--green)">
+      <h4>5.5 消费者爽点(高满意驱动 · 研判)</h4>
+      <div class="ml" style="margin-top:4px">基于三国综合好评率 96.1% 与高分机型共性推断:</div>
+      <ul style="list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px">
+        <li>✅ <b>功能爽点</b>:多合一省空间 / 一机搞定吹+卷+直 / 快速出门</li>
+        <li>✅ <b>体验爽点</b>:轻便好握 / 配件丰富 / 操作简单 / 直播同款</li>
+        <li>✅ <b>情感爽点</b>:平价获得"沙龙感""Dyson平替"的满足 / 送礼有面子</li>
+      </ul>
+    </div>
+    <div class="flag-card" style="border-top-color:var(--red)">
+      <h4>5.6 消费者痛点(低分风险 · 研判)</h4>
+      <div class="ml" style="margin-top:4px">基于低星机型与品类共性短板推断:</div>
+      <ul style="list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px;font-size:13px">
+        <li>⚠️ <b>功能痛点</b>:粗硬发温度/风力不够 / 卷度不持久 / 噪音大</li>
+        <li>⚠️ <b>体验痛点</b>:换头麻烦 / 配件收纳乱 / 线短 / 偏重</li>
+        <li>⚠️ <b>价值痛点</b>:白牌做工参差 / 耐用性存疑 / 规格不透明</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ibox" style="margin-top:24px"><h4>5.7 产品卖点 &amp; 外观洞察</h4><ul>
+    <li><b>功能卖点排序(影响购买决策):</b>① 多合一配件数 ② 负离子护发 ③ 冷热风/快干 ④ 自动卷发 ⑤ 大功率。其中"X 合一"和"负离子"是标题出现率最高的两大卖点,是必备入场叙事。</li>
+    <li><b>颜色趋势:</b>入门白牌以黑/白为主;中高端多功能机偏好<b>香槟金/玫瑰金/莫兰迪粉</b>(MASUTO Champagne Gold、SimplusPink 是典型),迎合年轻女性"高级感+ins风"审美。</li>
+    <li><b>结构设计:</b>磁吸换头 + 专属收纳盒是中高端标配卖点;入门款多为固定梳头一体式。便携折叠在旅游场景有差异化空间。</li>
+    <li><b>外观是种草关键变量:</b>东南亚直播/短视频带货为主,"颜值即转化"。配色与质感(磨砂/类肤涂层)在 $40+ 段是重要的视觉差异化武器。</li>
+  </ul></div>
+
+  <div class="ibox" style="margin-top:24px"><h4>5.8 核心 TA 总结 &amp; 机会人群</h4><ul>
+    <li><b>当前被充分覆盖:</b>价格敏感的入门新手(已被 $6–15 白牌热风梳大量满足,竞争红海)。</li>
+    <li><b>未被满足的机会人群①:越南"中端断层"人群</b> —— 想要比白牌更好、但买不起 $55+ 平替旗舰的用户,$25–35 价位无供给,是最明确的真空。</li>
+    <li><b>未被满足的机会人群②:多元发质家庭(尤其马来)</b> —— 一台机器要适配自然卷/直发/粗硬发,对"配件齐全+温控可调"的多功能机有真实但未被精准满足的需求。</li>
+    <li><b>优先打谁:</b>以马来西亚为根据地的"18–30 岁、追求多合一+高颜值、预算 $30–60"的城市年轻女性 —— 这是数据显示规模最大、增速最快、且已有品类认知的人群。</li>
+  </ul></div>
+</section>
+
+
+<section class="section" id="strategy" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">06 · Strategic Recommendations</div>
+    <h2 class="sec-title">战略建议</h2>
+    <p class="sec-desc">基于三国真实数据与柬埔寨定性判断,给出进入优先级、产品规格定价与风险评估。结论导向:以马来为根据地、越南补断层、泰国卡高端、柬埔寨观望。</p>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>优先级</th><th class="l">市场</th><th>规模(月销)</th><th>30日环比</th><th>竞争强度</th><th class="l">进入理由</th><th class="l">主要风险</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="pill g">P0 首发</span></td>
+        <td class="l"><b>🇲🇾 马来西亚</b></td>
+        <td>12,246 件</td><td><span class="mom up">+127%</span></td><td>高(CR3 76%)</td>
+        <td class="l" style="font-size:12px">体量最大、品类认知最成熟(已有品牌化搜索)、TikTok+Shopee 双渠道成熟、英语+多元发质适配出海</td>
+        <td class="l" style="font-size:12px">UKLISS/Simplus 已建评论壁垒,需差异化突围</td>
+      </tr>
+      <tr>
+        <td><span class="pill b">P1 跟进</span></td>
+        <td class="l"><b>🇻🇳 越南</b></td>
+        <td>5,615 件</td><td><span class="mom up">+23%</span></td><td>中(CR3 62%)</td>
+        <td class="l" style="font-size:12px">存在明确的<b>中端 $15–40 空白带</b>,本土店生态友好,直播带货活跃</td>
+        <td class="l" style="font-size:12px">价格高度敏感、两极分化,中端能否被教育出来需验证</td>
+      </tr>
+      <tr>
+        <td><span class="pill o">P1 跟进</span></td>
+        <td class="l"><b>🇹🇭 泰国</b></td>
+        <td>3,736 件</td><td><span class="mom up">+13%</span></td><td>高(CR3 74%)</td>
+        <td class="l" style="font-size:12px">均价最高($82)、高端需求已激活(Dyson)、本土品牌 Lesasha 证明品牌化可行</td>
+        <td class="l" style="font-size:12px">TikTok 数据不可见(渠道盲区)、本土品牌护城河</td>
+      </tr>
+      <tr style="background:#fffaf3">
+        <td><span class="pill" style="background:#f0f0f3;color:#6e6e73">P2 观望</span></td>
+        <td class="l"><b>🇰🇭 柬埔寨</b></td>
+        <td style="color:#9a5b00">无数据</td><td style="color:#9a5b00">—</td><td style="color:#9a5b00">未知</td>
+        <td class="l" style="font-size:12px">市场早期、电商渗透低,暂无数据驱动选品条件</td>
+        <td class="l" style="font-size:12px">⚠️ 平台数据盲区,贸然进入风险高,待数据可得再评估</td>
+      </tr>
+    </tbody></table>
+    <p class="foot"><b>口径</b>:规模/环比为近30日真实数据;<b>优先级排序、竞争强度评语、进入理由为分析师研判</b>。柬埔寨全部留空,不臆造。</p>
+  </div>
+  
+
+  <div class="flag-grid" style="margin-top:28px">
+    <div class="flag-card" style="border-top-color:var(--blue)">
+      <h4>6.2 推荐产品规格 &amp; 定价</h4>
+      <ul style="list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:9px;font-size:13px">
+        <li><b>核心款(主推):5-in-1 多功能造型器</b><span class="sub2">负离子 + 冷热风 + 磁吸换头 + 收纳盒;香槟金/玫瑰金配色</span></li>
+        <li><b>定价锚点:</b>马来 RM160–200(≈$40–50)/ 越南 650k–900k₫(≈$25–35,填断层)/ 泰国 ฿1,500–1,900(≈$45–58)</li>
+        <li><b>差异化武器:</b>把"温控档位 + 涂层 + 电机参数"做成透明可信卖点,打白牌规格不透明的软肋</li>
+        <li><b>副线:</b>$10–15 入门热风梳铺货走量、养评论,为主推款导流</li>
+      </ul>
+    </div>
+    <div class="flag-card" style="border-top-color:var(--purple)">
+      <h4>6.2 三阶段进入路径(18个月)</h4>
+      <ul style="list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:9px;font-size:13px">
+        <li><span class="pill b">Phase 1 (0–6月)</span> <b>马来走量验证</b><span class="sub2">入门+中端双 SKU 进 Shopee+TikTok,快速积累评论与好评率</span></li>
+        <li><span class="pill g">Phase 2 (6–12月)</span> <b>越南补断层 + 利润款突围</b><span class="sub2">$25–35 中端机切越南真空带,马来上探中高端</span></li>
+        <li><span class="pill p">Phase 3 (12–18月)</span> <b>泰国卡高端 + 建品牌</b><span class="sub2">对标 Lesasha/Dyson 之间,建立"专业平价"品牌调性</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tw" style="margin-top:24px"><table>
+    <thead><tr><th class="l">风险类型</th><th class="l">描述</th><th>影响</th><th class="l">应对策略</th></tr></thead>
+    <tbody>
+      <tr><td class="l"><b>白牌价格战</b></td><td class="l" style="font-size:12.5px">Simplus/UKLISS/HODEKT 已用低价+SKU矩阵占据走量盘</td><td><span class="pill r">高</span></td><td class="l" style="font-size:12.5px">不打纯价格战,以规格透明+颜值+配件生态差异化</td></tr>
+      <tr><td class="l"><b>评论壁垒</b></td><td class="l" style="font-size:12.5px">头部机型评论数上万,新品冷启动难</td><td><span class="pill o">中</span></td><td class="l" style="font-size:12.5px">TikTok 达人种草 + 早期评价激励快速破冰</td></tr>
+      <tr><td class="l"><b>越南中端教育成本</b></td><td class="l" style="font-size:12.5px">$15–40 空白可能是需求真空而非供给真空</td><td><span class="pill o">中</span></td><td class="l" style="font-size:12.5px">先小批量测款验证,再放量</td></tr>
+      <tr><td class="l"><b>泰国渠道盲区</b></td><td class="l" style="font-size:12.5px">TikTok TH 数据不可见,实际盘可能被低估</td><td><span class="pill o">中</span></td><td class="l" style="font-size:12.5px">进入前补充第三方/实地渠道调研</td></tr>
+      <tr style="background:#fffaf3"><td class="l"><b>⚠️ 柬埔寨数据盲区</b></td><td class="l" style="font-size:12.5px">无任何平台级数据,市场规模/结构完全未知</td><td><span class="pill r">高</span></td><td class="l" style="font-size:12.5px">列为观望,不投入;待数据可得再评估</td></tr>
+    </tbody></table>
+    <p class="foot"><b>风险评估为分析师研判</b>,基于真实竞争格局与数据可得性。数据源:Sorftime × Shopee+TikTok。</p>
+  </div>
+</section>
+
+
+<section class="section" id="appendix" style="padding-top:0;">
+  <div class="sec-head">
+    <div class="eyebrow">Appendix · Core Keywords &amp; Methodology</div>
+    <h2 class="sec-title">附录</h2>
+  </div>
+  <div class="flag-grid">
+    <div class="flag-card">
+      <h4>A.1 三国核心搜索词库</h4>
+      <div style="margin-top:8px"><b style="font-size:13px">🇲🇾 马来西亚(认知最成熟)</b>
+        <ul style="list-style:none;font-size:12.5px;margin:6px 0 12px"><li><b>philips hair styler</b> <span class="sub2" style="display:inline">月搜索 3100</span></li><li><b>hair styler</b> <span class="sub2" style="display:inline">月搜索 2352</span></li><li><b>airwrap hair styler</b> <span class="sub2" style="display:inline">月搜索 1671</span></li><li><b>automatic hair styler</b> <span class="sub2" style="display:inline">月搜索 85</span></li><li><b>vivid & vogue 32mm 28mm hair curler automatic cu</b> <span class="sub2" style="display:inline">月搜索 4</span></li></ul></div>
+      <div><b style="font-size:13px">🇻🇳 越南</b>
+        <ul style="list-style:none;font-size:12.5px;margin:6px 0 12px"><li><b>hair styler</b> <span class="sub2" style="display:inline">月搜索 132</span></li></ul></div>
+      <div><b style="font-size:13px">🇹🇭 泰国</b>
+        <ul style="list-style:none;font-size:12.5px;margin:6px 0"><li><b>hair styler</b> <span class="sub2" style="display:inline">月搜索 182</span></li><li><b>⭐️จัดส่งในพื้นที่⭐️ 6 in 1 hair styler,1000w แปร</b> <span class="sub2" style="display:inline">月搜索 90</span></li><li><b>hair styler,1000w แปรงเครื่องเป่าผมสําหรับจัดแต่</b> <span class="sub2" style="display:inline">月搜索 38</span></li></ul></div>
+      <div class="ml">马来出现 philips/airwrap 等品牌词,越泰仍以泛品类词为主 —— 印证 Ch.1 认知成熟度判断。数据源:Sorftime Shopee 热搜。</div>
+    </div>
+    <div class="flag-card">
+      <h4>A.2 数据来源标注规范</h4>
+      <ul style="list-style:none;font-size:12.5px;margin-top:8px;display:flex;flex-direction:column;gap:7px">
+        <li><b>数据源</b>:Sorftime MCP × Shopee 榜单/搜索 + TikTok Shop(实时抓取)</li>
+        <li><b>时间口径</b>:近30日单月快照(Top SKU 附累计销量趋势)</li>
+        <li><b>增速口径</b>:近30日 vs 上一个30日累计销量差分(MoM),无 YoY</li>
+        <li><b>价格段</b>:分位数法,USD 统一 — 入门&lt;$15/中端$15–40/中高端$40–80/高端&gt;$80</li>
+        <li><b>汇率</b>:2026-06-06 实时,1USD=26,268VND/4.025MYR/32.728THB</li>
+        <li><b>品类范围</b>:仅多功能造型器🌀+热风梳🪮,气流门控分类器过滤</li>
+        <li><b>局限</b>:柬埔寨无数据(定性);TikTok 泰国不可用;Lazada 无接口;评论无原文(仅星级)</li>
+      </ul>
+    </div>
+    <div class="flag-card">
+      <h4>A.3 品类过滤审计</h4>
+      <ul style="list-style:none;font-size:12.5px;margin-top:8px;display:flex;flex-direction:column;gap:7px">
+        <li>抓取去重后总池:<b>637</b> 个 SKU</li>
+        <li>经分类器判定 KEEP(目标品类):<b>51</b> 个</li>
+        <li>高销量被剔除(直发器/卷发棒/吹风机/配件等):<b>433</b> 个,存档可查</li>
+        <li>存疑待审(REVIEW,销量≥50):<b>125</b> 个,存档可查</li>
+        <li class="ml" style="padding:0;margin-top:4px">分类逻辑:气流门控(本品类定义性特征)+ 三语关键词规则 + 硬阻断清单,可复现。原始 JSON 与脚本留存于 data/。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="foot-sec">
+  Airstyler 东南亚四国市场竞品调研报告 · 数据源 Sorftime × Shopee + TikTok Shop · 数据截止 2026-06-06<br>
+  近30日单月快照 · 环比 MoM(无 YoY)· USD 按实时汇率换算 · 仅含多功能造型器🌀+热风梳🪮<br>
+  口碑数据为真实星级分布;优劣势/采购建议/定位为分析师研判;柬埔寨无平台数据仅定性前瞻 · 全程零编造,缺失标"—"
+</div>
+
+<script>
+// 国家 Tab 切换
+document.querySelectorAll('#sku-country-tabs .tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const cty=btn.dataset.cty;
+    document.querySelectorAll('#sku-country-tabs .tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.country-pane').forEach(p=>p.classList.toggle('active',p.dataset.cty===cty));
+  });
+});
+// 子 Tab 切换(每国独立)
+document.querySelectorAll('.sku-subtabs').forEach(tabs=>{
+  const owner=tabs.dataset.owner;
+  tabs.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const sub=btn.dataset.sub;
+      tabs.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll(`.sku-subpane[data-owner="${owner}"]`).forEach(p=>
+        p.classList.toggle('active',p.dataset.sub===sub));
+    });
+  });
+});
+</script>
+</body>
+</html>

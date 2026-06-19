@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>洗牙器全球市场洞察报告 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root {
+  --bg: #0a0e1a; --bg2: #111827; --bg3: #1a2235;
+  --accent: #00d4ff; --accent2: #7c3aed; --accent3: #10b981; --accent4: #f59e0b;
+  --text: #e2e8f0; --text2: #94a3b8; --border: #1e293b; --card: #141b2d;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; }
+.header {
+  background: linear-gradient(135deg, #0a0e1a 0%, #1a0a2e 50%, #0a1628 100%);
+  padding: 48px 40px 32px; border-bottom: 1px solid var(--border); position:relative; overflow:hidden;
+}
+.header::before {
+  content:''; position:absolute; top:-50%; left:-20%; width:60%; height:200%;
+  background: radial-gradient(ellipse, rgba(0,212,255,0.08) 0%, transparent 70%); pointer-events:none;
+}
+.header-tag {
+  display:inline-block; background:rgba(0,212,255,0.12); border:1px solid rgba(0,212,255,0.3);
+  color:var(--accent); font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+  padding:4px 12px; border-radius:4px; margin-bottom:16px;
+}
+.header h1 {
+  font-size:clamp(24px,4vw,42px); font-weight:700; line-height:1.2;
+  background:linear-gradient(135deg,#e2e8f0 0%,#00d4ff 50%,#7c3aed 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:8px;
+}
+.header-sub { color:var(--text2); font-size:14px; margin-top:8px; }
+.header-meta { display:flex; gap:24px; margin-top:20px; flex-wrap:wrap; }
+.header-meta span { font-size:12px; color:var(--text2); display:flex; align-items:center; gap:6px; }
+.header-meta span::before { content:'▸'; color:var(--accent); }
+.main { max-width:1440px; margin:0 auto; padding:32px 24px; }
+.section-title {
+  font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+  color:var(--accent); margin-bottom:20px; display:flex; align-items:center; gap:12px;
+}
+.section-title::after { content:''; flex:1; height:1px; background:linear-gradient(to right,rgba(0,212,255,0.3),transparent); }
+.kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:40px; }
+.kpi-card {
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:20px 24px; position:relative; overflow:hidden;
+}
+.kpi-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(to right,var(--accent),var(--accent2));
+}
+.kpi-label { font-size:11px; color:var(--text2); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
+.kpi-value { font-size:clamp(22px,3vw,32px); font-weight:700; color:var(--accent); line-height:1; }
+.kpi-sub { font-size:12px; color:var(--text2); margin-top:6px; }
+.chart-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:24px; }
+@media(max-width:1100px){ .chart-grid-2{grid-template-columns:1fr;} }
+.chart-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:24px; }
+.chart-card h3 { font-size:13px; font-weight:600; color:var(--text2); margin-bottom:4px; }
+.chart-card .chart-sub { font-size:11px; color:#4b5563; margin-bottom:12px; }
+.chart-box { width:100%; height:300px; }
+.chart-box-tall { width:100%; height:380px; }
+.brand-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:40px; }
+@media(max-width:900px){ .brand-cards{grid-template-columns:1fr;} }
+.brand-card {
+  background:var(--card); border:1px solid var(--border); border-radius:12px;
+  padding:24px; position:relative; overflow:hidden;
+}
+.brand-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.brand-card.rank1::before { background:linear-gradient(135deg,#ffd700,#f59e0b); }
+.brand-card.rank2::before { background:linear-gradient(135deg,#c0c0c0,#94a3b8); }
+.brand-card.rank3::before { background:linear-gradient(135deg,#cd7f32,#78716c); }
+.brand-rank { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text2); margin-bottom:6px; }
+.brand-name { font-size:22px; font-weight:700; color:var(--text); margin-bottom:4px; }
+.brand-asin { font-size:11px; color:#4b5563; font-family:monospace; margin-bottom:16px; }
+.brand-metrics { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.metric { background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+.metric-label { font-size:10px; color:var(--text2); letter-spacing:0.5px; text-transform:uppercase; margin-bottom:4px; }
+.metric-value { font-size:16px; font-weight:700; color:var(--text); }
+.brand-share-bar { margin-top:16px; background:rgba(255,255,255,0.05); border-radius:4px; height:6px; overflow:hidden; }
+.brand-share-fill { height:100%; border-radius:4px; background:linear-gradient(to right,var(--accent),var(--accent2)); }
+.brand-share-label { font-size:12px; color:var(--text2); margin-top:6px; }
+.region-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:40px; }
+@media(max-width:900px){ .region-grid{grid-template-columns:1fr;} }
+.region-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; }
+.region-flag { font-size:24px; margin-bottom:8px; }
+.region-name { font-size:16px; font-weight:700; color:var(--text); margin-bottom:4px; }
+.region-size { font-size:24px; font-weight:700; color:var(--accent3); margin:12px 0 4px; }
+.region-size-label { font-size:11px; color:var(--text2); margin-bottom:16px; }
+.region-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
+.tag { background:rgba(255,255,255,0.05); border:1px solid var(--border); border-radius:20px; padding:3px 10px; font-size:11px; color:var(--text2); }
+.region-brands { margin-top:12px; }
+.region-brand-item { display:flex; justify-content:space-between; align-items:center; padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:13px; }
+.region-brand-item:last-child { border-bottom:none; }
+.region-brand-rank { color:var(--text2); font-size:11px; margin-right:8px; }
+.region-growth { display:inline-block; background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25); color:var(--accent3); font-size:11px; font-weight:600; padding:2px 8px; border-radius:4px; margin-top:8px; }
+.section-gap { margin-bottom:40px; }
+.footer { border-top:1px solid var(--border); padding:24px 40px; text-align:center; color:var(--text2); font-size:12px; margin-top:40px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-tag">Market Intelligence Report</div>
+  <h1>洗牙器全球市场洞察</h1>
+  <div class="header-sub">Water Flosser Global Market Analysis · Amazon 7 Sites + Greater China / SEA / Japan / Korea</div>
+  <div class="header-meta">
+    <span>数据截至 2026年05月</span>
+    <span>亚马逊7站 · US GB DE FR JP CA ES</span>
+    <span>数据来源：Sorftime MCP + 公开市场资料</span>
+  </div>
+</div>
+<div class="main">
+
+
+<div class="section-gap">
+  <div class="section-title">执行摘要</div>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-label">亚马逊7站 月销售额</div><div class="kpi-value">$22.8M</div><div class="kpi-sub">USD / 月，Top100产品合计</div></div>
+    <div class="kpi-card"><div class="kpi-label">最大市场：美国</div><div class="kpi-value">$16.7M</div><div class="kpi-sub">占7站总额 73.6%</div></div>
+    <div class="kpi-card"><div class="kpi-label">美国站第一品牌</div><div class="kpi-value">Waterpik</div><div class="kpi-sub">美国站市场份额 36.75%</div></div>
+    <div class="kpi-card"><div class="kpi-label">中国大陆 线上估算</div><div class="kpi-value">~13亿元</div><div class="kpi-sub">人民币 / 2024年1-11月</div></div>
+    <div class="kpi-card"><div class="kpi-label">美国站月销量峰值</div><div class="kpi-value">919K</div><div class="kpi-sub">2025年12月 Top100产品合计</div></div>
+    <div class="kpi-card"><div class="kpi-label">全球市场规模（2024）</div><div class="kpi-value">~$10.8B</div><div class="kpi-sub">北美占50%，亚太增速最快</div></div>
+  </div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">亚马逊区域市场对比</div>
+  <div class="chart-grid-2">
+    <div class="chart-card"><h3>各站月销售额对比</h3><div class="chart-sub">Top100产品月销售额（万美元）</div><div class="chart-box" id="chart-region-rev"></div></div>
+    <div class="chart-card"><h3>各站产品均价（USD）</h3><div class="chart-sub">Top100产品平均售价（本地货币折 USD）</div><div class="chart-box" id="chart-avg-price"></div></div>
+  </div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">品牌格局分析（美国站）</div>
+  <div class="chart-grid-2">
+    <div class="chart-card"><h3>Top10 品牌市场份额</h3><div class="chart-sub">按月销售额计算（美国站 Top100）</div><div class="chart-box-tall" id="chart-brand-pie"></div></div>
+    <div class="chart-card"><h3>Top10 品牌月销售额（万美元）</h3><div class="chart-sub">美国站</div><div class="chart-box-tall" id="chart-brand-bar"></div></div>
+  </div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">Top3 品牌深度分析（美国站）</div>
+  <div class="brand-cards">
+    <div class="brand-card rank1">
+      <div class="brand-rank"># 1 全球老牌</div>
+      <div class="brand-name">Waterpik</div>
+      <div class="brand-asin">ASIN: B01GNVF8S8</div>
+      <div class="brand-metrics">
+        <div class="metric"><div class="metric-label">售价</div><div class="metric-value">$66.98</div></div>
+        <div class="metric"><div class="metric-label">评分</div><div class="metric-value">4.2★</div></div>
+        <div class="metric"><div class="metric-label">评论数</div><div class="metric-value">76,033</div></div>
+        <div class="metric"><div class="metric-label">月销量</div><div class="metric-value">35,246</div></div>
+      </div>
+      <div class="brand-share-bar"><div class="brand-share-fill" style="width:36.75%"></div></div>
+      <div class="brand-share-label">美国站份额 36.75%｜中高端 $50-200｜品类开创者，70年历史</div>
+    </div>
+    <div class="brand-card rank2">
+      <div class="brand-rank"># 2 中国新锐</div>
+      <div class="brand-name">COSLUS</div>
+      <div class="brand-asin">ASIN: B0BG52SJ5N</div>
+      <div class="brand-metrics">
+        <div class="metric"><div class="metric-label">售价</div><div class="metric-value">$29.94</div></div>
+        <div class="metric"><div class="metric-label">评分</div><div class="metric-value">4.4★</div></div>
+        <div class="metric"><div class="metric-label">评论数</div><div class="metric-value">49,656</div></div>
+        <div class="metric"><div class="metric-label">月销量</div><div class="metric-value">69,322</div></div>
+      </div>
+      <div class="brand-share-bar"><div class="brand-share-fill" style="width:24.18%"></div></div>
+      <div class="brand-share-label">美国站份额 24.18%｜性价比 $20-50｜销量第一，中国直发FBA</div>
+    </div>
+    <div class="brand-card rank3">
+      <div class="brand-rank"># 3 高端新锐</div>
+      <div class="brand-name">Flaus</div>
+      <div class="brand-asin">ASIN: B0CZSBT5VF</div>
+      <div class="brand-metrics">
+        <div class="metric"><div class="metric-label">售价</div><div class="metric-value">$118.98</div></div>
+        <div class="metric"><div class="metric-label">评分</div><div class="metric-value">4.4★</div></div>
+        <div class="metric"><div class="metric-label">评论数</div><div class="metric-value">1,639</div></div>
+        <div class="metric"><div class="metric-label">月销量</div><div class="metric-value">7,109</div></div>
+      </div>
+      <div class="brand-share-bar"><div class="brand-share-fill" style="width:5.05%"></div></div>
+      <div class="brand-share-label">美国站份额 5.05%｜高端创新 $100-150｜DTC品牌，设计感+续航</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">价格段分析</div>
+  <div class="chart-grid-2">
+    <div class="chart-card"><h3>美国站产品价格分布</h3><div class="chart-sub">按价格段统计 Top100 产品数量</div><div class="chart-box" id="chart-price-seg"></div></div>
+    <div class="chart-card"><h3>各站价格段产品数量对比</h3><div class="chart-sub">各价格区间产品数（Top100中）</div><div class="chart-box" id="chart-price-multi"></div></div>
+  </div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">美国站月销量趋势（25个月）</div>
+  <div class="chart-card"><h3>美国站洗牙器品类月销量趋势</h3><div class="chart-sub">Top100产品月度总销量 · 2024年5月 - 2026年5月（2026年5月为当月不完整数据）</div><div class="chart-box-tall" id="chart-trend"></div></div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">卖家来源分析（美国站）</div>
+  <div class="chart-card"><h3>美国站 Top100 产品卖家国籍分布</h3><div class="chart-sub">按月销售额（USD）计算</div><div class="chart-box" id="chart-seller"></div></div>
+</div>
+
+<div class="section-gap">
+  <div class="section-title">大中国区 · 东南亚 · 日韩市场洞察</div>
+  <div class="region-grid">
+    <div class="region-card">
+      <div class="region-flag">🇨🇳</div>
+      <div class="region-name">中国大陆</div>
+      <div class="region-size">~13亿元</div>
+      <div class="region-size-label">线上市场 / 2024年1-11月 · 欧特欧监测</div>
+      <div class="region-tags"><span class="tag">渗透率 &lt;5%</span><span class="tag">天猫/抖音/京东</span><span class="tag">国产品牌主导</span><span class="tag">正畸驱动</span></div>
+      <div class="region-brands">
+        <div class="region-brand-item"><span><span class="region-brand-rank">#1</span>usmile 笑容加</span><span style="color:#00d4ff;font-size:12px">13.4% · +29.7%↑</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#2</span>倍至 Bixdo</span><span style="color:#00d4ff;font-size:12px">10.4% · +24.1%↑</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#3</span>拜尔 BAIR</span><span style="color:#94a3b8;font-size:12px">10.2% · 下滑</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#4</span>洁碧 Waterpik</span><span style="color:#00d4ff;font-size:12px">7.5% · 正增长</span></div>
+      </div>
+      <span class="region-growth">价格主力段：150-400元</span>
+      <div style="font-size:12px;color:#64748b;margin-top:8px">抖音2024超越京东成第二渠道 · 增速+59.6%</div>
+    </div>
+    <div class="region-card">
+      <div class="region-flag">🌏</div>
+      <div class="region-name">东南亚</div>
+      <div class="region-size">~$30-50M</div>
+      <div class="region-size-label">年市场规模估算 · 亚太区CAGR 6.6%</div>
+      <div class="region-tags"><span class="tag">Shopee 主导(75%)</span><span class="tag">Lazada</span><span class="tag">TikTok Shop</span><span class="tag">中产扩大</span></div>
+      <div class="region-brands">
+        <div class="region-brand-item"><span><span class="region-brand-rank">#1</span>Waterpik</span><span style="color:#94a3b8;font-size:12px">品牌力强，官方旗舰</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#2</span>小米/米家</span><span style="color:#00d4ff;font-size:12px">中低端爆款</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#3</span>Panasonic</span><span style="color:#94a3b8;font-size:12px">2024年扩展东南亚</span></div>
+      </div>
+      <span class="region-growth">价格主力段：$30-60 USD</span>
+      <div style="font-size:12px;color:#64748b;margin-top:8px">70-95%学龄儿童有龋齿，渗透率极低，成长空间大</div>
+    </div>
+    <div class="region-card">
+      <div class="region-flag">🇯🇵</div>
+      <div class="region-name">日本</div>
+      <div class="region-size">~$21M</div>
+      <div class="region-size-label">年市场规模 · CAGR 4.77% · 2024</div>
+      <div class="region-tags"><span class="tag">Panasonic垄断</span><span class="tag">高端成熟市场</span><span class="tag">40-60岁主力</span></div>
+      <div class="region-brands">
+        <div class="region-brand-item"><span><span class="region-brand-rank">#1</span>Panasonic Doltz</span><span style="color:#f59e0b;font-size:12px">榜单前10占7席</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#2</span>Philips Sonicare</span><span style="color:#94a3b8;font-size:12px">第二大品牌</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#3</span>ELECOM等本土新兴</span><span style="color:#94a3b8;font-size:12px">性价比切入</span></div>
+      </div>
+      <span class="region-growth">价格主力段：¥10,000-18,000</span>
+      <div style="font-size:12px;color:#64748b;margin-top:8px">Doltz 2024年累计出货突破100万台</div>
+    </div>
+    <div class="region-card">
+      <div class="region-flag">🇰🇷</div>
+      <div class="region-name">韩国</div>
+      <div class="region-size">~$15-20M</div>
+      <div class="region-size-label">年市场规模估算 · CAGR ~5-7%</div>
+      <div class="region-tags"><span class="tag">Coupang 主渠道(20%)</span><span class="tag">品牌忠诚度高</span><span class="tag">政府推广预防</span></div>
+      <div class="region-brands">
+        <div class="region-brand-item"><span><span class="region-brand-rank">#1</span>Waterpik</span><span style="color:#00d4ff;font-size:12px">消费者首选</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#2</span>Philips Sonicare</span><span style="color:#94a3b8;font-size:12px">中高端稳定</span></div>
+        <div class="region-brand-item"><span><span class="region-brand-rank">#3</span>Aquapick 아쿠아픽</span><span style="color:#10b981;font-size:12px">韩国本土品牌</span></div>
+      </div>
+      <span class="region-growth">价格主力段：₩50,000-150,000</span>
+      <div style="font-size:12px;color:#64748b;margin-top:8px">66%消费者偏好熟悉品牌</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="footer">洗牙器全球市场洞察报告 · 数据截至2026年5月 · 亚马逊数据：Sorftime MCP · 区域市场：COCIA/欧特欧/Deep Market Insights/GVR等公开资料</div>
+
+<script>
+const COLORS = ["#00d4ff", "#7c3aed", "#10b981", "#f59e0b", "#ef4444", "#ec4899", "#8b5cf6", "#06b6d4", "#84cc16", "#f97316"];
+const ACCENT='#00d4ff', ACCENT2='#7c3aed', ACCENT3='#10b981', ACCENT4='#f59e0b';
+const TEXT='#e2e8f0', TEXT2='#94a3b8', GRID='#1e293b';
+function ic(id){ return echarts.init(document.getElementById(id),null,{renderer:'canvas'}); }
+
+// 1. Region Revenue
+(function(){
+  const c=ic('chart-region-rev');
+  const sites=["\u7f8e\u56fd", "\u82f1\u56fd", "\u5fb7\u56fd", "\u6cd5\u56fd", "\u65e5\u672c", "\u52a0\u62ff\u5927", "\u897f\u73ed\u7259"], revs=[1674.5, 167.9, 143.2, 56.2, 94.7, 52.6, 86.3];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT}},
+    grid:{left:55,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:sites,axisLabel:{color:TEXT2},axisLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'value',axisLabel:{color:TEXT2,formatter:v=>v+'万'},splitLine:{lineStyle:{color:GRID}}},
+    series:[{type:'bar',data:revs,barMaxWidth:50,
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:ACCENT},{offset:1,color:ACCENT2}])},
+      label:{show:true,position:'top',color:TEXT2,formatter:p=>p.value+'万'}
+    }]
+  });
+})();
+
+// 2. Avg Price
+(function(){
+  const c=ic('chart-avg-price');
+  const sites=["\u7f8e\u56fd", "\u82f1\u56fd", "\u5fb7\u56fd", "\u6cd5\u56fd", "\u65e5\u672c", "\u52a0\u62ff\u5927", "\u897f\u73ed\u7259"], avgs=[41.8, 38.4, 40.8, 48.3, 39.0, 12.3, 40.8];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT}},
+    grid:{left:55,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:sites,axisLabel:{color:TEXT2},axisLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'value',axisLabel:{color:TEXT2,formatter:v=>'$'+v},splitLine:{lineStyle:{color:GRID}}},
+    series:[{type:'bar',data:avgs,barMaxWidth:50,
+      itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:ACCENT3},{offset:1,color:'#047857'}])},
+      label:{show:true,position:'top',color:TEXT2,formatter:p=>'$'+p.value}
+    }]
+  });
+})();
+
+// 3. Brand Pie
+(function(){
+  const c=ic('chart-brand-pie');
+  const names=["Waterpik", "COSLUS", "Flaus", "Aquasonic", "Philips Sonicare", "usmile", "Onlyone", "Soocas", "Bitvae", "HUACO CARE"], shares=[36.75, 24.18, 5.05, 4.12, 3.77, 2.74, 1.99, 1.98, 1.93, 1.74];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'item',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT},formatter:p=>p.name+': '+p.value+'%'},
+    legend:{orient:'vertical',right:0,top:'center',textStyle:{color:TEXT2},icon:'circle',itemWidth:8,formatter:n=>{const i=names.indexOf(n);return n+(i>=0?' '+shares[i]+'%':'');} },
+    series:[{type:'pie',radius:['40%','70%'],center:['38%','50%'],
+      data:names.map((n,i)=>({name:n,value:shares[i]})),
+      itemStyle:{borderColor:'#0a0e1a',borderWidth:2},
+      label:{show:false},color:COLORS
+    }]
+  });
+})();
+
+// 4. Brand Bar
+(function(){
+  const c=ic('chart-brand-bar');
+  const names=["HUACO CARE", "Bitvae", "Soocas", "Onlyone", "usmile", "Philips Sonicare", "Aquasonic", "Flaus", "COSLUS", "Waterpik"], revs=[29.2, 32.3, 33.2, 33.3, 45.8, 63.2, 69.0, 84.6, 405.0, 615.4];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT}},
+    grid:{left:110,right:40,top:20,bottom:20},
+    xAxis:{type:'value',axisLabel:{color:TEXT2,formatter:v=>v+'万'},splitLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'category',data:names,axisLabel:{color:TEXT2,fontSize:11},axisLine:{lineStyle:{color:GRID}}},
+    series:[{type:'bar',data:revs,barMaxWidth:24,
+      itemStyle:{color:(p)=>COLORS[names.length-1-p.dataIndex]||COLORS[0]},
+      label:{show:true,position:'right',color:TEXT2,formatter:p=>p.value+'万'}
+    }]
+  });
+})();
+
+// 5. US Price Segments
+(function(){
+  const c=ic('chart-price-seg');
+  const labels=["<30", "30-60", "60-100", ">100"], vals=[58, 23, 12, 7];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT}},
+    grid:{left:40,right:20,top:20,bottom:40},
+    xAxis:{type:'category',data:labels,axisLabel:{color:TEXT2},axisLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'value',axisLabel:{color:TEXT2},splitLine:{lineStyle:{color:GRID}}},
+    series:[{type:'bar',data:vals,barMaxWidth:60,
+      itemStyle:{color:(p)=>COLORS[p.dataIndex]},
+      label:{show:true,position:'top',color:TEXT2}
+    }]
+  });
+})();
+
+// 6. Multi-site price segments
+(function(){
+  const c=ic('chart-price-multi');
+  const sites=["\u7f8e\u56fd", "\u82f1\u56fd", "\u5fb7\u56fd", "\u6cd5\u56fd", "\u65e5\u672c", "\u52a0\u62ff\u5927", "\u897f\u73ed\u7259"];
+  const seriesData=[{"name": "<30", "data": [58, 0, 0, 0, 0, 0, 0]}, {"name": "30-60", "data": [23, 0, 0, 0, 0, 0, 0]}, {"name": "60-100", "data": [12, 0, 0, 0, 0, 0, 0]}, {"name": ">100", "data": [7, 0, 0, 0, 0, 0, 0]}];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'},backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT}},
+    legend:{textStyle:{color:TEXT2},icon:'circle',itemWidth:8,top:0},
+    grid:{left:40,right:20,top:40,bottom:40},
+    xAxis:{type:'category',data:sites,axisLabel:{color:TEXT2},axisLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'value',axisLabel:{color:TEXT2},splitLine:{lineStyle:{color:GRID}}},
+    series:seriesData.map((s,i)=>({
+      name:s.name,type:'bar',stack:'total',barMaxWidth:50,
+      data:s.data,itemStyle:{color:COLORS[i]}
+    }))
+  });
+})();
+
+// 7. Trend
+(function(){
+  const c=ic('chart-trend');
+  const months=["2024/05", "2024/06", "2024/07", "2024/08", "2024/09", "2024/10", "2024/11", "2024/12", "2025/01", "2025/02", "2025/03", "2025/04", "2025/05", "2025/06", "2025/07", "2025/08", "2025/09", "2025/10", "2025/11", "2025/12", "2026/01", "2026/02", "2026/03", "2026/04", "2026/05"], vals=[526720, 502034, 679733, 654706, 642328, 651455, 809635, 876963, 506514, 483358, 455528, 477207, 483226, 472402, 677772, 549099, 510767, 662313, 734783, 918598, 560253, 538801, 539041, 491827, 47678];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT},formatter:p=>p[0].name+'<br/>月销量: '+p[0].value.toLocaleString()},
+    grid:{left:70,right:20,top:30,bottom:60},
+    xAxis:{type:'category',data:months,axisLabel:{color:TEXT2,rotate:45,fontSize:11},axisLine:{lineStyle:{color:GRID}}},
+    yAxis:{type:'value',axisLabel:{color:TEXT2,formatter:v=>(v/1000).toFixed(0)+'K'},splitLine:{lineStyle:{color:GRID}}},
+    series:[{type:'line',data:vals,smooth:true,symbol:'none',
+      lineStyle:{color:ACCENT,width:2.5},
+      areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(0,212,255,0.25)'},{offset:1,color:'rgba(0,212,255,0.01)'}])},
+      markPoint:{data:[{type:'max',name:'峰值',label:{color:TEXT,backgroundColor:'rgba(0,212,255,0.15)',padding:[4,8],borderRadius:4}}]},
+      markLine:{data:[{type:'average',name:'均值'}],lineStyle:{color:'rgba(245,158,11,0.5)',type:'dashed'},label:{color:ACCENT4}}
+    }]
+  });
+})();
+
+// 8. Seller Origin
+(function(){
+  const c=ic('chart-seller');
+  const names=["Unknown", "\u4e2d\u56fd", "\u7f8e\u56fd", "\u4e2d\u56fd\u9999\u6e2f", "\u8d8a\u5357", "\u6bd4\u5229\u65f6"], revs=[642.7, 575.6, 401.1, 53.1, 1.3, 0.7];
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'item',backgroundColor:'#1e293b',borderColor:'#334155',textStyle:{color:TEXT},formatter:p=>p.name+': $'+p.value+'万'},
+    legend:{orient:'vertical',right:20,top:'center',textStyle:{color:TEXT2},icon:'circle',itemWidth:8},
+    series:[{type:'pie',radius:['40%','70%'],center:['38%','50%'],
+      data:names.map((n,i)=>({name:n,value:revs[i]})),
+      itemStyle:{borderColor:'#0a0e1a',borderWidth:2},
+      label:{show:false},color:COLORS
+    }]
+  });
+})();
+
+window.addEventListener('resize',()=>{
+  ['chart-region-rev','chart-avg-price','chart-brand-pie','chart-brand-bar',
+   'chart-price-seg','chart-price-multi','chart-trend','chart-seller']
+  .forEach(id=>echarts.getInstanceByDom(document.getElementById(id))?.resize());
+});
+</script>
+</body>
+</html>

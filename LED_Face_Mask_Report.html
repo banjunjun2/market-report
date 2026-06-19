@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED光子美容面罩全球市场调研报告 2024-2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5F5F7;--card:#fff;--blue:#0071E3;--blue-lt:#E8F0FE;
+  --green:#34C759;--red:#FF3B30;--orange:#FF9500;--purple:#AF52DE;
+  --t1:#1D1D1F;--t2:#6E6E73;--t3:#86868B;
+  --border:#D2D2D7;--shadow:0 2px 12px rgba(0,0,0,.08);
+  --r8:8px;--r12:12px;--r20:20px
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Helvetica Neue',Arial,sans-serif;
+  background:var(--bg);color:var(--t1);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none}
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,245,247,.88);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;
+  justify-content:space-between;height:50px}
+.nav-brand{font-size:13px;font-weight:600;color:var(--t1)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:12px;color:var(--t2);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.hero{padding:72px 40px 56px;text-align:center;
+  background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--border)}
+.hero-tag{display:inline-block;background:var(--blue-lt);color:var(--blue);
+  font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-size:44px;font-weight:700;letter-spacing:-1.5px;line-height:1.1;
+  color:var(--t1);margin-bottom:14px}
+.hero-sub{font-size:17px;color:var(--t2);margin-bottom:40px;
+  max-width:560px;margin-left:auto;margin-right:auto}
+.hero-kpis{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.kpi-val{font-size:30px;font-weight:700;letter-spacing:-1px;color:var(--t1)}
+.kpi-lbl{font-size:12px;color:var(--t2);margin-top:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.sec{padding:56px 0}
+.sec-tag{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  color:var(--blue);margin-bottom:6px}
+.sec-title{font-size:30px;font-weight:700;letter-spacing:-.8px;margin-bottom:10px}
+.sec-desc{font-size:15px;color:var(--t2);max-width:580px;margin-bottom:32px}
+.card{background:var(--card);border-radius:var(--r20);padding:28px;
+  box-shadow:var(--shadow);border:1px solid var(--border)}
+.card-title{font-size:17px;font-weight:600;margin-bottom:6px}
+.card-sub{font-size:13px;color:var(--t2);margin-bottom:20px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.chart{width:100%;height:400px}
+.chart-lg{width:100%;height:460px}
+.chart-sm{width:100%;height:320px}
+.metric-card{background:var(--card);border-radius:var(--r12);padding:20px;
+  border:1px solid var(--border);box-shadow:var(--shadow)}
+.m-label{font-size:12px;color:var(--t2);margin-bottom:6px}
+.m-val{font-size:26px;font-weight:700;letter-spacing:-.6px}
+.m-sub{font-size:12px;color:var(--green);margin-top:4px}
+.tbl-wrap{overflow-x:auto;border-radius:var(--r12);
+  border:1px solid var(--border);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--card)}
+thead th{background:#F5F5F7;padding:11px 14px;text-align:left;font-weight:600;
+  color:var(--t2);font-size:11px;letter-spacing:.3px;
+  border-bottom:1px solid var(--border);white-space:nowrap}
+tbody tr{border-bottom:1px solid #F0F0F0;transition:background .15s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#FAFAFA}
+tbody td{padding:13px 14px;color:var(--t1);vertical-align:top}
+.rank{display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;font-size:11px;font-weight:700}
+.r1{background:#FFD700;color:#7A5C00}
+.r2{background:#C0C0C0;color:#444}
+.r3{background:#CD7F32;color:#fff}
+.rn{background:#F0F0F0;color:var(--t2)}
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;
+  font-size:11px;font-weight:500;white-space:nowrap}
+.t-blue{background:#E8F0FE;color:#0071E3}
+.t-green{background:#E8F8EE;color:#34C759}
+.t-orange{background:#FFF3E0;color:#FF9500}
+.t-red{background:#FFE8E8;color:#FF3B30}
+.t-purple{background:#F3E8FF;color:#AF52DE}
+.t-gray{background:#F0F0F0;color:#6E6E73}
+.bar-wrap{display:flex;align-items:center;gap:6px}
+.bar-fill{height:5px;border-radius:3px;background:var(--blue)}
+.pain-card{background:var(--card);border-radius:var(--r12);padding:22px;
+  border:1px solid var(--border);border-left:4px solid var(--red)}
+.pain-brand{font-size:15px;font-weight:600;margin-bottom:3px}
+.pain-sub{font-size:12px;color:var(--t2);margin-bottom:14px}
+.pain-list{list-style:none}
+.pain-list li{display:flex;align-items:flex-start;gap:7px;
+  padding:5px 0;font-size:12.5px;border-bottom:1px solid #F5F5F7}
+.pain-list li:last-child{border-bottom:none}
+.pain-dot{width:16px;height:16px;border-radius:50%;background:#FFE8E8;
+  color:var(--red);display:flex;align-items:center;justify-content:center;
+  font-size:9px;flex-shrink:0;margin-top:2px}
+.opp-card{background:var(--card);border-radius:var(--r12);padding:22px;
+  border:1px solid var(--border);border-top:3px solid var(--blue)}
+.opp-num{font-size:32px;font-weight:700;color:var(--blue);opacity:.2;line-height:1;margin-bottom:6px}
+.opp-title{font-size:14px;font-weight:600;margin-bottom:6px}
+.opp-desc{font-size:12.5px;color:var(--t2)}
+.divider{height:1px;background:var(--border);margin:0}
+.note{font-size:11px;color:var(--t3);margin-top:10px;font-style:italic}
+footer{background:var(--card);border-top:1px solid var(--border);
+  padding:32px 40px;text-align:center}
+footer p{font-size:12px;color:var(--t3)}
+@media(max-width:900px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .hero h1{font-size:30px}
+  .hero-kpis{gap:24px}
+  .wrap,.hero,.nav{padding-left:20px;padding-right:20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">LED光子美容面罩市场报告 2024–2026</span>
+    <ul class="nav-links">
+      <li><a href="#market">市场规模</a></li>
+      <li><a href="#region">区域分析</a></li>
+      <li><a href="#competitors">竞品TOP10</a></li>
+      <li><a href="#pain">痛点分析</a></li>
+      <li><a href="#opportunity">市场机会</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">Global Market Research Report</div>
+  <h1>LED光子美容面罩<br>全球市场调研报告</h1>
+  <p class="hero-sub">覆盖美国、英国、德国、日本、加拿大五大市场 · 数据来源 Amazon 实时数据 · 2024–2026 含预测</p>
+  <div class="hero-kpis">
+    <div><div class="kpi-val">$285M</div><div class="kpi-lbl">2024年全球市场规模（估算）</div></div>
+    <div><div class="kpi-val">18.7%</div><div class="kpi-lbl">2024–2026 复合增长率 CAGR</div></div>
+    <div><div class="kpi-val">10</div><div class="kpi-lbl">重点竞品深度分析</div></div>
+    <div><div class="kpi-val">5</div><div class="kpi-lbl">主要销售区域</div></div>
+  </div>
+</section>
+
+<!-- =================== SECTION 1: MARKET SIZE =================== -->
+<section class="sec" id="market">
+  <div class="wrap">
+    <div class="sec-tag">Market Overview</div>
+    <div class="sec-title">全球市场规模与增速</div>
+    <p class="sec-desc">基于亚马逊多站点实时销售数据与行业趋势推算，2024–2026年LED光子美容面罩市场保持高速增长。</p>
+
+    <div class="g4" style="margin-bottom:28px">
+      <div class="metric-card">
+        <div class="m-label">2024年市场规模</div>
+        <div class="m-val">$285M</div>
+        <div class="m-sub">↑ +21.3% vs 2023</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">2025年预测规模</div>
+        <div class="m-val">$338M</div>
+        <div class="m-sub">↑ +18.6% YoY</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">2026年预测规模</div>
+        <div class="m-val">$402M</div>
+        <div class="m-sub">↑ +18.9% YoY</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">CAGR 2024–2026</div>
+        <div class="m-val">18.7%</div>
+        <div class="m-sub" style="color:var(--blue)">高速增长赛道</div>
+      </div>
+    </div>
+
+    <div class="g2">
+      <div class="card">
+        <div class="card-title">市场规模趋势（2022–2026E）</div>
+        <div class="card-sub">含历史数据与预测数据，单位：百万美元</div>
+        <div class="chart" id="chart-market-bar"></div>
+        <p class="note">* 2022–2023为估算历史值，2024基于Amazon实时数据推算，2025–2026为预测值</p>
+      </div>
+      <div class="card">
+        <div class="card-title">年增速趋势（YoY Growth %）</div>
+        <div class="card-sub">逐年增长率变化</div>
+        <div class="chart" id="chart-growth"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =================== SECTION 2: REGIONAL =================== -->
+<section class="sec" id="region">
+  <div class="wrap">
+    <div class="sec-tag">Regional Analysis</div>
+    <div class="sec-title">TOP5 主要销售区域分析</div>
+    <p class="sec-desc">基于Amazon US/GB/DE/JP/CA五大站点类目实时数据，涵盖月销量、月销售额、均价、竞争格局等维度。</p>
+
+    <div class="g4" style="margin-bottom:28px">
+      <div class="metric-card">
+        <div class="m-label">🇺🇸 美国 月销量</div>
+        <div class="m-val" style="font-size:20px">869,775</div>
+        <div class="m-sub">类目月销售额 $16.58M</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">🇯🇵 日本 月销量</div>
+        <div class="m-val" style="font-size:20px">371,102</div>
+        <div class="m-sub">类目月销售额 ¥605.6M</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">🇬🇧 英国 月销量</div>
+        <div class="m-val" style="font-size:20px">239,743</div>
+        <div class="m-sub">类目月销售额 £2.97M</div>
+      </div>
+      <div class="metric-card">
+        <div class="m-label">🇩🇪 德国 月销量</div>
+        <div class="m-val" style="font-size:20px">80,261</div>
+        <div class="m-sub">类目月销售额 €876K</div>
+      </div>
+    </div>
+
+    <div class="g2" style="margin-bottom:24px">
+      <div class="card">
+        <div class="card-title">月销量对比（各站点类目，单位：万件）</div>
+        <div class="card-sub">Amazon各站点面部美容/LED类目月销量</div>
+        <div class="chart" id="chart-region-bar"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">区域综合实力雷达图</div>
+        <div class="card-sub">维度：销量·销售额·均价·增速·竞争度</div>
+        <div class="chart" id="chart-radar"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">各区域核心指标汇总</div>
+      <div class="card-sub">数据来源：Amazon 各站点类目实时数据（2026年5月）</div>
+      <div class="tbl-wrap" style="border:none;border-radius:0;box-shadow:none">
+        <table>
+          <thead>
+            <tr>
+              <th>区域</th><th>站点</th><th>月销量</th><th>月销售额（本地货币）</th>
+              <th>月销售额（USD）</th><th>类目均价</th><th>Top3销量占比</th><th>竞争强度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>🇺🇸 美国</td><td>amazon.com</td>
+              <td><b>869,775</b></td>
+              <td>$16,584,260</td><td><b>$16.58M</b></td>
+              <td>$28.83</td><td>~35%</td>
+              <td><span class="tag t-red">极高</span></td>
+            </tr>
+            <tr>
+              <td>🇯🇵 日本</td><td>amazon.co.jp</td>
+              <td><b>371,102</b></td>
+              <td>¥605,596,979</td><td><b>$4.04M</b></td>
+              <td>¥1,586（≈$10.6）</td><td>~40%</td>
+              <td><span class="tag t-orange">高</span></td>
+            </tr>
+            <tr>
+              <td>🇬🇧 英国</td><td>amazon.co.uk</td>
+              <td><b>239,743</b></td>
+              <td>£2,968,782</td><td><b>$3.77M</b></td>
+              <td>£15.33（≈$19.5）</td><td>~38%</td>
+              <td><span class="tag t-orange">高</span></td>
+            </tr>
+            <tr>
+              <td>🇨🇦 加拿大</td><td>amazon.ca</td>
+              <td><b>58,218</b></td>
+              <td>CAD 1,686,227</td><td><b>$1.23M</b></td>
+              <td>CAD 34.49（≈$25.2）</td><td>~33%</td>
+              <td><span class="tag t-blue">中</span></td>
+            </tr>
+            <tr>
+              <td>🇩🇪 德国</td><td>amazon.de</td>
+              <td><b>80,261</b></td>
+              <td>€876,434</td><td><b>$0.95M</b></td>
+              <td>€10.93（≈$11.8）</td><td>~42%</td>
+              <td><span class="tag t-blue">中</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =================== SECTION 3: COMPETITORS =================== -->
+<section class="sec" id="competitors">
+  <div class="wrap">
+    <div class="sec-tag">Competitive Intelligence</div>
+    <div class="sec-title">TOP10 竞品深度分析</div>
+    <p class="sec-desc">基于Amazon美国站BSR排名，综合月销量、价格、产品参数、卖点及用户痛点的全维度竞品画像。</p>
+
+    <div class="card" style="margin-bottom:24px">
+      <div class="card-title">月销量分布（TOP10竞品，件/月）</div>
+      <div class="card-sub">气泡大小=月销量，X轴=价格，Y轴=月销量</div>
+      <div class="chart" id="chart-competitors"></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:36px">排名</th>
+            <th>品牌/产品</th>
+            <th>ASIN</th>
+            <th>价格</th>
+            <th>月销量</th>
+            <th>BSR</th>
+            <th>产品形态</th>
+            <th>波长(nm)</th>
+            <th>LED数量</th>
+            <th>辐照度</th>
+            <th>光疗模式</th>
+            <th>主要卖点</th>
+            <th>认证</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="rank r1">1</span></td>
+            <td><b>INIA</b><br><span style="font-size:11px;color:var(--t2)">LED Face Mask 220 Beads</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0FLDP8Y5W</span></td>
+            <td><b>$89.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:100px"></div>
+                <span>8,886</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">面膜类 #12</span></td>
+            <td><span class="tag t-blue">软硅胶壳</span></td>
+            <td>620/630<br>460-470<br>850</td>
+            <td><b>220</b></td>
+            <td>105 mW/cm²</td>
+            <td>4 (红/蓝/NIR/组合)</td>
+            <td>
+              <span class="tag t-blue">高LED密度</span>
+              <span class="tag t-purple">多波长</span>
+              <span class="tag t-green">2600mAh大电池</span>
+              <span class="tag t-orange">硅胶贴合</span>
+            </td>
+            <td><span class="tag t-gray">暂无FDA</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank r2">2</span></td>
+            <td><b>Shark CryoGlow</b><br><span style="font-size:11px;color:var(--t2)">LED + InstaChill冷敷</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0DSGJCS47</span></td>
+            <td><b>$349.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:59px"></div>
+                <span>5,268</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">抗衰老 #2</span></td>
+            <td><span class="tag t-orange">硬壳+冷敷</span></td>
+            <td>红+蓝+IR</td>
+            <td>—</td>
+            <td>—</td>
+            <td>LED+InstaChill</td>
+            <td>
+              <span class="tag t-blue">冷热双效</span>
+              <span class="tag t-purple">Shark品牌背书</span>
+              <span class="tag t-orange">专利冷敷技术</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank r3">3</span></td>
+            <td><b>tinkoola</b><br><span style="font-size:11px;color:var(--t2)">Face + Neck LED Mask</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0FJ5XSQVG</span></td>
+            <td><b>$69.98</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:25px"></div>
+                <span>2,244</span>
+              </div>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+            <td><span class="tag t-purple">面颈一体</span></td>
+            <td>红+蓝+NIR</td>
+            <td>—</td>
+            <td>—</td>
+            <td>多模式</td>
+            <td>
+              <span class="tag t-purple">面颈全覆盖</span>
+              <span class="tag t-green">USB-C充电</span>
+              <span class="tag t-blue">性价比高</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">4</span></td>
+            <td><b>gelpal</b><br><span style="font-size:11px;color:var(--t2)">7-Color LED Mask</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0DT3C5ZFY</span></td>
+            <td><b>$39.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:23px"></div>
+                <span>2,028</span>
+              </div>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+            <td><span class="tag t-gray">硬壳</span></td>
+            <td>7色全光谱</td>
+            <td>—</td>
+            <td>—</td>
+            <td>7模式</td>
+            <td>
+              <span class="tag t-green">超低入门价</span>
+              <span class="tag t-blue">7色光疗</span>
+              <span class="tag t-orange">全光谱覆盖</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">5</span></td>
+            <td><b>CurrentBody Skin</b><br><span style="font-size:11px;color:var(--t2)">LED Light Therapy Mask Series 2</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0DHRW819R</span></td>
+            <td><b>$469.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:21px"></div>
+                <span>1,915</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">面膜类 #63</span></td>
+            <td><span class="tag t-blue">柔性软壳</span></td>
+            <td>633/830</td>
+            <td>—</td>
+            <td>~39 mW/cm²</td>
+            <td>红+NIR</td>
+            <td>
+              <span class="tag t-blue">临床级认证</span>
+              <span class="tag t-purple">专业品牌</span>
+              <span class="tag t-green">柔性贴合</span>
+            </td>
+            <td><span class="tag t-green">CE认证</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">6</span></td>
+            <td><b>XSSNVV</b><br><span style="font-size:11px;color:var(--t2)">850nm NIR 272 LEDs</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0FY5DNY9D</span></td>
+            <td><b>$89.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:21px"></div>
+                <span>1,884</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">光疗类 #7</span></td>
+            <td><span class="tag t-gray">硬壳</span></td>
+            <td>850 (NIR)</td>
+            <td><b>272</b></td>
+            <td>—</td>
+            <td>4模式</td>
+            <td>
+              <span class="tag t-purple">高NIR密度272颗</span>
+              <span class="tag t-blue">专注近红外</span>
+              <span class="tag t-orange">深层渗透</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">7</span></td>
+            <td><b>iRestore</b><br><span style="font-size:11px;color:var(--t2)">Professional 360 LED</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0D7N2KWLH</span></td>
+            <td><b>$398.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:20px"></div>
+                <span>1,810</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">面膜类 #42</span></td>
+            <td><span class="tag t-gray">硬壳</span></td>
+            <td>红+NIR</td>
+            <td><b>360</b></td>
+            <td>—</td>
+            <td>多模式</td>
+            <td>
+              <span class="tag t-blue">360颗高密度</span>
+              <span class="tag t-purple">专业品牌</span>
+              <span class="tag t-green">临床研究支持</span>
+            </td>
+            <td><span class="tag t-green">FDA注册</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">8</span></td>
+            <td><b>wavytalk</b><br><span style="font-size:11px;color:var(--t2)">Anti-Aging LED Mask</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0DZ6SLJQ3</span></td>
+            <td><b>$109.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:18px"></div>
+                <span>1,608</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">抗衰老 #3</span></td>
+            <td><span class="tag t-gray">硬壳</span></td>
+            <td>红+蓝</td>
+            <td>—</td>
+            <td>—</td>
+            <td>多模式</td>
+            <td>
+              <span class="tag t-blue">抗衰老主打</span>
+              <span class="tag t-orange">中端定价</span>
+              <span class="tag t-green">多功能美容</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">9</span></td>
+            <td><b>INTEO</b><br><span style="font-size:11px;color:var(--t2)">Face+Neck 680 LEDs</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0FMXH8STX</span></td>
+            <td><b>$119.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:14px"></div>
+                <span>1,273</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">光疗类 #22</span></td>
+            <td><span class="tag t-purple">面颈一体</span></td>
+            <td>红+蓝+NIR</td>
+            <td><b>680</b></td>
+            <td>—</td>
+            <td>多模式</td>
+            <td>
+              <span class="tag t-purple">680颗超高密度</span>
+              <span class="tag t-blue">面颈一体全覆盖</span>
+              <span class="tag t-orange">中高端定价</span>
+            </td>
+            <td><span class="tag t-gray">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="rank rn">10</span></td>
+            <td><b>TheraFace (Therabody)</b><br><span style="font-size:11px;color:var(--t2)">Mask Pro FDA Cleared</span></td>
+            <td><span style="font-family:monospace;font-size:11px">B0FKD3826X</span></td>
+            <td><b>$329.99</b></td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-fill" style="width:14px"></div>
+                <span>1,270</span>
+              </div>
+            </td>
+            <td><span class="tag t-green">抗衰老 #9</span></td>
+            <td><span class="tag t-gray">硬壳</span></td>
+            <td>红+蓝+NIR</td>
+            <td>—</td>
+            <td>—</td>
+            <td>多模式</td>
+            <td>
+              <span class="tag t-green">FDA正式清关认证</span>
+              <span class="tag t-purple">Therabody医疗品牌</span>
+              <span class="tag t-blue">专业医疗级定位</span>
+            </td>
+            <td><span class="tag t-green">FDA Cleared</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:24px">
+      <div class="card-title">价格带分布分析</div>
+      <div class="card-sub">TOP10竞品价格区间与月销量关系</div>
+      <div class="chart" id="chart-price-scatter"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =================== SECTION 4: PAIN POINTS =================== -->
+<section class="sec" id="pain">
+  <div class="wrap">
+    <div class="sec-tag">User Pain Points</div>
+    <div class="sec-title">用户差评痛点深度归纳</div>
+    <p class="sec-desc">基于Amazon真实用户评论（1-3星差评）抓取分析，归纳三大主流竞品的核心用户痛点。</p>
+
+    <div class="g3" style="margin-bottom:28px">
+      <div class="pain-card">
+        <div class="pain-brand">INIA LED面罩</div>
+        <div class="pain-sub">$89.99 · 月销量 8,886 · 差评主题分析</div>
+        <ul class="pain-list">
+          <li><div class="pain-dot">!</div><div><b>质量寿命短：</b>LED灯珠2–6个月后大量失效，核心功能损坏</div></li>
+          <li><div class="pain-dot">!</div><div><b>安全隐患：</b>电池组使用中过热，存在烫伤风险</div></li>
+          <li><div class="pain-dot">!</div><div><b>售后服务差：</b>客服响应慢，维权困难，退款流程繁琐</div></li>
+          <li><div class="pain-dot">!</div><div><b>适配性差：</b>面罩尺寸偏大，亚洲/小脸用户贴合不佳</div></li>
+          <li><div class="pain-dot">!</div><div><b>肤色安全：</b>蓝光对深色肤色用户有色素沉着风险</div></li>
+          <li><div class="pain-dot">!</div><div><b>认证争议：</b>宣传功效缺乏FDA认证背书，用户信任度低</div></li>
+        </ul>
+      </div>
+      <div class="pain-card">
+        <div class="pain-brand">Shark CryoGlow</div>
+        <div class="pain-sub">$349.99 · 月销量 5,268 · 差评主题分析</div>
+        <ul class="pain-list">
+          <li><div class="pain-dot">!</div><div><b>续航极差：</b>一次充电仅支持2–3次使用，体验断续</div></li>
+          <li><div class="pain-dot">!</div><div><b>重量过重：</b>675g机身压迫皮肤留下压痕</div></li>
+          <li><div class="pain-dot">!</div><div><b>眼部安全：</b>眼部冷却垫设计不适，LED光对眼部有隐患</div></li>
+          <li><div class="pain-dot">!</div><div><b>效果存疑：</b>部分用户在数周使用后未感受到改善</div></li>
+          <li><div class="pain-dot">!</div><div><b>二手品质：</b>收到开封/使用过的翻新品，包装异常</div></li>
+          <li><div class="pain-dot">!</div><div><b>禁忌未公示：</b>产品使用禁忌未在线上详细说明</div></li>
+        </ul>
+      </div>
+      <div class="pain-card">
+        <div class="pain-brand">CurrentBody Series 2</div>
+        <div class="pain-sub">$469.99 · 月销量 1,915 · 差评主题分析</div>
+        <ul class="pain-list">
+          <li><div class="pain-dot">!</div><div><b>耐久性差：</b>数次使用后停止工作，主板/电路问题频发</div></li>
+          <li><div class="pain-dot">!</div><div><b>异味问题：</b>产品初次使用散发明显化学异味</div></li>
+          <li><div class="pain-dot">!</div><div><b>佩戴不适：</b>柔性材质压迫鼻梁，长期佩戴不舒适</div></li>
+          <li><div class="pain-dot">!</div><div><b>二手问题：</b>收到明显使用痕迹的翻新产品</div></li>
+          <li><div class="pain-dot">!</div><div><b>售后服务差：</b>高价产品客服响应与服务品质不匹配</div></li>
+          <li><div class="pain-dot">!</div><div><b>眼部安全：</b>使用时需严格佩戴护目镜，操作门槛高</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">痛点类别频率统计</div>
+      <div class="card-sub">基于三大竞品差评归类，红色为高频痛点</div>
+      <div class="chart-sm" id="chart-pain"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =================== SECTION 5: OPPORTUNITIES =================== -->
+<section class="sec" id="opportunity">
+  <div class="wrap">
+    <div class="sec-tag">Strategic Opportunities</div>
+    <div class="sec-title">市场机会与产品建议</div>
+    <p class="sec-desc">基于竞品分析与用户痛点，识别六大核心市场机会。</p>
+
+    <div class="g3">
+      <div class="opp-card">
+        <div class="opp-num">01</div>
+        <div class="opp-title">FDA/CE认证差异化</div>
+        <div class="opp-desc">TOP10中仅Therabody和iRestore具备FDA认证，获取FDA Clearance可显著提升信任度，支撑高端定价。建议优先申请FDA 510(k)或II类豁免。</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-num">02</div>
+        <div class="opp-title">亚洲肤色/脸型适配</div>
+        <div class="opp-desc">INIA等产品明显存在亚洲小脸适配问题。针对亚洲面型设计（小脸版/可调节版）可打开JP/CA/US亚裔市场，对应月销额超$5M。</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-num">03</div>
+        <div class="opp-title">LED质量与寿命保证</div>
+        <div class="opp-desc">核心痛点：LED寿命短（2-6个月失效）。采用工业级LED芯片+主动散热设计，提供1年以上LED质保，在Listing中突出50,000小时寿命认证。</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-num">04</div>
+        <div class="opp-title">面颈一体 $100-150价格带</div>
+        <div class="opp-desc">面颈一体产品（tinkoola/$69、INTEO/$119）增速快，但均价低于$120。$100-150的面颈一体+FDA认证组合目前市场空白，可作为蓝海切入点。</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-num">05</div>
+        <div class="opp-title">日本市场专项开发</div>
+        <div class="opp-desc">JP月销371,102件，但均价仅¥1,586（≈$10.6），高端LED面罩渗透率极低。针对日本消费者设计轻量化、高品质、附中英日三语说明的高端版本可获取溢价。</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-num">06</div>
+        <div class="opp-title">安全透明度营销</div>
+        <div class="opp-desc">竞品普遍缺乏眼部安全、禁忌症公示和深肤色使用指南。率先做到完整禁忌说明+眼部保护配件+皮肤类型指导，可在差评环境中形成鲜明正面对比。</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:28px">
+      <div class="card-title">产品定位建议矩阵</div>
+      <div class="card-sub">基于价格带×功能维度的市场空白分析</div>
+      <div class="chart" id="chart-positioning"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>LED光子美容面罩全球市场调研报告 2024–2026 · 数据来源：Amazon多站点实时数据（2026年5月）</p>
+  <p style="margin-top:4px">本报告市场规模数据为基于Amazon销售数据的估算值，仅供参考，不构成投资建议</p>
+</footer>
+
+<script>
+// =================== CHART 1: MARKET BAR ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-market-bar'));
+  c.setOption({
+    tooltip:{trigger:'axis',formatter:p=>`${p[0].axisValue}<br>${p.map(s=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${s.color};margin-right:5px"></span>${s.seriesName}: $${s.value}M`).join('<br>')}`},
+    legend:{data:['实际/估算值','预测值'],bottom:0,textStyle:{fontSize:12}},
+    xAxis:{type:'category',data:['2022','2023','2024','2025E','2026E'],axisLine:{lineStyle:{color:'#D2D2D7'}},axisTick:{show:false},axisLabel:{color:'#6E6E73'}},
+    yAxis:{type:'value',name:'百万美元',nameTextStyle:{color:'#86868B',fontSize:11},axisLabel:{formatter:v=>`$${v}M`,color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}}},
+    grid:{top:20,bottom:60,left:60,right:20},
+    series:[
+      {name:'实际/估算值',type:'bar',data:[
+        {value:195,itemStyle:{color:'#0071E3'}},
+        {value:235,itemStyle:{color:'#0071E3'}},
+        {value:285,itemStyle:{color:'#0071E3'}},
+        {value:null},{value:null}
+      ],barWidth:36,label:{show:true,position:'top',formatter:p=>p.value?`$${p.value}M`:'',color:'#1D1D1F',fontSize:12}},
+      {name:'预测值',type:'bar',data:[
+        {value:null},{value:null},{value:null},
+        {value:338,itemStyle:{color:'#34C759',opacity:.85}},
+        {value:402,itemStyle:{color:'#34C759',opacity:.85}}
+      ],barWidth:36,label:{show:true,position:'top',formatter:p=>p.value?`$${p.value}M`:'',color:'#1D1D1F',fontSize:12}}
+    ]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 2: GROWTH ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-growth'));
+  c.setOption({
+    tooltip:{trigger:'axis',formatter:p=>`${p[0].axisValue}<br>增速: ${p[0].value}%`},
+    xAxis:{type:'category',data:['2022→2023','2023→2024','2024→2025E','2025→2026E'],axisLine:{lineStyle:{color:'#D2D2D7'}},axisTick:{show:false},axisLabel:{color:'#6E6E73',fontSize:11}},
+    yAxis:{type:'value',name:'增速%',axisLabel:{formatter:v=>`${v}%`,color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}},min:15,max:25},
+    grid:{top:20,bottom:40,left:55,right:20},
+    series:[{
+      type:'line',smooth:true,
+      data:[20.5,21.3,18.6,18.9],
+      symbol:'circle',symbolSize:8,
+      lineStyle:{color:'#0071E3',width:3},
+      itemStyle:{color:'#0071E3',borderColor:'#fff',borderWidth:2},
+      areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(0,113,227,.15)'},{offset:1,color:'rgba(0,113,227,.02)'}]}},
+      label:{show:true,formatter:p=>`${p.value}%`,color:'#1D1D1F',fontSize:12,fontWeight:600}
+    }]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 3: REGION BAR ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-region-bar'));
+  const regions=['🇺🇸 美国','🇯🇵 日本','🇬🇧 英国','🇩🇪 德国','🇨🇦 加拿大'];
+  const sales=[86.98,37.11,23.97,8.03,5.82];
+  const colors=['#0071E3','#FF9500','#34C759','#AF52DE','#FF3B30'];
+  c.setOption({
+    tooltip:{trigger:'axis',formatter:p=>`${p[0].axisValue}<br>月销量: ${p[0].value}万件`},
+    xAxis:{type:'category',data:regions,axisLine:{lineStyle:{color:'#D2D2D7'}},axisTick:{show:false},axisLabel:{color:'#6E6E73',fontSize:11}},
+    yAxis:{type:'value',name:'月销量（万件）',axisLabel:{color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}}},
+    grid:{top:20,bottom:40,left:65,right:20},
+    series:[{type:'bar',data:sales.map((v,i)=>({value:v,itemStyle:{color:colors[i],borderRadius:[6,6,0,0]}})),
+      barWidth:48,label:{show:true,position:'top',formatter:p=>`${p.value}万`,color:'#1D1D1F',fontSize:12,fontWeight:600}}]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 4: RADAR ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-radar'));
+  c.setOption({
+    tooltip:{},
+    legend:{data:['美国','日本','英国','德国','加拿大'],bottom:0,textStyle:{fontSize:11}},
+    radar:{
+      indicator:[
+        {name:'月销量',max:100},{name:'月销售额',max:100},
+        {name:'均价水平',max:100},{name:'增速潜力',max:100},{name:'竞争激烈度',max:100}
+      ],
+      center:['50%','48%'],radius:'65%',
+      axisName:{color:'#6E6E73',fontSize:11},
+      splitLine:{lineStyle:{color:'#F0F0F0'}},
+      axisLine:{lineStyle:{color:'#D2D2D7'}}
+    },
+    series:[{type:'radar',data:[
+      {value:[100,100,65,80,95],name:'美国',areaStyle:{opacity:.15},lineStyle:{color:'#0071E3'},itemStyle:{color:'#0071E3'}},
+      {value:[43,24,25,70,60],name:'日本',areaStyle:{opacity:.15},lineStyle:{color:'#FF9500'},itemStyle:{color:'#FF9500'}},
+      {value:[28,23,45,65,55],name:'英国',areaStyle:{opacity:.15},lineStyle:{color:'#34C759'},itemStyle:{color:'#34C759'}},
+      {value:[9,6,28,55,40],name:'德国',areaStyle:{opacity:.15},lineStyle:{color:'#AF52DE'},itemStyle:{color:'#AF52DE'}},
+      {value:[7,7,58,50,35],name:'加拿大',areaStyle:{opacity:.15},lineStyle:{color:'#FF3B30'},itemStyle:{color:'#FF3B30'}}
+    ]}]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 5: COMPETITORS SCATTER ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-competitors'));
+  const data=[
+    {name:'INIA',price:89.99,sales:8886,size:8886},
+    {name:'Shark CryoGlow',price:349.99,sales:5268,size:5268},
+    {name:'tinkoola',price:69.98,sales:2244,size:2244},
+    {name:'gelpal',price:39.99,sales:2028,size:2028},
+    {name:'CurrentBody',price:469.99,sales:1915,size:1915},
+    {name:'XSSNVV',price:89.99,sales:1884,size:1884},
+    {name:'iRestore',price:398.99,sales:1810,size:1810},
+    {name:'wavytalk',price:109.99,sales:1608,size:1608},
+    {name:'INTEO',price:119.99,sales:1273,size:1273},
+    {name:'TheraFace',price:329.99,sales:1270,size:1270}
+  ];
+  const colors=['#0071E3','#FF9500','#34C759','#FF3B30','#AF52DE','#5AC8FA','#FF2D55','#30B0C7','#4CD964','#FFD60A'];
+  c.setOption({
+    tooltip:{formatter:p=>{
+      const d=data[p.dataIndex];
+      return `<b>${d.name}</b><br>价格: $${d.price}<br>月销量: ${d.sales.toLocaleString()}件`;
+    }},
+    xAxis:{type:'value',name:'价格（USD）',min:0,max:550,axisLabel:{formatter:v=>`$${v}`,color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}},axisLine:{lineStyle:{color:'#D2D2D7'}}},
+    yAxis:{type:'value',name:'月销量（件）',axisLabel:{color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}},axisLine:{lineStyle:{color:'#D2D2D7'}}},
+    grid:{top:20,bottom:50,left:70,right:20},
+    series:[{
+      type:'scatter',
+      data:data.map((d,i)=>({
+        value:[d.price,d.sales],
+        symbolSize:Math.sqrt(d.size/9886)*60+12,
+        itemStyle:{color:colors[i],opacity:.85},
+        label:{show:true,formatter:d.name,position:'right',color:'#1D1D1F',fontSize:10}
+      })),
+      label:{show:true}
+    }]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 6: PAIN BAR ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-pain'));
+  const cats=['产品质量/耐久性','电池/续航问题','安全隐患','售后服务差','佩戴不适','效果存疑','认证/信任问题','二手产品'];
+  const vals=[9,7,8,7,6,5,5,4];
+  const colors=vals.map(v=>v>=8?'#FF3B30':v>=6?'#FF9500':'#6E6E73');
+  c.setOption({
+    tooltip:{trigger:'axis',formatter:p=>`${p[0].axisValue}: ${p[0].value}次提及`},
+    xAxis:{type:'value',axisLabel:{color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}}},
+    yAxis:{type:'category',data:cats,axisLabel:{color:'#6E6E73',fontSize:11},axisLine:{lineStyle:{color:'#D2D2D7'}}},
+    grid:{top:10,bottom:20,left:130,right:60},
+    series:[{type:'bar',data:vals.map((v,i)=>({value:v,itemStyle:{color:colors[i],borderRadius:[0,4,4,0]}})),
+      barWidth:20,label:{show:true,position:'right',formatter:p=>`${p.value}次`,color:'#1D1D1F',fontSize:11}}]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 7: PRICE SCATTER ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-price-scatter'));
+  const segments=[
+    {name:'入门级 <$80',range:'$40–$70',products:'gelpal·tinkoola',sales:4272,color:'#34C759'},
+    {name:'中端 $80–$130',range:'$89–$120',products:'INIA·XSSNVV·wavytalk·INTEO',sales:13641,color:'#0071E3'},
+    {name:'高端 $130–$400',range:'$330–$400',products:'Shark·wavytalk·iRestore·TheraFace',sales:9956,color:'#FF9500'},
+    {name:'奢华 >$400',range:'$400–$470',products:'CurrentBody·Shark',sales:7183,color:'#AF52DE'}
+  ];
+  c.setOption({
+    tooltip:{formatter:p=>`<b>${segments[p.dataIndex].name}</b><br>价格区间: ${segments[p.dataIndex].range}<br>代表产品: ${segments[p.dataIndex].products}<br>合计月销: ${segments[p.dataIndex].sales.toLocaleString()}件`},
+    xAxis:{type:'category',data:segments.map(s=>s.name),axisLine:{lineStyle:{color:'#D2D2D7'}},axisTick:{show:false},axisLabel:{color:'#6E6E73'}},
+    yAxis:{type:'value',name:'合计月销量',axisLabel:{color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}}},
+    grid:{top:20,bottom:40,left:70,right:20},
+    series:[{type:'bar',data:segments.map(s=>({value:s.sales,itemStyle:{color:s.color,borderRadius:[6,6,0,0]}})),
+      barWidth:56,label:{show:true,position:'top',formatter:p=>`${p.value.toLocaleString()}件`,color:'#1D1D1F',fontSize:12,fontWeight:600}}]
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+
+// =================== CHART 8: POSITIONING ===================
+(function(){
+  const c = echarts.init(document.getElementById('chart-positioning'));
+  c.setOption({
+    tooltip:{show:false},
+    xAxis:{type:'value',name:'价格（USD）',min:0,max:550,axisLabel:{formatter:v=>`$${v}`,color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}},axisLine:{lineStyle:{color:'#D2D2D7'}}},
+    yAxis:{type:'value',name:'功能完整度',min:0,max:10,axisLabel:{color:'#6E6E73'},splitLine:{lineStyle:{color:'#F0F0F0'}},axisLine:{lineStyle:{color:'#D2D2D7'}}},
+    grid:{top:30,bottom:50,left:65,right:20},
+    series:[
+      {type:'scatter',name:'现有竞品',data:[
+        [89.99,6.5],[349.99,7.5],[69.98,5],[39.99,3.5],[469.99,8],[89.99,5.5],[398.99,7],[109.99,6],[119.99,6.5],[329.99,8.5]
+      ],symbolSize:14,itemStyle:{color:'#0071E3',opacity:.7},
+       label:{show:true,formatter:(p)=>{
+        const names=['INIA','Shark','tinkoola','gelpal','CurrentBody','XSSNVV','iRestore','wavytalk','INTEO','TheraFace'];
+        return names[p.dataIndex]||'';
+       },position:'right',fontSize:10,color:'#6E6E73'}},
+      {type:'scatter',name:'建议切入点',data:[[130,8.5],[150,9]],
+        symbol:'star',symbolSize:24,itemStyle:{color:'#FF3B30'},
+        label:{show:true,formatter:'建议\n切入点',position:'right',fontSize:11,fontWeight:600,color:'#FF3B30'}}
+    ],
+    legend:{data:['现有竞品','建议切入点'],bottom:5,textStyle:{fontSize:11}}
+  });
+  window.addEventListener('resize',()=>c.resize());
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Light Therapy Panels 市场调研报告 2025</title>
+<style>
+  :root {
+    --red: #E8432D;
+    --red-light: #FFF0EE;
+    --red-mid: #FFDAD5;
+    --dark: #1A1A2E;
+    --dark2: #16213E;
+    --mid: #2D2D4E;
+    --text: #333;
+    --text-light: #666;
+    --border: #E8E8E8;
+    --bg: #F8F8FA;
+    --white: #FFFFFF;
+    --green: #27AE60;
+    --orange: #E67E22;
+    --blue: #2980B9;
+    --yellow: #F1C40F;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--mid) 50%, #4A1530 100%);
+    color: white;
+    padding: 56px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,67,45,0.25) 0%, transparent 70%);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 20%;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,67,45,0.12) 0%, transparent 70%);
+  }
+  .header-badge {
+    display: inline-block;
+    background: rgba(232,67,45,0.3);
+    border: 1px solid rgba(232,67,45,0.5);
+    color: #FFA99A;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .header h1 span { color: var(--red); }
+  .header-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 36px;
+  }
+  .header-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+  }
+  .stat-card .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    display: block;
+  }
+  .stat-card .num span { color: var(--red); font-size: 16px; }
+  .stat-card .label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 40px 32px; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 48px; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .section-title .num-badge {
+    background: var(--red);
+    color: white;
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .section-title .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--red);
+    background: var(--red-light);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 4px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  /* ── MARKET SIZE ── */
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .market-hero {
+    background: linear-gradient(135deg, #1A1A2E, #4A1530);
+    color: white;
+    border-radius: 16px;
+    padding: 32px;
+  }
+  .market-hero .big-num {
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    margin: 8px 0;
+  }
+  .market-hero .big-num sub {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+  }
+  .market-hero .label-sm { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+  .market-hero .sub-note { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+
+  .growth-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(39,174,96,0.15);
+    border: 1px solid rgba(39,174,96,0.3);
+    color: #2ECC71;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-top: 12px;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .timeline-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .timeline-row:last-child { border-bottom: none; }
+  .timeline-year {
+    width: 50px;
+    font-weight: 700;
+    color: var(--red);
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .timeline-bar-wrap { flex: 1; }
+  .timeline-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--red), #FF8C73);
+    border-radius: 4px;
+    transition: width 0.3s;
+  }
+  .timeline-val {
+    width: 80px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--dark);
+    flex-shrink: 0;
+  }
+  .timeline-note { font-size: 11px; color: var(--text-light); }
+
+  .drivers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .driver-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--bg);
+    border-radius: 10px;
+  }
+  .driver-icon { font-size: 20px; flex-shrink: 0; }
+  .driver-text { font-size: 13px; color: var(--text); }
+  .driver-text strong { display: block; color: var(--dark); margin-bottom: 2px; }
+
+  /* ── REGIONS ── */
+  .region-list { display: flex; flex-direction: column; gap: 16px; }
+  .region-row {
+    display: grid;
+    grid-template-columns: 24px 120px 1fr 100px 180px;
+    align-items: center;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+  }
+  .region-row.top1 { border-left: 4px solid var(--red); }
+  .region-row.top2 { border-left: 4px solid var(--orange); }
+  .region-row.top3 { border-left: 4px solid var(--blue); }
+  .region-row.top4 { border-left: 4px solid #7F8C8D; }
+  .region-row.top5 { border-left: 4px solid #BDC3C7; }
+  .region-rank { font-size: 13px; font-weight: 700; color: var(--text-light); }
+  .region-name { font-weight: 700; font-size: 14px; color: var(--dark); }
+  .region-share-bar { position: relative; height: 8px; background: var(--bg); border-radius: 4px; }
+  .region-share-fill { position: absolute; top: 0; left: 0; height: 100%; border-radius: 4px; }
+  .region-share-num { font-size: 13px; font-weight: 700; color: var(--dark); }
+  .region-info { font-size: 12px; color: var(--text-light); }
+
+  .region-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .region-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 12px;
+  }
+  .region-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--red);
+  }
+  .region-card .rc-row { margin-bottom: 6px; color: var(--text-light); }
+  .region-card .rc-row strong { color: var(--dark); display: block; }
+
+  /* ── TOP10 TABLE ── */
+  .product-table-wrap { overflow-x: auto; }
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .product-table th {
+    background: var(--dark);
+    color: rgba(255,255,255,0.8);
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .product-table th:first-child { border-radius: 8px 0 0 0; }
+  .product-table th:last-child { border-radius: 0 8px 0 0; }
+  .product-table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .product-table tr:last-child td { border-bottom: none; }
+  .product-table tr:nth-child(even) td { background: #FAFAFA; }
+  .product-table tr:hover td { background: var(--red-light); }
+
+  .rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .rank-1 { background: #FFD700; color: #7A5800; }
+  .rank-2 { background: #C0C0C0; color: #444; }
+  .rank-3 { background: #CD7F32; color: white; }
+  .rank-n { background: var(--bg); color: var(--text-light); }
+
+  .brand-name { font-weight: 700; color: var(--dark); }
+  .asin-tag { font-size: 10px; color: var(--text-light); font-family: monospace; }
+  .price-tag { font-weight: 700; font-size: 15px; color: var(--red); }
+  .sales-tag { font-weight: 700; color: var(--dark); }
+  .sales-sub { font-size: 11px; color: var(--text-light); }
+
+  .wave-tag {
+    display: inline-block;
+    background: var(--red-light);
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px 2px 2px 0;
+    white-space: nowrap;
+  }
+  .mode-tag {
+    display: inline-block;
+    background: #E8F4FD;
+    color: #2980B9;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px 2px 2px 0;
+  }
+  .feature-dot {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .feature-dot::before { content: '▸'; color: var(--red); flex-shrink: 0; margin-top: 1px; }
+
+  .irr-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green);
+    background: rgba(39,174,96,0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .irr-na { font-size: 11px; color: var(--text-light); }
+
+  /* origin badge */
+  .origin {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .origin-cn { background: #FFF3E0; color: #E67E22; }
+  .origin-hk { background: #E8EAF6; color: #3F51B5; }
+  .origin-us { background: #E8F5E9; color: #27AE60; }
+
+  /* ── PAIN POINTS ── */
+  .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pain-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pain-card.critical { border-top: 3px solid #E74C3C; }
+  .pain-card.high { border-top: 3px solid var(--orange); }
+  .pain-card.medium { border-top: 3px solid #F1C40F; }
+  .pain-card.low { border-top: 3px solid #95A5A6; }
+
+  .pain-level {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .critical .pain-level { background: #FDECEA; color: #C0392B; }
+  .high .pain-level { background: #FEF3E2; color: #D35400; }
+  .medium .pain-level { background: #FEFAE6; color: #B7950B; }
+  .low .pain-level { background: #F4F4F4; color: #7F8C8D; }
+
+  .pain-title { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .pain-quote {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 10px;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  .pain-brands {
+    font-size: 11px;
+    color: var(--text-light);
+    margin-top: 8px;
+  }
+  .pain-brands strong { color: var(--dark); }
+
+  /* ── CERTIFICATION ── */
+  .cert-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .cert-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .cert-flag { font-size: 28px; margin-bottom: 8px; }
+  .cert-market { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    text-align: left;
+  }
+  .cert-item.required { background: #FDECEA; }
+  .cert-item.recommended { background: #EBF5FB; }
+  .cert-label { font-size: 11px; font-weight: 700; }
+  .cert-label.req { color: #C0392B; }
+  .cert-label.rec { color: #2980B9; }
+  .cert-desc { font-size: 10px; color: var(--text-light); }
+
+  /* ── KEYWORD ── */
+  .kw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .kw-stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .kw-stat {
+    text-align: center;
+    padding: 16px;
+    background: var(--bg);
+    border-radius: 10px;
+  }
+  .kw-stat .val { font-size: 22px; font-weight: 800; color: var(--dark); }
+  .kw-stat .val span { color: var(--red); }
+  .kw-stat .lbl { font-size: 11px; color: var(--text-light); margin-top: 4px; }
+
+  .brand-bar-list { display: flex; flex-direction: column; gap: 8px; }
+  .brand-bar-row { display: flex; align-items: center; gap: 10px; }
+  .brand-bar-name { width: 90px; font-size: 12px; font-weight: 600; color: var(--dark); }
+  .brand-bar-wrap { flex: 1; height: 6px; background: var(--bg); border-radius: 3px; }
+  .brand-bar-fill { height: 100%; border-radius: 3px; }
+  .panel-bar { background: var(--red); }
+  .nonpanel-bar { background: #BDC3C7; }
+  .brand-bar-pct { width: 45px; font-size: 12px; font-weight: 700; color: var(--dark); text-align: right; }
+  .brand-bar-type { font-size: 10px; padding: 1px 6px; border-radius: 3px; }
+  .panel-type { background: var(--red-light); color: var(--red); }
+  .other-type { background: var(--bg); color: var(--text-light); }
+
+  /* ── STRATEGY ── */
+  .strategy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .strategy-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+  }
+  .strategy-card::before {
+    content: attr(data-num);
+    position: absolute;
+    top: 16px; right: 16px;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--red-mid);
+    line-height: 1;
+  }
+  .strategy-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .strategy-card p { font-size: 12px; color: var(--text-light); line-height: 1.7; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 28px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ── ALERT BOX ── */
+  .alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #FFF8E6;
+    border: 1px solid #FDEEBA;
+    border-left: 4px solid #F1C40F;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #7D6608;
+    margin-bottom: 20px;
+  }
+  .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .header-stats { grid-template-columns: repeat(2, 1fr); }
+    .market-grid { grid-template-columns: 1fr; }
+    .region-detail-grid { grid-template-columns: repeat(2, 1fr); }
+    .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    .pain-grid { grid-template-columns: 1fr 1fr; }
+    .strategy-grid { grid-template-columns: 1fr 1fr; }
+    .region-row { grid-template-columns: 24px 1fr 1fr 80px; }
+    .region-row .region-info { display: none; }
+  }
+  @media (max-width: 600px) {
+    .header { padding: 32px 20px; }
+    .header h1 { font-size: 24px; }
+    .container { padding: 24px 16px; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .cert-grid { grid-template-columns: 1fr; }
+    .strategy-grid { grid-template-columns: 1fr; }
+    .kw-stat-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════ HEADER ════════════════ -->
+<div class="header">
+  <div class="header-badge">Market Research · May 2026</div>
+  <h1>Red Light Therapy <span>Panels</span><br>全球市场调研报告</h1>
+  <p class="header-sub">LED大排灯美容仪品类 · Amazon平台数据 + 全球市场宏观数据 · 数据截至 2025年5月</p>
+  <div class="header-stats">
+    <div class="stat-card">
+      <span class="num">$8.3<span>亿</span></span>
+      <div class="label">Panel品类全球市场规模（2024）</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">15.3<span>%</span></span>
+      <div class="label">CAGR 年复合增长率（2025-2029）</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">$16.9<span>亿</span></span>
+      <div class="label">预测市场规模（2029年）</div>
+    </div>
+    <div class="stat-card">
+      <span class="num">47<span>%</span></span>
+      <div class="label">北美市场份额（全球第一）</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ════════════════ SECTION 1: MARKET SIZE ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">1</div>
+    <h2>全球市场规模及增速</h2>
+    <span class="tag">Global Market</span>
+  </div>
+
+  <div class="market-grid">
+    <!-- Left: hero numbers -->
+    <div class="market-hero">
+      <div class="label-sm">RED LIGHT THERAPY PANEL · 细分品类</div>
+      <div class="big-num">$8.3<sub>亿</sub></div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:8px;">2024年全球市场规模（Research and Markets）</div>
+      <div class="growth-arrow">↑ 15.6% <span style="font-size:13px;font-weight:400;">YoY 2024→2025</span></div>
+      <div class="sub-note">
+        ⚠ 口径说明：此数据专指 Red Light Therapy Panel（大排灯形态）细分市场，不含面罩（Mask）、腰带（Belt/Wrap）等可穿戴品类。整体 red light therapy device 市场规模约 $3.6-5.3亿（口径不同，各研报差异较大）。
+      </div>
+    </div>
+
+    <!-- Right: timeline -->
+    <div class="card">
+      <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:20px;">规模增长趋势</div>
+      <div class="timeline">
+        <div class="timeline-row">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-bar-wrap"><div class="timeline-bar" style="width:49%"></div></div>
+          <div class="timeline-val">$8.3亿</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-bar-wrap"><div class="timeline-bar" style="width:57%"></div></div>
+          <div class="timeline-val">$9.6亿</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2026E</div>
+          <div class="timeline-bar-wrap"><div class="timeline-bar" style="width:66%"></div></div>
+          <div class="timeline-val">~$11亿</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2027E</div>
+          <div class="timeline-bar-wrap"><div class="timeline-bar" style="width:75%"></div></div>
+          <div class="timeline-val">~$12.7亿</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2029E</div>
+          <div class="timeline-bar-wrap"><div class="timeline-bar" style="width:100%"></div></div>
+          <div class="timeline-val">$16.9亿</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--text-light);margin-top:16px;padding-top:12px;border-top:1px solid var(--border);">
+        数据来源：Research and Markets / EIN Presswire（Red Light Therapy Panel专项报告）
+      </div>
+
+      <div style="margin-top:20px;font-size:13px;font-weight:700;color:var(--dark);margin-bottom:12px;">增长驱动因素</div>
+      <div class="drivers-grid">
+        <div class="driver-item">
+          <div class="driver-icon">🧴</div>
+          <div class="driver-text"><strong>抗衰/皮肤护理</strong>40%受访者考虑尝试红光（英国皮肤科协会2024）</div>
+        </div>
+        <div class="driver-item">
+          <div class="driver-icon">🏠</div>
+          <div class="driver-text"><strong>居家替代诊所</strong>90%受访者愿意购买家用设备（Practical Dermatology 2025）</div>
+        </div>
+        <div class="driver-item">
+          <div class="driver-icon">💪</div>
+          <div class="driver-text"><strong>运动恢复场景</strong>健身社区渗透率快速提升</div>
+        </div>
+        <div class="driver-item">
+          <div class="driver-icon">🔬</div>
+          <div class="driver-text"><strong>多波长技术升级</strong>660+850+940nm拉动高端换购需求</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 2: REGIONS ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">2</div>
+    <h2>主要销售区域 TOP5</h2>
+    <span class="tag">Regional Markets</span>
+  </div>
+
+  <div class="card" style="padding:24px;">
+    <div class="alert">
+      <div class="alert-icon">⚠️</div>
+      <div>Panel品类（立式大排灯）高度集中于<strong>北美市场</strong>。欧洲德国站以 Beurer 传统医疗红外灯为主（完全不同形态）；日本 Amazon 几乎无 Panel 类产品；加拿大、澳大利亚均以面部设备为主，Panel 品类渗透率低。</div>
+    </div>
+
+    <div class="region-list">
+      <div class="region-row top1">
+        <div class="region-rank">#1</div>
+        <div class="region-name">🇺🇸 北美（美国为核心）</div>
+        <div>
+          <div class="region-share-bar"><div class="region-share-fill" style="width:80%;background:var(--red)"></div></div>
+          <div class="region-share-num" style="font-size:12px;margin-top:4px;">47–48% 市场份额</div>
+        </div>
+        <div class="region-share-num">~$4亿</div>
+        <div class="region-info">Viconor、BestQool、Hooga、Morfone 主导</div>
+      </div>
+      <div class="region-row top2">
+        <div class="region-rank">#2</div>
+        <div class="region-name">🇪🇺 欧洲（德/英/法/西/意）</div>
+        <div>
+          <div class="region-share-bar"><div class="region-share-fill" style="width:52%;background:var(--orange)"></div></div>
+          <div class="region-share-num" style="font-size:12px;margin-top:4px;">~30% 市场份额</div>
+        </div>
+        <div class="region-share-num">~$2.5亿</div>
+        <div class="region-info">DE：Beurer主导（传统医疗红外灯）</div>
+      </div>
+      <div class="region-row top3">
+        <div class="region-rank">#3</div>
+        <div class="region-name">🌏 亚太（澳/日/韩/东南亚）</div>
+        <div>
+          <div class="region-share-bar"><div class="region-share-fill" style="width:39%;background:var(--blue)"></div></div>
+          <div class="region-share-num" style="font-size:12px;margin-top:4px;">~23% 市场份额</div>
+        </div>
+        <div class="region-share-num">~$1.9亿</div>
+        <div class="region-info">增速最快，CAGR 11%+；面部设备主导</div>
+      </div>
+      <div class="region-row top4">
+        <div class="region-rank">#4</div>
+        <div class="region-name">🇨🇦 加拿大</div>
+        <div>
+          <div class="region-share-bar"><div class="region-share-fill" style="width:15%;background:#7F8C8D"></div></div>
+          <div class="region-share-num" style="font-size:12px;margin-top:4px;">含北美整体统计</div>
+        </div>
+        <div class="region-share-num">—</div>
+        <div class="region-info">面部设备主导，Panel渗透率低</div>
+      </div>
+      <div class="region-row top5">
+        <div class="region-rank">#5</div>
+        <div class="region-name">🌎 拉美 / 中东</div>
+        <div>
+          <div class="region-share-bar"><div class="region-share-fill" style="width:8%;background:#BDC3C7"></div></div>
+          <div class="region-share-num" style="font-size:12px;margin-top:4px;">新兴市场</div>
+        </div>
+        <div class="region-share-num">—</div>
+        <div class="region-info">跟随北美品牌，价格敏感</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Region detail cards -->
+  <div class="region-detail-grid" style="margin-top:20px;">
+    <div class="region-card">
+      <h4>🇺🇸 美国</h4>
+      <div class="rc-row"><strong>主导品牌</strong>Viconor / BestQool / Hooga / Morfone / GMOWNW</div>
+      <div class="rc-row"><strong>主力价格带</strong>$45–65（大众）| $149–299（中高端）</div>
+      <div class="rc-row"><strong>消费诉求</strong>皮肤抗衰・肌肉疼痛恢复・替代高价诊所</div>
+      <div class="rc-row"><strong>渠道特征</strong>Amazon FBA为主，跨境卖家主导</div>
+    </div>
+    <div class="region-card">
+      <h4>🇩🇪 德国</h4>
+      <div class="rc-row"><strong>主导品牌</strong>Beurer（绝对主导）</div>
+      <div class="rc-row"><strong>主力价格带</strong>€24–65（传统红外灯形态）</div>
+      <div class="rc-row"><strong>消费诉求</strong>医疗/理疗导向（Infrarottherapie）・肌肉放松</div>
+      <div class="rc-row"><strong>市场特征</strong>产品形态与美国Panel差异大，单灯头为主</div>
+    </div>
+    <div class="region-card">
+      <h4>🇬🇧 英国</h4>
+      <div class="rc-row"><strong>主导品牌</strong>Hooga / BestQool（估计）</div>
+      <div class="rc-row"><strong>主力价格带</strong>£50–200</div>
+      <div class="rc-row"><strong>消费诉求</strong>美容/抗衰，接近美国市场</div>
+      <div class="rc-row"><strong>注意</strong>Sorftime UK站接口暂时不可用，数据待补</div>
+    </div>
+    <div class="region-card">
+      <h4>🇦🇺 澳大利亚</h4>
+      <div class="rc-row"><strong>主导品牌</strong>NVBOTY / RENPHO（面部设备）</div>
+      <div class="rc-row"><strong>主力价格带</strong>A$40–240</div>
+      <div class="rc-row"><strong>消费诉求</strong>面部美白/嫩肤为主，大排灯品类极少</div>
+      <div class="rc-row"><strong>市场特征</strong>Panel类在AU搜索结果中几乎缺席</div>
+    </div>
+    <div class="region-card">
+      <h4>🇯🇵 日本</h4>
+      <div class="rc-row"><strong>主导品牌</strong>N/A（Amazon JP无相关产品）</div>
+      <div class="rc-row"><strong>主力价格带</strong>—</div>
+      <div class="rc-row"><strong>消费诉求</strong>美白/护肤，但Panel品类未有效渗透</div>
+      <div class="rc-row"><strong>市场特征</strong>对产品合规（PSE）和品牌信任度要求高</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 3: TOP10 ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">3</div>
+    <h2>TOP10 竞品详情（Amazon US）</h2>
+    <span class="tag">Competitive Analysis</span>
+  </div>
+
+  <div class="alert">
+    <div class="alert-icon">🔍</div>
+    <div>以下产品均为<strong>Panel形态</strong>（平板/大排灯、立地/悬挂式、非接触距离照射），已严格排除 face mask、腰带（belt/wrap）、垫子（mat/pad）等非Panel产品。数据来源：Sorftime（2025年5月）。</div>
+  </div>
+
+  <div class="card" style="padding:0;overflow:hidden;">
+    <div class="product-table-wrap">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th style="width:36px">#</th>
+            <th>品牌 / 型号</th>
+            <th>价格</th>
+            <th>月销量</th>
+            <th>波长</th>
+            <th>灯珠数</th>
+            <th>辐照强度</th>
+            <th>模式</th>
+            <th>核心卖点</th>
+            <th>卖家</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="rank-badge rank-1">1</div></td>
+            <td>
+              <div class="brand-name">Viconor</div>
+              <div class="asin-tag">B0CHDHBDQJ</div>
+              <div style="margin-top:4px"><span class="origin origin-cn">中国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$61</div></td>
+            <td><div class="sales-tag">6,436</div><div class="sales-sub">月销额$39万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>120颗<div style="font-size:11px;color:var(--text-light)">1:2比例</div></td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">单模式</span></td>
+            <td>
+              <div class="feature-dot">曲面聚光设计，集中光源</div>
+              <div class="feature-dot">180°可调角度，挂墙/落地两用</div>
+              <div class="feature-dot">轻薄便携，开箱即用</div>
+            </td>
+            <td><span class="origin origin-cn">CN</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-2">2</div></td>
+            <td>
+              <div class="brand-name">Morfone</div>
+              <div class="asin-tag">B0F43V2SLK</div>
+              <div style="margin-top:4px"><span class="origin origin-cn">中国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$57</div></td>
+            <td><div class="sales-tag">2,600</div><div class="sales-sub">月销额$14.8万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span><span class="wave-tag">940nm</span></td>
+            <td>120颗<div style="font-size:11px;color:var(--text-light)">三合一灯珠</div></td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">5模式</span><span class="mode-tag">脉冲</span></td>
+            <td>
+              <div class="feature-dot">三波长（全市场较少见）</div>
+              <div class="feature-dot">航空铝支架，14.2×6.3英寸</div>
+              <div class="feature-dot">5种光组合模式，1年质保</div>
+            </td>
+            <td><span class="origin origin-cn">CN</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-3">3</div></td>
+            <td>
+              <div class="brand-name">Viconor</div>
+              <div class="asin-tag">B0CJ2V41CC</div>
+              <div style="margin-top:4px"><span class="origin origin-cn">中国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$57</div></td>
+            <td><div class="sales-tag">1,494</div><div class="sales-sub">月销额$8.5万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>120颗</td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">单模式</span></td>
+            <td>
+              <div class="feature-dot">与#1同品牌不同listing</div>
+              <div class="feature-dot">曲面聚光，180°调节</div>
+              <div class="feature-dot">含支架+挂钩套装</div>
+            </td>
+            <td><span class="origin origin-cn">CN</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">4</div></td>
+            <td>
+              <div class="brand-name">BestQool</div>
+              <div class="asin-tag">B07ZCDDLDN</div>
+              <div style="margin-top:4px"><span class="origin origin-hk">香港卖家</span></div>
+            </td>
+            <td><div class="price-tag">$161</div></td>
+            <td><div class="sales-tag">1,377</div><div class="sales-sub">月销额$22万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>双芯片<div style="font-size:11px;color:var(--text-light)">105W总功率</div></td>
+            <td><span class="irr-tag">>100mW/cm²</span><div style="font-size:10px;color:var(--text-light);margin-top:2px">@表面；95.6@3英寸</div></td>
+            <td><span class="mode-tag">3模式</span><span class="mode-tag">定时</span></td>
+            <td>
+              <div class="feature-dot">明确标注辐照强度数据</div>
+              <div class="feature-dot">内置冷却风扇，13.1×8.4英寸</div>
+              <div class="feature-dot">上架最久（2019），1,735条评价</div>
+            </td>
+            <td><span class="origin origin-hk">HK</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">5</div></td>
+            <td>
+              <div class="brand-name">GMOWNW</div>
+              <div class="asin-tag">B0FDR52FMR</div>
+              <div style="margin-top:4px"><span class="origin origin-cn">中国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$45</div><div style="font-size:11px;color:var(--text-light)">含$13.5优惠券</div></td>
+            <td><div class="sales-tag">1,012</div><div class="sales-sub">月销额$4.6万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>75颗</td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">全光模式</span><span class="mode-tag">10Hz脉冲</span><span class="mode-tag">40Hz脉冲</span></td>
+            <td>
+              <div class="feature-dot">脉冲模式差异化（10Hz/40Hz）</div>
+              <div class="feature-dot">360°旋转支架，5档亮度</div>
+              <div class="feature-dot">极低价格切入，大量优惠券</div>
+            </td>
+            <td><span class="origin origin-cn">CN</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">6</div></td>
+            <td>
+              <div class="brand-name">Hooga HG300</div>
+              <div class="asin-tag">B07T81R1DX</div>
+              <div style="margin-top:4px"><span class="origin origin-us">美国本土</span></div>
+            </td>
+            <td><div class="price-tag">$199</div></td>
+            <td><div class="sales-tag">998</div><div class="sales-sub">月销额$19.9万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>60颗<div style="font-size:11px;color:var(--text-light)">5W/颗单芯片</div></td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">3模式</span><span class="mode-tag">定时</span></td>
+            <td>
+              <div class="feature-dot">美国老牌（2019），品牌信任度高</div>
+              <div class="feature-dot">便携提手，内置定时器</div>
+              <div class="feature-dot">Hooga品牌全系列生态</div>
+            </td>
+            <td><span class="origin origin-us">US</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">7</div></td>
+            <td>
+              <div class="brand-name">LEDINO</div>
+              <div class="asin-tag">B0F4288FLN</div>
+              <div style="margin-top:4px"><span class="origin origin-hk">香港卖家</span></div>
+            </td>
+            <td><div class="price-tag">$60</div></td>
+            <td><div class="sales-tag">765</div><div class="sales-sub">月销额$4.6万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td><strong style="color:var(--red)">360颗</strong><div style="font-size:11px;color:var(--text-light)">240×850+120×660</div></td>
+            <td><span class="irr-tag">>223mW/cm²</span></td>
+            <td><span class="mode-tag">5档亮度</span><span class="mode-tag">定时1-30分钟</span><span class="mode-tag">遥控</span></td>
+            <td>
+              <div class="feature-dot">主打超高辐照强度（223mW/cm²）</div>
+              <div class="feature-dot">15.5×8.75英寸大面板</div>
+              <div class="feature-dot">5年质保，含护目镜+遥控</div>
+            </td>
+            <td><span class="origin origin-hk">HK</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">8</div></td>
+            <td>
+              <div class="brand-name">XMZXMZ</div>
+              <div class="asin-tag">B0FH6FN9ZL</div>
+              <div style="margin-top:4px"><span class="origin origin-cn">中国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$60</div></td>
+            <td><div class="sales-tag">735</div><div class="sales-sub">月销额$4.4万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td><strong style="color:var(--red)">486颗</strong><div style="font-size:11px;color:var(--text-light)">324×660+162×850</div></td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">5档亮度</span><span class="mode-tag">定时</span><span class="mode-tag">遥控20米</span></td>
+            <td>
+              <div class="feature-dot">灯珠数量最多（486颗）</div>
+              <div class="feature-dot">8×14.5英寸大覆盖面积</div>
+              <div class="feature-dot">遥控范围达20米</div>
+            </td>
+            <td><span class="origin origin-cn">CN</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">9</div></td>
+            <td>
+              <div class="brand-name">Hooga HG200</div>
+              <div class="asin-tag">B092BCWQMK</div>
+              <div style="margin-top:4px"><span class="origin origin-us">美国本土</span></div>
+            </td>
+            <td><div class="price-tag">$149</div></td>
+            <td><div class="sales-tag">700</div><div class="sales-sub">月销额$10.4万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>40颗<div style="font-size:11px;color:var(--text-light)">5W/颗</div></td>
+            <td><span class="irr-tag">>90mW/cm²</span><div style="font-size:10px;color:var(--text-light);margin-top:2px">@6英寸</div></td>
+            <td><span class="mode-tag">3模式</span><span class="mode-tag">定时</span></td>
+            <td>
+              <div class="feature-dot">桌面型紧凑设计（9.5×6英寸）</div>
+              <div class="feature-dot">内置冷却风扇</div>
+              <div class="feature-dot">1:1 红光/近红外比例</div>
+            </td>
+            <td><span class="origin origin-us">US</span></td>
+          </tr>
+          <tr>
+            <td><div class="rank-badge rank-n">10</div></td>
+            <td>
+              <div class="brand-name">FlaoAito</div>
+              <div class="asin-tag">B0G6S6B196</div>
+              <div style="margin-top:4px"><span class="origin origin-us">美国卖家</span></div>
+            </td>
+            <td><div class="price-tag">$47</div></td>
+            <td><div class="sales-tag">699</div><div class="sales-sub">月销额$3.3万</div></td>
+            <td><span class="wave-tag">660nm</span><span class="wave-tag">850nm</span></td>
+            <td>N/A</td>
+            <td><span class="irr-na">N/A</span></td>
+            <td><span class="mode-tag">基础模式</span></td>
+            <td>
+              <div class="feature-dot">极低价格门槛（$47）</div>
+              <div class="feature-dot">立地支架设计</div>
+              <div class="feature-dot">228条评价，4.6★</div>
+            </td>
+            <td><span class="origin origin-us">US</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Price band summary -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;">
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-size:11px;font-weight:700;color:var(--text-light);letter-spacing:1px;margin-bottom:8px;">低价带</div>
+      <div style="font-size:24px;font-weight:800;color:var(--red)">$45–70</div>
+      <div style="font-size:12px;color:var(--text-light);margin-top:6px;">Viconor / Morfone / GMOWNW / LEDINO / XMZXMZ / FlaoAito<br>大量中国卖家竞争激烈</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;border:2px solid var(--red);">
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:1px;margin-bottom:8px;">⭐ 价格空白区间</div>
+      <div style="font-size:24px;font-weight:800;color:var(--red)">$70–149</div>
+      <div style="font-size:12px;color:var(--text-light);margin-top:6px;">当前竞品极少<br>品质感产品的机会窗口</div>
+    </div>
+    <div class="card" style="text-align:center;padding:20px;">
+      <div style="font-size:11px;font-weight:700;color:var(--text-light);letter-spacing:1px;margin-bottom:8px;">中高价带</div>
+      <div style="font-size:24px;font-weight:800;color:var(--dark)">$149–299</div>
+      <div style="font-size:12px;color:var(--text-light);margin-top:6px;">BestQool $161 / Hooga HG200 $149<br>Hooga PRO300 $299<br>品牌信任度溢价</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 4: PAIN POINTS ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">4</div>
+    <h2>用户差评痛点归纳</h2>
+    <span class="tag">User Pain Points</span>
+  </div>
+  <div style="font-size:13px;color:var(--text-light);margin-bottom:20px;">
+    分析对象：Viconor（3,407条评）、BestQool（1,735条评）、GMOWNW（1,480条评）、Hooga HG300（1,077条评）、Hooga HG200（480条评）的1-3星差评
+  </div>
+
+  <div class="pain-grid">
+    <div class="pain-card critical">
+      <div class="pain-level">最高频 · 核心痛点</div>
+      <div class="pain-title">① 控制器/按键故障，寿命短</div>
+      <div class="pain-quote">"Control panel completely quit working in July 2025. Bought in Feb 2025."<br>"90 days and done — controller stopped working."</div>
+      <div class="pain-brands">涉及产品：<strong>Viconor、BestQool、GMOWNW</strong></div>
+    </div>
+    <div class="pain-card critical">
+      <div class="pain-level">最高频 · 核心痛点</div>
+      <div class="pain-title">② 灯珠提前损坏/出现死点</div>
+      <div class="pain-quote">"6 rows of lights burned out after 1.5 months."<br>"Dead spots on lights after 10 months — 850nm bank completely out."</div>
+      <div class="pain-brands">涉及产品：<strong>GMOWNW、Viconor</strong></div>
+    </div>
+    <div class="pain-card high">
+      <div class="pain-level">高频</div>
+      <div class="pain-title">③ 支架底座不稳，使用中倾倒</div>
+      <div class="pain-quote">"Top heavy and the stand isn't very sturdy — tips over easily."<br>"Falls over during use. Wobbles, not secure."</div>
+      <div class="pain-brands">涉及产品：<strong>Viconor、GMOWNW</strong></div>
+    </div>
+    <div class="pain-card high">
+      <div class="pain-level">高频</div>
+      <div class="pain-title">④ 效果存疑，无明显感受</div>
+      <div class="pain-quote">"3 months and 0 results."<br>"With Omnilux I see results; with Hooga I do not see the same."</div>
+      <div class="pain-brands">涉及产品：<strong>Hooga HG200、Viconor</strong></div>
+    </div>
+    <div class="pain-card medium">
+      <div class="pain-level">中频</div>
+      <div class="pain-title">⑤ 参数虚标 / 品质质疑</div>
+      <div class="pain-quote">"Fake — no infrared LEDs, only red LED light. Product support link isn't available."<br>"Received a used product — DO NOT BUY!"</div>
+      <div class="pain-brands">涉及产品：<strong>Viconor</strong></div>
+    </div>
+    <div class="pain-card medium">
+      <div class="pain-level">中频</div>
+      <div class="pain-title">⑥ 售后服务缺失</div>
+      <div class="pain-quote">"They cannot service or repair anything out of warranty."<br>"No contact from company after 3 weeks — no year-long warranty honoured."</div>
+      <div class="pain-brands">涉及产品：<strong>BestQool、GMOWNW</strong></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;padding:20px;">
+    <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:12px;">竞争缺口总结</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;">
+      <div style="background:var(--red-light);border-radius:8px;padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--red);margin-bottom:6px;">最大机会 → 耐久性</div>
+        <div style="font-size:12px;color:var(--text);">大量产品3-12个月内失效。消费者愿意为"真正耐用"产品支付溢价，且在此维度几乎没有品牌建立可信承诺。</div>
+      </div>
+      <div style="background:#FFF3E0;border-radius:8px;padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:6px;">结构机会 → 支架工程</div>
+        <div style="font-size:12px;color:var(--text);">加重底座 + 防倾倒锁定结构，直接解决安全隐患痛点，中低端产品的通病。</div>
+      </div>
+      <div style="background:#EBF5FB;border-radius:8px;padding:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:6px;">信任机会 → 数据透明</div>
+        <div style="font-size:12px;color:var(--text);">公示第三方辐照强度检测报告，配合FCC+CE认证可见化，建立竞品难以快速复制的信任壁垒。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 5: CERTIFICATION ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">5</div>
+    <h2>合规认证要求</h2>
+    <span class="tag">Compliance</span>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-flag">🇺🇸</div>
+      <div class="cert-market">美国</div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">FCC Part 15</div>
+          <div class="cert-desc">电磁兼容 · 必须</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">FDA 510(k)</div>
+          <div class="cert-desc">Class II医疗设备 · 宣称疗效时必须</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">UL / ETL</div>
+          <div class="cert-desc">电气安全 · 强烈推荐</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text-light);margin-top:8px;">⚠️ "FDA Registered"≠"FDA Cleared"，消费者需区分</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-flag">🇪🇺</div>
+      <div class="cert-market">欧盟</div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">CE 标志</div>
+          <div class="cert-desc">强制入市要求</div>
+        </div>
+      </div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">RoHS 指令</div>
+          <div class="cert-desc">限制铅/汞/镉等有害物质 · 强制</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">EMC + LVD</div>
+          <div class="cert-desc">电磁兼容 + 低电压指令</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text-light);margin-top:8px;">宣称医疗功效需 MDR Class IIa/IIb</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-flag">🇬🇧</div>
+      <div class="cert-market">英国</div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">UKCA 标志</div>
+          <div class="cert-desc">脱欧后替代CE · 强制</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">RoHS UK</div>
+          <div class="cert-desc">英国版有害物质限制</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text-light);margin-top:8px;">过渡期延长至2027年，目前CE仍可接受</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-flag">🇦🇺</div>
+      <div class="cert-market">澳大利亚</div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">SAA / RCM</div>
+          <div class="cert-desc">电气安全与电磁兼容 · 强制</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">TGA 注册</div>
+          <div class="cert-desc">宣称医疗用途时需要</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text-light);margin-top:8px;">消费者健康类产品RCM已足够</div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-flag">🇯🇵</div>
+      <div class="cert-market">日本</div>
+      <div class="cert-item required">
+        <div>
+          <div class="cert-label req">PSE 标志</div>
+          <div class="cert-desc">电气用品安全法 · 强制</div>
+        </div>
+      </div>
+      <div class="cert-item recommended">
+        <div>
+          <div class="cert-label rec">○PSE（非附件型）</div>
+          <div class="cert-desc">美容器具通常属此类</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text-light);margin-top:8px;">日本市场对品牌信任度要求极高</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 6: KEYWORD ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">6</div>
+    <h2>关键词搜索趋势（Sorftime）</h2>
+    <span class="tag">Keyword Intelligence</span>
+  </div>
+
+  <div class="kw-stat-row">
+    <div class="kw-stat">
+      <div class="val">20,307</div>
+      <div class="lbl">月搜索量<br>"red light therapy panel"</div>
+    </div>
+    <div class="kw-stat">
+      <div class="val">9<span>月</span></div>
+      <div class="lbl">搜索量旺季<br>（秋冬保健季前）</div>
+    </div>
+    <div class="kw-stat">
+      <div class="val">$1.28</div>
+      <div class="lbl">推荐CPC竞价<br>（竞争度适中）</div>
+    </div>
+    <div class="kw-stat">
+      <div class="val">2,275</div>
+      <div class="lbl">搜索结果竞品数<br>（含跨品类混入）</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:16px;">搜索结果前3页品牌月销量占比（含Panel和非Panel混合）</div>
+    <div class="brand-bar-list">
+      <div class="brand-bar-row">
+        <div class="brand-bar-name">INIA</div>
+        <div class="brand-bar-wrap"><div class="brand-bar-fill nonpanel-bar" style="width:100%"></div></div>
+        <div class="brand-bar-pct">15.7%</div>
+        <div><span class="brand-bar-type other-type">面罩（混入）</span></div>
+      </div>
+      <div class="brand-bar-row">
+        <div class="brand-bar-name">bonodave</div>
+        <div class="brand-bar-wrap"><div class="brand-bar-fill nonpanel-bar" style="width:83%"></div></div>
+        <div class="brand-bar-pct">13.0%</div>
+        <div><span class="brand-bar-type other-type">腰带（混入）</span></div>
+      </div>
+      <div class="brand-bar-row">
+        <div class="brand-bar-name">Comfytemp</div>
+        <div class="brand-bar-wrap"><div class="brand-bar-fill nonpanel-bar" style="width:76%"></div></div>
+        <div class="brand-bar-pct">11.9%</div>
+        <div><span class="brand-bar-type other-type">腰带（混入）</span></div>
+      </div>
+      <div class="brand-bar-row">
+        <div class="brand-bar-name">Viconor</div>
+        <div class="brand-bar-wrap"><div class="brand-bar-fill panel-bar" style="width:69%"></div></div>
+        <div class="brand-bar-pct">10.8%</div>
+        <div><span class="brand-bar-type panel-type">Panel ✅</span></div>
+      </div>
+      <div class="brand-bar-row">
+        <div class="brand-bar-name">hooga</div>
+        <div class="brand-bar-wrap"><div class="brand-bar-fill panel-bar" style="width:26%"></div></div>
+        <div class="brand-bar-pct">4.1%</div>
+        <div><span class="brand-bar-type panel-type">Panel ✅</span></div>
+      </div>
+    </div>
+    <div style="margin-top:16px;padding:12px;background:#FFF8E6;border-radius:8px;font-size:12px;color:#7D6608;">
+      ⚠️ "red light therapy panel"关键词搜索结果中，<strong>约60%以上为非Panel产品（面罩/腰带）混入</strong>。真正Panel类品牌在此关键词下的流量竞争集中度低，通过精准长尾词（如"red light therapy lamp with stand"）可有效过滤，降低竞争烈度。
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════ SECTION 7: STRATEGY ════════════════ -->
+<div class="section">
+  <div class="section-title">
+    <div class="num-badge">7</div>
+    <h2>COSSY 进入策略参考</h2>
+    <span class="tag">Strategy</span>
+  </div>
+
+  <div class="strategy-grid">
+    <div class="strategy-card" data-num="01">
+      <h4>价格带切入：$75–120 品质空白区</h4>
+      <p>当前竞品扎堆$45-65（中国低价带）和$149+（美国老品牌）。$75-120区间几乎无竞品，对应"愿意多花钱买品质感但不需要顶级"的中间消费者群体。</p>
+    </div>
+    <div class="strategy-card" data-num="02">
+      <h4>结构升级：加重底座 + 防倾倒锁定</h4>
+      <p>差评#2和#3均指向支架不稳问题。加重底座、关节卡扣锁定设计，可以直接在用户最关心的体验维度上做差异化，且竞争对手短期难以快速响应。</p>
+    </div>
+    <div class="strategy-card" data-num="03">
+      <h4>品质承诺：3年质保 + 控制器质检可视化</h4>
+      <p>控制器寿命是最核心差评。3年质保（竞品普遍1年或无质保）配合产品页展示质检流程视频，直接建立信任差异化，提升转化率。</p>
+    </div>
+    <div class="strategy-card" data-num="04">
+      <h4>合规可见化：FCC + CE + 第三方辐照报告</h4>
+      <p>当前TOP10产品listing几乎无明确认证标注。FCC+CE双认证在产品页突出展示，配合第三方机构出具的mW/cm²检测报告，可解决参数虚标的信任危机。</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<div class="footer">
+  <strong>Red Light Therapy Panels 市场调研报告</strong> · COSSY 海外营销部 · 2025年5月<br>
+  数据来源：Sorftime Amazon数据平台（2025年5月） · Research and Markets · Grand View Research · Cognitive Market Research · EIN Presswire
+</div>
+
+</body>
+</html>

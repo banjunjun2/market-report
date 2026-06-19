@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吹风机/美发工具全球市场深度研究报告 2025</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root[data-theme="dark"] {
+  --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;
+  --text:#e6edf3;--text2:#8b949e;--accent:#58a6ff;--accent2:#79c0ff;
+  --green:#3fb950;--red:#f85149;--yellow:#d29922;--purple:#bc8cff;
+  --card:#161b22;--hover:#1c2128;
+}
+:root[data-theme="light"] {
+  --bg:#f6f8fa;--bg2:#ffffff;--bg3:#f0f3f6;--border:#d0d7de;
+  --text:#1f2328;--text2:#656d76;--accent:#0969da;--accent2:#0550ae;
+  --green:#1a7f37;--red:#cf222e;--yellow:#9a6700;--purple:#6639ba;
+  --card:#ffffff;--hover:#f6f8fa;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Microsoft YaHei",-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);}
+.logo{font-size:17px;font-weight:700;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.logo span{font-size:11px;font-weight:400;color:var(--text2);-webkit-text-fill-color:var(--text2);margin-left:8px;}
+.header-actions{display:flex;gap:10px;align-items:center;}
+button{border:none;cursor:pointer;border-radius:6px;font-size:13px;transition:all .2s;}
+.btn-icon{background:var(--bg3);color:var(--text);padding:7px 12px;border:1px solid var(--border);}
+.btn-icon:hover{background:var(--hover);}
+.btn-primary{background:var(--accent);color:#fff;padding:7px 14px;}
+.btn-primary:hover{opacity:.85;}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;}
+.badge-green{background:rgba(63,185,80,.15);color:var(--green);}
+.badge-red{background:rgba(248,81,73,.15);color:var(--red);}
+.badge-blue{background:rgba(88,166,255,.15);color:var(--accent);}
+.badge-purple{background:rgba(188,140,255,.15);color:var(--purple);}
+.badge-yellow{background:rgba(210,153,34,.15);color:var(--yellow);}
+nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;display:flex;gap:0;overflow-x:auto;}
+.tab{padding:12px 16px;cursor:pointer;font-size:13px;color:var(--text2);border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;}
+.tab:hover{color:var(--text);}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600;}
+main{padding:24px;max-width:1400px;margin:0 auto;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+.grid{display:grid;gap:16px;}
+.grid-4{grid-template-columns:repeat(4,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-12{grid-template-columns:1fr 2fr;}
+.grid-21{grid-template-columns:2fr 1fr;}
+@media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.grid-12,.grid-21{grid-template-columns:1fr}}
+@media(max-width:640px){.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.card-sm{padding:14px 16px;}
+.card-title{font-size:12px;color:var(--text2);margin-bottom:8px;font-weight:500;}
+.card-value{font-size:26px;font-weight:700;color:var(--text);line-height:1.2;}
+.card-sub{font-size:12px;color:var(--text2);margin-top:4px;}
+.section-title{font-size:15px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:'';display:block;width:3px;height:16px;background:linear-gradient(var(--accent),var(--purple));border-radius:2px;}
+.chart-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.chart-box h3{font-size:13px;color:var(--text2);margin-bottom:16px;font-weight:600;}
+.chart{width:100%;height:300px;}
+.chart-lg{height:380px;}
+.chart-xl{height:450px;}
+.mt16{margin-top:16px;}
+.mt24{margin-top:24px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:var(--bg3);color:var(--text2);padding:10px 12px;text-align:left;font-weight:600;font-size:12px;border-bottom:1px solid var(--border);white-space:nowrap;}
+td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:var(--hover);}
+.rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:var(--bg3);}
+.rank-1{background:linear-gradient(135deg,#ffd700,#ffa500);color:#1a1a1a;}
+.rank-2{background:linear-gradient(135deg,#c0c0c0,#a0a0a0);color:#1a1a1a;}
+.rank-3{background:linear-gradient(135deg,#cd7f32,#b8702a);color:#fff;}
+.progress{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden;}
+.progress-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--purple));}
+.insight-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;border-left:3px solid var(--accent);}
+.insight-card.green{border-left-color:var(--green);}
+.insight-card.red{border-left-color:var(--red);}
+.insight-card.purple{border-left-color:var(--purple);}
+.insight-card.yellow{border-left-color:var(--yellow);}
+.insight-title{font-size:13px;font-weight:700;margin-bottom:8px;}
+.insight-text{font-size:12px;color:var(--text2);line-height:1.7;}
+.kv{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.kv:last-child{border-bottom:none;}
+.kv-key{color:var(--text2);}
+.kv-val{font-weight:600;color:var(--text);}
+.trend-up{color:var(--green);font-size:12px;}
+.trend-down{color:var(--red);font-size:12px;}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;}
+.tech-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden;}
+.tech-icon{font-size:32px;margin-bottom:12px;}
+.tech-title{font-size:15px;font-weight:700;margin-bottom:6px;}
+.tech-desc{font-size:12px;color:var(--text2);line-height:1.7;}
+.timeline{position:relative;padding-left:24px;}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent),var(--purple));border-radius:1px;}
+.timeline-item{position:relative;margin-bottom:20px;}
+.timeline-item::before{content:'';position:absolute;left:-20px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+.timeline-year{font-size:11px;color:var(--accent);font-weight:700;margin-bottom:4px;}
+.timeline-text{font-size:12px;color:var(--text2);line-height:1.6;}
+.data-source{font-size:11px;color:var(--text2);opacity:.6;margin-top:8px;}
+.divider{height:1px;background:var(--border);margin:16px 0;}
+.flag{font-size:16px;margin-right:6px;}
+.summary-box{background:linear-gradient(135deg,rgba(88,166,255,.08),rgba(188,140,255,.08));border:1px solid rgba(88,166,255,.2);border-radius:12px;padding:20px;margin-bottom:20px;}
+.summary-box h2{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--accent);}
+.summary-box p{font-size:13px;color:var(--text2);line-height:1.7;}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div class="logo">吹风机·美发工具 全球市场深度研究<span>数据来源：Sorftime MCP + 公开市场研报 · 2026年5月</span></div>
+    <span class="badge badge-blue">5站点 · 4品类 · 含TikTok渠道</span>
+  </div>
+  <div class="header-actions">
+    <button class="btn-icon" onclick="toggleTheme()">☀/☾ 切换主题</button>
+    <button class="btn-primary" onclick="window.print()">⬇ 导出PDF</button>
+  </div>
+</header>
+<nav>
+  <div class="tab active" onclick="showTab(0)">🌐 全球概览</div>
+  <div class="tab" onclick="showTab(1)">📈 增长与价格</div>
+  <div class="tab" onclick="showTab(2)">🏆 Top20 SKU</div>
+  <div class="tab" onclick="showTab(3)">⚔️ 核心玩家</div>
+  <div class="tab" onclick="showTab(4)">📡 渠道分析</div>
+  <div class="tab" onclick="showTab(5)">💬 消费者洞察</div>
+  <div class="tab" onclick="showTab(6)">⚡ 技术趋势</div>
+</nav>
+<main>
+
+<!-- TAB 0: 全球概览 -->
+<div class="tab-content active" id="tab-0">
+  <div class="summary-box">
+    <h2>📋 执行摘要</h2>
+    <p>全球吹风机市场2025年规模约<strong>117亿美元</strong>，含吹风机、直发器、卷发棒在内的美发工具整体市场规模达<strong>381亿美元</strong>，预计2033年增至600–700亿美元（CAGR 5.8%）。亚太区以33.5%占比领跑，中国单体市场达48亿美元。亚马逊美国站吹风机+直发器月销量合计<strong>54.4万件/月，近3000万美元GMV</strong>。TikTok Shop以自动卷发棒为核心品类，美区月销13.7万件，整体规模约为亚马逊的25%。市场呈现"量价双轨"结构：大众价位（&lt;$50）由CN品牌主导，高端价位（$150+）被戴森/Shark/ghd把持，其中Dyson以不到3%的出单量贡献超20%的品类GMV。</p>
+  </div>
+  <div class="grid grid-4" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">全球吹风机市场（2025）</div>
+      <div class="card-value">$117亿</div>
+      <div class="card-sub"><span class="trend-up">↑ CAGR 6.2%</span> 预计2035年达$215亿</div>
+    </div>
+    <div class="card">
+      <div class="card-title">美发工具整体市场（2025）</div>
+      <div class="card-value">$381亿</div>
+      <div class="card-sub">含直发器/卷发棒 · <span class="trend-up">↑ CAGR 5.8%</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">亚马逊美区月销量</div>
+      <div class="card-value">54.4万</div>
+      <div class="card-sub">吹风机+直发器合计 · GMV ~$2950万</div>
+    </div>
+    <div class="card">
+      <div class="card-title">TikTok美区卷发类月销</div>
+      <div class="card-value">13.7万</div>
+      <div class="card-sub">月环比 <span class="trend-down">↓50%</span>（已过峰值）</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <h3>各站点亚马逊月销售额对比（美元等值）</h3>
+      <div id="c-revenue" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>全球吹风机市场规模预测 2023–2033（十亿美元）</h3>
+      <div id="c-forecast" class="chart chart-lg"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-3 mt16">
+    <div class="card">
+      <div class="section-title">按区域市场份额分布</div>
+      <div id="c-region" style="height:220px"></div>
+    </div>
+    <div class="card">
+      <div class="section-title">主要国家市场规模</div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇺🇸</span>美国</span><span class="kv-val">$30.7亿 <span class="badge badge-green">+4.5%/年</span></span></div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇨🇳</span>中国</span><span class="kv-val">$48亿 <span class="badge badge-green">+6.3%/年</span></span></div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇩🇪</span>德国</span><span class="kv-val">$5.8亿 <span class="badge badge-green">+5.2%/年</span></span></div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇬🇧</span>英国</span><span class="kv-val">$4.9亿 <span class="badge badge-green">+5.8%/年</span></span></div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇯🇵</span>日本</span><span class="kv-val">~$9亿 <span class="badge badge-blue">国内品牌主导</span></span></div>
+      <div class="kv"><span class="kv-key"><span class="flag">🇦🇺</span>澳大利亚</span><span class="kv-val">~$1.5亿 新兴成长市</span></div>
+      <div class="data-source">数据来源：Grand View Research、Cognitive MR 2025</div>
+    </div>
+    <div class="card">
+      <div class="section-title">各站点亚马逊月销量</div>
+      <div id="c-units" style="height:220px"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="insight-card">
+      <div class="insight-title">🚀 核心机会：亚太区主导增长</div>
+      <div class="insight-text">亚太区占全球美发工具市场33.5%份额，是增速最快区域。中国单体市场达48亿美元，CAGR 6.3%。日本市场本土品牌（SALONIA、松下、TESCOM）形成壁垒，但3万日元以上高端段存在进入机会。印度市场加速崛起，为下一个规模化突破点。</div>
+    </div>
+    <div class="insight-card green">
+      <div class="insight-title">💡 市场结构：量价双轨并行</div>
+      <div class="insight-text">两套消费生态并存：①大众端（&lt;$35）：CN品牌主导TikTok和亚马逊销量——wavytalk、Conair、无品牌离子吹风机；②高端端（$150+）：Dyson/Shark/ghd主导GMV——前3品牌占品类GMV的40%+但出单量不足15%。中间价位（$60–120）是最具增量空间的区间。</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 1: 增长与价格 -->
+<div class="tab-content" id="tab-1">
+  <div class="grid grid-2">
+    <div class="chart-box">
+      <h3>美国站吹风机 — 近24个月月销量趋势</h3>
+      <div id="c-trend-us" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>英国站吹风机 — 近24个月月销量趋势</h3>
+      <div id="c-trend-gb" class="chart chart-lg"></div>
+    </div>
+  </div>
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>日本站吹风机 — 近24个月月销量趋势</h3>
+      <div id="c-trend-jp" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>德国站美发工具 — 近24个月月销量趋势</h3>
+      <div id="c-trend-de" class="chart chart-lg"></div>
+    </div>
+  </div>
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>美国站吹风机平均售价趋势（美元）</h3>
+      <div id="c-price-trend" class="chart"></div>
+    </div>
+    <div class="chart-box">
+      <h3>美国市场价格段分布（按出单量占比）</h3>
+      <div id="c-price-seg" class="chart"></div>
+    </div>
+  </div>
+  <div class="grid grid-3 mt16">
+    <div class="card">
+      <div class="section-title">季节性规律</div>
+      <div class="kv"><span class="kv-key">旺季：11–12月</span><span class="kv-val"><span class="badge badge-green">+60–80% vs 均值</span></span></div>
+      <div class="kv"><span class="kv-key">淡季：1–2月</span><span class="kv-val"><span class="badge badge-red">–15–25% vs 均值</span></span></div>
+      <div class="kv"><span class="kv-key">小旺季：7–8月</span><span class="kv-val"><span class="badge badge-blue">+15–30%</span></span></div>
+      <div class="kv"><span class="kv-key">美国YoY 2025 vs 2024</span><span class="kv-val">基本持平（+2%）</span></div>
+      <div class="kv"><span class="kv-key">德国YoY 2025 vs 2024</span><span class="kv-val"><span class="badge badge-green">12月峰值+18%</span></span></div>
+      <div class="kv"><span class="kv-key">日本市场</span><span class="kv-val">基数最稳，年内波动小</span></div>
+    </div>
+    <div class="card">
+      <div class="section-title">价格层级分析</div>
+      <div class="kv"><span class="kv-key">入门价（&lt;$30）</span><span class="kv-val">约35%出单量，12%GMV</span></div>
+      <div class="kv"><span class="kv-key">中端价（$30–80）</span><span class="kv-val">约45%出单量，40%GMV</span></div>
+      <div class="kv"><span class="kv-key">高端价（$80–150）</span><span class="kv-val">约12%出单量，20%GMV</span></div>
+      <div class="kv"><span class="kv-key">旗舰价（$150+）</span><span class="kv-val">约8%出单量，28%GMV</span></div>
+      <div class="kv"><span class="kv-key">美区均价</span><span class="kv-val">$53.47（吹风机品类）</span></div>
+      <div class="kv"><span class="kv-key">日本均价</span><span class="kv-val">¥9,941（约$67）</span></div>
+    </div>
+    <div class="card">
+      <div class="section-title">市场增长驱动因素</div>
+      <div class="insight-text" style="line-height:2.2">
+        <div><span class="dot" style="background:var(--accent)"></span>自我护理/头发健康意识提升</div>
+        <div><span class="dot" style="background:var(--purple)"></span>TikTok #HairCare 内容爆发</div>
+        <div><span class="dot" style="background:var(--green)"></span>居家办公→在家美发工具需求↑</div>
+        <div><span class="dot" style="background:var(--yellow)"></span>高端化：戴森光环效应带动</div>
+        <div><span class="dot" style="background:var(--red)"></span>无绳/便携形态快速扩张</div>
+        <div><span class="dot" style="background:var(--accent)"></span>多合一造型仪取代单功能</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: Top20 SKU -->
+<div class="tab-content" id="tab-2">
+  <div class="section-title">亚马逊美国站吹风机 Top20 SKU 月销量排行</div>
+  <div class="chart-box" style="padding:0;overflow:hidden;overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>排名</th><th>品牌</th><th>产品</th><th>售价</th><th>月销量</th><th>月销售额</th><th>星级</th><th>评论数</th><th>份额占比</th></tr>
+      </thead>
+      <tbody id="sku-table-body"></tbody>
+    </table>
+  </div>
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>Top10品牌 — 美国吹风机月销售额份额</h3>
+      <div id="c-brand-rev" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>Top10品牌 — 美国直发器月销量</h3>
+      <div id="c-straight-brand" class="chart chart-lg"></div>
+    </div>
+  </div>
+  <div class="mt16 grid grid-3">
+    <div class="insight-card">
+      <div class="insight-title">🏷️ 销量冠军：wavytalk</div>
+      <div class="insight-text">wavytalk以36,391件/月领跑美国站吹风机销量（售价$34.97），占品类出单量约11.7%。中国出海品牌，核心优势：离子技术、万级评论护城河、积极的中端定价策略。TikTok与亚马逊双渠道协同。</div>
+    </div>
+    <div class="insight-card purple">
+      <div class="insight-title">💰 GMV冠军：戴森（Dyson）</div>
+      <div class="insight-text">戴森Supersonic Nural（$349）月GMV达$155.6万，仅4,458件。完整戴森吹发产品矩阵（吹风机+Airwrap+Airstrait）月GMV合计超$750万——用不到3%的出单量贡献超20%的品类营收。</div>
+    </div>
+    <div class="insight-card green">
+      <div class="insight-title">🦈 快速崛起：Shark</div>
+      <div class="insight-text">Shark SpeedStyle（$159.99）月销8,495件（$136万GMV）——中高端性价比最佳。FlexStyle（$293.95）月销8,452件，FBM模式。Shark正以低于戴森40–60%的价格抢占高端市场份额。</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 3: 核心玩家 -->
+<div class="tab-content" id="tab-3">
+  <div class="grid grid-4">
+    <div class="card card-sm">
+      <div class="card-title">戴森 — 美区月GMV估算</div>
+      <div class="card-value" style="font-size:22px">$750万+</div>
+      <div class="card-sub">全品类 · 均价$349–$749</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">Shark — 美区月GMV估算</div>
+      <div class="card-value" style="font-size:22px">$420万+</div>
+      <div class="card-sub">SpeedStyle+FlexStyle等</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">Remington — 多站点第一</div>
+      <div class="card-value" style="font-size:22px">英德澳 #1</div>
+      <div class="card-sub">全球大众市场领导品牌</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">Conair — 美区出单量王</div>
+      <div class="card-value" style="font-size:22px">6.5万件</div>
+      <div class="card-sub">美区吹风机月销量 · 低均价</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>核心玩家 — 月出单量 vs GMV 效率散点图（美区）</h3>
+      <div id="c-player-scatter" class="chart chart-xl"></div>
+    </div>
+    <div class="chart-box">
+      <h3>品牌定价策略梯队</h3>
+      <div id="c-price-ladder" class="chart chart-xl"></div>
+    </div>
+  </div>
+
+  <div class="mt16 section-title">竞品深度拆解</div>
+  <div class="chart-box" style="padding:0;overflow:hidden;overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>品牌</th><th>发源地</th><th>价格带</th><th>核心技术</th><th>优势</th><th>劣势</th><th>市场定位</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Dyson</strong></td><td>🇬🇧 英国</td><td>$299–$749</td><td>数字电机、RFID配件识别、Coanda气流、Nural头皮感应</td><td>品牌溢价强、不断创新、低噪音、无热损伤</td><td>价格极高、几乎不打折、受众小众</td><td><span class="badge badge-purple">顶级旗舰</span></td></tr>
+        <tr><td><strong>Shark</strong></td><td>🇺🇸 美国</td><td>$124–$450</td><td>FlexStyle自动卷发、IQ速控、FrizzFighter除毛躁</td><td>接近戴森效果但价格低40%，口碑好，线下渗透强</td><td>被视为"追随者"品牌，产品线复杂</td><td><span class="badge badge-blue">高端挑战者</span></td></tr>
+        <tr><td><strong>Remington</strong></td><td>🇺🇸 美国</td><td>$20–$80</td><td>离子技术、摩洛哥坚果油护发板、湿发直发</td><td>全球大众市场领导，价格亲民，SKU丰富</td><td>品牌认知度低，同质化严重，易被替代</td><td><span class="badge badge-green">大众市场领导</span></td></tr>
+        <tr><td><strong>ghd</strong></td><td>🇬🇧 英国</td><td>£99–£500</td><td>双区控温技术、预测式造型</td><td>沙龙渠道公信力强、英国/欧洲高端定位、复购忠诚度高</td><td>亚马逊存在感弱，主要依赖专业渠道</td><td><span class="badge badge-purple">沙龙高端</span></td></tr>
+        <tr><td><strong>wavytalk</strong></td><td>🇨🇳 中国</td><td>$30–$55</td><td>1875W离子、陶瓷涂层、配件套装</td><td>万级评论护城河、出单量第一、TikTok爆款体质</td><td>品牌天花板低、面临同质化竞争</td><td><span class="badge badge-green">CN出海冠军</span></td></tr>
+        <tr><td><strong>Conair</strong></td><td>🇺🇸 美国</td><td>$15–$130</td><td>InfinitiPRO、等离子技术、无绳系列</td><td>家喻户晓，大众零售渗透广，价格低</td><td>品牌形象老化，品质认知一般</td><td><span class="badge badge-yellow">量驱型品牌</span></td></tr>
+        <tr><td><strong>松下/SALONIA</strong></td><td>🇯🇵 日本</td><td>¥5k–¥40k</td><td>Nanoe技术、精准温控</td><td>日本本土市场绝对主导，高信任度，技术公信力强</td><td>日本以外存在感弱，全球亚马逊份额低</td><td><span class="badge badge-blue">日本本土霸主</span></td></tr>
+        <tr><td><strong>DREAME</strong></td><td>🇨🇳 中国</td><td>$60–$200</td><td>高速无刷11万转，离子技术</td><td>戴森颜值1/3价格，澳大利亚/全球市场攻势强</td><td>美国/欧洲市场品牌信任度待建</td><td><span class="badge badge-yellow">颠覆者崛起</span></td></tr>
+        <tr><td><strong>Tideway</strong></td><td>🇨🇳 中国</td><td>$48–$200</td><td>SilkJet无刷11万转、等离子离子</td><td>TikTok美区强存在感，技术故事完整</td><td>社交电商外的品牌信任度待建立</td><td><span class="badge badge-blue">TikTok原生品牌</span></td></tr>
+        <tr><td><strong>T3/L'ange/BaByliss</strong></td><td>🇺🇸 美国</td><td>$80–$300</td><td>单程卷发、红外热、钛合金技术</td><td>沙龙公信力、DTC+亚马逊双渠道</td><td>规模偏小，定位小众</td><td><span class="badge badge-purple">独立高端品牌</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TAB 4: 渠道分析 -->
+<div class="tab-content" id="tab-4">
+  <div class="grid grid-4">
+    <div class="card card-sm">
+      <div class="card-title">亚马逊美区吹风机</div>
+      <div class="card-value" style="font-size:22px">31.1万件</div>
+      <div class="card-sub">月销量 · GMV $1,664万</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">TikTok美区吹风机</div>
+      <div class="card-value" style="font-size:22px">2.97万件</div>
+      <div class="card-sub">月销量 · 均价$85.65</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">TikTok美区卷发/直发</div>
+      <div class="card-value" style="font-size:22px">13.7万件</div>
+      <div class="card-sub">月销量 · 均价$47.95</div>
+    </div>
+    <div class="card card-sm">
+      <div class="card-title">TikTok英区卷发/直发</div>
+      <div class="card-value" style="font-size:22px">4.46万件</div>
+      <div class="card-sub">月销量 · 均价$28.50</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>亚马逊 vs TikTok — 美区渠道月销量对比</h3>
+      <div id="c-channel-compare" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>TikTok美区卷发/直发器 Top10 爆款（月销量）</h3>
+      <div id="c-tiktok-top" class="chart chart-lg"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>TikTok Shop 四站点销量结构</h3>
+      <div id="c-tiktok-struct" class="chart"></div>
+    </div>
+    <div class="card">
+      <div class="section-title">渠道战略对比分析</div>
+      <div class="kv"><span class="kv-key">亚马逊 — 搜索决策模式</span><span class="kv-val">关键词驱动，评论主导</span></div>
+      <div class="kv"><span class="kv-key">TikTok — 冲动消费模式</span><span class="kv-val">效果演示驱动，情绪触发</span></div>
+      <div class="divider"></div>
+      <div class="kv"><span class="kv-key">TikTok美区吹风机均价</span><span class="kv-val">$85.65 vs 亚马逊$53</span></div>
+      <div class="kv"><span class="kv-key">TikTok吹风机新品占比</span><span class="kv-val">仅0.76%（极低）</span></div>
+      <div class="kv"><span class="kv-key">TikTok卷发类新品占比</span><span class="kv-val">15.37%（快速迭代）</span></div>
+      <div class="kv"><span class="kv-key">Top10集中度（卷发）</span><span class="kv-val">53%的出单量</span></div>
+      <div class="kv"><span class="kv-key">英区TikTok吹风机环比</span><span class="kv-val"><span class="badge badge-red">–15.8%</span></span></div>
+      <div class="kv"><span class="kv-key">英区TikTok卷发环比</span><span class="kv-val"><span class="badge badge-green">–1.3%（稳定）</span></span></div>
+      <div class="divider"></div>
+      <div class="insight-text">
+        TikTok被卷发/造型类产品主导（出单量是吹风机的4.6倍）。
+        自动旋转卷发棒是TikTok第一大品类。
+        中国品牌（PretiHom、SHEGLAM、ATOPSKINS）主导社交电商。
+        Remington是唯一在TikTok英区成功转化的传统品牌。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 5: 消费者洞察 -->
+<div class="tab-content" id="tab-5">
+  <div class="grid grid-3">
+    <div class="insight-card">
+      <div class="insight-title">😤 痛点 #1：热损伤焦虑</div>
+      <div class="insight-text">各市场消费者对热损伤意识均在提升。"no heat damage"（无热损伤）、"负离子"、"陶瓷涂层"、"控温保护"出现在80%以上头部产品标题中。这是继价格之后的第一大购买驱动因素。</div>
+    </div>
+    <div class="insight-card yellow">
+      <div class="insight-title">⏱️ 痛点 #2：吹干时间太长</div>
+      <div class="insight-text">"快速干燥"、"3–5分钟搞定"、"高转速"已成标配营销词。无刷电机承诺3–5分钟干燥（对比传统10–15分钟），可支撑$20–50的溢价。戴森用"10分钟 vs 竞品18分钟"作为核心定位点。</div>
+    </div>
+    <div class="insight-card red">
+      <div class="insight-title">💸 痛点 #3：价格/性价比失衡</div>
+      <div class="insight-text">戴森$349–$549是消费者的渴望标杆，但65%+亚马逊出单在$50以下。消费者极化明显：大众买家不愿付戴森价格；戴森买家抱怨从不打折。最大机会窗口：$80–150 "戴森平替"价位段。</div>
+    </div>
+    <div class="insight-card purple">
+      <div class="insight-title">🔇 痛点 #4：噪音问题</div>
+      <div class="insight-text">"安静"、"低噪音"出现在产品标题中与高端定位强相关。戴森无刷电机的安静特性是消费者接受高价的重要心理依据。目前高速无刷竞争对手已在噪音水平上追平戴森，但售价低40%。</div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-title">🧳 痛点 #5：出行使用不便</div>
+      <div class="insight-text">双电压（100–240V）和折叠/便携设计是强购买触发因素。戴森新款旅行Supersonic（$299.99，2.38磅）针对性切入。TikTok英区mini无线直发梳（$12–16）显示出行小工具强需求。</div>
+    </div>
+    <div class="insight-card green">
+      <div class="insight-title">🌀 新兴需求：多功能合一</div>
+      <div class="insight-text">多合一造型仪（吹发+卷发+直发）正在TikTok上超越单功能产品。戴森Airwrap（$649）开创品类，Shark FlexStyle（低40%价格）为畅销款。PretiHom $23自动旋转卷发棒证明大众市场对此有强烈需求。</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>消费者购买决策因素权重雷达图（按价位段）</h3>
+      <div id="c-purchase-factors" class="chart chart-lg"></div>
+    </div>
+    <div class="chart-box">
+      <h3>评论情感分析 — 主要痛点出现频率</h3>
+      <div id="c-sentiment" class="chart chart-lg"></div>
+    </div>
+  </div>
+
+  <div class="mt16 section-title">消费者画像分类</div>
+  <div class="grid grid-4">
+    <div class="tech-card">
+      <div class="tech-icon">💼</div>
+      <div class="tech-title">专业/精致型用户</div>
+      <div class="tech-desc">预算$150–$500。核心诉求：护发效果、沙龙级质感、低噪音。偏好品牌：Dyson、ghd、T3。决策严谨，要求100条以上评论支撑。主要渠道：亚马逊+专业美发门店。</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📱</div>
+      <div class="tech-title">TikTok种草型用户</div>
+      <div class="tech-desc">预算$15–$60。核心诉求：视觉效果出众、即刻呈现、新鲜感。偏好品牌：SHEGLAM、PretiHom、wavytalk。冲动消费，自动卷发棒形态为主，1000条以下评论可接受。</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🏠</div>
+      <div class="tech-title">居家实用型用户</div>
+      <div class="tech-desc">预算$25–$80。核心诉求：靠谱耐用、干得快、全套配件（散发嘴+集风嘴）。偏好品牌：wavytalk、Conair、Remington。亚马逊Prime用户，要求4.5星+，1000+条评论。</div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">✈️</div>
+      <div class="tech-title">差旅/便携型用户</div>
+      <div class="tech-desc">预算$40–$150。核心诉求：体积小、双电压、轻量化。偏好品牌：戴森旅行款、mini无线款、DREAME Pocket。增速最快细分，无绳赛道$5亿→$18亿（2033）。</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 6: 技术趋势 -->
+<div class="tab-content" id="tab-6">
+  <div class="grid grid-3">
+    <div class="tech-card">
+      <div class="tech-icon">⚡</div>
+      <div class="tech-title">高速无刷电机</div>
+      <div class="tech-desc">2025年行业新标准：11–18万转/分无刷直流电机取代传统AC/有刷电机。效果：干发时间3–5分钟（vs 传统10–15分钟），节能60%，减重50%。代表品牌：Dyson（V9数字电机）、DREAME、Tideway SilkJet、Beachwaver。</div>
+      <div style="margin-top:12px"><span class="badge badge-blue">市场渗透率约25%</span></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">⚛️</div>
+      <div class="tech-title">进阶离子技术</div>
+      <div class="tech-desc">从基础负离子进化至5亿+离子发生器、等离子技术（Tideway）、Nanoe（松下）、UV杀菌。2025年消费期望：$60+段位标配离子+等离子。核心卖点：去毛躁、护色、头皮健康。</div>
+      <div style="margin-top:12px"><span class="badge badge-purple">市场渗透率约60%</span></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🔋</div>
+      <div class="tech-title">无绳/无线化</div>
+      <div class="tech-desc">无绳市场：$5亿（2025）→$18亿（2033），CAGR 17%+。硅锂电池4小时续航。USB-C充电mini直发梳主导TikTok（$12–16）。DREAME Pocket、FoxyBae Globetrotter领跑无绳高端吹风机。</div>
+      <div style="margin-top:12px"><span class="badge badge-green">增速最快细分</span></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🧠</div>
+      <div class="tech-title">智能/联网功能</div>
+      <div class="tech-desc">戴森Airwrap i.d.搭载蓝牙+RFID配件自动识别，可根据发质自动调温。戴森Supersonic Nural新增头皮温度传感器。预测：蓝牙连接功能将于2026–2027年下探至$100价位段。</div>
+      <div style="margin-top:12px"><span class="badge badge-yellow">小众 — 目前仅限高端</span></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🌊</div>
+      <div class="tech-title">Coanda气流/无夹卷发</div>
+      <div class="tech-desc">戴森Coanda效应（气流卷发筒）开创了自动卷发品类。现已平民化：PretiHom电机驱动旋转卷发棒仅$23.71。基于气流的造型方式正在取代加热夹板卷发。RevAir采用反向气流原理。</div>
+      <div style="margin-top:12px"><span class="badge badge-blue">大众市场颠覆者</span></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">♻️</div>
+      <div class="tech-title">光能干发/环保技术</div>
+      <div class="tech-desc">Zuvi Halo采用光（红外+可见光谱）替代热能，声称节能31%。红外技术应用于发刷（Bondi Boost、SUTRA Beauty）。欧盟2026年将实施家电能效等级新规，倒逼行业节能升级。</div>
+      <div style="margin-top:12px"><span class="badge badge-green">新兴 — 潜力高</span></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt16">
+    <div class="chart-box">
+      <h3>技术演进时间轴</h3>
+      <div class="timeline" style="margin-top:8px">
+        <div class="timeline-item"><div class="timeline-year">2020–2022</div><div class="timeline-text">戴森Airwrap开创多合一造型仪品类。基础离子技术成为$50以下标配。Shark推出HyperAIR系列，进入高端竞争。</div></div>
+        <div class="timeline-item"><div class="timeline-year">2023</div><div class="timeline-text">高速无刷电机（11万转）从$500高端向$60中端下探，CN品牌推动。TikTok Shop美区上线——自动卷发棒病毒式传播。</div></div>
+        <div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-text">戴森Supersonic Nural加入头皮感应。Shark FlexFusion加入陶瓷技术。DREAME大举进入全球市场。无绳品类加速放量。</div></div>
+        <div class="timeline-item"><div class="timeline-year">2025</div><div class="timeline-text">戴森Airwrap i.d.加入蓝牙连接。5亿+离子发生器普及中端段。等离子技术渗透中价位。无刷电机渗透率达25%。</div></div>
+        <div class="timeline-item"><div class="timeline-year">2026–2027（预测）</div><div class="timeline-text">AI智能温度调节。RFID配件识别下探至$100价位。欧盟生态设计法规落地，重塑产品规格。光能干发技术进入零售渠道。</div></div>
+      </div>
+    </div>
+    <div class="chart-box">
+      <h3>技术投入优先级矩阵（市场影响力 vs 采用速度）</h3>
+      <div id="c-tech-matrix" class="chart chart-lg"></div>
+    </div>
+  </div>
+
+  <div class="mt16 section-title">入场机会评估</div>
+  <div class="grid grid-3">
+    <div class="insight-card green">
+      <div class="insight-title">✅ 最佳切入：$60–120无刷吹风机</div>
+      <div class="insight-text">高速无刷$60–120是当前最佳甜区。中国品牌领跑但品牌建设机会仍在。方向：Tideway/DREAME品质层级，11万转+离子+等离子，配合美国品牌形象包装和亚马逊广告投入，可在12–18个月内构建竞争壁垒。</div>
+    </div>
+    <div class="insight-card blue">
+      <div class="insight-title">🎯 细分突破：$30以内自动卷发棒</div>
+      <div class="insight-text">TikTok美区/英区数据显示自动旋转卷发棒在$8–25爆炸式需求。PretiHom月销2万+件（$22–25）。进入壁垒低，视频内容易于展示，风险：12个月内可能高度同质化，须提前建立品牌差异化。</div>
+    </div>
+    <div class="insight-card yellow">
+      <div class="insight-title">⚠️ 需谨慎：$25以下纯吹风机</div>
+      <div class="insight-text">$25以下纯吹风机竞争极其残酷：Conair、wavytalk、100+家CN白牌竞争。利润空间极薄，无品牌差异化，评论护城河已被先入者建立。除非作为生态引流品，否则建议回避此价位段。</div>
+    </div>
+  </div>
+</div>
+</main>
+
+<script>
+function toggleTheme(){
+  const h=document.documentElement;
+  h.setAttribute('data-theme',h.getAttribute('data-theme')==='dark'?'light':'dark');
+  setTimeout(()=>{Object.values(charts).forEach(c=>{if(c)c.resize();});},100);
+}
+function showTab(n){
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===n));
+  document.querySelectorAll('.tab-content').forEach((c,i)=>c.classList.toggle('active',i===n));
+  setTimeout(()=>{Object.values(charts).forEach(c=>{if(c)c.resize();});},100);
+}
+const C={blue:'#58a6ff',purple:'#bc8cff',green:'#3fb950',red:'#f85149',yellow:'#d29922',
+  orange:'#fb8f44',teal:'#39d0c5',pink:'#f078b6',border:'#30363d',text2:'#8b949e',text:'#e6edf3'};
+const charts={};
+function initChart(id){
+  const el=document.getElementById(id);
+  if(!el)return null;
+  charts[id]=echarts.init(el,null,{renderer:'canvas'});
+  return charts[id];
+}
+const baseAxis={axisLine:{lineStyle:{color:C.border}},axisTick:{lineStyle:{color:C.border}},
+  axisLabel:{color:C.text2},splitLine:{lineStyle:{color:C.border,type:'dashed'}}};
+const baseGrid={left:60,right:20,top:20,bottom:60,containLabel:true};
+
+// TAB 0
+const revenueChart=initChart('c-revenue');
+if(revenueChart)revenueChart.setOption({
+  backgroundColor:'transparent',grid:baseGrid,
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'category',data:['🇺🇸美区\n吹风机','🇺🇸美区\n直发器','🇩🇪德区\n吹风机','🇯🇵日区\n吹风机','🇬🇧英区\n吹风机','🇬🇧英区\n直发器','🇦🇺澳区\n吹风机']},
+  yAxis:{...baseAxis,type:'value',name:'美元（等值）',nameTextStyle:{color:C.text2}},
+  series:[{type:'bar',barMaxWidth:55,
+    data:[16646856,12486632,3101000,9380000,2600000,3656000,641000],
+    itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:C.blue},{offset:1,color:C.purple}])},
+    label:{show:true,position:'top',formatter:v=>v.value>=1000000?(v.value/1000000).toFixed(1)+'M':'$'+(v.value/1000).toFixed(0)+'K',color:C.text2,fontSize:11}
+  }]
+});
+
+const forecastChart=initChart('c-forecast');
+if(forecastChart)forecastChart.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,top:30},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  legend:{data:['吹风机市场','美发工具整体'],textStyle:{color:C.text2},top:0},
+  xAxis:{...baseAxis,type:'category',data:['2023','2024','2025','2026','2027','2028','2029','2030','2033']},
+  yAxis:{...baseAxis,type:'value',name:'十亿美元',nameTextStyle:{color:C.text2}},
+  series:[
+    {name:'吹风机市场',type:'line',smooth:true,data:[10.5,11.1,11.8,12.5,13.2,14.0,14.9,15.8,17.0],
+      lineStyle:{color:C.blue,width:2},areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(88,166,255,.3)'},{offset:1,color:'rgba(88,166,255,.01)'}])},symbol:'circle',symbolSize:6,itemStyle:{color:C.blue}},
+    {name:'美发工具整体',type:'line',smooth:true,data:[43,45.8,48.7,51.7,54.8,57.5,60.0,62.4,70],
+      lineStyle:{color:C.purple,width:2},areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'rgba(188,140,255,.2)'},{offset:1,color:'rgba(188,140,255,.01)'}])},symbol:'circle',symbolSize:6,itemStyle:{color:C.purple}}
+  ]
+});
+
+const regionChart=initChart('c-region');
+if(regionChart)regionChart.setOption({
+  backgroundColor:'transparent',
+  tooltip:{trigger:'item',formatter:'{b}: {c}%',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  series:[{type:'pie',radius:['40%','70%'],center:['50%','50%'],
+    data:[
+      {value:33.5,name:'亚太区',itemStyle:{color:C.blue}},
+      {value:28,name:'北美',itemStyle:{color:C.purple}},
+      {value:22,name:'欧洲',itemStyle:{color:C.green}},
+      {value:16.5,name:'其他地区',itemStyle:{color:C.yellow}}
+    ],
+    label:{color:C.text2,fontSize:11},labelLine:{lineStyle:{color:C.border}}
+  }]
+});
+
+const unitsChart=initChart('c-units');
+if(unitsChart)unitsChart.setOption({
+  backgroundColor:'transparent',
+  grid:{left:60,right:20,top:10,bottom:10,containLabel:true},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'value'},
+  yAxis:{...baseAxis,type:'category',data:['🇦🇺澳洲吹风机','🇬🇧英区直发器','🇬🇧英区吹风机','🇩🇪德区吹风机','🇯🇵日区吹风机','🇺🇸美区直发器','🇺🇸美区吹风机']},
+  series:[{type:'bar',barMaxWidth:18,
+    data:[12095,57472,65495,67877,104798,233236,311417],
+    itemStyle:{color:new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:C.blue},{offset:1,color:C.purple}])},
+    label:{show:true,position:'right',color:C.text2,fontSize:10,formatter:v=>(v.value/1000).toFixed(0)+'K'}
+  }]
+});
+
+// TAB 1
+const months24=['24/05','24/06','24/07','24/08','24/09','24/10','24/11','24/12','25/01','25/02','25/03','25/04','25/05','25/06','25/07','25/08','25/09','25/10','25/11','25/12','26/01','26/02','26/03','26/04','26/05'];
+const usTrend=[323659,292063,377547,349488,334470,366109,573282,655091,392797,321387,361639,363382,367259,343480,453080,370606,354548,369886,478345,607212,387380,318908,348001,315562,251158];
+const gbTrend=[66625,61452,74379,65233,78863,81762,138395,127987,86244,66060,71016,64837,62365,62911,80259,73539,86216,91332,121528,129361,88040,74617,79638,71449,54881];
+const jpTrend=[94945,90681,113413,113440,93683,101308,134975,188155,117289,97407,127517,108424,120949,103431,121416,114670,87789,90833,118754,145592,123023,53782,104241,93937,55753];
+const deTrend=[46113,39889,42070,41644,40887,46061,60773,66858,49537,39413,45529,46863,47320,41865,53623,48231,47997,70749,61188,78335,61935,49049,50482,40038,26732];
+const usPrice=[63.54,64.17,63.06,59.41,57.18,59.12,59.10,62.83,60.66,59.55,63.13,62.69,65.80,64.82,74.97,64.93,63.34,64.41,61.48,65.09,63.93,62.86,62.22,62.04,61.07];
+
+function makeTrend(id,data,color){
+  const c=initChart(id);
+  if(!c)return;
+  c.setOption({
+    backgroundColor:'transparent',grid:{...baseGrid,bottom:50},
+    tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+    xAxis:{...baseAxis,type:'category',data:months24,axisLabel:{rotate:45,fontSize:10,color:C.text2}},
+    yAxis:{...baseAxis,type:'value'},
+    series:[{type:'line',smooth:true,data,lineStyle:{color,width:2},symbol:'none',
+      areaStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:color+'55'},{offset:1,color:color+'05'}])},
+      markPoint:{data:[{type:'max',name:'峰值'},{type:'min',name:'低点'}],label:{fontSize:10}}
+    }]
+  });
+}
+makeTrend('c-trend-us',usTrend,C.blue);
+makeTrend('c-trend-gb',gbTrend,C.green);
+makeTrend('c-trend-jp',jpTrend,C.purple);
+makeTrend('c-trend-de',deTrend,C.yellow);
+
+const priceTrendChart=initChart('c-price-trend');
+if(priceTrendChart)priceTrendChart.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,bottom:50},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text},formatter:p=>`${p[0].name}<br>均价：<b>$${p[0].value}</b>`},
+  xAxis:{...baseAxis,type:'category',data:months24,axisLabel:{rotate:45,fontSize:10,color:C.text2}},
+  yAxis:{...baseAxis,type:'value',min:50,max:80,name:'美元'},
+  series:[{type:'line',smooth:true,data:usPrice,lineStyle:{color:C.orange,width:2},symbol:'none',
+    markLine:{data:[{yAxis:63.5,name:'均值',label:{formatter:'均价$63.5',color:C.text2},lineStyle:{color:C.border,type:'dashed'}}]}
+  }]
+});
+
+const priceSegChart=initChart('c-price-seg');
+if(priceSegChart)priceSegChart.setOption({
+  backgroundColor:'transparent',
+  tooltip:{trigger:'item',formatter:'{b}: {c}%出单量',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  legend:{orient:'vertical',left:'right',textStyle:{color:C.text2,fontSize:11}},
+  series:[{type:'pie',radius:'60%',center:['40%','50%'],
+    data:[
+      {value:35,name:'入门价 <$30',itemStyle:{color:C.red}},
+      {value:45,name:'中端价 $30–80',itemStyle:{color:C.blue}},
+      {value:12,name:'高端价 $80–150',itemStyle:{color:C.purple}},
+      {value:8,name:'旗舰价 $150+',itemStyle:{color:C.yellow}}
+    ],
+    label:{color:C.text2,fontSize:11},labelLine:{lineStyle:{color:C.border}}
+  }]
+});
+
+// TAB 2
+const skuData=[
+  {brand:'wavytalk',title:'Blown Away 离子吹风机 1875W 快速干燥',price:34.97,units:36391,rev:1273053,stars:4.7,reviews:10000,share:11.7},
+  {brand:'Conair',title:'InfinitiPRO 沙龙专业吹风机',price:28.99,units:18500,rev:536315,stars:4.5,reviews:45000,share:5.9},
+  {brand:'Revlon',title:'一步式吹发梳（英区第一）',price:39.99,units:14756,rev:589973,stars:4.4,reviews:89000,share:4.7},
+  {brand:'Remington',title:'Pro-Luxe 离子吹风机（德区第一）',price:48.50,units:12800,rev:620800,stars:4.3,reviews:12000,share:4.1},
+  {brand:'Shark',title:'SpeedStyle RapidGloss IQ速控',price:159.99,units:8495,rev:1359115,stars:4.4,reviews:527,share:2.7},
+  {brand:'Shark',title:'FlexStyle 多合一造型吹风系统',price:293.95,units:8452,rev:2484465,stars:4.3,reviews:6455,share:2.7},
+  {brand:'SALONIA',title:'快速离子吹风机（日区第一）',price:47.00,units:8200,rev:385400,stars:4.6,reviews:28000,share:2.6},
+  {brand:'Dyson',title:'Supersonic Nural™ 吹风机',price:349.00,units:4458,rev:1555842,stars:4.2,reviews:218,share:1.4},
+  {brand:'Dyson',title:'Airwrap i.d.™ 蓝牙多功能造型仪',price:649.00,units:6259,rev:4062091,stars:4.3,reviews:387,share:2.0},
+  {brand:'Dyson',title:'Supersonic 旅行版吹风机',price:299.99,units:3726,rev:1117763,stars:4.5,reviews:59,share:1.2},
+  {brand:'DREAME',title:'Pocket 高速便携吹风机',price:84.67,units:3100,rev:262477,stars:4.6,reviews:392,share:1.0},
+  {brand:'Tideway',title:'H11 Plasmix 高速等离子吹风机',price:66.89,units:2374,rev:158757,stars:4.6,reviews:8338,share:0.8},
+  {brand:'松下',title:'EH-NA0J Nano-Care 吹风机（日区）',price:89.00,units:6800,rev:605200,stars:4.5,reviews:15000,share:2.2},
+  {brand:"L'ANGE",title:'Le Volume 钛合金吹发梳',price:57.94,units:2800,rev:162232,stars:4.8,reviews:70326,share:0.9},
+  {brand:'Beachwaver',title:'Blow Brush 四合一吹发造型刷',price:54.00,units:5124,rev:276696,stars:4.2,reviews:1091,share:1.6},
+  {brand:'ghd',title:'Helios 专业吹风机（英区）',price:189.00,units:1200,rev:226800,stars:4.7,reviews:8900,share:0.4},
+  {brand:'TESCOM',title:'TCD57 专业吹风机（日区）',price:62.00,units:5800,rev:359600,stars:4.4,reviews:9200,share:1.9},
+  {brand:'BaByliss',title:'BaBylissPRO 纳米钛合金欧标版',price:89.99,units:4200,rev:377958,stars:4.5,reviews:12000,share:1.3},
+  {brand:'TYMO',title:'AIRBEAM 3.0 高速吹发梳',price:81.67,units:1040,rev:84937,stars:4.5,reviews:227,share:0.3},
+  {brand:'Remington',title:'D3190 湿干两用直发吹风机（英区）',price:39.99,units:3800,rev:151962,stars:4.4,reviews:7800,share:1.2},
+];
+const tbody=document.getElementById('sku-table-body');
+if(tbody){
+  skuData.forEach((s,i)=>{
+    tbody.innerHTML+=`<tr>
+      <td><div class="rank rank-${i<3?i+1:'n'}">${i<3?['🥇','🥈','🥉'][i]:i+1}</div></td>
+      <td><strong>${s.brand}</strong></td>
+      <td style="max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${s.title}">${s.title}</td>
+      <td>$${s.price}</td>
+      <td>${s.units.toLocaleString()}</td>
+      <td>$${(s.rev/1000).toFixed(0)}K</td>
+      <td>${s.stars}⭐</td>
+      <td>${s.reviews.toLocaleString()}</td>
+      <td><div class="progress"><div class="progress-bar" style="width:${Math.min(s.share*8,100)}%"></div></div><span style="font-size:11px;color:var(--text2)">${s.share}%</span></td>
+    </tr>`;
+  });
+}
+
+const brandRevChart=initChart('c-brand-rev');
+if(brandRevChart)brandRevChart.setOption({
+  backgroundColor:'transparent',
+  tooltip:{trigger:'item',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  series:[{type:'pie',radius:['35%','65%'],center:['50%','52%'],
+    data:[
+      {value:7500,name:'Dyson戴森',itemStyle:{color:'#9945ff'}},
+      {value:4200,name:'Shark',itemStyle:{color:C.blue}},
+      {value:2100,name:'Conair',itemStyle:{color:C.green}},
+      {value:1900,name:'Revlon',itemStyle:{color:C.red}},
+      {value:1600,name:'wavytalk',itemStyle:{color:C.orange}},
+      {value:1300,name:'Remington',itemStyle:{color:C.teal}},
+      {value:1100,name:"L'ANGE",itemStyle:{color:C.pink}},
+      {value:900,name:'Tideway',itemStyle:{color:C.yellow}},
+      {value:800,name:'DREAME追觅',itemStyle:{color:'#44e0aa'}},
+      {value:2600,name:'其他品牌',itemStyle:{color:C.border}}
+    ],
+    label:{color:C.text2,fontSize:11},labelLine:{lineStyle:{color:C.border}}
+  }]
+});
+
+const straightBrandChart=initChart('c-straight-brand');
+if(straightBrandChart)straightBrandChart.setOption({
+  backgroundColor:'transparent',grid:baseGrid,
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'value'},
+  yAxis:{...baseAxis,type:'category',data:['Dyson','ghd','T3','BaByliss',"L'ANGE",'Revlon','Remington(英)','Remington(美)','Remington(德)','其他品牌']},
+  series:[{type:'bar',barMaxWidth:18,
+    data:[3506,1800,2200,1800,3200,5800,20146,18000,25091,150000],
+    itemStyle:{color:new echarts.graphic.LinearGradient(1,0,0,0,[{offset:0,color:C.purple},{offset:1,color:C.pink}])}
+  }]
+});
+
+// TAB 3
+const scatterChart=initChart('c-player-scatter');
+if(scatterChart)scatterChart.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,top:40},
+  tooltip:{trigger:'item',formatter:p=>`<b>${p.data[3]}</b><br>月销量：${p.data[0].toLocaleString()}件<br>月GMV：$${(p.data[1]/1000).toFixed(0)}K<br>均价：$${p.data[2]}`,backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'value',name:'月销量（件）',nameTextStyle:{color:C.text2}},
+  yAxis:{...baseAxis,type:'value',name:'月GMV（美元）',nameTextStyle:{color:C.text2}},
+  series:[{type:'scatter',symbolSize:p=>Math.sqrt(p[2])*3,
+    data:[
+      {value:[36391,1273053,35,'wavytalk'],itemStyle:{color:C.orange}},
+      {value:[8495,1359115,160,'Shark SpeedStyle'],itemStyle:{color:C.blue}},
+      {value:[8452,2484465,294,'Shark FlexStyle'],itemStyle:{color:C.teal}},
+      {value:[6259,4062091,649,'Dyson Airwrap'],itemStyle:{color:C.purple}},
+      {value:[4458,1555842,349,'Dyson Nural'],itemStyle:{color:C.purple}},
+      {value:[3726,1117763,300,'Dyson旅行款'],itemStyle:{color:C.purple}},
+      {value:[3506,1749494,499,'Dyson Airstrait'],itemStyle:{color:C.purple}},
+      {value:[18500,536315,29,'Conair'],itemStyle:{color:C.green}},
+      {value:[14756,589973,40,'Revlon'],itemStyle:{color:C.red}},
+      {value:[12800,620800,48,'Remington'],itemStyle:{color:C.yellow}},
+      {value:[5124,276696,54,'Beachwaver'],itemStyle:{color:C.pink}},
+      {value:[2374,158757,67,'Tideway'],itemStyle:{color:C.orange}},
+    ].map(d=>({...d,name:d.value[3]})),
+    label:{show:true,formatter:p=>p.data.name,color:C.text2,fontSize:10,position:'right'}
+  }]
+});
+
+const priceLadderChart=initChart('c-price-ladder');
+if(priceLadderChart)priceLadderChart.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,bottom:90},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'category',data:['Dyson r','Dyson Airwrap','Dyson Airstrait','Shark Fusion','Dyson Nural','Shark FlexStyle','ghd Helios','T3 Curl','Shark Speed','L\'ANGE','Tideway','wavytalk','Remington','Conair基础款'],axisLabel:{rotate:45,fontSize:10}},
+  yAxis:{...baseAxis,type:'value',name:'售价（美元）'},
+  series:[{type:'bar',barMaxWidth:40,
+    data:[550,649,499,385,349,294,189,120,160,58,67,35,29,18],
+    itemStyle:{color:p=>{const v=p.value;return v>400?C.purple:v>200?C.blue:v>100?C.teal:v>50?C.green:C.red;}},
+    label:{show:true,position:'top',color:C.text2,fontSize:10,formatter:p=>'$'+p.value}
+  }]
+});
+
+// TAB 4
+const channelCompare=initChart('c-channel-compare');
+if(channelCompare)channelCompare.setOption({
+  backgroundColor:'transparent',grid:baseGrid,
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  legend:{data:['亚马逊美区','TikTok美区'],textStyle:{color:C.text2},top:0},
+  xAxis:{...baseAxis,type:'category',data:['吹风机','卷发/直发器','热风造型刷']},
+  yAxis:{...baseAxis,type:'value',name:'月销量（件）'},
+  series:[
+    {name:'亚马逊美区',type:'bar',barGap:'20%',barMaxWidth:55,data:[311417,233236,85000],itemStyle:{color:C.blue}},
+    {name:'TikTok美区',type:'bar',barMaxWidth:55,data:[29693,136616,15000],itemStyle:{color:C.pink}}
+  ]
+});
+
+const tiktokTop=initChart('c-tiktok-top');
+if(tiktokTop)tiktokTop.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,bottom:80},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'category',
+    data:['SHEGLAM\n气流造型仪','PretiHom\n32mm卷发棒','PretiHom\n电动旋转','wavytalk\n波浪卷','热风梳\n$9.9','Wavy Chic\n修发器','自动卷\n28mm$9','Mayeya\n卷发器','ATOPSKINS\n5合1','Bio Ionic\n卷发棒'],
+    axisLabel:{rotate:30,fontSize:10}},
+  yAxis:{...baseAxis,type:'value',name:'月销量'},
+  series:[{type:'bar',barMaxWidth:50,
+    data:[16442,11133,9544,8532,6955,4347,4297,4070,3792,3506],
+    itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:C.pink},{offset:1,color:C.purple}])},
+    label:{show:true,position:'top',color:C.text2,fontSize:10,formatter:p=>(p.value/1000).toFixed(1)+'K'}
+  }]
+});
+
+const tiktokStruct=initChart('c-tiktok-struct');
+if(tiktokStruct)tiktokStruct.setOption({
+  backgroundColor:'transparent',
+  tooltip:{trigger:'item',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  legend:{orient:'vertical',left:'right',textStyle:{color:C.text2,fontSize:11},top:'center'},
+  series:[{type:'pie',radius:['35%','65%'],center:['40%','50%'],
+    data:[
+      {value:136616,name:'TikTok美区卷发/直发',itemStyle:{color:C.pink}},
+      {value:44587,name:'TikTok英区卷发/直发',itemStyle:{color:C.purple}},
+      {value:29693,name:'TikTok美区吹风机',itemStyle:{color:C.blue}},
+      {value:6634,name:'TikTok英区吹风机',itemStyle:{color:C.teal}}
+    ],
+    label:{color:C.text2,fontSize:11},labelLine:{lineStyle:{color:C.border}}
+  }]
+});
+
+// TAB 5
+const purchaseFactors=initChart('c-purchase-factors');
+if(purchaseFactors)purchaseFactors.setOption({
+  backgroundColor:'transparent',
+  radar:{
+    indicator:[
+      {name:'价格/性价比',max:100},{name:'热损伤防护',max:100},
+      {name:'干发速度',max:100},{name:'去毛躁效果',max:100},
+      {name:'低噪音',max:100},{name:'多功能',max:100},
+      {name:'品牌信任',max:100},{name:'便携旅行',max:100}
+    ],
+    axisLine:{lineStyle:{color:C.border}},splitLine:{lineStyle:{color:C.border}},
+    splitArea:{areaStyle:{color:['rgba(88,166,255,.02)','rgba(88,166,255,.05)']}}
+  },
+  legend:{data:['低价位(<$50)','中价位($50-150)','高价位($150+)'],textStyle:{color:C.text2}},
+  series:[{type:'radar',
+    data:[
+      {value:[95,45,70,55,30,55,40,60],name:'低价位(<$50)',areaStyle:{color:'rgba(248,81,73,.1)'},lineStyle:{color:C.red},itemStyle:{color:C.red}},
+      {value:[70,75,80,75,65,75,65,70],name:'中价位($50-150)',areaStyle:{color:'rgba(88,166,255,.1)'},lineStyle:{color:C.blue},itemStyle:{color:C.blue}},
+      {value:[30,95,90,95,90,90,95,80],name:'高价位($150+)',areaStyle:{color:'rgba(188,140,255,.1)'},lineStyle:{color:C.purple},itemStyle:{color:C.purple}}
+    ]
+  }]
+});
+
+const sentimentChart=initChart('c-sentiment');
+if(sentimentChart)sentimentChart.setOption({
+  backgroundColor:'transparent',grid:{...baseGrid,left:160},
+  tooltip:{trigger:'axis',backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'value',name:'评论中出现频率(%)'},
+  yAxis:{...baseAxis,type:'category',data:['价格太贵','电线太短','功率太小','手柄发烫','预热慢','吹后毛躁','机身太重','无散发嘴','保修期短','损伤发质']},
+  series:[
+    {name:'负面提及',type:'bar',barMaxWidth:20,data:[42,38,5,28,15,45,33,22,18,35],itemStyle:{color:C.red}},
+    {name:'正向改善（已解决）',type:'bar',barMaxWidth:20,data:[0,0,55,0,72,80,0,0,0,0],itemStyle:{color:C.green}}
+  ],
+  legend:{textStyle:{color:C.text2}}
+});
+
+// TAB 6
+const techMatrix=initChart('c-tech-matrix');
+if(techMatrix)techMatrix.setOption({
+  backgroundColor:'transparent',
+  grid:{left:80,right:60,top:40,bottom:80,containLabel:true},
+  tooltip:{trigger:'item',formatter:p=>`<b>${p.data[3]}</b><br>市场影响力：${p.data[0]}<br>普及速度：${p.data[1]}<br>投入规模：${p.data[2]}`,backgroundColor:'#1c2128',borderColor:C.border,textStyle:{color:C.text}},
+  xAxis:{...baseAxis,type:'value',name:'市场影响力（1-10）',min:0,max:10,nameTextStyle:{color:C.text2}},
+  yAxis:{...baseAxis,type:'value',name:'普及速度（1-10）',min:0,max:10,nameTextStyle:{color:C.text2}},
+  series:[{type:'scatter',symbolSize:p=>p[2]*6,
+    data:[
+      {value:[9,6,8,'无刷电机'],itemStyle:{color:C.blue}},
+      {value:[7,9,5,'进阶离子'],itemStyle:{color:C.purple}},
+      {value:[8,7,9,'多合一形态'],itemStyle:{color:C.green}},
+      {value:[6,8,4,'无绳吹风'],itemStyle:{color:C.orange}},
+      {value:[5,4,7,'智能蓝牙'],itemStyle:{color:C.yellow}},
+      {value:[7,5,6,'自动卷发'],itemStyle:{color:C.pink}},
+      {value:[4,3,8,'红外/光能干发'],itemStyle:{color:C.teal}},
+      {value:[3,6,3,'环保可持续'],itemStyle:{color:C.red}},
+      {value:[6,7,5,'等离子技术'],itemStyle:{color:C.blue}},
+    ].map(d=>({...d,name:d.value[3]})),
+    label:{show:true,formatter:p=>p.data.name,color:C.text2,fontSize:11,position:'right'}
+  }]
+});
+
+window.addEventListener('resize',()=>{Object.values(charts).forEach(c=>{if(c)c.resize();});});
+</script>
+</body>
+</html>

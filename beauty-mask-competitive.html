@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CurrentBody vs Shark 美容面罩 竞品洞察 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root{
+  --bg:#0a0c14;--card:#111827;--border:#1f2d45;
+  --gold:#d4a84b;--rose:#e8a598;--teal:#4db8c8;--purple:#9b79d4;
+  --text:#e8e4dd;--muted:#6b7280;--green:#34d399;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+.header{background:linear-gradient(135deg,#0f0a1e 0%,#1a1228 50%,#0d1a2e 100%);
+         padding:40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(212,168,75,0.08) 0%,transparent 70%);border-radius:50%}
+.header h1{font-size:1.9rem;font-weight:700;
+  background:linear-gradient(90deg,var(--gold),var(--rose));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header .meta{color:var(--muted);margin-top:8px;font-size:.88rem}
+.container{max-width:1400px;margin:0 auto;padding:24px}
+.section-title{font-size:1.15rem;font-weight:600;color:var(--gold);margin:36px 0 16px;
+  border-left:3px solid var(--rose);padding-left:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:28px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kpi.gold::before{background:linear-gradient(90deg,var(--gold),var(--rose))}
+.kpi.blue::before{background:linear-gradient(90deg,var(--teal),var(--purple))}
+.kpi .label{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.kpi .value{font-size:1.85rem;font-weight:700;margin:8px 0 4px}
+.kpi .sub{color:var(--muted);font-size:.8rem}
+.chart-grid{display:grid;gap:20px}
+.chart-2col{grid-template-columns:1fr 1fr}
+.chart-3col{grid-template-columns:1fr 1fr 1fr}
+.chart-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.chart-box h3{font-size:.92rem;color:var(--text);margin-bottom:16px;opacity:.85}
+.chart{width:100%;height:300px}
+.chart-tall{width:100%;height:380px}
+.brand-compare{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;margin-bottom:32px;align-items:start}
+.brand-panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+.brand-panel.cb{border-top:3px solid var(--gold)}
+.brand-panel.sk{border-top:3px solid var(--teal)}
+.brand-panel .bname{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.brand-panel .bsub{color:var(--muted);font-size:.82rem;margin-bottom:16px}
+.metric-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+.metric-row .ml{color:var(--muted);font-size:.83rem}
+.metric-row .mv{font-weight:600;font-size:.9rem}
+.vs-badge{display:flex;align-items:center;justify-content:center;padding-top:40px}
+.vs-badge span{background:linear-gradient(135deg,var(--gold),var(--rose));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  font-size:2.5rem;font-weight:900}
+.note-card{background:rgba(212,168,75,.06);border:1px solid rgba(212,168,75,.2);
+  border-radius:10px;padding:16px;font-size:.83rem;color:var(--muted);margin:16px 0}
+.note-card b{color:var(--gold)}
+.tag{display:inline-block;background:rgba(212,168,75,.12);color:var(--gold);
+  border-radius:4px;padding:2px 8px;font-size:.75rem;margin:2px}
+.tag.blue{background:rgba(77,184,200,.12);color:var(--teal)}
+.footer{text-align:center;padding:32px;color:var(--muted);font-size:.8rem;
+  border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:900px){.chart-2col,.chart-3col,.brand-compare{grid-template-columns:1fr}
+  .vs-badge{padding:0 0 16px 0}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>CurrentBody vs Shark 美容面罩 竞品洞察</h1>
+  <div class="meta">亚马逊 Top4 国家精确数据 + 全渠道估算 · 数据日期 2026-05-07</div>
+</div>
+<div class="container">
+
+<div class="section-title">执行摘要</div>
+<div class="kpi-grid">
+  <div class="kpi gold">
+    <div class="label">CurrentBody 2024年营收</div>
+    <div class="value" style="color:var(--gold)">£101M</div>
+    <div class="sub">全渠道年度，IPO招股书披露</div>
+  </div>
+  <div class="kpi gold">
+    <div class="label">CurrentBody Amazon US 月销量</div>
+    <div class="value" style="color:var(--gold)">2,421</div>
+    <div class="sub">件/月 · $112万USD</div>
+  </div>
+  <div class="kpi blue">
+    <div class="label">Shark Beauty 类目增速（2024）</div>
+    <div class="value" style="color:var(--teal)">+68%</div>
+    <div class="sub">Beauty & Home Env. $568.7M</div>
+  </div>
+  <div class="kpi blue">
+    <div class="label">Shark Amazon US 月销量</div>
+    <div class="value" style="color:var(--teal)">6,095</div>
+    <div class="sub">件/月 · $210万USD</div>
+  </div>
+  <div class="kpi gold">
+    <div class="label">Amazon Top4国 月销量合计</div>
+    <div class="value" style="font-size:1.5rem">11,573</div>
+    <div class="sub">件/月，两品牌合计</div>
+  </div>
+  <div class="kpi blue">
+    <div class="label">Shark CryoGlow 2025目标</div>
+    <div class="value" style="color:var(--rose)">$100M+</div>
+    <div class="sub">CEO Q4 2024财报电话会预期</div>
+  </div>
+</div>
+<div class="note-card">
+  <b>数据说明：</b>
+  Amazon 渠道数据来自 Sorftime API（精确月销量），仅代表亚马逊平台；
+  全渠道数据基于 IPO 招股书（CurrentBody）、SharkNinja 财报及管理层表述（Shark），为估算值。
+  CurrentBody 约 90% 收入来自自营电商，Amazon 仅为辅助渠道。
+  Shark DE/CA 无官方上市，Amazon 数据为非官方第三方卖家或早期测试。
+</div>
+
+<div class="section-title">Amazon 渠道：Top4 国家月销量对比</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>月销量 — 两品牌各国对比（件/月）</h3>
+    <div id="chartSalesBar" class="chart-tall"></div>
+  </div>
+  <div class="chart-box">
+    <h3>月销售额 — 两品牌各国对比（万USD）</h3>
+    <div id="chartRevBar" class="chart-tall"></div>
+  </div>
+</div>
+
+<div class="section-title">品牌深度对比</div>
+<div class="brand-compare">
+  <div class="brand-panel cb">
+    <div class="bname" style="color:var(--gold)">CurrentBody Skin</div>
+    <div class="bsub">The Beauty Tech Group · LED光疗面罩</div>
+    <div class="metric-row"><span class="ml">2024年全渠道营收</span><span class="mv">£101.1M (~$128M)</span></div>
+    <div class="metric-row"><span class="ml">Amazon US 月销量</span><span class="mv">2,421 件</span></div>
+    <div class="metric-row"><span class="ml">Amazon US 均价</span><span class="mv">$470</span></div>
+    <div class="metric-row"><span class="ml">Amazon GB 月销量</span><span class="mv">447 件</span></div>
+    <div class="metric-row"><span class="ml">最大市场</span><span class="mv">美国+加拿大（37%）</span></div>
+    <div class="metric-row"><span class="ml">主要渠道</span><span class="mv">自营电商 >90%</span></div>
+    <div class="metric-row"><span class="ml">零售合作</span><span class="mv">Selfridges · Space NK</span></div>
+    <div class="metric-row"><span class="ml">US官网月收入（Grips）</span><span class="mv">~$258万（11,307单）</span></div>
+    <div class="metric-row"><span class="ml">全球覆盖</span><span class="mv">90+ 国家</span></div>
+    <div style="margin-top:12px">
+      <span class="tag">LED光疗</span><span class="tag">高端 $470</span>
+      <span class="tag">DTC主导</span><span class="tag">IPO中</span>
+    </div>
+  </div>
+  <div class="vs-badge"><span>VS</span></div>
+  <div class="brand-panel sk">
+    <div class="bname" style="color:var(--teal)">Shark CryoGlow</div>
+    <div class="bsub">SharkNinja (NYSE: SN) · LED+冷疗复合面罩</div>
+    <div class="metric-row"><span class="ml">Beauty类目2024营收</span><span class="mv">$568.7M (+67.8%)</span></div>
+    <div class="metric-row"><span class="ml">Amazon US 月销量</span><span class="mv">6,095 件</span></div>
+    <div class="metric-row"><span class="ml">Amazon US 均价</span><span class="mv">$350</span></div>
+    <div class="metric-row"><span class="ml">Amazon GB 月销量</span><span class="mv">1,040 件</span></div>
+    <div class="metric-row"><span class="ml">2025年CryoGlow目标</span><span class="mv">$100M+（CEO预期）</span></div>
+    <div class="metric-row"><span class="ml">主要渠道</span><span class="mv">Amazon · Best Buy · Ulta</span></div>
+    <div class="metric-row"><span class="ml">零售合作</span><span class="mv">Currys · Argos · Boots (UK)</span></div>
+    <div class="metric-row"><span class="ml">市场地位</span><span class="mv">美国 #1 护肤面部设备（Circana）</span></div>
+    <div class="metric-row"><span class="ml">全球曝光</span><span class="mv">10亿+ 次</span></div>
+    <div style="margin-top:12px">
+      <span class="tag blue">LED+冷疗</span><span class="tag blue">主流 $350</span>
+      <span class="tag blue">全渠道</span><span class="tag blue">上市公司</span>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">全渠道分布估算</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>CurrentBody 2024年营收地区分布（IPO招股书）</h3>
+    <div id="chartCBRegion" class="chart"></div>
+  </div>
+  <div class="chart-box">
+    <h3>Shark CryoGlow 已上市国家/地区</h3>
+    <div id="chartSkLaunch" class="chart"></div>
+  </div>
+</div>
+
+<div class="section-title">竞品维度对比</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>竞品能力雷达图（评分 1–10，主观综合评估）</h3>
+    <div id="chartRadar" class="chart-tall"></div>
+  </div>
+  <div class="chart-box">
+    <h3>Amazon Top4国月销量构成</h3>
+    <div id="chartStack" class="chart-tall"></div>
+  </div>
+</div>
+
+</div>
+<div class="footer">
+  数据来源：Sorftime API（Amazon 精确月销量）· The Beauty Tech Group IPO招股书 · SharkNinja Q4 2024财报 ·
+  Grips Intelligence · Circana Retail Tracking<br>
+  Amazon数据日期：2026-05-07 | 全渠道数据为估算，仅供参考
+</div>
+
+<script>
+const GOLD='#d4a84b',ROSE='#e8a598',TEAL='#4db8c8',PURPLE='#9b79d4',MUTED='#6b7280';
+const BG='#111827',AXIS='#1f2d45',TEXT='#e8e4dd';
+
+function baseOpts(){
+  return {
+    backgroundColor:BG,
+    textStyle:{color:TEXT},
+    tooltip:{backgroundColor:'#1f2d45',borderColor:'#2d3f5a',textStyle:{color:TEXT}},
+    legend:{textStyle:{color:TEXT}},
+    grid:{containLabel:true,top:40,bottom:30,left:20,right:20}
+  };
+}
+function initChart(id){return echarts.init(document.getElementById(id),null,{renderer:'canvas'});}
+
+// 1. Sales bar (grouped)
+(function(){
+  const c=initChart('chartSalesBar');
+  const opts=baseOpts();
+  const sites=["美国", "加拿大", "英国", "德国"];
+  opts.legend={bottom:0,textStyle:{color:TEXT}};
+  opts.xAxis={type:'category',data:sites,axisLabel:{color:TEXT}};
+  opts.yAxis={type:'value',name:'件/月',axisLabel:{color:MUTED},splitLine:{lineStyle:{color:AXIS}}};
+  opts.series=[
+    {name:'CurrentBody',type:'bar',data:[2421, 0, 447, 0],barMaxWidth:32,
+      itemStyle:{color:GOLD,borderRadius:[3,3,0,0]},
+      label:{show:true,position:'top',color:TEXT,fontSize:10}},
+    {name:'Shark',type:'bar',data:[6095, 779, 1040, 791],barMaxWidth:32,
+      itemStyle:{color:TEAL,borderRadius:[3,3,0,0]},
+      label:{show:true,position:'top',color:TEXT,fontSize:10}}
+  ];
+  c.setOption(opts);
+})();
+
+// 2. Revenue bar (grouped)
+(function(){
+  const c=initChart('chartRevBar');
+  const opts=baseOpts();
+  opts.legend={bottom:0,textStyle:{color:TEXT}};
+  opts.xAxis={type:'category',data:["美国", "加拿大", "英国", "德国"],axisLabel:{color:TEXT}};
+  opts.yAxis={type:'value',name:'万USD',axisLabel:{color:MUTED},splitLine:{lineStyle:{color:AXIS}}};
+  opts.series=[
+    {name:'CurrentBody',type:'bar',data:[112.0, 0.0, 22.7, 0.0],barMaxWidth:32,
+      itemStyle:{color:GOLD,borderRadius:[3,3,0,0]},
+      label:{show:true,position:'top',formatter:'{c}',color:TEXT,fontSize:10}},
+    {name:'Shark',type:'bar',data:[210.0, 28.4, 39.6, 20.8],barMaxWidth:32,
+      itemStyle:{color:TEAL,borderRadius:[3,3,0,0]},
+      label:{show:true,position:'top',formatter:'{c}',color:TEXT,fontSize:10}}
+  ];
+  c.setOption(opts);
+})();
+
+// 3. CurrentBody region pie
+(function(){
+  const c=initChart('chartCBRegion');
+  const opts=baseOpts();
+  opts.grid=undefined;
+  opts.legend={bottom:0,textStyle:{color:TEXT,fontSize:11}};
+  opts.series=[{
+    type:'pie',radius:['38%','65%'],center:['50%','45%'],
+    data:[{"value": 37, "name": "美国+加拿大"}, {"value": 22, "name": "英国+爱尔兰"}, {"value": 23, "name": "欧盟"}, {"value": 14, "name": "亚洲"}, {"value": 4, "name": "其他"}],
+    label:{show:true,formatter:'{b}\n{d}%',fontSize:11,color:TEXT},
+    emphasis:{itemStyle:{shadowBlur:8}}
+  }];
+  c.setOption(opts);
+})();
+
+// 4. Shark launch bar (market rollout)
+(function(){
+  const c=initChart('chartSkLaunch');
+  const opts=baseOpts();
+  opts.grid=undefined;
+  const markets=['英国','美国','澳大利亚','UAE','德国(未上市)','加拿大(未上市)'];
+  const times=[2024.85, 2025.12, 2026.25, 2026.37, 0, 0];
+  const labels=['2024/11','2025/02','2026/03','2026/05','—','—'];
+  opts.xAxis={type:'value',min:2024,max:2027,show:false};
+  opts.yAxis={type:'category',data:markets,axisLabel:{color:TEXT}};
+  opts.series=[{
+    type:'bar',data:times.map((v,i)=>v?{value:v,label:{show:true,formatter:labels[i],position:'right',color:TEXT,fontSize:11},itemStyle:{color:[GOLD,TEAL,PURPLE,ROSE,'#2d3f5a','#2d3f5a'][i],borderRadius:[0,4,4,0]}}:{value:2024,label:{show:true,formatter:labels[i],position:'right',color:MUTED,fontSize:11},itemStyle:{color:'transparent'}}),
+    barMaxWidth:28
+  }];
+  c.setOption(opts);
+})();
+
+// 5. Radar
+(function(){
+  const c=initChart('chartRadar');
+  const opts=baseOpts();
+  opts.grid=undefined;
+  opts.legend={bottom:0,textStyle:{color:TEXT}};
+  opts.radar={
+    indicator:[
+      {name:'亚马逊渠道强度',max:10},
+      {name:'价格竞争力',max:10},
+      {name:'品牌溢价',max:10},
+      {name:'DTC能力',max:10},
+      {name:'零售渗透',max:10}
+    ],
+    shape:'polygon',
+    splitNumber:4,
+    axisName:{color:TEXT,fontSize:11},
+    splitLine:{lineStyle:{color:AXIS}},
+    splitArea:{show:false},
+    axisLine:{lineStyle:{color:AXIS}}
+  };
+  opts.series=[{
+    type:'radar',
+    data:[
+      {value:[4.5, 9, 7, 6, 8],name:'CurrentBody',
+        itemStyle:{color:GOLD},
+        lineStyle:{color:GOLD,width:2},
+        areaStyle:{color:'rgba(212,168,75,0.15)'}},
+      {value:[7, 8, 5, 9, 9],name:'Shark CryoGlow',
+        itemStyle:{color:TEAL},
+        lineStyle:{color:TEAL,width:2},
+        areaStyle:{color:'rgba(77,184,200,0.15)'}}
+    ]
+  }];
+  c.setOption(opts);
+})();
+
+// 6. Stacked bar by country
+(function(){
+  const c=initChart('chartStack');
+  const opts=baseOpts();
+  opts.legend={bottom:0,textStyle:{color:TEXT}};
+  opts.xAxis={type:'category',data:["美国", "加拿大", "英国", "德国"],axisLabel:{color:TEXT}};
+  opts.yAxis={type:'value',name:'件/月',axisLabel:{color:MUTED},splitLine:{lineStyle:{color:AXIS}}};
+  opts.series=[
+    {name:'CurrentBody',type:'bar',stack:'total',data:[2421, 0, 447, 0],
+      itemStyle:{color:GOLD},label:{show:true,formatter:(p)=>p.value?p.value:'',color:'#0a0c14',fontSize:10}},
+    {name:'Shark',type:'bar',stack:'total',data:[6095, 779, 1040, 791],
+      itemStyle:{color:TEAL},label:{show:true,formatter:(p)=>p.value?p.value:'',color:'#0a0c14',fontSize:10}}
+  ];
+  c.setOption(opts);
+})();
+
+window.addEventListener('resize',()=>{
+  ['chartSalesBar','chartRevBar','chartCBRegion','chartSkLaunch','chartRadar','chartStack']
+  .forEach(id=>{const c=echarts.getInstanceByDom(document.getElementById(id));if(c)c.resize();});
+});
+</script>
+</body>
+</html>

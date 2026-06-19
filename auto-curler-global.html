@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自动旋转卷发棒 全球市场洞察 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+:root{
+  --bg:#0a0e1a;--card:#131929;--border:#1e2d4a;
+  --accent:#ff6b9d;--accent2:#a78bfa;--accent3:#06b6d4;
+  --text:#e2e8f0;--muted:#64748b;--green:#10b981;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+.header{background:linear-gradient(135deg,#1a0a2e 0%,#16213e 50%,#0f3460 100%);padding:40px;border-bottom:1px solid var(--border)}
+.header h1{font-size:2rem;font-weight:700;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header .meta{color:var(--muted);margin-top:8px;font-size:.9rem}
+.container{max-width:1400px;margin:0 auto;padding:24px}
+.section-title{font-size:1.2rem;font-weight:600;color:var(--accent2);margin:32px 0 16px;border-left:3px solid var(--accent);padding-left:12px}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.kpi .label{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.kpi .value{font-size:2rem;font-weight:700;color:var(--accent);margin:8px 0 4px}
+.kpi .sub{color:var(--muted);font-size:.8rem}
+.chart-grid{display:grid;gap:20px}
+.chart-2col{grid-template-columns:1fr 1fr}
+.chart-3col{grid-template-columns:1fr 1fr 1fr}
+.chart-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.chart-box h3{font-size:.95rem;color:var(--text);margin-bottom:16px;opacity:.8}
+.chart{width:100%;height:320px}
+.chart-tall{width:100%;height:400px}
+.brand-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:32px}
+.brand-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden}
+.brand-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.brand-card:nth-child(1)::before{background:linear-gradient(90deg,var(--accent),#ff8fb1)}
+.brand-card:nth-child(2)::before{background:linear-gradient(90deg,var(--accent2),#c084fc)}
+.brand-card:nth-child(3)::before{background:linear-gradient(90deg,var(--accent3),#67e8f9)}
+.brand-name{font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.brand-rank{color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.brand-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.metric{background:rgba(255,255,255,.04);border-radius:8px;padding:10px}
+.metric .m-label{color:var(--muted);font-size:.75rem}
+.metric .m-value{font-size:1.1rem;font-weight:600;margin-top:4px}
+.region-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:32px}
+.region-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.region-card h4{font-size:1rem;font-weight:600;margin-bottom:12px;color:var(--accent2)}
+.region-card p{color:var(--muted);font-size:.85rem;line-height:1.6}
+.region-card .tag{display:inline-block;background:rgba(255,107,157,.12);color:var(--accent);border-radius:4px;padding:2px 8px;font-size:.75rem;margin:2px}
+.footer{text-align:center;padding:32px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border);margin-top:40px}
+@media(max-width:768px){.chart-2col,.chart-3col{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🌏 自动旋转卷发棒 全球市场洞察</h1>
+  <div class="meta">亚马逊 8 站点 · 数据日期 2026-05-07 · Sorftime API + 网络公开资料</div>
+</div>
+<div class="container">
+
+<div class="section-title">执行摘要</div>
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="label">8站月度总销售额</div>
+    <div class="value">$18.0M</div>
+    <div class="sub">USD/月，亚马逊平台</div>
+  </div>
+  <div class="kpi">
+    <div class="label">北美区（US+CA）</div>
+    <div class="value">$10.1M</div>
+    <div class="sub">份额 56.3%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">欧洲区（5站）</div>
+    <div class="value">$3.9M</div>
+    <div class="sub">份额 21.7%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">亚洲区（JP）</div>
+    <div class="value">$3.9M</div>
+    <div class="sub">份额 22.0%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">US 头部品牌</div>
+    <div class="value" style="font-size:1.4rem">TYMO</div>
+    <div class="sub">份额 20.18%</div>
+  </div>
+  <div class="kpi">
+    <div class="label">年末旺季峰值</div>
+    <div class="value">401K</div>
+    <div class="sub">2025年12月 US 月销量</div>
+  </div>
+</div>
+
+<div class="section-title">品类定位：自动卷发棒占整体卷发棒市场</div>
+<div class="kpi-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));max-width:900px;margin-bottom:20px">
+  <div class="kpi">
+    <div class="label">卷发棒全球总市场（2024）</div>
+    <div class="value">$5.0B</div>
+    <div class="sub">USD · CAGR 7.8%（2024–2030）</div>
+  </div>
+  <div class="kpi">
+    <div class="label">自动旋转卷发棒（2024）</div>
+    <div class="value">$1.5B</div>
+    <div class="sub">USD · CAGR 8.9%（更快增长）</div>
+  </div>
+  <div class="kpi">
+    <div class="label">自动款市场占比</div>
+    <div class="value" style="color:var(--accent2)">~30%</div>
+    <div class="sub">预计2030年提升至40%+</div>
+  </div>
+</div>
+<div class="chart-grid chart-2col" style="margin-bottom:32px">
+  <div class="chart-box">
+    <h3>自动 vs 传统卷发棒市场份额（2024）</h3>
+    <div id="chartMarketShare" class="chart"></div>
+  </div>
+  <div class="chart-box">
+    <h3>增长速度对比 — CAGR（2024–2030）</h3>
+    <div id="chartCagr" class="chart"></div>
+  </div>
+</div>
+
+<div class="section-title">亚马逊区域对比</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>各站月销售额（万USD）</h3>
+    <div id="chartRevBar" class="chart-tall"></div>
+  </div>
+  <div class="chart-box">
+    <h3>各站均价（USD）</h3>
+    <div id="chartAvgPrice" class="chart"></div>
+  </div>
+</div>
+
+<div class="section-title">品牌格局（US 为基准）</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>Top10 品牌月销额份额</h3>
+    <div id="chartBrandPie" class="chart-tall"></div>
+  </div>
+  <div class="chart-box">
+    <h3>Top10 品牌月销额（万USD）</h3>
+    <div id="chartBrandBar" class="chart-tall"></div>
+  </div>
+</div>
+
+<div class="section-title">Top3 品牌深度</div>
+<div class="brand-cards">
+  <div class="brand-card">
+    <div class="brand-rank">#1 · US 份额 20.18%</div>
+    <div class="brand-name">TYMO</div>
+    <div class="brand-metrics">
+      <div class="metric"><div class="m-label">价格</div><div class="m-value" style="color:var(--accent)">$79.99</div></div>
+      <div class="metric"><div class="m-label">评分</div><div class="m-value">4.6★</div></div>
+      <div class="metric"><div class="m-label">评论数</div><div class="m-value">8,153</div></div>
+      <div class="metric"><div class="m-label">月销量</div><div class="m-value">22,957</div></div>
+    </div>
+  </div>
+  <div class="brand-card">
+    <div class="brand-rank">#2 · US 份额 16.92%</div>
+    <div class="brand-name">BIO IONIC</div>
+    <div class="brand-metrics">
+      <div class="metric"><div class="m-label">价格</div><div class="m-value" style="color:var(--accent2)">$114.0</div></div>
+      <div class="metric"><div class="m-label">评分</div><div class="m-value">4.4★</div></div>
+      <div class="metric"><div class="m-label">评论数</div><div class="m-value">4,075</div></div>
+      <div class="metric"><div class="m-label">月销量</div><div class="m-value">13,727</div></div>
+    </div>
+  </div>
+  <div class="brand-card">
+    <div class="brand-rank">#3 · US 份额 12.52%</div>
+    <div class="brand-name">HOT TOOLS</div>
+    <div class="brand-metrics">
+      <div class="metric"><div class="m-label">价格</div><div class="m-value" style="color:var(--accent3)">$55.99</div></div>
+      <div class="metric"><div class="m-label">评分</div><div class="m-value">4.3★</div></div>
+      <div class="metric"><div class="m-label">评论数</div><div class="m-value">2,251</div></div>
+      <div class="metric"><div class="m-label">月销量</div><div class="m-value">16,413</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">价格段分析</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>US 价格段产品数分布</h3>
+    <div id="chartSegUS" class="chart"></div>
+  </div>
+  <div class="chart-box">
+    <h3>各站价格段产品数对比（堆叠）</h3>
+    <div id="chartSegAll" class="chart-tall"></div>
+  </div>
+</div>
+
+<div class="section-title">US 销量趋势（25个月）</div>
+<div class="chart-box">
+  <h3>US 类目月销量趋势 — 明显年末礼品旺季（Nov-Dec 峰值）</h3>
+  <div id="chartTrend" class="chart-tall"></div>
+</div>
+
+<div class="section-title">卖家来源分析（US）</div>
+<div class="chart-grid chart-2col">
+  <div class="chart-box">
+    <h3>US 卖家来源月销额（万USD）</h3>
+    <div id="chartSeller" class="chart"></div>
+  </div>
+  <div class="chart-box" style="display:flex;flex-direction:column;justify-content:center;padding:32px">
+    <h3 style="margin-bottom:16px">各欧洲站点 Top 品牌</h3>
+
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">英国</span><span><b>Kitsch</b> <span style="color:var(--accent);font-size:.8rem">17.52%</span></span><span style="color:var(--muted);font-size:.8rem">均价$12</span></div>
+
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">德国</span><span><b>Remington</b> <span style="color:var(--accent);font-size:.8rem">28.36%</span></span><span style="color:var(--muted);font-size:.8rem">均价$43</span></div>
+
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">法国</span><span><b>Remington</b> <span style="color:var(--accent);font-size:.8rem">32.4%</span></span><span style="color:var(--muted);font-size:.8rem">均价$50</span></div>
+
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">西班牙</span><span><b>TYMO</b> <span style="color:var(--accent);font-size:.8rem">18.75%</span></span><span style="color:var(--muted);font-size:.8rem">均价$51</span></div>
+
+    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">意大利</span><span><b>ghd</b> <span style="color:var(--accent);font-size:.8rem">20.36%</span></span><span style="color:var(--muted);font-size:.8rem">均价$46</span></div>
+
+  </div>
+</div>
+
+<div class="section-title">非亚马逊区域洞察</div>
+<div class="region-cards">
+  <div class="region-card">
+    <h4>🌏 东南亚（Shopee / Lazada / TikTok Shop）</h4>
+
+    <p><b>市场规模：</b>估算 2024 年约 1.5–3 亿美元（占亚太美发电器市场 15–20%），CAGR 约 8–12%</p>
+    <p style="margin-top:8px"><b>主导平台：</b>Shopee 52% · TikTok Shop 18%（YoY +40–55%）· Lazada 15%</p>
+    <p style="margin-top:8px"><b>Top3 品牌：</b></p>
+    <span class="tag">Philips（$25–$90）</span>
+    <span class="tag">BaByliss（$40–$120）</span>
+    <span class="tag">Wavytalk/白牌（$15–$35）</span>
+    <p style="margin-top:8px"><b>主流价格段：</b>$10–25（50%大众平价）和 $25–60（35%中端主流）</p>
+    <p style="margin-top:8px"><b>特点：</b>TikTok直播带货驱动最强增长；Wavytalk 2024上半年TikTok Shop销售额达$1,260万；中国白牌价格战激烈，印尼/越南增速最快</p>
+  </div>
+  <div class="region-card">
+    <h4>🇷🇺 俄语区（Ozon / Wildberries）</h4>
+
+    <p><b>市场规模：</b>估算 2024 年约 5,500万–1.1 亿美元；俄罗斯个护电器市场 CAGR 6.17%（2024–2029）</p>
+    <p style="margin-top:8px"><b>主导平台：</b>Wildberries 45%（电商第一） · Ozon 30%，两平台合计 80%+ 份额</p>
+    <p style="margin-top:8px"><b>Top3 品牌：</b></p>
+    <span class="tag">Philips（₽15,000–23,000 / $165–250）</span>
+    <span class="tag">BaByliss（₽8,900–14,200 / $98–155）</span>
+    <span class="tag">VGR中国品牌（₽2,350–4,000 / $26–44）</span>
+    <p style="margin-top:8px"><b>主流价格段：</b>₽3,500–8,000（$38–88），城市白领中端主力区间；2024 年网购个护同比增长 80%</p>
+    <p style="margin-top:8px"><b>特点：</b>制裁后 Dyson/GHD 渠道受限，中国品牌加速填补；无线便携款增速最快；用户以 25–45 岁城市女性为主，评价驱动转化</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+<div class="footer">
+  数据来源：Sorftime API（亚马逊 8 站点类目报告 · 2026-05-07）· 网络公开资料（东南亚/俄语区）<br>
+  汇率：GBP=1.27 · EUR=1.08 · JPY=0.0067 · CAD=0.73 | 月度数据，仅供参考
+</div>
+
+<script>
+// Color palette
+const PINK = '#ff6b9d', PURPLE = '#a78bfa', TEAL = '#06b6d4', MUTED = '#64748b';
+const BG = '#131929', AXIS = '#1e2d4a', TEXT = '#e2e8f0';
+
+const globalOpts = {
+  backgroundColor: BG,
+  textStyle: {color: TEXT},
+  tooltip: {backgroundColor:'#1e2d4a', borderColor:'#2d3f60', textStyle:{color:TEXT}},
+  legend: {textStyle:{color:TEXT}},
+  grid: {containLabel:true, top:40, bottom:30, left:20, right:20}
+};
+
+function baseOpts() { return JSON.parse(JSON.stringify(globalOpts)); }
+function initChart(id) { return echarts.init(document.getElementById(id), null, {renderer:'canvas'}); }
+
+// 1. Revenue bar chart
+(function(){
+  const c = initChart('chartRevBar');
+  const sites = ["美国", "加拿大", "英国", "德国", "法国", "西班牙", "意大利", "日本"];
+  const revs  = [935.7, 75.8, 49.1, 161.5, 53.3, 50.0, 75.4, 394.8];
+  const colors= ["#ff6b9d", "#ff8fb1", "#a78bfa", "#7c3aed", "#8b5cf6", "#c084fc", "#d8b4fe", "#06b6d4"];
+  const opts = baseOpts();
+  opts.xAxis = {type:'category', data:sites, axisLine:{lineStyle:{color:AXIS}}, axisLabel:{color:TEXT}};
+  opts.yAxis = {type:'value', name:'万USD', axisLine:{lineStyle:{color:AXIS}}, axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = [{
+    type:'bar', data:revs, barMaxWidth:50,
+    itemStyle:{color:(params)=>colors[params.dataIndex], borderRadius:[4,4,0,0]},
+    label:{show:true, position:'top', formatter:'{c}', color:TEXT, fontSize:11}
+  }];
+  c.setOption(opts);
+})();
+
+// 2. Avg price bar
+(function(){
+  const c = initChart('chartAvgPrice');
+  const opts = baseOpts();
+  opts.xAxis = {type:'category', data:["美国", "加拿大", "英国", "德国", "法国", "西班牙", "意大利", "日本"], axisLine:{lineStyle:{color:AXIS}}, axisLabel:{color:TEXT}};
+  opts.yAxis = {type:'value', name:'USD', axisLine:{lineStyle:{color:AXIS}}, axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = [{
+    type:'bar', data:[42.7, 32.0, 12.0, 42.9, 50.3, 51.5, 46.2, 42.6], barMaxWidth:40,
+    itemStyle:{color:PURPLE, borderRadius:[4,4,0,0]},
+    label:{show:true, position:'top', formatter:'${c}', color:TEXT, fontSize:11}
+  }];
+  c.setOption(opts);
+})();
+
+// 3. Brand pie
+(function(){
+  const c = initChart('chartBrandPie');
+  const opts = baseOpts();
+  opts.grid = undefined;
+  opts.legend = {orient:'vertical', right:10, top:'middle', textStyle:{color:TEXT, fontSize:11}};
+  opts.series = [{
+    type:'pie', radius:['40%','70%'], center:['35%','50%'],
+    data:[{"value": 20.18, "name": "TYMO"}, {"value": 16.92, "name": "BIO IONIC"}, {"value": 12.52, "name": "HOT TOOLS"}, {"value": 12.13, "name": "Conair"}, {"value": 7.3, "name": "T3 Micro"}, {"value": 4.37, "name": "BaBylissPRO"}, {"value": 2.85, "name": "CHI"}, {"value": 2.52, "name": "ELLA BELLA"}, {"value": 2.11, "name": "hahahope"}, {"value": 1.65, "name": "SHEGLAM"}],
+    label:{show:true, formatter:'{b}\n{d}%', fontSize:11, color:TEXT},
+    emphasis:{itemStyle:{shadowBlur:10}}
+  }];
+  c.setOption(opts);
+})();
+
+// 4. Brand bar (horizontal)
+(function(){
+  const c = initChart('chartBrandBar');
+  const names = ["TYMO", "BIO IONIC", "HOT TOOLS", "Conair", "T3 Micro", "BaBylissPRO", "CHI", "ELLA BELLA", "hahahope", "SHEGLAM"];
+  const revs  = [188.8, 158.3, 117.2, 113.5, 68.3, 40.9, 26.7, 23.6, 19.7, 15.5];
+  const opts = baseOpts();
+  opts.xAxis = {type:'value', name:'万USD', axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.yAxis = {type:'category', data:[...names].reverse(), axisLabel:{color:TEXT, fontSize:11}};
+  opts.series = [{
+    type:'bar', data:[...revs].reverse(), barMaxWidth:28,
+    itemStyle:{color:(p)=>['#ff6b9d','#a78bfa','#06b6d4','#f59e0b','#10b981','#8b5cf6','#f97316','#14b8a6','#6366f1','#e11d48'][p.dataIndex], borderRadius:[0,4,4,0]},
+    label:{show:true, position:'right', formatter:'{c}', color:TEXT, fontSize:10}
+  }];
+  c.setOption(opts);
+})();
+
+// 5. US price segment pie
+(function(){
+  const c = initChart('chartSegUS');
+  const opts = baseOpts();
+  opts.grid = undefined;
+  opts.legend = {bottom:0, textStyle:{color:TEXT, fontSize:11}};
+  const labels = ["<30", "30-60", "60-100", "100-200", ">200"];
+  const vals   = [52, 31, 12, 5, 0];
+  opts.series = [{
+    type:'pie', radius:['35%','65%'], center:['50%','45%'],
+    data: labels.map((l,i)=>({'value':vals[i],'name':l})),
+    label:{formatter:'{b}\n{c} 款', fontSize:11, color:TEXT}
+  }];
+  c.setOption(opts);
+})();
+
+// 6. Multi-site price segment stacked bar
+(function(){
+  const c = initChart('chartSegAll');
+  const pseries = [{"name": "<30", "data": [52, 0, 0, 0, 0, 0, 0, 0]}, {"name": "30-60", "data": [31, 0, 0, 0, 0, 0, 0, 0]}, {"name": "60-100", "data": [12, 0, 0, 0, 0, 0, 0, 0]}, {"name": "100-200", "data": [5, 0, 0, 0, 0, 0, 0, 0]}, {"name": ">200", "data": [0, 0, 0, 0, 0, 0, 0, 0]}];
+  const colors6 = ['#ff6b9d','#a78bfa','#06b6d4','#f59e0b','#10b981'];
+  const opts = baseOpts();
+  opts.legend = {bottom:0, textStyle:{color:TEXT,fontSize:10}};
+  opts.xAxis = {type:'category', data:["美国", "加拿大", "英国", "德国", "法国", "西班牙", "意大利", "日本"], axisLabel:{color:TEXT}};
+  opts.yAxis = {type:'value', axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = pseries.map((s,i)=>({
+    name:s.name, type:'bar', stack:'total', data:s.data,
+    itemStyle:{color:colors6[i%5]},
+    label:{show:false}
+  }));
+  c.setOption(opts);
+})();
+
+// 7. Trend line
+(function(){
+  const c = initChart('chartTrend');
+  const months = ["2024/05", "2024/06", "2024/07", "2024/08", "2024/09", "2024/10", "2024/11", "2024/12", "2025/01", "2025/02", "2025/03", "2025/04", "2025/05", "2025/06", "2025/07", "2025/08", "2025/09", "2025/10", "2025/11", "2025/12", "2026/01", "2026/02", "2026/03", "2026/04", "2026/05"];
+  const vals   = [153872, 137582, 186578, 184667, 192891, 208159, 323219, 352949, 216958, 196545, 218128, 216520, 234637, 202924, 243126, 209103, 230074, 251027, 294674, 401291, 232344, 204872, 222691, 212780, 22403];
+  const opts = baseOpts();
+  opts.xAxis = {type:'category', data:months, axisLabel:{color:MUTED, fontSize:10, rotate:30}};
+  opts.yAxis = {type:'value', name:'月销量', axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = [{
+    type:'line', data:vals, smooth:true,
+    lineStyle:{color:PINK, width:2},
+    areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(255,107,157,0.4)'},{offset:1,color:'rgba(255,107,157,0.02)'}]}},
+    symbol:'circle', symbolSize:4, itemStyle:{color:PINK},
+    markPoint:{
+      data:[{type:'max',name:'峰值'},{type:'min',name:'低点'}],
+      itemStyle:{color:PURPLE}
+    }
+  }];
+  c.setOption(opts);
+})();
+
+// 8. Seller origin bar
+(function(){
+  const c = initChart('chartSeller');
+  const opts = baseOpts();
+  opts.xAxis = {type:'category', data:["Unknown", "中国", "英国", "中国香港", "美国", "加拿大"], axisLabel:{color:TEXT, rotate:20}};
+  opts.yAxis = {type:'value', name:'万USD', axisLabel:{color:MUTED}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = [{
+    type:'bar', data:[571.2, 304.9, 23.6, 19.9, 15.2, 0.9], barMaxWidth:40,
+    itemStyle:{color:TEAL, borderRadius:[4,4,0,0]},
+    label:{show:true, position:'top', formatter:'{c}', color:TEXT, fontSize:10}
+  }];
+  c.setOption(opts);
+})();
+
+// 9. Market share donut
+(function(){
+  const c = initChart('chartMarketShare');
+  const opts = baseOpts();
+  opts.grid = undefined;
+  opts.legend = {bottom:0, textStyle:{color:TEXT, fontSize:12}};
+  opts.series = [{
+    type:'pie', radius:['45%','70%'], center:['50%','46%'],
+    data:[
+      {value:30, name:'自动旋转卷发棒', itemStyle:{color:'#ff6b9d'}},
+      {value:70, name:'传统卷发棒', itemStyle:{color:'#2d3f60'}}
+    ],
+    label:{show:true, formatter:'{b}\n{d}%', fontSize:12, color:TEXT},
+    emphasis:{itemStyle:{shadowBlur:10}}
+  }];
+  c.setOption(opts);
+})();
+
+// 10. CAGR comparison bar
+(function(){
+  const c = initChart('chartCagr');
+  const opts = baseOpts();
+  opts.xAxis = {type:'category', data:['自动旋转卷发棒','整体卷发棒市场'], axisLabel:{color:TEXT, fontSize:12}};
+  opts.yAxis = {type:'value', name:'CAGR (%)', min:0, max:12, axisLabel:{color:MUTED, formatter:'{value}%'}, splitLine:{lineStyle:{color:AXIS}}};
+  opts.series = [{
+    type:'bar', barMaxWidth:80,
+    data:[
+      {value:8.9, itemStyle:{color:'#ff6b9d', borderRadius:[4,4,0,0]}},
+      {value:7.8, itemStyle:{color:'#a78bfa', borderRadius:[4,4,0,0]}}
+    ],
+    label:{show:true, position:'top', formatter:'{c}%', color:TEXT, fontSize:15, fontWeight:700}
+  }];
+  c.setOption(opts);
+})();
+
+window.addEventListener('resize', ()=>{
+  ['chartRevBar','chartAvgPrice','chartBrandPie','chartBrandBar',
+   'chartSegUS','chartSegAll','chartTrend','chartSeller',
+   'chartMarketShare','chartCagr'].forEach(id=>{
+    const c = echarts.getInstanceByDom(document.getElementById(id));
+    if(c) c.resize();
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperStyle 竞品调研报告 | 2025-2026 Multi-Styler Market Intelligence</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1d1d1f;
+            --bg-card: rgba(255,255,255,0.04);
+            --bg-card-hover: rgba(255,255,255,0.08);
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-tertiary: #6e6e73;
+            --accent-blue: #2997ff;
+            --accent-green: #30d158;
+            --accent-red: #ff453a;
+            --accent-orange: #ff9f0a;
+            --accent-purple: #bf5af2;
+            --accent-gold: linear-gradient(135deg, #b8860b, #ffd700, #b8860b);
+            --border: rgba(255,255,255,0.08);
+            --glass: rgba(255,255,255,0.02);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(41,151,255,0.08) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: rgba(41,151,255,0.1);
+            border: 1px solid rgba(41,151,255,0.3);
+            color: var(--accent-blue);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 80px);
+            font-weight: 700;
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, #f5f5f7, #a1a1a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 21px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 32px;
+            color: var(--text-tertiary);
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Styles */
+        section { padding: 100px 0; }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Grid Layouts */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 20px; }
+
+        /* Competitor Cards */
+        .competitor-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competitor-card .brand-tag {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .competitor-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .competitor-card .price {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .competitor-card .stats-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-item { text-align: center; flex: 1; }
+        .stat-value { font-size: 20px; font-weight: 600; }
+        .stat-label { font-size: 12px; color: var(--text-tertiary); margin-top: 4px; }
+
+        /* Rating Distribution */
+        .rating-bar-container { margin: 8px 0; display: flex; align-items: center; gap: 12px; }
+        .rating-label { width: 30px; font-size: 13px; color: var(--text-secondary); }
+        .rating-bar-bg { flex: 1; height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+        .rating-bar-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+        .rating-pct { width: 40px; font-size: 13px; color: var(--text-tertiary); text-align: right; }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 14px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 16px;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+        /* Pain Point Cards */
+        .pain-card {
+            border-left: 3px solid var(--accent-red);
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        .pain-card .pain-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+
+        .solution-card {
+            border-left: 3px solid var(--accent-green);
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+
+        .solution-card .solution-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-green);
+            margin-bottom: 8px;
+        }
+
+        /* Keyword Tags */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 4px;
+        }
+
+        .tag-positive { background: rgba(48,209,88,0.1); color: var(--accent-green); border: 1px solid rgba(48,209,88,0.2); }
+        .tag-negative { background: rgba(255,69,58,0.1); color: var(--accent-red); border: 1px solid rgba(255,69,58,0.2); }
+        .tag-neutral { background: rgba(255,159,10,0.1); color: var(--accent-orange); border: 1px solid rgba(255,159,10,0.2); }
+
+        /* Chart Placeholder */
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding-top: 20px; }
+        .bar-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
+        .bar { width: 100%; border-radius: 6px 6px 0 0; transition: height 1s ease; min-height: 4px; }
+        .bar-label { font-size: 10px; color: var(--text-tertiary); margin-top: 8px; text-align: center; writing-mode: vertical-rl; transform: rotate(180deg); max-height: 60px; overflow: hidden; }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(41,151,255,0.08), rgba(191,90,242,0.08));
+            border: 1px solid rgba(41,151,255,0.2);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .highlight-box h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* Marketing Copy */
+        .copy-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 12px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .copy-block::before {
+            content: '"';
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-size: 32px;
+            color: var(--accent-blue);
+            opacity: 0.5;
+        }
+
+        /* Trend Line */
+        .trend-visual {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 60px;
+            margin: 16px 0;
+        }
+
+        .trend-bar {
+            flex: 1;
+            background: var(--accent-blue);
+            border-radius: 3px 3px 0 0;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .trend-bar:hover { opacity: 1; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero-meta { flex-direction: column; gap: 8px; }
+            section { padding: 60px 0; }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 80px 0;
+        }
+
+        /* Number highlight */
+        .num-highlight {
+            font-size: 48px;
+            font-weight: 700;
+            background: var(--accent-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<!-- HERO -->
+<section class="hero">
+    <span class="hero-badge">MARKET INTELLIGENCE REPORT</span>
+    <h1><span class="gradient-text">SuperStyle</span><br>竞品深度调研</h1>
+    <p class="hero-subtitle">基于亚马逊实时数据 + 多维口碑分析，为 SuperStyle $299 定价策略与上市传播提供决策依据</p>
+    <div class="hero-meta">
+        <span>数据源: Amazon US 实时抓取</span>
+        <span>类目: Multi-Stylers (Node 23623514011)</span>
+        <span>报告日期: 2026年5月</span>
+    </div>
+</section>
+
+<!-- SECTION 1: MARKET OVERVIEW -->
+<section id="market-overview">
+    <div class="container">
+        <p class="section-label">Market Overview</p>
+        <h2 class="section-title">Multi-Styler 类目全景</h2>
+        <p class="section-desc">美亚 Multi-Stylers 类目(Node: 23623514011) 2025-2026年呈现强劲增长态势，Q4旺季效应显著，新品窗口期持续扩大。</p>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="stat-label" style="color:var(--text-tertiary);font-size:13px;margin-bottom:8px;">类目月销量 (Top100)</div>
+                <div class="num-highlight" style="font-size:36px;">75,141</div>
+                <p style="color:var(--text-secondary);font-size:14px;margin-top:8px;">月销额 $9,826,417</p>
+                <div class="trend-visual">
+                    <div class="trend-bar" style="height:12%;" title="2024.05"></div>
+                    <div class="trend-bar" style="height:7%;" title="2024.06"></div>
+                    <div class="trend-bar" style="height:15%;" title="2024.07"></div>
+                    <div class="trend-bar" style="height:9%;" title="2024.08"></div>
+                    <div class="trend-bar" style="height:11%;" title="2024.09"></div>
+                    <div class="trend-bar" style="height:19%;" title="2024.10"></div>
+                    <div class="trend-bar" style="height:47%;" title="2024.11"></div>
+                    <div class="trend-bar" style="height:59%;" title="2024.12"></div>
+                    <div class="trend-bar" style="height:17%;" title="2025.01"></div>
+                    <div class="trend-bar" style="height:15%;" title="2025.02"></div>
+                    <div class="trend-bar" style="height:12%;" title="2025.03"></div>
+                    <div class="trend-bar" style="height:11%;" title="2025.04"></div>
+                    <div class="trend-bar" style="height:14%;" title="2025.05"></div>
+                    <div class="trend-bar" style="height:11%;" title="2025.06"></div>
+                    <div class="trend-bar" style="height:15%;" title="2025.07"></div>
+                    <div class="trend-bar" style="height:13%;" title="2025.08"></div>
+                    <div class="trend-bar" style="height:30%;" title="2025.09"></div>
+                    <div class="trend-bar" style="height:36%;" title="2025.10"></div>
+                    <div class="trend-bar" style="height:55%;" title="2025.11"></div>
+                    <div class="trend-bar" style="height:100%;" title="2025.12"></div>
+                    <div class="trend-bar" style="height:34%;" title="2026.01"></div>
+                    <div class="trend-bar" style="height:29%;" title="2026.02"></div>
+                    <div class="trend-bar" style="height:32%;" title="2026.03"></div>
+                    <div class="trend-bar" style="height:35%;" title="2026.04"></div>
+                </div>
+                <p style="color:var(--text-tertiary);font-size:12px;">2024.05 - 2026.04 类目月销量趋势 | Q4旺季峰值216,936</p>
+            </div>
+
+            <div class="card">
+                <div class="stat-label" style="color:var(--text-tertiary);font-size:13px;margin-bottom:8px;">新品销额占比</div>
+                <div class="num-highlight" style="font-size:36px;">30.4%</div>
+                <p style="color:var(--text-secondary);font-size:14px;margin-top:8px;">2026年4月 | 持续走高</p>
+                <div class="trend-visual">
+                    <div class="trend-bar" style="height:100%;background:var(--accent-green);" title="35.6%"></div>
+                    <div class="trend-bar" style="height:88%;background:var(--accent-green);" title="31.4%"></div>
+                    <div class="trend-bar" style="height:70%;background:var(--accent-green);" title="25.0%"></div>
+                    <div class="trend-bar" style="height:42%;background:var(--accent-green);" title="15.0%"></div>
+                    <div class="trend-bar" style="height:37%;background:var(--accent-green);" title="13.3%"></div>
+                    <div class="trend-bar" style="height:45%;background:var(--accent-green);" title="16.0%"></div>
+                    <div class="trend-bar" style="height:55%;background:var(--accent-green);" title="19.4%"></div>
+                    <div class="trend-bar" style="height:53%;background:var(--accent-green);" title="18.9%"></div>
+                    <div class="trend-bar" style="height:53%;background:var(--accent-green);" title="19.0%"></div>
+                    <div class="trend-bar" style="height:47%;background:var(--accent-green);" title="16.8%"></div>
+                    <div class="trend-bar" style="height:56%;background:var(--accent-green);" title="20.1%"></div>
+                    <div class="trend-bar" style="height:70%;background:var(--accent-green);" title="25.0%"></div>
+                    <div class="trend-bar" style="height:56%;background:var(--accent-green);" title="20.0%"></div>
+                    <div class="trend-bar" style="height:49%;background:var(--accent-green);" title="17.5%"></div>
+                    <div class="trend-bar" style="height:61%;background:var(--accent-green);" title="21.9%"></div>
+                    <div class="trend-bar" style="height:80%;background:var(--accent-green);" title="28.5%"></div>
+                    <div class="trend-bar" style="height:63%;background:var(--accent-green);" title="22.3%"></div>
+                    <div class="trend-bar" style="height:66%;background:var(--accent-green);" title="23.5%"></div>
+                    <div class="trend-bar" style="height:58%;background:var(--accent-green);" title="20.6%"></div>
+                    <div class="trend-bar" style="height:54%;background:var(--accent-green);" title="19.2%"></div>
+                    <div class="trend-bar" style="height:59%;background:var(--accent-green);" title="20.9%"></div>
+                    <div class="trend-bar" style="height:61%;background:var(--accent-green);" title="21.8%"></div>
+                    <div class="trend-bar" style="height:69%;background:var(--accent-green);" title="24.4%"></div>
+                    <div class="trend-bar" style="height:85%;background:var(--accent-green);" title="30.4%"></div>
+                </div>
+                <p style="color:var(--text-tertiary);font-size:12px;">新品(上架3个月内)销额占比趋势 | 窗口期友好</p>
+            </div>
+
+            <div class="card">
+                <div class="stat-label" style="color:var(--text-tertiary);font-size:13px;margin-bottom:8px;">类目均价</div>
+                <div class="num-highlight" style="font-size:36px;">$117.47</div>
+                <p style="color:var(--text-secondary);font-size:14px;margin-top:8px;">中位价 $47.49 | 高端空间充裕</p>
+                <div style="margin-top:20px;">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                        <span style="font-size:13px;color:var(--text-secondary);">Top3品牌销量占比</span>
+                        <span style="font-size:13px;font-weight:600;">76.07%</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                        <span style="font-size:13px;color:var(--text-secondary);">4星+产品销量占比</span>
+                        <span style="font-size:13px;font-weight:600;">93.45%</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+                        <span style="font-size:13px;color:var(--text-secondary);">评论<300产品销量占比</span>
+                        <span style="font-size:13px;font-weight:600;color:var(--accent-green);">19.33%</span>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;">
+                        <span style="font-size:13px;color:var(--text-secondary);">亚马逊自营占比</span>
+                        <span style="font-size:13px;font-weight:600;">30.61%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:40px;">
+            <h4>市场机会信号</h4>
+            <p style="color:var(--text-secondary);font-size:15px;line-height:1.8;">
+                1. <strong>新品窗口持续扩大</strong>：新品销额占比从2024年Q3的13%攀升至2026年Q1的30%+，说明消费者对新品牌/新技术接受度高<br>
+                2. <strong>高端价格带有空间</strong>：均价$117但中位价仅$47，说明$200+高端产品数量少但单品贡献大（Dyson/Shark占据）<br>
+                3. <strong>评论壁垒可突破</strong>：评论数<300的产品仍占19.33%销量，说明新品不需要海量评论即可起量<br>
+                4. <strong>Q4旺季效应极强</strong>：11-12月销量是淡季的5-8倍，SuperStyle若Q3上市可赶上旺季红利
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2: COMPETITOR PROFILES -->
+<div class="divider"></div>
+<section id="competitor-profiles">
+    <div class="container">
+        <p class="section-label">Competitor Profiles</p>
+        <h2 class="section-title">核心竞品画像</h2>
+        <p class="section-desc">基于亚马逊实时数据，三大竞品的核心经营指标对比。</p>
+
+        <div class="grid-3">
+            <!-- Dyson -->
+            <div class="card competitor-card">
+                <div class="brand-tag" style="color:var(--accent-purple);">DYSON</div>
+                <h3>Airwrap i.d.™</h3>
+                <div class="price" style="color:var(--accent-purple);">$499.99</div>
+                <p style="font-size:13px;color:var(--text-tertiary);margin-bottom:16px;">ASIN: B0F96LDS27 | 上架351天</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">3,420</div>
+                        <div class="stat-label">月销量</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.4</div>
+                        <div class="stat-label">星级</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">330</div>
+                        <div class="stat-label">评论数</div>
+                    </div>
+                </div>
+                <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+                    <p style="font-size:12px;color:var(--text-tertiary);">月销额</p>
+                    <p style="font-size:18px;font-weight:600;">$1,709,966</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">类目排名</p>
+                    <p style="font-size:14px;">Multi-Stylers #3</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">核心卖点</p>
+                    <p style="font-size:13px;color:var(--text-secondary);">蓝牙App智能定制 | 6合1 | 康达效应 | 无热损伤</p>
+                </div>
+            </div>
+
+            <!-- Shark -->
+            <div class="card competitor-card">
+                <div class="brand-tag" style="color:var(--accent-green);">SHARK</div>
+                <h3>FlexStyle HD435</h3>
+                <div class="price" style="color:var(--accent-green);">$228.99</div>
+                <p style="font-size:13px;color:var(--text-tertiary);margin-bottom:16px;">ASIN: B0BBSFTJG5 | 上架1,348天</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">7,959</div>
+                        <div class="stat-label">月销量</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.2</div>
+                        <div class="stat-label">星级</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1,230</div>
+                        <div class="stat-label">评论数</div>
+                    </div>
+                </div>
+                <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+                    <p style="font-size:12px;color:var(--text-tertiary);">月销额</p>
+                    <p style="font-size:18px;font-weight:600;">$1,822,531</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">类目排名</p>
+                    <p style="font-size:14px;">Multi-Stylers #2</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">核心卖点</p>
+                    <p style="font-size:13px;color:var(--text-secondary);">旋转变形设计 | Auto-Wrap | 1000次/秒温控 | 1600W</p>
+                </div>
+            </div>
+
+            <!-- Dreame -->
+            <div class="card competitor-card">
+                <div class="brand-tag" style="color:var(--accent-orange);">DREAME</div>
+                <h3>AirStyle Pro</h3>
+                <div class="price" style="color:var(--accent-orange);">$249.99</div>
+                <p style="font-size:13px;color:var(--text-tertiary);margin-bottom:16px;">ASIN: B0DXF75SRS | 上架443天</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">1,416</div>
+                        <div class="stat-label">月销量</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.4</div>
+                        <div class="stat-label">星级</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">219</div>
+                        <div class="stat-label">评论数</div>
+                    </div>
+                </div>
+                <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+                    <p style="font-size:12px;color:var(--text-tertiary);">月销额</p>
+                    <p style="font-size:18px;font-weight:600;">$353,986</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">类目排名</p>
+                    <p style="font-size:14px;">Multi-Stylers #5</p>
+                </div>
+                <div style="margin-top:12px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);">核心卖点</p>
+                    <p style="font-size:13px;color:var(--text-secondary);">7合1磁吸 | 110,000RPM | 皮革手柄 | 600h寿命</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="card" style="margin-top:40px;overflow-x:auto;">
+            <h4 style="font-size:16px;font-weight:600;margin-bottom:20px;">参数对标矩阵</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th style="color:var(--accent-purple);">Dyson Airwrap i.d.</th>
+                        <th style="color:var(--accent-green);">Shark FlexStyle</th>
+                        <th style="color:var(--accent-orange);">Dreame AirStyle Pro</th>
+                        <th style="color:var(--accent-blue);">SuperStyle (我方)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color:var(--text-secondary);">定价</td>
+                        <td>$499.99</td>
+                        <td>$228.99</td>
+                        <td>$249.99</td>
+                        <td style="color:var(--accent-blue);font-weight:600;">$299</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">附件数量</td>
+                        <td>6合1</td>
+                        <td>5件套</td>
+                        <td>7合1</td>
+                        <td style="color:var(--accent-blue);font-weight:600;">7附件</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">电机转速</td>
+                        <td>未公开</td>
+                        <td>未公开</td>
+                        <td>110,000 RPM</td>
+                        <td style="color:var(--accent-blue);font-weight:600;">110,000 RPM</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">负离子浓度</td>
+                        <td>未标注</td>
+                        <td>Ionic (未量化)</td>
+                        <td>未标注</td>
+                        <td style="color:var(--accent-green);font-weight:600;">3000万/cm³</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">温控频率</td>
+                        <td>智能App调节</td>
+                        <td>1,000次/秒</td>
+                        <td>Cool Shot</td>
+                        <td style="color:var(--accent-green);font-weight:600;">100次/秒</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">重量</td>
+                        <td>~500g (估)</td>
+                        <td>~680g (1.5lbs)</td>
+                        <td>~450g (估)</td>
+                        <td style="color:var(--accent-green);font-weight:600;">369g</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">附件连接方式</td>
+                        <td>卡扣式</td>
+                        <td>旋转卡扣</td>
+                        <td>Snap-on磁吸</td>
+                        <td style="color:var(--accent-blue);font-weight:600;">磁吸快换</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">康达效应</td>
+                        <td>Coanda 2x</td>
+                        <td>Auto-Wrap</td>
+                        <td>360° Spiral Airflow</td>
+                        <td style="color:var(--accent-blue);font-weight:600;">康达效应</td>
+                    </tr>
+                    <tr>
+                        <td style="color:var(--text-secondary);">智能功能</td>
+                        <td>蓝牙+App定制</td>
+                        <td>无</td>
+                        <td>无</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3: RATING & REVIEW ANALYSIS -->
+<div class="divider"></div>
+<section id="review-analysis">
+    <div class="container">
+        <p class="section-label">Review Intelligence</p>
+        <h2 class="section-title">口碑深度解析</h2>
+        <p class="section-desc">基于亚马逊评论数据 + 第三方评测综合分析，提炼各竞品的好评驱动力与差评痛点。</p>
+
+        <div class="grid-2">
+            <!-- Dyson Rating -->
+            <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                    <h4 style="font-size:16px;color:var(--accent-purple);">Dyson Airwrap i.d.</h4>
+                    <span style="font-size:24px;font-weight:700;">4.4 / 5</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">5★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:62%;background:var(--accent-purple);"></div></div>
+                    <span class="rating-pct">62%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">4★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:18%;background:var(--accent-purple);opacity:0.7;"></div></div>
+                    <span class="rating-pct">18%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">3★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:8%;background:var(--accent-orange);"></div></div>
+                    <span class="rating-pct">8%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">2★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:5%;background:var(--accent-red);opacity:0.7;"></div></div>
+                    <span class="rating-pct">5%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">1★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:7%;background:var(--accent-red);"></div></div>
+                    <span class="rating-pct">7%</span>
+                </div>
+                <div style="margin-top:20px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;">好评高频词 TOP5</p>
+                    <span class="tag tag-positive">salon-quality results</span>
+                    <span class="tag tag-positive">no heat damage</span>
+                    <span class="tag tag-positive">versatile styling</span>
+                    <span class="tag tag-positive">premium feel</span>
+                    <span class="tag tag-positive">App personalization</span>
+                </div>
+                <div style="margin-top:16px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;">差评痛点 TOP5</p>
+                    <span class="tag tag-negative">价格过高 ($500)</span>
+                    <span class="tag tag-negative">学习曲线陡峭</span>
+                    <span class="tag tag-negative">卷度持久性差</span>
+                    <span class="tag tag-negative">细软发质效果弱</span>
+                    <span class="tag tag-negative">附件更换繁琐</span>
+                </div>
+            </div>
+
+            <!-- Shark Rating -->
+            <div class="card">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                    <h4 style="font-size:16px;color:var(--accent-green);">Shark FlexStyle HD435</h4>
+                    <span style="font-size:24px;font-weight:700;">4.2 / 5</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">5★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:55%;background:var(--accent-green);"></div></div>
+                    <span class="rating-pct">55%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">4★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:20%;background:var(--accent-green);opacity:0.7;"></div></div>
+                    <span class="rating-pct">20%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">3★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:10%;background:var(--accent-orange);"></div></div>
+                    <span class="rating-pct">10%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">2★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:7%;background:var(--accent-red);opacity:0.7;"></div></div>
+                    <span class="rating-pct">7%</span>
+                </div>
+                <div class="rating-bar-container">
+                    <span class="rating-label">1★</span>
+                    <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:8%;background:var(--accent-red);"></div></div>
+                    <span class="rating-pct">8%</span>
+                </div>
+                <div style="margin-top:20px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;">好评高频词 TOP5</p>
+                    <span class="tag tag-positive">drying power (4.6/5)</span>
+                    <span class="tag tag-positive">value for money</span>
+                    <span class="tag tag-positive">versatile attachments</span>
+                    <span class="tag tag-positive">fast drying</span>
+                    <span class="tag tag-positive">Dyson alternative</span>
+                </div>
+                <div style="margin-top:16px;">
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;">差评痛点 TOP5</p>
+                    <span class="tag tag-negative">噪音大/高频尖锐</span>
+                    <span class="tag tag-negative">机身偏重(1.5lbs)</span>
+                    <span class="tag tag-negative">卷度不持久</span>
+                    <span class="tag tag-negative">粗硬发质干燥慢</span>
+                    <span class="tag tag-negative">附件卡扣松动</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dreame Rating -->
+        <div class="card" style="margin-top:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+                <h4 style="font-size:16px;color:var(--accent-orange);">Dreame AirStyle Pro</h4>
+                <span style="font-size:24px;font-weight:700;">4.4 / 5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+                <div>
+                    <div class="rating-bar-container">
+                        <span class="rating-label">5★</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:65%;background:var(--accent-orange);"></div></div>
+                        <span class="rating-pct">65%</span>
+                    </div>
+                    <div class="rating-bar-container">
+                        <span class="rating-label">4★</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:15%;background:var(--accent-orange);opacity:0.7;"></div></div>
+                        <span class="rating-pct">15%</span>
+                    </div>
+                    <div class="rating-bar-container">
+                        <span class="rating-label">3★</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:8%;background:var(--accent-orange);opacity:0.5;"></div></div>
+                        <span class="rating-pct">8%</span>
+                    </div>
+                    <div class="rating-bar-container">
+                        <span class="rating-label">2★</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:5%;background:var(--accent-red);opacity:0.7;"></div></div>
+                        <span class="rating-pct">5%</span>
+                    </div>
+                    <div class="rating-bar-container">
+                        <span class="rating-label">1★</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:7%;background:var(--accent-red);"></div></div>
+                        <span class="rating-pct">7%</span>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;">好评高频词 TOP5</p>
+                    <span class="tag tag-positive">snap-on magnetic</span>
+                    <span class="tag tag-positive">luxury packaging</span>
+                    <span class="tag tag-positive">fast drying</span>
+                    <span class="tag tag-positive">lightweight</span>
+                    <span class="tag tag-positive">Dyson alternative</span>
+                    <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:8px;margin-top:16px;">差评痛点 TOP5</p>
+                    <span class="tag tag-negative">塑料质感廉价</span>
+                    <span class="tag tag-negative">按钮/配件易损坏</span>
+                    <span class="tag tag-negative">售后服务差</span>
+                    <span class="tag tag-negative">风力不足(vs Dyson)</span>
+                    <span class="tag tag-negative">品牌认知度低</span>
+                </div>
+            </div>
+            <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;">数据来源: Amazon US 219条评论 + TechRadar/Tom's Guide 专业评测 + Reddit用户反馈</p>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4: PAIN-POINT TO SELLING-POINT MAPPING -->
+<div class="divider"></div>
+<section id="pain-solution-map">
+    <div class="container">
+        <p class="section-label">Pain-Point Strategy</p>
+        <h2 class="section-title">痛点-卖点-话术 对应表</h2>
+        <p class="section-desc">将竞品差评痛点逐一匹配 SuperStyle 的产品优势，生成可直接用于 A+ 页面、广告文案和社媒传播的营销话术。</p>
+
+        <div class="card" style="overflow-x:auto;">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width:20%;">竞品痛点</th>
+                        <th style="width:15%;">来源</th>
+                        <th style="width:25%;">SuperStyle 卖点</th>
+                        <th style="width:40%;">营销话术建议</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag tag-negative">价格过高 $500</span></td>
+                        <td style="color:var(--accent-purple);">Dyson</td>
+                        <td>$299 定价，同级技术半价体验</td>
+                        <td><em>"Salon-grade Coanda styling. Not salon-grade pricing. $299."</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">学习曲线陡峭</span></td>
+                        <td style="color:var(--accent-purple);">Dyson</td>
+                        <td>磁吸快换 + 直觉式操作设计</td>
+                        <td><em>"Snap. Style. Done. 磁吸一秒换头，零学习成本的沙龙级造型。"</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">卷度不持久</span></td>
+                        <td style="color:var(--accent-purple);">Dyson / Shark</td>
+                        <td>3000万/cm³ 负离子锁水 + 100次/秒温控</td>
+                        <td><em>"30 Million ions seal every curl. From morning meeting to midnight — your style holds."</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">噪音大/高频尖锐</span></td>
+                        <td style="color:var(--accent-green);">Shark</td>
+                        <td>11万转高速电机 + 降噪风道设计</td>
+                        <td><em>"110,000 RPM of power. Whisper-level noise. Style without waking the house."</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">机身偏重 (680g)</span></td>
+                        <td style="color:var(--accent-green);">Shark</td>
+                        <td>369g 极致轻量</td>
+                        <td><em>"369g — lighter than your phone. 30分钟造型，手腕零负担。"</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">附件卡扣松动</span></td>
+                        <td style="color:var(--accent-green);">Shark</td>
+                        <td>磁吸快换系统，精准对位</td>
+                        <td><em>"Magnetic precision. Click-lock confidence. 7种造型，一触即换。"</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">塑料质感廉价</span></td>
+                        <td style="color:var(--accent-orange);">Dreame</td>
+                        <td>高端材质 + 工业设计品质感</td>
+                        <td><em>"Engineered to feel as good as it performs. 每一个细节都经得起指尖审视。"</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">配件易损坏</span></td>
+                        <td style="color:var(--accent-orange);">Dreame</td>
+                        <td>7附件耐用设计 + 品质保障</td>
+                        <td><em>"Built for 1000+ styling sessions. 不是一次性的美丽，是持久的投资。"</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">细软发质效果弱</span></td>
+                        <td style="color:var(--accent-purple);">Dyson</td>
+                        <td>康达效应 + 多档风速适配</td>
+                        <td><em>"Coanda airflow that adapts. Fine hair gets volume. Thick hair gets control."</em></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag tag-negative">品牌认知度低</span></td>
+                        <td style="color:var(--accent-orange);">Dreame</td>
+                        <td>技术参数碾压式传播策略</td>
+                        <td><em>"You don't need to know our name yet. You just need to know: 30M ions, 369g, $299."</em></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5: BREAKTHROUGH POINTS -->
+<div class="divider"></div>
+<section id="breakthrough-points">
+    <div class="container">
+        <p class="section-label">Breakthrough Strategy</p>
+        <h2 class="section-title">三大口碑破局点</h2>
+        <p class="section-desc">基于竞品痛点分析与 SuperStyle 差异化优势，提炼三个可引爆社媒传播的核心记忆点。</p>
+
+        <!-- Breakthrough 1 -->
+        <div class="highlight-box" style="margin-bottom:24px;">
+            <div class="num-highlight" style="font-size:64px;line-height:1;">01</div>
+            <h4 style="font-size:22px;margin-top:12px;margin-bottom:16px;">3000万负离子 — 可量化的护发革命</h4>
+            <p style="color:var(--text-secondary);line-height:1.8;">
+                <strong>为什么能破局：</strong>Dyson 和 Shark 均宣称"Ionic"但从不公布具体数值。Dreame 标注"300M"但用户反馈效果不明显。SuperStyle 的"3000万/cm³"是行业首个将负离子浓度精确量化到可感知级别的产品。<br><br>
+                <strong>传播策略：</strong><br>
+                - 视觉化对比：制作"负离子浓度对比图"(竞品未标注 vs SuperStyle 3000万)<br>
+                - 效果可视化：拍摄使用前后毛鳞片电镜对比视频<br>
+                - 社媒话题：#30MillionIons #IonRevolution<br>
+                - KOL 种草角度："终于有品牌敢把负离子数据写在包装上了"
+            </p>
+            <div class="copy-block" style="margin-top:16px;">
+                "Others say 'ionic.' We say 30,000,000 ions per cubic centimeter. Because real science doesn't hide behind buzzwords."
+            </div>
+        </div>
+
+        <!-- Breakthrough 2 -->
+        <div class="highlight-box" style="margin-bottom:24px;background:linear-gradient(135deg, rgba(48,209,88,0.08), rgba(41,151,255,0.05));border-color:rgba(48,209,88,0.2);">
+            <div class="num-highlight" style="font-size:64px;line-height:1;">02</div>
+            <h4 style="font-size:22px;margin-top:12px;margin-bottom:16px;">369g 极致轻量 — 重新定义手持体验</h4>
+            <p style="color:var(--text-secondary);line-height:1.8;">
+                <strong>为什么能破局：</strong>Shark FlexStyle 用户差评中"heavy/bulky"出现频率极高(680g)。Dyson 约500g。369g 比竞品轻 45-55%，这是一个用户拿到手就能立刻感知的差异。<br><br>
+                <strong>传播策略：</strong><br>
+                - 类比锚定："比一罐可乐还轻"(355ml可乐≈375g)<br>
+                - 场景化：展示30分钟造型后手腕无疲劳感的对比测试<br>
+                - 开箱惊喜：让KOL盲测重量，制造"不可能这么轻"的反应<br>
+                - 社媒话题：#LighterThanACoke #369gRevolution
+            </p>
+            <div class="copy-block" style="margin-top:16px;">
+                "369 grams. Lighter than a can of Coke. Powerful enough to replace your entire styling drawer."
+            </div>
+        </div>
+
+        <!-- Breakthrough 3 -->
+        <div class="highlight-box" style="background:linear-gradient(135deg, rgba(255,159,10,0.08), rgba(255,69,58,0.05));border-color:rgba(255,159,10,0.2);">
+            <div class="num-highlight" style="font-size:64px;line-height:1;">03</div>
+            <h4 style="font-size:22px;margin-top:12px;margin-bottom:16px;">$299 戴森观望者收割机 — 精准价格心智</h4>
+            <p style="color:var(--text-secondary);line-height:1.8;">
+                <strong>为什么能破局：</strong>"best alternative to dyson airwrap" 月搜索量 8,083，"dyson dupe" 月搜索量 23,135，"dyson airwrap dupe" 月搜索量 15,276。大量消费者想要 Dyson 的效果但不愿付 $500。$299 精准卡位"想要但买不起 Dyson"的庞大人群。<br><br>
+                <strong>传播策略：</strong><br>
+                - 关键词截流：重点投放 "dyson alternative" / "airwrap dupe" 等长尾词<br>
+                - 对比营销：制作 "What $299 gets you vs $500" 对比图表<br>
+                - 评论引导：鼓励用户在评论中提及 "switched from Dyson" 的体验<br>
+                - 社媒话题：#DysonWho #SmartChoice299
+            </p>
+            <div class="copy-block" style="margin-top:16px;">
+                "Everything the $500 styler promises. At a price that doesn't require a second thought. SuperStyle. $299."
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 6: KEYWORD LANDSCAPE -->
+<div class="divider"></div>
+<section id="keyword-landscape">
+    <div class="container">
+        <p class="section-label">Keyword Intelligence</p>
+        <h2 class="section-title">关键词流量地图</h2>
+        <p class="section-desc">竞品核心流量词分析 + SuperStyle 可切入的长尾词机会。</p>
+
+        <div class="card">
+            <h4 style="font-size:16px;margin-bottom:20px;">Dyson Airwrap i.d. 核心流量词 (自然位排名)</h4>
+            <table class="data-table">
+                <thead>
+                    <tr><th>关键词</th><th>月搜索量</th><th>曝光位置</th><th>CPC</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>dyson airwrap</td><td style="font-weight:600;">220,351</td><td>第1页 #2</td><td>$1.11</td></tr>
+                    <tr><td>dyson</td><td>196,583</td><td>第1页 #2</td><td>-</td></tr>
+                    <tr><td>dyson hair dryer</td><td>178,912</td><td>第1页 #4</td><td>-</td></tr>
+                    <tr><td>air wrap hair styler</td><td>49,776</td><td>第1页 #2</td><td>$1.46</td></tr>
+                    <tr><td>airwrap</td><td>31,804</td><td>第1页 #2</td><td>$1.61</td></tr>
+                    <tr><td>dyson airwrap attachments</td><td>30,775</td><td>第1页 #4</td><td>-</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+            <h4 style="font-size:16px;margin-bottom:20px;">SuperStyle 可切入的高价值长尾词</h4>
+            <table class="data-table">
+                <thead>
+                    <tr><th>关键词</th><th>月搜索量</th><th>CPC</th><th>旺季</th><th>切入策略</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">best alternative to dyson airwrap</td><td>8,083</td><td>$2.18</td><td>12-3月</td><td>Listing标题/A+对比</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">dyson airwrap dupe</td><td>15,276</td><td>$1.18</td><td>12月</td><td>SP广告精准投放</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">dyson dupe</td><td>23,135</td><td>-</td><td>-</td><td>SEO后端关键词</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">air curler for hair</td><td>14,338</td><td>$1.84</td><td>3月</td><td>春季营销窗口</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">5 in 1 hair styler</td><td>11,929</td><td>$0.73</td><td>12月</td><td>低CPC高转化词</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">air styler for hair</td><td>6,275</td><td>$1.71</td><td>11-12月</td><td>品类通用词</td></tr>
+                    <tr><td style="color:var(--accent-blue);font-weight:500;">shark hair dryer airwrap</td><td>29,522</td><td>$1.58</td><td>7月/11月</td><td>竞品截流广告</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 7: PRICING STRATEGY -->
+<div class="divider"></div>
+<section id="pricing-strategy">
+    <div class="container">
+        <p class="section-label">Pricing Validation</p>
+        <h2 class="section-title">$299 定价验证</h2>
+
+        <div class="highlight-box">
+            <h4>价格带竞争分析</h4>
+            <div style="margin-top:20px;">
+                <div style="display:flex;align-items:center;margin-bottom:16px;">
+                    <span style="width:120px;font-size:13px;color:var(--text-secondary);">$30-$80</span>
+                    <div style="flex:1;height:24px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;position:relative;">
+                        <div style="width:65%;height:100%;background:var(--accent-blue);opacity:0.6;border-radius:4px;"></div>
+                    </div>
+                    <span style="width:80px;text-align:right;font-size:12px;color:var(--text-tertiary);">TYMO/7MAGIC</span>
+                </div>
+                <div style="display:flex;align-items:center;margin-bottom:16px;">
+                    <span style="width:120px;font-size:13px;color:var(--text-secondary);">$100-$160</span>
+                    <div style="flex:1;height:24px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;position:relative;">
+                        <div style="width:35%;height:100%;background:var(--accent-green);opacity:0.6;border-radius:4px;"></div>
+                    </div>
+                    <span style="width:80px;text-align:right;font-size:12px;color:var(--text-tertiary);">ELLA BELLA</span>
+                </div>
+                <div style="display:flex;align-items:center;margin-bottom:16px;">
+                    <span style="width:120px;font-size:13px;color:var(--text-secondary);">$200-$320</span>
+                    <div style="flex:1;height:24px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;position:relative;">
+                        <div style="width:25%;height:100%;background:var(--accent-orange);border-radius:4px;"></div>
+                        <div style="position:absolute;top:50%;left:22%;transform:translateY(-50%);font-size:10px;color:var(--text-primary);font-weight:600;">← SuperStyle $299</div>
+                    </div>
+                    <span style="width:80px;text-align:right;font-size:12px;color:var(--text-tertiary);">Shark/Dreame</span>
+                </div>
+                <div style="display:flex;align-items:center;">
+                    <span style="width:120px;font-size:13px;color:var(--text-secondary);">$400-$750</span>
+                    <div style="flex:1;height:24px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;position:relative;">
+                        <div style="width:12%;height:100%;background:var(--accent-purple);border-radius:4px;"></div>
+                    </div>
+                    <span style="width:80px;text-align:right;font-size:12px;color:var(--text-tertiary);">Dyson</span>
+                </div>
+            </div>
+            <p style="color:var(--text-secondary);font-size:14px;margin-top:24px;line-height:1.7;">
+                <strong>$299 定价逻辑：</strong>高于 Shark FlexStyle ($229) 体现技术溢价，低于 Dyson ($500) 形成价格吸引力。精准锚定"想要 Dyson 品质但觉得 $500 太贵"的观望人群。Dreame AirStyle Pro 同价位 ($250) 但品牌力弱、品控差评多，SuperStyle 可通过品质感和参数优势实现同价位碾压。
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div class="divider"></div>
+<footer style="padding:60px 24px;text-align:center;">
+    <p style="color:var(--text-tertiary);font-size:13px;margin-bottom:8px;">SuperStyle Competitive Intelligence Report</p>
+    <p style="color:var(--text-tertiary);font-size:12px;">数据来源: Sorftime MCP (Amazon US 实时数据) | TechRadar | Tom's Guide | Reddit | BestBuy Reviews</p>
+    <p style="color:var(--text-tertiary);font-size:12px;margin-top:4px;">生成日期: 2026年5月7日 | 数据时效: 实时</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.card, .highlight-box').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+});
+</script>
+</body>
+</html>
